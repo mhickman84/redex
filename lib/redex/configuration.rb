@@ -14,6 +14,8 @@ module Redex
     define_setting :write_path
 #   Global hash of user-defined document types
     define_setting :document_types, :default => {}
+#   Global hash of dictionaries
+    define_setting :dictionaries, :default => {}
 
 #   Returns the global hash of settings
     def settings

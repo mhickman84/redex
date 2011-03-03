@@ -10,6 +10,7 @@ require 'redex/dictionary_item'
 require 'redex/dictionary'
 require 'redex/match'
 require 'redex/parser'
+require 'redex/runner'
 
 module Redex
   extend Helper::Data
@@ -20,6 +21,10 @@ module Redex
 
   def self.configure
     yield configuration if block_given?
+  end
+
+  def self.document_types
+    configuration.document_types
   end
 
   def self.define_doctype(name)
