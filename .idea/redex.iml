@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="RUBY_MODULE" version="4">
+  <component name="GemRequirementsHolder" version="3">
+    <requirement>
+      <requirement>
+        <dependency name="bundler" version="1.0.10" bound="LATEST_IN_BRANCH" git="false" path="false" doRequire="true" />
+      </requirement>
+      <source from="Gemfile" />
+    </requirement>
+    <requirement>
+      <requirement>
+        <dependency name="jeweler" version="1.5.2" bound="LATEST_IN_BRANCH" git="false" path="false" doRequire="true" />
+      </requirement>
+      <source from="Gemfile" />
+    </requirement>
+    <requirement>
+      <requirement>
+        <dependency name="nokogiri" version="1.4.4" bound="LATEST_IN_BRANCH" git="false" path="false" doRequire="true" />
+      </requirement>
+      <source from="Gemfile" />
+    </requirement>
+    <requirement>
+      <requirement>
+        <dependency name="rcov" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
+      </requirement>
+      <source from="Gemfile" />
+    </requirement>
+    <requirement>
+      <requirement>
+        <dependency name="redis-namespace" version="0.1" bound="LATEST_IN_BRANCH" git="false" path="false" doRequire="true" />
+      </requirement>
+      <source from="Gemfile" />
+    </requirement>
+    <requirement>
+      <requirement>
+        <dependency name="rspec" version="2.5.0" bound="LATEST_IN_BRANCH" git="false" path="false" doRequire="true" />
+      </requirement>
+      <source from="Gemfile" />
+    </requirement>
+  </component>
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/.bundle" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] rake (v0.8.7, /Users/mhickman84/.rvm/gems/ruby-1.9.2-p0@redex/gems/rake-0.8.7)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] jeweler (v1.5.2, /Users/mhickman84/.rvm/gems/ruby-1.9.2-p0@redex/gems/jeweler-1.5.2)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] git (v1.2.5, /Users/mhickman84/.rvm/gems/ruby-1.9.2-p0@redex/gems/git-1.2.5)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] rspec (v2.5.0, /Users/mhickman84/.rvm/gems/ruby-1.9.2-p0@redex/gems/rspec-2.5.0)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] redis (v2.1.1, /Users/mhickman84/.rvm/gems/ruby-1.9.2-p0@redex/gems/redis-2.1.1)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] rcov (v0.9.9, /Users/mhickman84/.rvm/gems/ruby-1.9.2-p0@redex/gems/rcov-0.9.9)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] rspec-mocks (v2.5.0, /Users/mhickman84/.rvm/gems/ruby-1.9.2-p0@redex/gems/rspec-mocks-2.5.0)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] rspec-expectations (v2.5.0, /Users/mhickman84/.rvm/gems/ruby-1.9.2-p0@redex/gems/rspec-expectations-2.5.0)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] rspec-core (v2.5.1, /Users/mhickman84/.rvm/gems/ruby-1.9.2-p0@redex/gems/rspec-core-2.5.1)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] bundler (v1.0.10, /Users/mhickman84/.rvm/gems/ruby-1.9.2-p0@redex/gems/bundler-1.0.10)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] redis-namespace (v0.10.0, /Users/mhickman84/.rvm/gems/ruby-1.9.2-p0@redex/gems/redis-namespace-0.10.0)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] haml (v3.0.25, /Users/mhickman84/.rvm/gems/ruby-1.9.2-p0@redex/gems/haml-3.0.25)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] forgery (v0.3.7, /Users/mhickman84/.rvm/gems/ruby-1.9.2-p0@redex/gems/forgery-0.3.7)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] nokogiri (v1.4.4, /Users/mhickman84/.rvm/gems/ruby-1.9.2-p0@redex/gems/nokogiri-1.4.4)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] diff-lcs (v1.1.2, /Users/mhickman84/.rvm/gems/ruby-1.9.2-p0@redex/gems/diff-lcs-1.1.2)" level="application" />
+  </component>
+</module>
+

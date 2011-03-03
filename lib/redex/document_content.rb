@@ -1,8 +1,6 @@
 module Redex
-  module Document
-    class Content
-      include Document::Helper
-      
-    end
+  class DocumentContent
+    include Helper::DocumentUtil
+
   end
 end

@@ -1,13 +1,13 @@
 require File.expand_path('../spec_helper', File.dirname(__FILE__))
 
-module Redex
-  describe FileGenerator do
+module Redex::Helper
+  describe FileUtil do
     before :each do
       Redex.configure do |c|
         c.write_path = File.expand_path("spec/dictionary_files")
       end
       @lines = ['one', 'two', 'three']
-      @file = FileGenerator.create_file 'sample.txt', @lines
+      @file = FileUtil.create_file 'sample.txt', @lines
     end
 
     it "should create a dictionary file when given an array" do
@@ -21,23 +21,23 @@ module Redex
 
     it "should create a dictionary file from an html page" do
       html_doc = get_sample 'mock_web_page.html'
-      FileGenerator.stub!(:open_page).and_return(html_doc)
-      dictionary = FileGenerator.generate('sample', 'http://www.fakeurl.com', '#list li')
+      FileUtil.stub!(:open_page).and_return(html_doc)
+      dictionary = FileUtil.generate('sample', 'http://www.fakeurl.com', '#list li')
       File.exist?(File.expand_path(dictionary)).should be_true
       IO.readlines(dictionary)[1].chomp.should == 'dos'
     end
 
     it "should create a dictionary file from xml content" do
       xml_doc = get_sample 'mock_xml_doc.xml'
-      FileGenerator.stub!(:open_page).and_return(xml_doc)
-      dictionary = FileGenerator.generate('sample', 'http://www.fakeurl.com', '//dog')
+      FileUtil.stub!(:open_page).and_return(xml_doc)
+      dictionary = FileUtil.generate('sample', 'http://www.fakeurl.com', '//dog')
       File.exist?(File.expand_path(dictionary)).should be_true
       IO.readlines(dictionary)[0].chomp.should == 'Labrador Retriever'
     end
 
     it "should create a dictionary file from a .csv file" do
       csv = File.expand_path('zeppelin_members.csv', "spec/data")
-      dictionary = FileGenerator.generate('zeppelin_members.txt', csv)
+      dictionary = FileUtil.generate('zeppelin_members.txt', csv)
       File.exist?(File.expand_path(dictionary)).should be_true
       IO.readlines(dictionary)[0].chomp.should == 'Robert Plant'
       IO.readlines(dictionary)[3].chomp.should == 'John Paul Jones'
@@ -45,18 +45,17 @@ module Redex
 
     it "should accept multiple selectors for html/xml content" do
       html_doc = get_sample('mock_web_page.html')
-      FileGenerator.stub!(:open_page).and_return(html_doc)
-      dictionary = FileGenerator.generate('sample', 'http://www.fakeurl.com', 'h1', 'h2', 'p')
+      FileUtil.stub!(:open_page).and_return(html_doc)
+      dictionary = FileUtil.generate('sample', 'http://www.fakeurl.com', 'h1', 'h2', 'p')
       File.exist?(File.expand_path(dictionary)).should be_true
       IO.readlines(dictionary)[0].chomp.should == 'Title'
       IO.readlines(dictionary)[2].chomp.should == 'Paragraph.'
     end
 
     it "should raise an exception if no dictionary items are found" do
-      xml_doc = get_sample 'mock_xml_doc.xml'
-      msg = FileGenerator.send :empty_msg
+      msg = FileUtil.send :empty_msg
       lambda {
-        FileGenerator.generate('sample', 'http://www.fakeurl.com', 'cat')
+        FileUtil.generate('sample', 'http://www.fakeurl.com', 'cat')
       }.should raise_error(RuntimeError, msg)
     end
 

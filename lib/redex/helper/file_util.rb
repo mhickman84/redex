@@ -47,6 +47,7 @@ module Redex
       end
 
       module Import
+#       Load document(s) from file into Redis
         def import(thing)
           if File.directory? thing
             add_directory(thing)
@@ -58,7 +59,7 @@ module Redex
         end
 
         private
-#   Adds files in supplied directory to Redis
+#       Adds files in supplied directory to Redis
         def add_directory(directory)
           Dir.foreach(directory) do |file|
             file_path = File.join(File.expand_path(directory), file)

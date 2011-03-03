@@ -1,43 +1,110 @@
+require "redex/helper"
+require "redex/document_content"
+require "redex/document_section"
 module Redex
-  class SourceFile
+# Represents a document stored in Redis as a list,
+# with each line is stored as a list item
+  class Document
 
-    extend Redex::DataHelper
+    extend Helper::Data
+    extend Helper::FileUtil::Import
+    include Enumerable
 
+#   Prefix used in Redis
     NAMESPACE = :file
 
-    def self.get_line(file_name, number)
-      db.zrangebyscore(file_name, number, number).first
+#   Unique name for document
+    attr_reader :name
+
+#   Type of document
+    
+
+#   Hash containing parsed sections of a document
+    attr_accessor :sections
+
+#   Hash containing parsed contents of a document
+    attr_accessor :contents
+
+    def initialize(name)
+      @name = name
+      number_of_lines
     end
 
-    def self.get_lines(file_name, range=nil)
+#   Saves a single line or an array of lines to a document (stored in Redis)
+    def <<(line_or_lines)
+      case line_or_lines
+        when String
+          add_line line_or_lines
+        when Array
+          add_lines line_or_lines
+        else
+          raise "#{line_or_lines} must be a string or an array."
+      end
+      self
+    end
+
+#   Retrieves a single document line from Redis and returns a line object
+    def line(number)
+      value = Document.db.lindex @name, number - 1
+      Line.new self, value, number
+    end
+
+#   Returns all document lines from Redis and as an array of line objects
+#   Returns a range of lines when a range object is supplied
+    def lines(range=nil)
+      values = []
       if range
-        db.zrangebyscore(file_name, range.first, range.last)
+        values = Document.db.lrange(@name, range.first - 1, range.last - 1)
       else
-        db.zrangebyscore(file_name, "-inf", "+inf")
+        values = Document.db.lrange(@name, 0, @number_of_lines)
+      end
+      values.each_with_index.map { |val, index| Line.new(self, val, index + 1) }
+    end
+
+#   Performs an atomic update on a document
+    def update
+      Document.db.multi do
+        yield self
       end
     end
 
-    def self.add_line(file_name, number, value)
-      db.zadd file_name, number, value
-    end
-
-    def self.add_lines(file_name, lines)
-      db.multi do
-        lines.each_with_index do |line, index|
-          add_line(file_name, index, line)
+#   Take lines from Redis
+    def each
+      current_line = 1
+      Document.db.multi do
+        until current_line > @number_of_lines
+          index = current_line - 1
+          value = Document.db.lrange self.name, index, index
+          line = Line.new(self, value[0], current_line)
+          yield line
+          current_line += 1
         end
       end
     end
+
+#   Name-based equality
+    def ==(other)
+      self.name == other.name
+    end
+
 
     private
-    def self.add_file(path_to_file)
-      line_counter = 0
-      IO.foreach path_to_file do |line|
-        db.multi do
-          add_line(File.basename(path_to_file, ".txt"), line_counter, line)
-          line_counter += 1
+    def add_line(line)
+      @number_of_lines = Document.db.rpush @name, line
+      self
+    end
+
+    def number_of_lines
+      @number_of_lines ||= Document.db.llen @name
+    end
+
+    def add_lines(lines)
+      update do |doc|
+        lines.each do |line|
+          add_line line
         end
       end
+      self
     end
   end
 end
