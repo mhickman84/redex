@@ -14,6 +14,15 @@ module Redex
       @name = name
     end
 
+#   Retrieve a dictionary by name (takes a symbol)
+    def self.get(name)
+      if Redex.configuration.dictionaries[name]
+        Redex.configuration.dictionaries[name]
+      else
+        raise "Dictionary #{name} not found"
+      end
+    end
+
 #   Add an item or an array of items to a dictionary
     def <<(item_or_items)
       case item_or_items

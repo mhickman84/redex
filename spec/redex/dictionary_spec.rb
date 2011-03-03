@@ -93,6 +93,12 @@ module Redex
       dictionary_1.should_not == dictionary_2
     end
 
+    it "should retrieve a dictionary from the configuration object by name" do
+      Redex.configuration.dictionaries[:cast] = Dictionary.new("cast")
+      Dictionary.get(:cast).should be_a Dictionary
+      Dictionary.get(:cast).name.should == "cast"
+    end
+
     after :each do
       Dictionary.db.flushdb
     end
