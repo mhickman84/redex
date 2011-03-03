@@ -2,69 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list id="e10eeceb-6d35-4780-8e7e-c56b083da24c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/data/zeppelin_members.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/dictionary_files/zeppelin_members.txt" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/redex/version.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/spec/redex/runner_spec.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/spec/sample_files/chemist.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/spec/sample_files/engineer.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/spec/sample_files/engineer2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/spec/sample_files/history_professor.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/spec/sample_files/hostess.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/spec/sample_files/law_professor.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/spec/sample_files/lawyer.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/spec/sample_files/lawyer2.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/spec/sample_files/lawyer3.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/spec/sample_files/lawyer5.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/spec/sample_files/lawyer6.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/spec/sample_files/lawyer7.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/spec/sample_files/librarian.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/spec/sample_files/researcher.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/spec/sample_files/teacher.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/spec/sample_files/therapist.txt" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/redex/Document.rb" afterPath="$PROJECT_DIR$/lib/redex/document.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Rakefile" afterPath="$PROJECT_DIR$/Rakefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/redex.rb" afterPath="$PROJECT_DIR$/lib/redex.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/redex/configuration.rb" afterPath="$PROJECT_DIR$/lib/redex/configuration.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/redex/content_type.rb" afterPath="$PROJECT_DIR$/lib/redex/content_type.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/redex/dictionary.rb" afterPath="$PROJECT_DIR$/lib/redex/dictionary.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/redex/dictionary_item.rb" afterPath="$PROJECT_DIR$/lib/redex/dictionary_item.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/redex/document_content.rb" afterPath="$PROJECT_DIR$/lib/redex/document_content.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/redex/document_section.rb" afterPath="$PROJECT_DIR$/lib/redex/document_section.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/redex/document_type.rb" afterPath="$PROJECT_DIR$/lib/redex/document_type.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/redex/helper.rb" afterPath="$PROJECT_DIR$/lib/redex/helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/redex/helper/data.rb" afterPath="$PROJECT_DIR$/lib/redex/helper/data.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/redex/helper/file_util.rb" afterPath="$PROJECT_DIR$/lib/redex/helper/file_util.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/redex/line.rb" afterPath="$PROJECT_DIR$/lib/redex/line.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/redex/match.rb" afterPath="$PROJECT_DIR$/lib/redex/match.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/redex/parser.rb" afterPath="$PROJECT_DIR$/lib/redex/parser.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/redex/runner.rb" afterPath="$PROJECT_DIR$/lib/redex/runner.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/redex/section_type.rb" afterPath="$PROJECT_DIR$/lib/redex/section_type.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/dictionary_files/two.txt" afterPath="$PROJECT_DIR$/spec/dictionary_files/two.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/redex/configuration_spec.rb" afterPath="$PROJECT_DIR$/spec/redex/configuration_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/redex/content_type_spec.rb" afterPath="$PROJECT_DIR$/spec/redex/content_type_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/redex/dictionary_item_spec.rb" afterPath="$PROJECT_DIR$/spec/redex/dictionary_item_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/redex/dictionary_spec.rb" afterPath="$PROJECT_DIR$/spec/redex/dictionary_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/redex/document_content_spec.rb" afterPath="$PROJECT_DIR$/spec/redex/document_content_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/redex/document_section_spec.rb" afterPath="$PROJECT_DIR$/spec/redex/document_section_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/redex/document_spec.rb" afterPath="$PROJECT_DIR$/spec/redex/document_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/redex/document_type_spec.rb" afterPath="$PROJECT_DIR$/spec/redex/document_type_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/redex/file_helper_spec.rb" afterPath="$PROJECT_DIR$/spec/redex/file_helper_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/redex/line_spec.rb" afterPath="$PROJECT_DIR$/spec/redex/line_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/redex/match_spec.rb" afterPath="$PROJECT_DIR$/spec/redex/match_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/redex/parser_spec.rb" afterPath="$PROJECT_DIR$/spec/redex/parser_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/redex/section_type_spec.rb" afterPath="$PROJECT_DIR$/spec/redex/section_type_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/redex_spec.rb" afterPath="$PROJECT_DIR$/spec/redex_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/spec_helper.rb" afterPath="$PROJECT_DIR$/spec/spec_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/test_files/episodes.txt" afterPath="$PROJECT_DIR$/spec/test_files/episodes.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/test_files/test2.txt" afterPath="$PROJECT_DIR$/spec/test_files/test2.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/redex.gemspec" afterPath="$PROJECT_DIR$/redex.gemspec" />
     </list>
     <list default="true" id="937dd7be-bc59-4453-acd0-b8eac48cd1d3" name="DNC" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/mhickman84.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/mhickman84.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.bundle/config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/redex.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.rspec" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="redex.iws" />
     <ignored path=".idea/workspace.xml" />
+    <file path="$PROJECT_DIR$/.gitignore" changelist="937dd7be-bc59-4453-acd0-b8eac48cd1d3" time="1299140354234" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,178 +39,89 @@
     <favorites_list name="redex" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf>
-          <file leaf-file-name="redex.rb" pinned="false" current="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/lib/redex.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="12" column="0" selection-start="317" selection-end="317" vertical-scroll-proportion="0.44186047">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="runner.rb" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/lib/redex/runner.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="dictionary.rb" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/lib/redex/dictionary.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="52" column="49" selection-start="1203" selection-end="1203" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="dictionary_item.rb" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/lib/redex/dictionary_item.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="31" column="7" selection-start="730" selection-end="730" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="dictionary_item_spec.rb" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/spec/redex/dictionary_item_spec.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="32" column="7" selection-start="1019" selection-end="1019" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="match.rb" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/lib/redex/match.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="18" column="7" selection-start="438" selection-end="438" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="parser.rb" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/lib/redex/parser.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="19" column="3" selection-start="499" selection-end="499" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="redex_spec.rb" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/spec/redex_spec.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="43" column="24" selection-start="1724" selection-end="1724" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="parser_spec.rb" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/spec/redex/parser_spec.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="24" column="7" selection-start="1117" selection-end="1117" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="section_type.rb" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/lib/redex/section_type.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="22" column="18" selection-start="617" selection-end="617" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="redex_spec.rb" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/spec/redex_spec.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="32" column="5" selection-start="1259" selection-end="1259" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="document.rb" pinned="false" current="true" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/lib/redex/document.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="5" column="41" selection-start="194" selection-end="194" vertical-scroll-proportion="0.18410853">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="data.rb" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/lib/redex/helper/data.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="dictionary_item.rb" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/lib/redex/dictionary_item.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="52" column="5" selection-start="1168" selection-end="1168" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="dictionary.rb" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/lib/redex/dictionary.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="60" column="0" selection-start="1331" selection-end="1331" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="dictionary_item_spec.rb" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/spec/redex/dictionary_item_spec.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="36" column="7" selection-start="1116" selection-end="1116" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="match.rb" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/lib/redex/match.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="16" column="16" selection-start="385" selection-end="385" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="document_spec.rb" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/spec/redex/document_spec.rb">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="38" column="7" selection-start="1404" selection-end="1404" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file leaf-file-name="redex.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/redex.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="21" selection-start="352" selection-end="352" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="redex.gemspec" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/redex.gemspec">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="13" selection-start="525" selection-end="525" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="0" selection-start="184" selection-end="184" vertical-scroll-proportion="0.95652175">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="runner.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/redex/runner.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dictionary.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/redex/dictionary.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="52" column="49" selection-start="1203" selection-end="1203" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dictionary_item_spec.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spec/redex/dictionary_item_spec.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="7" selection-start="1019" selection-end="1019" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="match.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/redex/match.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="7" selection-start="438" selection-end="438" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="parser.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/redex/parser.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="3" selection-start="499" selection-end="499" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="redex_spec.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spec/redex_spec.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="43" column="24" selection-start="1724" selection-end="1724" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -297,13 +163,13 @@
         <option value="$PROJECT_DIR$/spec/test_files/episodes.txt" />
         <option value="$PROJECT_DIR$/spec/redex/document_section_spec.rb" />
         <option value="$PROJECT_DIR$/spec/redex/document_spec.rb" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/spec/redex/parser_spec.rb" />
         <option value="$PROJECT_DIR$/spec/redex/dictionary_item_spec.rb" />
         <option value="$PROJECT_DIR$/lib/redex/dictionary_item.rb" />
         <option value="$PROJECT_DIR$/lib/redex/parser.rb" />
         <option value="$PROJECT_DIR$/spec/redex_spec.rb" />
         <option value="$PROJECT_DIR$/lib/redex.rb" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -362,57 +228,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="spec" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redex" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redex" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spec" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redex" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redex" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redex" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redex" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redex" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redex" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -802,16 +618,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="93" y="22" width="1874" height="1178" extended-state="0" />
+    <frame x="48" y="22" width="887" height="1178" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.47830102" sideWeight="0.97431016" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5096953" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47830102" sideWeight="0.97431016" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5096953" sideWeight="0.99420625" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32871652" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32963988" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15243243" sideWeight="0.521699" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3267671" sideWeight="0.4903047" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45060018" sideWeight="0.9970888" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.55771005" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -857,6 +673,13 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/spec/redex/document_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="7" selection-start="1404" selection-end="1404" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/redex/dictionary_item.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="52" column="5" selection-start="1168" selection-end="1168" vertical-scroll-proportion="0.0">
@@ -864,37 +687,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/redex/helper/data.rb">
+    <entry file="file://$PROJECT_DIR$/.document">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/redex/dictionary.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="0" selection-start="1331" selection-end="1331" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/redex/dictionary_item_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="7" selection-start="1116" selection-end="1116" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/redex/match.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="16" selection-start="385" selection-end="385" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/redex/parser.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="3" selection-start="499" selection-end="499" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -906,13 +701,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/redex/line.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="68" selection-start="81" selection-end="81" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/redex/section_type.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="18" selection-start="617" selection-end="617" vertical-scroll-proportion="0.0">
@@ -920,9 +708,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/redex/match_spec.rb">
+    <entry file="file://$PROJECT_DIR$/lib/redex/helper/data.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="7" selection-start="729" selection-end="729" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/redex.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="21" selection-start="352" selection-end="352" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redex.gemspec">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="13" selection-start="525" selection-end="525" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -934,37 +736,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/redex.gemspec">
+    <entry file="file://$PROJECT_DIR$/lib/redex/dictionary.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="0" selection-start="1185" selection-end="1217" vertical-scroll-proportion="0.4393638">
+        <state line="52" column="49" selection-start="1203" selection-end="1203" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/redex.rb">
+    <entry file="file://$PROJECT_DIR$/spec/redex/dictionary_item_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="317" selection-end="317" vertical-scroll-proportion="0.44186047">
+        <state line="32" column="7" selection-start="1019" selection-end="1019" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/redex/match.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="7" selection-start="438" selection-end="438" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/redex/parser.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="3" selection-start="499" selection-end="499" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/redex_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="5" selection-start="1259" selection-end="1259" vertical-scroll-proportion="0.0">
+        <state line="43" column="24" selection-start="1724" selection-end="1724" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/redex/dictionary_spec.rb">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="26" selection-start="2795" selection-end="2795" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/redex/document.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="41" selection-start="194" selection-end="194" vertical-scroll-proportion="0.18410853">
+        <state line="22" column="0" selection-start="184" selection-end="184" vertical-scroll-proportion="0.95652175">
           <folding />
         </state>
       </provider>
