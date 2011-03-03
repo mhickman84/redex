@@ -2,6 +2,8 @@ module Redex
   class Parser
 #   Searches a line for dictionary terms
 #   Stops searching once a match is found and returns a match object
+#   Returns nil if no match is found
+#   Increments the score of the corresponding dictionary item when a match is created
     def find_match(dictionary, line)
       exit_item = nil
       dictionary.take_while do |item|

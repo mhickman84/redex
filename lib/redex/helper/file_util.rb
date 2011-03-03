@@ -61,13 +61,15 @@ module Redex
         private
 #       Adds files in supplied directory to Redis
         def add_directory(directory)
+          objects = []
           Dir.foreach(directory) do |file|
             file_path = File.join(File.expand_path(directory), file)
-            add_file(file_path) unless File.directory? file_path
+            objects << add_file(file_path) unless File.directory? file_path
           end
+          objects
         end
 
-#   Adds file to Redis (as a list)
+#       Adds file to Redis (as a list)
         def add_file(path_to_file, name=nil)
           name ||= File.basename(path_to_file, ".txt")
           collection = new(name)

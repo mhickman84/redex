@@ -16,5 +16,10 @@ module Redex
       @name = name
       yield self if block_given?
     end
+
+#   Returns the document type object associated with the supplied name
+    def self.get(name)
+      Redex.document_types[name]
+    end
   end
 end

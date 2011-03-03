@@ -2,9 +2,7 @@ require File.expand_path('../spec_helper', File.dirname(__FILE__))
 
 module Redex
   describe DocumentType do
-    before :each do
-      @doc_type = DocumentType.new(:letter)
-    end
+    before(:each) { @doc_type = Redex.define_doctype :letter }
 
     it "should be able to add section types" do
       @doc_type.has_section :header
@@ -24,6 +22,7 @@ module Redex
       doc_type = DocumentType.new :test_doc do |d|
         d.should be_a DocumentType
         d.has_section :body
+        d.has_section :footer
         d.has_content :name
       end
       doc_type.name.should == :test_doc
@@ -32,5 +31,24 @@ module Redex
       doc_type.content_types.first.should be_a ContentType
       doc_type.content_types.first.name.should == :name
     end
+
+    it "should retrieve document type objects by name" do
+      letter = DocumentType.get(:letter)
+      letter.should be_a DocumentType
+      letter.name.should == :letter
+    end
+
+    it "should return a list of section types contained within" do
+      doc_type = DocumentType.new :test_doc do |d|
+        d.should be_a DocumentType
+        d.has_section :body
+        d.has_section :footer
+        d.has_content :name
+      end
+
+      doc_type.section_types.size.should == 2
+    end
+
+    after(:each) { Redex.configuration.document_types = {} }
   end
 end

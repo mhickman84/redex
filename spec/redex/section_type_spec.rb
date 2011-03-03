@@ -3,7 +3,11 @@ require File.expand_path('../spec_helper', File.dirname(__FILE__))
 module Redex
   describe SectionType do
     before :each do
-      @section_type = SectionType.new(:header_section)
+      @section_type = SectionType.new(:test_section)
+    end
+
+    it "should have a name" do
+      @section_type.name.should == :test_section
     end
 
     it "should allow nested section types" do
@@ -20,8 +24,10 @@ module Redex
       @section_type.content_types.first.name.should == :first_name
     end
 
-    it "should have a name" do
-      @section_type.name.should == :header_section
+    it "should assign a start dictionary" do
+      @section_type.starts_with :dictionary => :cast
+      @section_type.start_dictionary.should be_a Dictionary
+      @section_type.start_dictionary.name.should == "cast"
     end
 
   end

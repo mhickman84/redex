@@ -30,5 +30,10 @@ module Redex
       @match.document.name.should == "episodes"
     end
 
+    it "should increment the score of a dictionary item when created" do
+      @dict.first.score.should == 1
+    end
+
+    after(:each) { Redex.db.flushdb }
   end
 end

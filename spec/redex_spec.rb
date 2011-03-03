@@ -28,18 +28,18 @@ describe Redex do
   it "should raise an exception if the doc type's name is not unique" do
     Redex.define_doctype :test_doc
     Redex.configuration.document_types.size.should == 1
-    lambda {Redex.define_doctype :test_doc }.should raise_error
+    lambda { Redex.define_doctype :test_doc }.should raise_error
     Redex.configuration.document_types.size.should == 1
   end
 
   it "should allow new document types to be defined" do
     Redex.define_doctype :letter do |d|
       d.has_section :return_address do |s|
-        s.starts_with :street_address, :dictionary => :street_addresses
+        s.starts_with :dictionary => :start_return_address
         s.has_content :city, :dictionary => :cities
         s.has_content :state, :dictionary => :states
         s.has_content :zip_code, :dictionary => :zip_codes
-        s.ends_with :send_date, :dictionary => :dates
+        s.ends_with :dictionary => :end_return_address
       end
       d.add_section :inside_address do |s|
         s.starts_with :street_address, :dictionary => :street_addresses

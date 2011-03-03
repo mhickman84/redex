@@ -2,7 +2,7 @@ module Redex
   module Helper
     module Type
 #     Adds new section to look for within this section type
-      def has_section(name)
+      def has_section(name, options={})
         @section_types ||= []
         new_section = SectionType.new(name)
         yield new_section if block_given?

@@ -17,6 +17,10 @@ module Redex
       @line_numbers = line_numbers
     end
 
+    def starts_with(options)
+      self.has_section
+    end
+
 #   Array of lines that the section contains
     def lines
       @document.lines @line_numbers
