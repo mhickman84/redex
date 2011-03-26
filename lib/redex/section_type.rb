@@ -8,16 +8,16 @@ module Redex
     attr_reader :name
 
 #   Dictionary terms signaling the start of the section
-    attr_accessor :start_dictionary
+    attr_reader :start_dictionary
 
 #   Dictionary terms signaling the end of the section
-    attr_accessor :end_dictionary
+    attr_reader :end_dictionary
 
 #   Sections to look for within this section type
-    attr_accessor :section_types
+    attr_reader :section_types
 
 #   Contents to look for within this section type
-    attr_accessor :content_types
+    attr_reader :content_types
 
     def initialize(name)
       @name = name
@@ -27,9 +27,11 @@ module Redex
     def starts_with(options)
       @start_dictionary = Dictionary.get(options[:dictionary])
     end
+    
 #   Set end dictionary
     def ends_with(options)
       @end_dictionary = Dictionary.get(options[:dictionary])
     end
+    
   end
 end

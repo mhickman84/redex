@@ -24,6 +24,7 @@ module Redex
     end
 
 #   Add an item or an array of items to a dictionary
+#   Returns the dictionary object
     def <<(item_or_items)
       case item_or_items
         when String

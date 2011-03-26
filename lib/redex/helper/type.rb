@@ -10,12 +10,18 @@ module Redex
       end
 
 #     Adds new content to look for within this section type
-      def has_content(name)
+      def has_content(name, options={})
         @content_types ||= []
         new_content = ContentType.new(name)
+        if options[:dictionary]
+          new_content.dictionary = Redex.configuration.dictionaries[options[:dictionary]]
+        end
         yield new_content if block_given?
         @content_types << new_content
       end
+
+      alias :starts_with_content :has_content
+      alias :ends_with_content :has_content
     end
   end
 end

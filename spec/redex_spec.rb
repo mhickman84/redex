@@ -33,6 +33,24 @@ describe Redex do
   end
 
   it "should allow new document types to be defined" do
+    @start_return_address = Redex::Dictionary.new("start_return_address")
+    @start_return_address << [""]
+    @cities = Redex::Dictionary.new("cities")
+    @states = Redex::Dictionary.new("states")
+    @zip_codes = Redex::Dictionary.new("zip_codes")
+    @end_return_address = Redex::Dictionary.new("end_return_address")
+    @greetings = Redex::Dictionary.new("greetings")
+    @first_names = Redex::Dictionary.new("first_names")
+
+
+    Redex.configuration.dictionaries[:start_return_address] = @start_return_address
+    Redex.configuration.dictionaries[:cities] = @cities
+    Redex.configuration.dictionaries[:states] = @states
+    Redex.configuration.dictionaries[:zip_codes] = @zip_codes
+    Redex.configuration.dictionaries[:end_return_address] = @end_return_address
+    Redex.configuration.dictionaries[:greetings] = @greetings
+    Redex.configuration.dictionaries[:first_names] = @first_names
+
     Redex.define_doctype :letter do |d|
       d.has_section :return_address do |s|
         s.starts_with :dictionary => :start_return_address
@@ -41,26 +59,20 @@ describe Redex do
         s.has_content :zip_code, :dictionary => :zip_codes
         s.ends_with :dictionary => :end_return_address
       end
-      d.add_section :inside_address do |s|
-        s.starts_with :street_address, :dictionary => :street_addresses
-        s.has_content :city, :dictionary => :cities
-        s.has_content :state, :dictionary => :states
-        s.has_content :zip_code, :dictionary => :zip_codes
-        s.ends_with :send_date, :dictionary => :dates
-      end
-      d.add_section :salutation do |s|
-        s.starts_with :greeting, :dictionary => :greetings
-        s.ends_with :first_name, :dictionary => :first_names
+      d.has_section :salutation do |s|
+        s.starts_with_content :greeting, :dictionary => :greetings
+        s.ends_with_content :first_name, :dictionary => :first_names
       end
     end
 
     Redex.document_types.size.should == 1
-    doc_type = Redex.document_types.first
+    doc_type = Redex.document_types[:letter]
     doc_type.name.should == :letter
-    doc_type.sections.size.should == 3
-    doc_type.sections[0]
-    doc_type.sections[1]
-    doc_type.sections[2]
+    doc_type.section_types.size.should == 2
+    doc_type.section_types[0].content_types[0].name.should == :city
+    doc_type.section_types[0].content_types[0].dictionary.should be_a Redex::Dictionary
+    doc_type.section_types[1].content_types[0].name.should == :greeting
+    doc_type.section_types[1].content_types[0].dictionary.should be_a Redex::Dictionary
   end
 
   it "should have a list of defined document types" do
@@ -69,5 +81,6 @@ describe Redex do
 
   after :each do
     Redex.configuration.document_types = {}
+    Redex.db.flushdb
   end
 end

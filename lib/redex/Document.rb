@@ -82,7 +82,7 @@ module Redex
       end
     end
 
-#   Name-based equality
+#   Name-based equality (name is stored as key in Redis)
     def ==(other)
       self.name == other.name
     end

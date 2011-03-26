@@ -12,5 +12,8 @@ module Redex
       @content_type.dictionary.should be_a Dictionary
     end
 
+    it "should have a name" do
+      @content_type.name.should == :name
+    end
   end
 end

@@ -30,5 +30,16 @@ module Redex
       @section_type.start_dictionary.name.should == "cast"
     end
 
+    it "should assign a start dictionary" do
+      @section_type.ends_with :dictionary => :cast
+      @section_type.end_dictionary.should be_a Dictionary
+      @section_type.end_dictionary.name.should == "cast"
+    end
+
+    it "should contain types of content" do
+      @section_type.has_content :address, :dictionary => :addresses
+      @section_type.has_content :phone_number, :dictionary => :phone_numbers
+      @section_type.content_types.size.should == 2
+    end
   end
 end
