@@ -3,7 +3,7 @@ require File.expand_path('../spec_helper', File.dirname(__FILE__))
 module Redex
   describe DocumentSection do
     before :each do
-      file_path = File.expand_path("spec/test_files/episodes.txt")
+      file_path = File.expand_path("spec/document_files/episodes.txt")
       @doc = Document.import(file_path)
       @section = DocumentSection.new(:header_section, @doc, 3..4)
     end

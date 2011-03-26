@@ -49,7 +49,7 @@ module Redex
     end
 
     it "should add all lines in a file when given a file path" do
-      file_path = File.expand_path("spec/test_files/test.txt")
+      file_path = File.expand_path("spec/document_files/test.txt")
       Document.import(file_path)
       lines = Document.new("test").lines
       puts "LINES: #{lines.inspect}"
@@ -60,7 +60,7 @@ module Redex
     end
 
     it "should add all files in a directory when given a directory" do
-      directory = File.expand_path("spec/test_files")
+      directory = File.expand_path("spec/document_files")
       puts directory
       Document.import(directory)
       file_lines = Document.new("test").lines

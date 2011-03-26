@@ -17,10 +17,10 @@ module Redex
 
 #   Retrieve related dictionary by its key
     def dictionary
-      Dictionary.new(@dictionary_item.key)
+      @dictionary ||= Dictionary.new(@dictionary_item.key)
     end
 
-#   Retrieve document that the match is in
+#   Retrieve matched document
     def document
       @line.document
     end

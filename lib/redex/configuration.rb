@@ -16,6 +16,8 @@ module Redex
     define_setting :document_types, :default => {}
 #   Global hash of dictionaries
     define_setting :dictionaries, :default => {}
+#   Global hash of documents
+    define_setting :documents, :default => {}
 
 #   Returns the global hash of settings
     def settings

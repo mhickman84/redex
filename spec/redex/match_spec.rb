@@ -4,7 +4,7 @@ module Redex
   describe Match do
     before :each do
       dictionary_path = File.expand_path("spec/dictionary_files/cast.txt")
-      doc_path = File.expand_path("spec/test_files/episodes.txt")
+      doc_path = File.expand_path("spec/document_files/episodes.txt")
       @dict = Dictionary.import(dictionary_path)
       @doc = Document.import(doc_path)
       @match = Match.new(@dict.first, @doc.line(2))

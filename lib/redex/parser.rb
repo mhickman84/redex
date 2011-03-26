@@ -18,5 +18,6 @@ module Redex
         nil
       end
     end
+
   end
 end

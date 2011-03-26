@@ -11,6 +11,12 @@ module Redex
       Redex.configuration.dictionaries[:cast].size.should == 5
     end
 
+    it "should load all document files in the search directory and save them in the config object" do
+      Redex.configuration.search_path = File.expand_path "../../spec/document_files", File.dirname(__FILE__)
+      Runner.import_documents
+      Redex.configuration.documents.size.should == 4
+    end
+
     after :each do
       Dictionary.db.flushdb
     end

@@ -3,7 +3,7 @@ require File.expand_path('../spec_helper', File.dirname(__FILE__))
 module Redex
   describe Parser do
     before :each do
-      @doc = Document.import(File.expand_path "../../spec/test_files/episodes.txt", File.dirname(__FILE__))
+      @doc = Document.import(File.expand_path "../../spec/document_files/episodes.txt", File.dirname(__FILE__))
       @dict = Dictionary.import(File.expand_path "../../spec/dictionary_files/cast.txt", File.dirname(__FILE__))
       @parser = Parser.new
     end

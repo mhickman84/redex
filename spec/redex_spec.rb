@@ -1,6 +1,25 @@
 require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 
 describe Redex do
+  before :each do
+    @start_return_address = Redex::Dictionary.new("start_return_address")
+    @start_return_address << [""]
+    @cities = Redex::Dictionary.new("cities")
+    @states = Redex::Dictionary.new("states")
+    @zip_codes = Redex::Dictionary.new("zip_codes")
+    @end_return_address = Redex::Dictionary.new("end_return_address")
+    @greetings = Redex::Dictionary.new("greetings")
+    @first_names = Redex::Dictionary.new("first_names")
+
+    Redex.configuration.dictionaries[:start_return_address] = @start_return_address
+    Redex.configuration.dictionaries[:cities] = @cities
+    Redex.configuration.dictionaries[:states] = @states
+    Redex.configuration.dictionaries[:zip_codes] = @zip_codes
+    Redex.configuration.dictionaries[:end_return_address] = @end_return_address
+    Redex.configuration.dictionaries[:greetings] = @greetings
+    Redex.configuration.dictionaries[:first_names] = @first_names
+  end
+
   it "should connect to a redis instance" do
     Redex.db.should be_a Redis
     Redex.db.info.should include "redis_version"
@@ -33,24 +52,6 @@ describe Redex do
   end
 
   it "should allow new document types to be defined" do
-    @start_return_address = Redex::Dictionary.new("start_return_address")
-    @start_return_address << [""]
-    @cities = Redex::Dictionary.new("cities")
-    @states = Redex::Dictionary.new("states")
-    @zip_codes = Redex::Dictionary.new("zip_codes")
-    @end_return_address = Redex::Dictionary.new("end_return_address")
-    @greetings = Redex::Dictionary.new("greetings")
-    @first_names = Redex::Dictionary.new("first_names")
-
-
-    Redex.configuration.dictionaries[:start_return_address] = @start_return_address
-    Redex.configuration.dictionaries[:cities] = @cities
-    Redex.configuration.dictionaries[:states] = @states
-    Redex.configuration.dictionaries[:zip_codes] = @zip_codes
-    Redex.configuration.dictionaries[:end_return_address] = @end_return_address
-    Redex.configuration.dictionaries[:greetings] = @greetings
-    Redex.configuration.dictionaries[:first_names] = @first_names
-
     Redex.define_doctype :letter do |d|
       d.has_section :return_address do |s|
         s.starts_with :dictionary => :start_return_address
