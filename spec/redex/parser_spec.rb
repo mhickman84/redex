@@ -5,7 +5,8 @@ module Redex
     before :each do
       @doc = Document.import(File.expand_path "../../spec/document_files/episodes.txt", File.dirname(__FILE__))
       @dict = Dictionary.import(File.expand_path "../../spec/dictionary_files/cast", File.dirname(__FILE__))
-      @parser = Parser.new
+      @parser = Parser.new :letter
+
     end
 
     it "should create a match object when given a dictionary and a line containing a match" do

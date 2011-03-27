@@ -9,8 +9,9 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Mike Hickman"]
-  s.date = %q{2011-03-03}
+  s.date = %q{2011-03-27}
   s.description = %q{TODO: longer description of your gem}
+  s.email = %q{mhickman84@gmail.com}
   s.extra_rdoc_files = [
     "LICENSE.txt",
     "README.rdoc"
@@ -34,15 +35,28 @@ Gem::Specification.new do |s|
     "lib/redex/helper/data.rb",
     "lib/redex/helper/document_util.rb",
     "lib/redex/helper/file_util.rb",
+    "lib/redex/helper/nestable.rb",
     "lib/redex/helper/type.rb",
     "lib/redex/line.rb",
     "lib/redex/match.rb",
     "lib/redex/parser.rb",
+    "lib/redex/runner.rb",
     "lib/redex/section_type.rb",
+    "redex.gemspec",
+    "spec/.DS_Store",
+    "spec/data/.DS_Store",
     "spec/data/mock_web_page.html",
     "spec/data/mock_xml_doc.xml",
-    "spec/dictionary_files/cast.txt",
-    "spec/dictionary_files/two.txt",
+    "spec/data/zeppelin_members.csv",
+    "spec/dictionary_files/cast",
+    "spec/dictionary_files/sample",
+    "spec/dictionary_files/two",
+    "spec/dictionary_files/zeppelin_members",
+    "spec/document_files/episodes.txt",
+    "spec/document_files/letters/sample_letter.txt",
+    "spec/document_files/letters/sample_letter_2.txt",
+    "spec/document_files/test.txt",
+    "spec/document_files/test2.txt",
     "spec/redex/configuration_spec.rb",
     "spec/redex/content_type_spec.rb",
     "spec/redex/dictionary_item_spec.rb",
@@ -58,26 +72,7 @@ Gem::Specification.new do |s|
     "spec/redex/runner_spec.rb",
     "spec/redex/section_type_spec.rb",
     "spec/redex_spec.rb",
-    "spec/sample_files/chemist.txt",
-    "spec/sample_files/engineer.txt",
-    "spec/sample_files/engineer2.txt",
-    "spec/sample_files/history_professor.txt",
-    "spec/sample_files/hostess.txt",
-    "spec/sample_files/law_professor.txt",
-    "spec/sample_files/lawyer.txt",
-    "spec/sample_files/lawyer2.txt",
-    "spec/sample_files/lawyer3.txt",
-    "spec/sample_files/lawyer5.txt",
-    "spec/sample_files/lawyer6.txt",
-    "spec/sample_files/lawyer7.txt",
-    "spec/sample_files/librarian.txt",
-    "spec/sample_files/researcher.txt",
-    "spec/sample_files/teacher.txt",
-    "spec/sample_files/therapist.txt",
-    "spec/spec_helper.rb",
-    "spec/test_files/episodes.txt",
-    "spec/test_files/test.txt",
-    "spec/test_files/test2.txt"
+    "spec/spec_helper.rb"
   ]
   s.homepage = %q{http://github.com/mhickman84/redex}
   s.licenses = ["MIT"]

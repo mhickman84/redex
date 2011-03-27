@@ -67,11 +67,11 @@ describe Redex do
     Redex.document_types.size.should == 1
     doc_type = Redex.document_types[:letter]
     doc_type.name.should == :letter
-    doc_type.section_types.size.should == 2
-    doc_type.section_types[0].content_types[0].name.should == :city
-    doc_type.section_types[0].content_types[0].dictionary.should be_a Redex::Dictionary
-    doc_type.section_types[1].content_types[0].name.should == :greeting
-    doc_type.section_types[1].content_types[0].dictionary.should be_a Redex::Dictionary
+    doc_type.children.size.should == 2
+    doc_type.children[0].children[0].name.should == :city
+    doc_type.children[0].children[0].dictionary.should be_a Redex::Dictionary
+    doc_type.children[1].children[0].name.should == :greeting
+    doc_type.children[1].children[0].dictionary.should be_a Redex::Dictionary
   end
 
   it "should have a list of defined document types" do

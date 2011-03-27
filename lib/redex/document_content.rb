@@ -1,6 +1,6 @@
 module Redex
   class DocumentContent
-    include Helper::DocumentUtil
+    include Helper::ActsAsChild
 
   end
 end

@@ -1,12 +1,10 @@
 module Redex
   class DocumentSection
-    include Helper::DocumentUtil
+    include Helper::ActsAsParent
+    include Helper::ActsAsChild
 
 #   Type of section (e.g. header, footer)
     attr_reader :type
-
-#   The parent section (only applies if this section is nested within another)
-    attr_accessor :parent
 
 #   The document containing this section
     attr_reader :document

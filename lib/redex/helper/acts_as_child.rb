@@ -1,11 +1,12 @@
 module Redex
   module Helper
-    module DocumentUtil
-#     Set parent section
+    module ActsAsChild
+#     Set parent
       def parent=(parent)
         @parent = parent
       end
-#     Get parent section
+
+#     Get parent
       def parent
         @parent
       end

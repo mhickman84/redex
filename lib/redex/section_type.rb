@@ -3,7 +3,8 @@ module Redex
 # a document or another section
   class SectionType
     include Helper::Type
-
+    include Helper::ActsAsParent
+    include Helper::ActsAsChild
 #   Name of the section type (i.e. header, footer)
     attr_reader :name
 
@@ -12,12 +13,7 @@ module Redex
 
 #   Dictionary terms signaling the end of the section
     attr_reader :end_dictionary
-
-#   Sections to look for within this section type
-    attr_reader :section_types
-
-#   Contents to look for within this section type
-    attr_reader :content_types
+    
 
     def initialize(name)
       @name = name

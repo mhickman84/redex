@@ -24,11 +24,6 @@ module Redex
       Redex.configuration.documents.values.all? { |doc| doc.type.should == :letter }
     end
 
-    it "should find all matches for documents of a particular type" do
-      letter_matches = Runner.find_matches :letter
-      
-    end
-
     after :each do
       Redex.configuration.document_types = {}
       Dictionary.db.flushdb

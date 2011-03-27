@@ -19,13 +19,22 @@ module Redex
       end
     end
 
+
+
 #   Find matches for the specified document type
     def self.find_matches(doc_type)
+      parser = Parser.new
       @matches = []
-      docs = @documents.select { |doc| doc.type == doc_type }
+      docs = Redex.configuration.documents.select { |doc| doc.type == doc_type }
       docs.each do |doc|
-        
+        doc.lines.each do |line|
+          DocumentType.get(doc_type)
+          match = parser.find_match(line)
+          @matches << match if match
+        end
+
       end
+      @matches
     end
 
   end

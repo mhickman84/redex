@@ -2,6 +2,13 @@ module Redex
   class Parser
 #   List of match objects
     attr_reader :matches
+#   Type of document to parse
+    attr_reader :doc_type
+
+    def initialize(doc_type)
+      @doc_type = DocumentType.get(doc_type)
+
+    end
 
 #   Searches a line for dictionary terms
 #   Stops searching once a match is found and returns a match object
@@ -19,6 +26,13 @@ module Redex
         Match.new(exit_item, line)
       else
         nil
+      end
+    end
+
+    def parse_outer_sections(document)
+      self.doc_type.
+      document.lines.each do |line|
+        
       end
     end
 

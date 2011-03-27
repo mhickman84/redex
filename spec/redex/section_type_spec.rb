@@ -12,16 +12,22 @@ module Redex
 
     it "should allow nested section types" do
       @section_type.has_section :section_header
-      @section_type.section_types.size.should == 1
-      @section_type.section_types.first.should be_a SectionType
-      @section_type.section_types.first.name.should == :section_header
+      @section_type.children.size.should == 1
+      @section_type.children.first.should be_a SectionType
+      @section_type.children.first.name.should == :section_header
+    end
+
+    it "should be a top level section type if it has no parent types" do
+      @section_type.top_level?.should be_true
+      @section_type.parent = SectionType.new(:some_section)
+      @section_type.top_level?.should be_false
     end
 
     it "should allow nested content types" do
       @section_type.has_content :first_name
-      @section_type.content_types.size.should == 1
-      @section_type.content_types.first.should be_a ContentType
-      @section_type.content_types.first.name.should == :first_name
+      @section_type.children.size.should == 1
+      @section_type.children.first.should be_a ContentType
+      @section_type.children.first.name.should == :first_name
     end
 
     it "should assign a start dictionary" do
@@ -36,10 +42,13 @@ module Redex
       @section_type.end_dictionary.name.should == "cast"
     end
 
-    it "should contain types of content" do
+    it "should contain section types and content types" do
       @section_type.has_content :address, :dictionary => :addresses
       @section_type.has_content :phone_number, :dictionary => :phone_numbers
-      @section_type.content_types.size.should == 2
+      @section_type.has_section :phone_number, :dictionary => :phone_numbers
+      @section_type.children.size.should == 3
+      @section_type.children.first.should be_a ContentType
+      @section_type.children.last.should be_a SectionType
     end
   end
 end
