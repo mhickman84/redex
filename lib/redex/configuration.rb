@@ -8,8 +8,6 @@ module Redex
 
 #   Path where dictionaries are located
     define_setting :load_path, :default => []
-#   Path where documents are located
-    define_setting :search_path, :default => []
 #   Path where new dictionary files are written
     define_setting :write_path
 #   Global hash of user-defined document types

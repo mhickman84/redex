@@ -48,11 +48,11 @@ module Redex
 
       module Import
 #       Load document(s) from file into Redis
-        def import(thing)
+        def import(thing, options={})
           if File.directory? thing
-            add_directory(thing)
-          elsif File.file?(thing)
-            add_file thing
+            add_directory thing, options
+          elsif File.file? thing
+            add_file thing, options
           else
             raise "#{thing} must be a valid file or directory"
           end
@@ -60,25 +60,26 @@ module Redex
 
         private
 #       Adds files in supplied directory to Redis
-        def add_directory(directory)
-          objects = []
+        def add_directory(directory, options={})
+          docs = []
           Dir.foreach(directory) do |file|
             file_path = File.join(File.expand_path(directory), file)
-            objects << add_file(file_path) unless File.directory? file_path
+            docs << add_file(file_path, options) unless File.directory? file_path
           end
-          objects
+          docs
         end
 
 #       Adds file to Redis (as a list)
-        def add_file(path_to_file, name=nil)
-          name ||= File.basename(path_to_file, ".txt")
-          collection = new(name)
-          collection.update do |d|
+        def add_file(path_to_file, options={})
+          name = options[:name] || File.basename(path_to_file)
+          redis_collection = new(name)
+          redis_collection.update do |d|
             IO.foreach path_to_file do |line|
               d << line
             end
           end
-          collection
+          redis_collection.type = options[:type] if options[:type]
+          redis_collection
         end
       end
     end

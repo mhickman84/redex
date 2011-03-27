@@ -3,7 +3,7 @@ require File.expand_path('../spec_helper', File.dirname(__FILE__))
 module Redex
   describe Match do
     before :each do
-      dictionary_path = File.expand_path("spec/dictionary_files/cast.txt")
+      dictionary_path = File.expand_path("spec/dictionary_files/cast")
       doc_path = File.expand_path("spec/document_files/episodes.txt")
       @dict = Dictionary.import(dictionary_path)
       @doc = Document.import(doc_path)
@@ -27,7 +27,7 @@ module Redex
 
     it "should reference a document" do
       @match.document.should be_a Document
-      @match.document.name.should == "episodes"
+      @match.document.name.should == "episodes.txt"
     end
 
     it "should increment the score of a dictionary item when created" do

@@ -4,7 +4,7 @@ module Redex
   describe DictionaryItem do
 
     before :each do
-      file_path = File.expand_path("spec/dictionary_files/cast.txt")
+      file_path = File.expand_path("spec/dictionary_files/cast")
       @dict = Dictionary.import(file_path)
       @item = DictionaryItem.new(@dict, "Frank")
       @item_2 = DictionaryItem.new(@dict, "Mac")

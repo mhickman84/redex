@@ -17,7 +17,7 @@ module Redex
     attr_reader :name
 
 #   Type of document
-    
+    attr_accessor :type
 
 #   Hash containing parsed sections of a document
     attr_accessor :sections
@@ -86,7 +86,6 @@ module Redex
     def ==(other)
       self.name == other.name
     end
-
 
     private
     def add_line(line)

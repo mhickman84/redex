@@ -51,7 +51,7 @@ module Redex
     it "should add all lines in a file when given a file path" do
       file_path = File.expand_path("spec/document_files/test.txt")
       Document.import(file_path)
-      lines = Document.new("test").lines
+      lines = Document.new("test.txt").lines
       puts "LINES: #{lines.inspect}"
       lines.size.should == 3
       lines[0].value.should == "First line of file\n"
@@ -63,8 +63,8 @@ module Redex
       directory = File.expand_path("spec/document_files")
       puts directory
       Document.import(directory)
-      file_lines = Document.new("test").lines
-      file_2_lines = Document.new("test2").lines
+      file_lines = Document.new("test.txt").lines
+      file_2_lines = Document.new("test2.txt").lines
       file_lines.size.should == 3
       file_2_lines.size.should == 5
       file_lines[0].value.should == "First line of file\n"
@@ -82,7 +82,7 @@ module Redex
     end
 
     it "should iterate through lines" do
-      @doc.each { |item| puts "VALUE: #{item.value}"}
+      @doc.each { |item| puts "VALUE: #{item.value}" }
     end
 
     it "should be equal to another dictionary with the same name" do

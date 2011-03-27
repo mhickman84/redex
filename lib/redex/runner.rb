@@ -8,10 +8,25 @@ module Redex
     end
 
     def self.import_documents
-      @documents = Document.import(Redex.configuration.search_path)
+      @documents = []
+      Redex.document_types.each_pair do |key, doc_type|
+        @documents << Document.import(doc_type.load_path, :type => key)
+      end
+      @documents.flatten!
       @documents.each do |doc|
+        puts "DOCUMENTS: #{@documents.inspect}"
         Redex.configuration.documents[doc.name.to_sym] = doc
       end
     end
+
+#   Find matches for the specified document type
+    def self.find_matches(doc_type)
+      @matches = []
+      docs = @documents.select { |doc| doc.type == doc_type }
+      docs.each do |doc|
+        
+      end
+    end
+
   end
 end

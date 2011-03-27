@@ -10,7 +10,7 @@ module Redex
 
     it "should belong to a document" do
       @section.document.should be_a Document
-      @section.document.name.should == "episodes"
+      @section.document.name.should == "episodes.txt"
     end
 
     it "should be a top level section if no parent has been assigned" do

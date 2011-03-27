@@ -10,6 +10,8 @@ module Redex
     attr_reader :section_types
 #   Contents to look for within this document type
     attr_reader :content_types
+#   Path where this type of document is stored
+    attr_accessor :load_path
 
 #   Accepts a unique name
     def initialize(name)
@@ -21,5 +23,6 @@ module Redex
     def self.get(name)
       Redex.document_types[name]
     end
+
   end
 end

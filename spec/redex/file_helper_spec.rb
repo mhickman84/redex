@@ -37,7 +37,7 @@ module Redex::Helper
 
     it "should create a dictionary file from a .csv file" do
       csv = File.expand_path('zeppelin_members.csv', "spec/data")
-      dictionary = FileUtil.generate('zeppelin_members.txt', csv)
+      dictionary = FileUtil.generate('zeppelin_members', csv)
       File.exist?(File.expand_path(dictionary)).should be_true
       IO.readlines(dictionary)[0].chomp.should == 'Robert Plant'
       IO.readlines(dictionary)[3].chomp.should == 'John Paul Jones'

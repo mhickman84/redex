@@ -2,7 +2,7 @@ require File.expand_path('../spec_helper', File.dirname(__FILE__))
 
 module Redex
   describe DocumentType do
-    before(:each) { @doc_type = Redex.define_doctype :letter }
+    before(:each) { @doc_type = Redex.define_doc_type :letter }
 
     it "should be able to add section types" do
       @doc_type.has_section :header

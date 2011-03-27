@@ -28,15 +28,13 @@ describe Redex do
   it "should be configurable" do
     Redex.configure do |config|
       config.load_path = ["/path/to/directory/1", "/path/to/directory/2"]
-      config.search_path = ["/path/to/directory/3", "/path/to/directory/4"]
     end
 
     Redex.configuration.settings[:load_path].should == ["/path/to/directory/1", "/path/to/directory/2"]
-    Redex.configuration.settings[:search_path].should == ["/path/to/directory/3", "/path/to/directory/4"]
   end
 
   it "should add a new document to the global document type hash" do
-    Redex.define_doctype :test_doc
+    Redex.define_doc_type :test_doc
     doc_types = Redex.configuration.document_types
     doc_types.size.should == 1
     test_doc = doc_types[:test_doc]
@@ -45,14 +43,14 @@ describe Redex do
   end
 
   it "should raise an exception if the doc type's name is not unique" do
-    Redex.define_doctype :test_doc
+    Redex.define_doc_type :test_doc
     Redex.configuration.document_types.size.should == 1
     lambda { Redex.define_doctype :test_doc }.should raise_error
     Redex.configuration.document_types.size.should == 1
   end
 
   it "should allow new document types to be defined" do
-    Redex.define_doctype :letter do |d|
+    Redex.define_doc_type :letter do |d|
       d.has_section :return_address do |s|
         s.starts_with :dictionary => :start_return_address
         s.has_content :city, :dictionary => :cities

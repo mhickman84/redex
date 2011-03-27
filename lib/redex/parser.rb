@@ -1,5 +1,8 @@
 module Redex
   class Parser
+#   List of match objects
+    attr_reader :matches
+
 #   Searches a line for dictionary terms
 #   Stops searching once a match is found and returns a match object
 #   Returns nil if no match is found

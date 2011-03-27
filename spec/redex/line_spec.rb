@@ -12,7 +12,7 @@ module Redex
 
     it "should reference a document" do
       @doc_line_2.value.should == "Second line of file\n"
-      @doc_line.document.name.should == "test"
+      @doc_line.document.name.should == "test.txt"
       @doc_line.document.should be_a Document
     end
 

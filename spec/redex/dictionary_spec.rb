@@ -26,7 +26,7 @@ module Redex
     end
 
     it "should add an item for each line in a dictionary file" do
-      file_path = File.expand_path("spec/dictionary_files/cast.txt")
+      file_path = File.expand_path("spec/dictionary_files/cast")
       @dictionary_from_file = Dictionary.import(file_path)
       items = @dictionary_from_file.items
       items.size.should == 5
@@ -35,13 +35,13 @@ module Redex
     end
 
     it "should remove extra white space and newline characters when adding an item" do
-      file_path = File.expand_path("spec/dictionary_files/two.txt")
+      file_path = File.expand_path("spec/dictionary_files/two")
       @two = Dictionary.import(file_path)
       @two.items.should include "one"
     end
 
     it "should ignore empty lines when adding a dictionary file" do
-      file_path = File.expand_path("spec/dictionary_files/two.txt")
+      file_path = File.expand_path("spec/dictionary_files/two")
       dictionary = Dictionary.import(file_path)
       dictionary.items.size.should == 5
     end
@@ -59,6 +59,8 @@ module Redex
       Dictionary.import(directory)
       dictionary_1 = Dictionary.new("cast")
       dictionary_2 = Dictionary.new("two")
+      puts "DICTIONARY 1: #{dictionary_1.items.inspect}"
+      puts "DICTIONARY 2: #{dictionary_2.items.inspect}"
       dictionary_1.items.size.should == 5
       dictionary_2.items.size.should == 5
       dictionary_1.items.should include "Mac"

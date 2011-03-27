@@ -27,7 +27,7 @@ module Redex
     configuration.document_types
   end
 
-  def self.define_doctype(name)
+  def self.define_doc_type(name)
     doc_type = DocumentType.new name
     yield doc_type if block_given?
     if configuration.document_types.keys.include? name
