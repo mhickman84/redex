@@ -4,6 +4,7 @@ module Redex
   describe Document do
     before(:each) do
       @doc = Document.new("some_file")
+      @doc.type = :term_paper
       @other_doc = Document.new("other_file")
 
       @doc << "Random line of text."
@@ -93,6 +94,10 @@ module Redex
       doc_1.should == doc_1
       doc_1.should == doc_3
       doc_1.should_not == doc_2
+    end
+
+    it "should not be flagged as 'parsed' at initialization" do
+      @doc.parsed?.should be_false
     end
 
     after(:each) { Document.db.flushdb }

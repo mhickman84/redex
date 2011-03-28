@@ -7,10 +7,7 @@ module Redex
 
 #   Unique name of the type of document containing the content to be extracted (letter, resume, etc).
     attr_reader :name
-#   Sections to look for within this document type
-    attr_reader :section_types
-#   Contents to look for within this document type
-    attr_reader :content_types
+    
 #   Path where this type of document is stored
     attr_accessor :load_path
 
@@ -25,5 +22,14 @@ module Redex
       Redex.document_types[name]
     end
 
+#   Types of content found in this doc type
+    def content_types
+      self.children.select { |child| child.class == ContentType }
+    end
+
+#   Types of sections found in this doc type
+    def section_types
+      self.children.select { |child| child.class == SectionType }
+    end
   end
 end

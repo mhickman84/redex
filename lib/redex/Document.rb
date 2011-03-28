@@ -19,15 +19,19 @@ module Redex
 #   Type of document
     attr_accessor :type
 
-#   Hash containing parsed sections of a document
-    attr_accessor :sections
+#   Array containing parsed sections of a document
+    attr_reader :sections
 
-#   Hash containing parsed contents of a document
-    attr_accessor :contents
+#   Array containing parsed contents of a document
+    attr_reader :contents
+
+#   Number of lines
+    attr_reader :number_of_lines
 
     def initialize(name)
       @name = name
-      number_of_lines
+      @parsed = false
+      @number_of_lines = Document.db.llen @name
     end
 
 #   Saves a single line or an array of lines to a document (stored in Redis)
@@ -45,7 +49,10 @@ module Redex
 
 #   Retrieves a single document line from Redis and returns a line object
     def line(number)
-      value = Document.db.lindex @name, number - 1
+      value = nil
+      update do
+        value = Document.db.lindex @name, number - 1
+      end
       Line.new self, value, number
     end
 
@@ -54,24 +61,23 @@ module Redex
     def lines(range=nil)
       values = []
       if range
-        values = Document.db.lrange(@name, range.first - 1, range.last - 1)
+        update { values = Document.db.lrange(@name, range.first - 1, range.last - 1) }
       else
-        values = Document.db.lrange(@name, 0, @number_of_lines)
+        update { values = Document.db.lrange(@name, 0, @number_of_lines) }
       end
       values.each_with_index.map { |val, index| Line.new(self, val, index + 1) }
     end
 
 #   Performs an atomic update on a document
     def update
-      Document.db.multi do
-        yield self
-      end
+      yield self
+      @number_of_lines = Document.db.llen @name
     end
 
 #   Take lines from Redis
     def each
       current_line = 1
-      Document.db.multi do
+      update do
         until current_line > @number_of_lines
           index = current_line - 1
           value = Document.db.lrange self.name, index, index
@@ -87,18 +93,30 @@ module Redex
       self.name == other.name
     end
 
+#   Boolean specifying whether parsing has completed for the document
+    def parsed?
+      @parsed
+    end
+
+    def add_section(section)
+      @sections ||= []
+      @sections << DocumentSection.new(self)
+    end
+
+    def add_content(content)
+
+    end
+
     private
     def add_line(line)
-      @number_of_lines = Document.db.rpush @name, line
+      update do
+        Document.db.rpush @name, line
+      end
       self
     end
 
-    def number_of_lines
-      @number_of_lines ||= Document.db.llen @name
-    end
-
     def add_lines(lines)
-      update do |doc|
+      update do
         lines.each do |line|
           add_line line
         end

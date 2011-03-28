@@ -13,6 +13,7 @@ module Redex
     it "should load all dictionary files in the load directory and save them in the config object" do
       Redex.configuration.load_path = File.expand_path "../../spec/dictionary_files/", File.dirname(__FILE__)
       Runner.import_dictionaries
+      puts "DICTIONARIES: #{Redex.configuration.dictionaries.inspect}"
       Redex.configuration.dictionaries.size.should == 4
       Redex.configuration.dictionaries[:cast].should be_a Dictionary
       Redex.configuration.dictionaries[:cast].size.should == 5

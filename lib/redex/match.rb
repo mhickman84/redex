@@ -1,10 +1,19 @@
 module Redex
 # Represents a dictionary match found within a document
   class Match
+
+    FLAGS = [
+      :content,
+      :start_section,
+      :end_section
+    ]
+
 #   Dictionary item that was matched
     attr_reader :dictionary_item
 #   Line that was matched
     attr_reader :line
+#   Flag(s) associated with this match
+    attr_reader :flags
 
     extend Helper::Data
 
@@ -23,6 +32,12 @@ module Redex
 #   Retrieve matched document
     def document
       @line.document
+    end
+
+    def add_flag(flag)
+      raise ArgumentError("Invalid type: #{flag}") unless FLAGS.include?(flag)
+      @flags ||= []
+      @flags << flag unless @flags.include? flag
     end
     
 #   Retrieve content matched

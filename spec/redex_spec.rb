@@ -3,7 +3,6 @@ require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 describe Redex do
   before :each do
     @start_return_address = Redex::Dictionary.new("start_return_address")
-    @start_return_address << [""]
     @cities = Redex::Dictionary.new("cities")
     @states = Redex::Dictionary.new("states")
     @zip_codes = Redex::Dictionary.new("zip_codes")

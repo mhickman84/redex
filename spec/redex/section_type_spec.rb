@@ -2,7 +2,9 @@ require File.expand_path('../spec_helper', File.dirname(__FILE__))
 
 module Redex
   describe SectionType do
+    include RedexHelper
     before :each do
+      add_dictionaries
       @section_type = SectionType.new(:test_section)
     end
 
@@ -31,24 +33,44 @@ module Redex
     end
 
     it "should assign a start dictionary" do
-      @section_type.starts_with :dictionary => :cast
+      @section_type.starts_with :dictionary => :street_addresses
       @section_type.start_dictionary.should be_a Dictionary
-      @section_type.start_dictionary.name.should == "cast"
+      @section_type.start_dictionary.name.should == :street_addresses.to_s
     end
 
     it "should assign a start dictionary" do
-      @section_type.ends_with :dictionary => :cast
+      @section_type.ends_with :dictionary => :cities
       @section_type.end_dictionary.should be_a Dictionary
-      @section_type.end_dictionary.name.should == "cast"
+      @section_type.end_dictionary.name.should == :cities.to_s
     end
 
     it "should contain section types and content types" do
-      @section_type.has_content :address, :dictionary => :addresses
+      @section_type.has_content :street_address, :dictionary => :street_addresses
       @section_type.has_content :phone_number, :dictionary => :phone_numbers
       @section_type.has_section :phone_number, :dictionary => :phone_numbers
       @section_type.children.size.should == 3
       @section_type.children.first.should be_a ContentType
       @section_type.children.last.should be_a SectionType
     end
+
+    it "should assign a start dictionary and content type" do
+      @section_type.starts_with_content :street_address, :dictionary => :street_addresses
+      @section_type.start_dictionary.should be_a Dictionary
+      @section_type.start_dictionary.name.should == :street_addresses.to_s
+      @section_type.children.size.should == 1
+      @section_type.children.first.should be_a ContentType
+      @section_type.children.first.name.should == :street_address
+    end
+
+    it "should assign an end dictionary and content type" do
+      @section_type.ends_with_content :zip_code, :dictionary => :zip_codes
+      @section_type.end_dictionary.should be_a Dictionary
+      @section_type.end_dictionary.name.should == :zip_codes.to_s
+      @section_type.children.size.should == 1
+      @section_type.children.first.should be_a ContentType
+      @section_type.children.first.name.should == :zip_code
+    end
+
+    after(:each) { remove_dictionaries }
   end
 end

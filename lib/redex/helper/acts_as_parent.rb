@@ -1,11 +1,11 @@
 module Redex
   module Helper
     module ActsAsParent
-#     Set children
-      def children=(children)
-        @children = children
+#     Add child
+      def add_child(child)
+        @children ||= []
+        @children << child
       end
-
 #     Get children
       def children
         @children

@@ -34,6 +34,24 @@ module Redex
       @dict.first.score.should == 1
     end
 
+    it "should be able to add multiple flags" do
+      @match.add_flag :content
+      @match.add_flag :end_section
+      @match.flags.size.should == 2
+      @match.flags.should include :content, :end_section
+    end
+
+    it "should not be able to add duplicate flags" do
+      @match.add_flag :content
+      @match.add_flag :content
+      @match.flags.size.should == 1
+      @match.flags.first.should == :content
+    end
+
+    it "should raise an error for invalid flags" do
+      lambda { @match.add_flag :invalid_flag }.should raise_error
+    end
+
     after(:each) { Redex.db.flushdb }
   end
 end
