@@ -17,8 +17,8 @@ module Redex
 
     it "should add a dictionary item prefixed with 'dict'" do
       @dictionary_1.items.size.should == 2
-      @dictionary_1.items[0].should == "item"
-      @dictionary_1.items[1].should == "other_item"
+      @dictionary_1.items[0].value.should == "item"
+      @dictionary_1.items[1].value.should == "other_item"
     end
 
     it "should set the score to 0 for new items" do
@@ -30,14 +30,16 @@ module Redex
       @dictionary_from_file = Dictionary.import(file_path)
       items = @dictionary_from_file.items
       items.size.should == 5
-      items.should include "Charlie"
-      items.should include "Mac"
+      item_values = items.map { |item| item.value }
+      item_values.should include "Charlie"
+      item_values.should include "Mac"
     end
 
     it "should remove extra white space and newline characters when adding an item" do
       file_path = File.expand_path("spec/dictionary_files/two")
       @two = Dictionary.import(file_path)
-      @two.items.should include "one"
+      values = @two.items.map { |item| item.value }
+      values.should include "one"
     end
 
     it "should ignore empty lines when adding a dictionary file" do
@@ -59,12 +61,14 @@ module Redex
       Dictionary.import(directory)
       dictionary_1 = Dictionary.new("cast")
       dictionary_2 = Dictionary.new("two")
-      puts "DICTIONARY 1: #{dictionary_1.items.inspect}"
-      puts "DICTIONARY 2: #{dictionary_2.items.inspect}"
+
+      dictionary_1_values = dictionary_1.items.map { |item| item.value }
+      dictionary_2_values = dictionary_2.items.map { |item| item.value }
       dictionary_1.items.size.should == 5
       dictionary_2.items.size.should == 5
-      dictionary_1.items.should include "Mac"
-      dictionary_2.items.should include "five"
+
+      dictionary_1_values.should include "Mac"
+      dictionary_2_values.should include "five"
     end
 
     it "should return the number of items in the dictionary" do
@@ -99,6 +103,12 @@ module Redex
       Redex.configuration.dictionaries[:cast] = Dictionary.new("cast")
       Dictionary.get(:cast).should be_a Dictionary
       Dictionary.get(:cast).name.should == "cast"
+    end
+
+    it "should return individual dictionary items by index" do
+      @dictionary_1[0].should be_a DictionaryItem
+      @dictionary_1[0].value.should == "item"
+      @dictionary_1[1].value.should == "other_item"
     end
 
     after :each do

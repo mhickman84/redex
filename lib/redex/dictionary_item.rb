@@ -5,7 +5,7 @@ module Redex
 #   Value of dictionary item (string)
     attr_reader :value
 
-#   Accepts a dictionary object or a dictionary
+#   Accepts a dictionary object or name
     def initialize(dictionary, value)
       @key = dictionary.name || dictionary
       @value = value
@@ -33,7 +33,8 @@ module Redex
 
 #   Convert value to regex and return the first capture
     def match(line)
-      self.to_regexp.match(line.value).to_s
+      regex = self.to_regexp
+      regex.match(line.value)
     end
 
 #   Return true (match found) or false (no match found)

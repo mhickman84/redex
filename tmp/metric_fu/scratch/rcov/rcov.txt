@@ -1,0 +1,1531 @@
+** WARNING: Ruby 1.9 Support is experimental at best. Don't expect correct results! **
+.....FFFFFFFFFFFFFFFFFFFFFF..FFFFFFFFFFFFFFF.......Created file sample.txt in /Users/mhickman84/dev/redex/redex/spec/dictionary_files
+.Created file sample.txt in /Users/mhickman84/dev/redex/redex/spec/dictionary_files
+.Created file sample.txt in /Users/mhickman84/dev/redex/redex/spec/dictionary_files
+Created file sample in /Users/mhickman84/dev/redex/redex/spec/dictionary_files
+.Created file sample.txt in /Users/mhickman84/dev/redex/redex/spec/dictionary_files
+Created file sample in /Users/mhickman84/dev/redex/redex/spec/dictionary_files
+.Created file sample.txt in /Users/mhickman84/dev/redex/redex/spec/dictionary_files
+Created file zeppelin_members in /Users/mhickman84/dev/redex/redex/spec/dictionary_files
+.Created file sample.txt in /Users/mhickman84/dev/redex/redex/spec/dictionary_files
+Created file sample in /Users/mhickman84/dev/redex/redex/spec/dictionary_files
+.Created file sample.txt in /Users/mhickman84/dev/redex/redex/spec/dictionary_files
+.FFFFFFFFFFFFF*FFFFFFFFFFFFFFFFFFF
+
+Pending:
+  Redex::Parser should parse a single content item
+    # Not Yet Implemented
+    # spec/redex/parser_spec.rb:49
+
+Failures:
+
+  1) Redex::DictionaryItem should access an item from a dictionary
+     Failure/Error: @dict = Dictionary.import(file_path)
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/dictionary.rb:53:in `update'
+     # ./lib/redex/helper/file_util.rb:76:in `add_file'
+     # ./lib/redex/helper/file_util.rb:55:in `import'
+     # spec/redex/dictionary_item_spec.rb:8:in `block (2 levels) in <module:Redex>'
+
+  2) Redex::DictionaryItem should increment items by 1
+     Failure/Error: @dict = Dictionary.import(file_path)
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/dictionary.rb:53:in `update'
+     # ./lib/redex/helper/file_util.rb:76:in `add_file'
+     # ./lib/redex/helper/file_util.rb:55:in `import'
+     # spec/redex/dictionary_item_spec.rb:8:in `block (2 levels) in <module:Redex>'
+
+  3) Redex::DictionaryItem should be comparable based on the score
+     Failure/Error: @dict = Dictionary.import(file_path)
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/dictionary.rb:53:in `update'
+     # ./lib/redex/helper/file_util.rb:76:in `add_file'
+     # ./lib/redex/helper/file_util.rb:55:in `import'
+     # spec/redex/dictionary_item_spec.rb:8:in `block (2 levels) in <module:Redex>'
+
+  4) Redex::DictionaryItem should return a regular expression
+     Failure/Error: @dict = Dictionary.import(file_path)
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/dictionary.rb:53:in `update'
+     # ./lib/redex/helper/file_util.rb:76:in `add_file'
+     # ./lib/redex/helper/file_util.rb:55:in `import'
+     # spec/redex/dictionary_item_spec.rb:8:in `block (2 levels) in <module:Redex>'
+
+  5) Redex::DictionaryItem should return the string matched within the line
+     Failure/Error: @dict = Dictionary.import(file_path)
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/dictionary.rb:53:in `update'
+     # ./lib/redex/helper/file_util.rb:76:in `add_file'
+     # ./lib/redex/helper/file_util.rb:55:in `import'
+     # spec/redex/dictionary_item_spec.rb:8:in `block (2 levels) in <module:Redex>'
+
+  6) Redex::DictionaryItem should return false if no match is found
+     Failure/Error: @dict = Dictionary.import(file_path)
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/dictionary.rb:53:in `update'
+     # ./lib/redex/helper/file_util.rb:76:in `add_file'
+     # ./lib/redex/helper/file_util.rb:55:in `import'
+     # spec/redex/dictionary_item_spec.rb:8:in `block (2 levels) in <module:Redex>'
+
+  7) Redex::DictionaryItem should return the index of the item
+     Failure/Error: @dict = Dictionary.import(file_path)
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/dictionary.rb:53:in `update'
+     # ./lib/redex/helper/file_util.rb:76:in `add_file'
+     # ./lib/redex/helper/file_util.rb:55:in `import'
+     # spec/redex/dictionary_item_spec.rb:8:in `block (2 levels) in <module:Redex>'
+
+  8) Redex::DictionaryItem should return true if a match is found
+     Failure/Error: @dict = Dictionary.import(file_path)
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/dictionary.rb:53:in `update'
+     # ./lib/redex/helper/file_util.rb:76:in `add_file'
+     # ./lib/redex/helper/file_util.rb:55:in `import'
+     # spec/redex/dictionary_item_spec.rb:8:in `block (2 levels) in <module:Redex>'
+
+  9) Redex::Dictionary should connect to a redis instance
+     Failure/Error: @dictionary_1 << "item"
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/dictionary.rb:78:in `add_item'
+     # ./lib/redex/dictionary.rb:31:in `<<'
+     # spec/redex/dictionary_spec.rb:8:in `block (2 levels) in <module:Redex>'
+
+  10) Redex::Dictionary should add a dictionary item prefixed with 'dict'
+     Failure/Error: @dictionary_1 << "item"
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/dictionary.rb:78:in `add_item'
+     # ./lib/redex/dictionary.rb:31:in `<<'
+     # spec/redex/dictionary_spec.rb:8:in `block (2 levels) in <module:Redex>'
+
+  11) Redex::Dictionary should set the score to 0 for new items
+     Failure/Error: @dictionary_1 << "item"
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/dictionary.rb:78:in `add_item'
+     # ./lib/redex/dictionary.rb:31:in `<<'
+     # spec/redex/dictionary_spec.rb:8:in `block (2 levels) in <module:Redex>'
+
+  12) Redex::Dictionary should add an item for each line in a dictionary file
+     Failure/Error: @dictionary_1 << "item"
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/dictionary.rb:78:in `add_item'
+     # ./lib/redex/dictionary.rb:31:in `<<'
+     # spec/redex/dictionary_spec.rb:8:in `block (2 levels) in <module:Redex>'
+
+  13) Redex::Dictionary should remove extra white space and newline characters when adding an item
+     Failure/Error: @dictionary_1 << "item"
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/dictionary.rb:78:in `add_item'
+     # ./lib/redex/dictionary.rb:31:in `<<'
+     # spec/redex/dictionary_spec.rb:8:in `block (2 levels) in <module:Redex>'
+
+  14) Redex::Dictionary should ignore empty lines when adding a dictionary file
+     Failure/Error: @dictionary_1 << "item"
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/dictionary.rb:78:in `add_item'
+     # ./lib/redex/dictionary.rb:31:in `<<'
+     # spec/redex/dictionary_spec.rb:8:in `block (2 levels) in <module:Redex>'
+
+  15) Redex::Dictionary should delete all items from the database
+     Failure/Error: @dictionary_1 << "item"
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/dictionary.rb:78:in `add_item'
+     # ./lib/redex/dictionary.rb:31:in `<<'
+     # spec/redex/dictionary_spec.rb:8:in `block (2 levels) in <module:Redex>'
+
+  16) Redex::Dictionary should add all files in a directory when given a directory
+     Failure/Error: @dictionary_1 << "item"
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/dictionary.rb:78:in `add_item'
+     # ./lib/redex/dictionary.rb:31:in `<<'
+     # spec/redex/dictionary_spec.rb:8:in `block (2 levels) in <module:Redex>'
+
+  17) Redex::Dictionary should return the number of items in the dictionary
+     Failure/Error: @dictionary_1 << "item"
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/dictionary.rb:78:in `add_item'
+     # ./lib/redex/dictionary.rb:31:in `<<'
+     # spec/redex/dictionary_spec.rb:8:in `block (2 levels) in <module:Redex>'
+
+  18) Redex::Dictionary should iterate through dictionary items
+     Failure/Error: @dictionary_1 << "item"
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/dictionary.rb:78:in `add_item'
+     # ./lib/redex/dictionary.rb:31:in `<<'
+     # spec/redex/dictionary_spec.rb:8:in `block (2 levels) in <module:Redex>'
+
+  19) Redex::Dictionary should be enumerable
+     Failure/Error: @dictionary_1 << "item"
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/dictionary.rb:78:in `add_item'
+     # ./lib/redex/dictionary.rb:31:in `<<'
+     # spec/redex/dictionary_spec.rb:8:in `block (2 levels) in <module:Redex>'
+
+  20) Redex::Dictionary should raise an error if the item passed is not a string or array
+     Failure/Error: @dictionary_1 << "item"
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/dictionary.rb:78:in `add_item'
+     # ./lib/redex/dictionary.rb:31:in `<<'
+     # spec/redex/dictionary_spec.rb:8:in `block (2 levels) in <module:Redex>'
+
+  21) Redex::Dictionary should be equal to another dictionary with the same name
+     Failure/Error: @dictionary_1 << "item"
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/dictionary.rb:78:in `add_item'
+     # ./lib/redex/dictionary.rb:31:in `<<'
+     # spec/redex/dictionary_spec.rb:8:in `block (2 levels) in <module:Redex>'
+
+  22) Redex::Dictionary should retrieve a dictionary from the configuration object by name
+     Failure/Error: @dictionary_1 << "item"
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/dictionary.rb:78:in `add_item'
+     # ./lib/redex/dictionary.rb:31:in `<<'
+     # spec/redex/dictionary_spec.rb:8:in `block (2 levels) in <module:Redex>'
+
+  23) Redex::DocumentSection should belong to a document
+     Failure/Error: @doc = Document.import(file_path)
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/document.rb:34:in `initialize'
+     # ./lib/redex/helper/file_util.rb:75:in `new'
+     # ./lib/redex/helper/file_util.rb:75:in `add_file'
+     # ./lib/redex/helper/file_util.rb:55:in `import'
+     # spec/redex/document_section_spec.rb:7:in `block (2 levels) in <module:Redex>'
+
+  24) Redex::DocumentSection should be a top level section if no parent has been assigned
+     Failure/Error: @doc = Document.import(file_path)
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/document.rb:34:in `initialize'
+     # ./lib/redex/helper/file_util.rb:75:in `new'
+     # ./lib/redex/helper/file_util.rb:75:in `add_file'
+     # ./lib/redex/helper/file_util.rb:55:in `import'
+     # spec/redex/document_section_spec.rb:7:in `block (2 levels) in <module:Redex>'
+
+  25) Redex::DocumentSection should reference lines from the parent document
+     Failure/Error: @doc = Document.import(file_path)
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/document.rb:34:in `initialize'
+     # ./lib/redex/helper/file_util.rb:75:in `new'
+     # ./lib/redex/helper/file_util.rb:75:in `add_file'
+     # ./lib/redex/helper/file_util.rb:55:in `import'
+     # spec/redex/document_section_spec.rb:7:in `block (2 levels) in <module:Redex>'
+
+  26) Redex::Document should connect to a redis instance
+     Failure/Error: @doc = Document.new("some_file")
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/document.rb:34:in `initialize'
+     # spec/redex/document_spec.rb:6:in `new'
+     # spec/redex/document_spec.rb:6:in `block (2 levels) in <module:Redex>'
+
+  27) Redex::Document should add a line of text to redis prefixed with 'file'
+     Failure/Error: @doc = Document.new("some_file")
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/document.rb:34:in `initialize'
+     # spec/redex/document_spec.rb:6:in `new'
+     # spec/redex/document_spec.rb:6:in `block (2 levels) in <module:Redex>'
+
+  28) Redex::Document should return a line of text when given a line number
+     Failure/Error: @doc = Document.new("some_file")
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/document.rb:34:in `initialize'
+     # spec/redex/document_spec.rb:6:in `new'
+     # spec/redex/document_spec.rb:6:in `block (2 levels) in <module:Redex>'
+
+  29) Redex::Document should return all lines of text for a file when range is omitted
+     Failure/Error: @doc = Document.new("some_file")
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/document.rb:34:in `initialize'
+     # spec/redex/document_spec.rb:6:in `new'
+     # spec/redex/document_spec.rb:6:in `block (2 levels) in <module:Redex>'
+
+  30) Redex::Document should return multiple lines of text when given a file name and a range
+     Failure/Error: @doc = Document.new("some_file")
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/document.rb:34:in `initialize'
+     # spec/redex/document_spec.rb:6:in `new'
+     # spec/redex/document_spec.rb:6:in `block (2 levels) in <module:Redex>'
+
+  31) Redex::Document should add an array of strings
+     Failure/Error: @doc = Document.new("some_file")
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/document.rb:34:in `initialize'
+     # spec/redex/document_spec.rb:6:in `new'
+     # spec/redex/document_spec.rb:6:in `block (2 levels) in <module:Redex>'
+
+  32) Redex::Document should add all lines in a file when given a file path
+     Failure/Error: @doc = Document.new("some_file")
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/document.rb:34:in `initialize'
+     # spec/redex/document_spec.rb:6:in `new'
+     # spec/redex/document_spec.rb:6:in `block (2 levels) in <module:Redex>'
+
+  33) Redex::Document should add all files in a directory when given a directory
+     Failure/Error: @doc = Document.new("some_file")
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/document.rb:34:in `initialize'
+     # spec/redex/document_spec.rb:6:in `new'
+     # spec/redex/document_spec.rb:6:in `block (2 levels) in <module:Redex>'
+
+  34) Redex::Document should delete all files from the database
+     Failure/Error: @doc = Document.new("some_file")
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/document.rb:34:in `initialize'
+     # spec/redex/document_spec.rb:6:in `new'
+     # spec/redex/document_spec.rb:6:in `block (2 levels) in <module:Redex>'
+
+  35) Redex::Document should iterate through lines
+     Failure/Error: @doc = Document.new("some_file")
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/document.rb:34:in `initialize'
+     # spec/redex/document_spec.rb:6:in `new'
+     # spec/redex/document_spec.rb:6:in `block (2 levels) in <module:Redex>'
+
+  36) Redex::Document should be equal to another dictionary with the same name
+     Failure/Error: @doc = Document.new("some_file")
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/document.rb:34:in `initialize'
+     # spec/redex/document_spec.rb:6:in `new'
+     # spec/redex/document_spec.rb:6:in `block (2 levels) in <module:Redex>'
+
+  37) Redex::Document should not be flagged as 'parsed' at initialization
+     Failure/Error: @doc = Document.new("some_file")
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/document.rb:34:in `initialize'
+     # spec/redex/document_spec.rb:6:in `new'
+     # spec/redex/document_spec.rb:6:in `block (2 levels) in <module:Redex>'
+
+  38) Redex::Line should reference a document
+     Failure/Error: @doc = Document.import(file_path)
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/document.rb:34:in `initialize'
+     # ./lib/redex/helper/file_util.rb:75:in `new'
+     # ./lib/redex/helper/file_util.rb:75:in `add_file'
+     # ./lib/redex/helper/file_util.rb:55:in `import'
+     # spec/redex/line_spec.rb:8:in `block (2 levels) in <module:Redex>'
+
+  39) Redex::Line should be comparable based on the line number (index in redis)
+     Failure/Error: @doc = Document.import(file_path)
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/document.rb:34:in `initialize'
+     # ./lib/redex/helper/file_util.rb:75:in `new'
+     # ./lib/redex/helper/file_util.rb:75:in `add_file'
+     # ./lib/redex/helper/file_util.rb:55:in `import'
+     # spec/redex/line_spec.rb:8:in `block (2 levels) in <module:Redex>'
+
+  40) Redex::Match should be associated with a line and a dictionary item
+     Failure/Error: @dict = Dictionary.import(dictionary_path)
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/dictionary.rb:53:in `update'
+     # ./lib/redex/helper/file_util.rb:76:in `add_file'
+     # ./lib/redex/helper/file_util.rb:55:in `import'
+     # spec/redex/match_spec.rb:8:in `block (2 levels) in <module:Redex>'
+
+  41) Redex::Match should contain a string containing the matched content
+     Failure/Error: @dict = Dictionary.import(dictionary_path)
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/dictionary.rb:53:in `update'
+     # ./lib/redex/helper/file_util.rb:76:in `add_file'
+     # ./lib/redex/helper/file_util.rb:55:in `import'
+     # spec/redex/match_spec.rb:8:in `block (2 levels) in <module:Redex>'
+
+  42) Redex::Match should reference a dictionary
+     Failure/Error: @dict = Dictionary.import(dictionary_path)
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/dictionary.rb:53:in `update'
+     # ./lib/redex/helper/file_util.rb:76:in `add_file'
+     # ./lib/redex/helper/file_util.rb:55:in `import'
+     # spec/redex/match_spec.rb:8:in `block (2 levels) in <module:Redex>'
+
+  43) Redex::Match should reference a document
+     Failure/Error: @dict = Dictionary.import(dictionary_path)
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/dictionary.rb:53:in `update'
+     # ./lib/redex/helper/file_util.rb:76:in `add_file'
+     # ./lib/redex/helper/file_util.rb:55:in `import'
+     # spec/redex/match_spec.rb:8:in `block (2 levels) in <module:Redex>'
+
+  44) Redex::Match should increment the score of a dictionary item when created
+     Failure/Error: @dict = Dictionary.import(dictionary_path)
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/dictionary.rb:53:in `update'
+     # ./lib/redex/helper/file_util.rb:76:in `add_file'
+     # ./lib/redex/helper/file_util.rb:55:in `import'
+     # spec/redex/match_spec.rb:8:in `block (2 levels) in <module:Redex>'
+
+  45) Redex::Match should be able to add multiple flags
+     Failure/Error: @dict = Dictionary.import(dictionary_path)
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/dictionary.rb:53:in `update'
+     # ./lib/redex/helper/file_util.rb:76:in `add_file'
+     # ./lib/redex/helper/file_util.rb:55:in `import'
+     # spec/redex/match_spec.rb:8:in `block (2 levels) in <module:Redex>'
+
+  46) Redex::Match should not be able to add duplicate flags
+     Failure/Error: @dict = Dictionary.import(dictionary_path)
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/dictionary.rb:53:in `update'
+     # ./lib/redex/helper/file_util.rb:76:in `add_file'
+     # ./lib/redex/helper/file_util.rb:55:in `import'
+     # spec/redex/match_spec.rb:8:in `block (2 levels) in <module:Redex>'
+
+  47) Redex::Match should raise an error for invalid flags
+     Failure/Error: @dict = Dictionary.import(dictionary_path)
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/dictionary.rb:53:in `update'
+     # ./lib/redex/helper/file_util.rb:76:in `add_file'
+     # ./lib/redex/helper/file_util.rb:55:in `import'
+     # spec/redex/match_spec.rb:8:in `block (2 levels) in <module:Redex>'
+
+  48) Redex::Parser should create a match object when given a dictionary and a line containing a match
+     Failure/Error: add_dictionaries
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/dictionary.rb:53:in `update'
+     # ./lib/redex/dictionary.rb:82:in `add_items'
+     # ./lib/redex/dictionary.rb:33:in `<<'
+     # ./spec/support/redex_helper.rb:10:in `add_dictionaries'
+     # spec/redex/parser_spec.rb:7:in `block (2 levels) in <module:Redex>'
+
+  49) Redex::Parser should return nil when given a dictionary and a line that doesn't contain a match
+     Failure/Error: add_dictionaries
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/dictionary.rb:53:in `update'
+     # ./lib/redex/dictionary.rb:82:in `add_items'
+     # ./lib/redex/dictionary.rb:33:in `<<'
+     # ./spec/support/redex_helper.rb:10:in `add_dictionaries'
+     # spec/redex/parser_spec.rb:7:in `block (2 levels) in <module:Redex>'
+
+  50) Redex::Parser should find matches within a document for a section type
+     Failure/Error: add_dictionaries
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/dictionary.rb:53:in `update'
+     # ./lib/redex/dictionary.rb:82:in `add_items'
+     # ./lib/redex/dictionary.rb:33:in `<<'
+     # ./spec/support/redex_helper.rb:10:in `add_dictionaries'
+     # spec/redex/parser_spec.rb:7:in `block (2 levels) in <module:Redex>'
+
+  51) Redex::Parser should parse the outer sections of a document
+     Failure/Error: add_dictionaries
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/dictionary.rb:53:in `update'
+     # ./lib/redex/dictionary.rb:82:in `add_items'
+     # ./lib/redex/dictionary.rb:33:in `<<'
+     # ./spec/support/redex_helper.rb:10:in `add_dictionaries'
+     # spec/redex/parser_spec.rb:7:in `block (2 levels) in <module:Redex>'
+
+  52) Redex::Parser should parse the outer contents of a document
+     Failure/Error: add_dictionaries
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/dictionary.rb:53:in `update'
+     # ./lib/redex/dictionary.rb:82:in `add_items'
+     # ./lib/redex/dictionary.rb:33:in `<<'
+     # ./spec/support/redex_helper.rb:10:in `add_dictionaries'
+     # spec/redex/parser_spec.rb:7:in `block (2 levels) in <module:Redex>'
+
+  53) Redex::Runner should load all dictionary files in the load directory and save them in the config object
+     Failure/Error: Runner.import_documents
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/document.rb:34:in `initialize'
+     # ./lib/redex/helper/file_util.rb:75:in `new'
+     # ./lib/redex/helper/file_util.rb:75:in `add_file'
+     # ./lib/redex/helper/file_util.rb:67:in `block in add_directory'
+     # ./lib/redex/helper/file_util.rb:65:in `foreach'
+     # ./lib/redex/helper/file_util.rb:65:in `add_directory'
+     # ./lib/redex/helper/file_util.rb:53:in `import'
+     # ./lib/redex/runner.rb:13:in `block in import_documents'
+     # ./lib/redex/runner.rb:12:in `each_pair'
+     # ./lib/redex/runner.rb:12:in `import_documents'
+     # spec/redex/runner_spec.rb:10:in `block (2 levels) in <module:Redex>'
+
+  54) Redex::Runner should load all document files of each type
+     Failure/Error: Runner.import_documents
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/document.rb:34:in `initialize'
+     # ./lib/redex/helper/file_util.rb:75:in `new'
+     # ./lib/redex/helper/file_util.rb:75:in `add_file'
+     # ./lib/redex/helper/file_util.rb:67:in `block in add_directory'
+     # ./lib/redex/helper/file_util.rb:65:in `foreach'
+     # ./lib/redex/helper/file_util.rb:65:in `add_directory'
+     # ./lib/redex/helper/file_util.rb:53:in `import'
+     # ./lib/redex/runner.rb:13:in `block in import_documents'
+     # ./lib/redex/runner.rb:12:in `each_pair'
+     # ./lib/redex/runner.rb:12:in `import_documents'
+     # spec/redex/runner_spec.rb:10:in `block (2 levels) in <module:Redex>'
+
+  55) Redex::SectionType should have a name
+     Failure/Error: add_dictionaries
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/dictionary.rb:53:in `update'
+     # ./lib/redex/dictionary.rb:82:in `add_items'
+     # ./lib/redex/dictionary.rb:33:in `<<'
+     # ./spec/support/redex_helper.rb:10:in `add_dictionaries'
+     # spec/redex/section_type_spec.rb:7:in `block (2 levels) in <module:Redex>'
+
+  56) Redex::SectionType should allow nested section types
+     Failure/Error: add_dictionaries
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/dictionary.rb:53:in `update'
+     # ./lib/redex/dictionary.rb:82:in `add_items'
+     # ./lib/redex/dictionary.rb:33:in `<<'
+     # ./spec/support/redex_helper.rb:10:in `add_dictionaries'
+     # spec/redex/section_type_spec.rb:7:in `block (2 levels) in <module:Redex>'
+
+  57) Redex::SectionType should be a top level section type if it has no parent types
+     Failure/Error: add_dictionaries
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/dictionary.rb:53:in `update'
+     # ./lib/redex/dictionary.rb:82:in `add_items'
+     # ./lib/redex/dictionary.rb:33:in `<<'
+     # ./spec/support/redex_helper.rb:10:in `add_dictionaries'
+     # spec/redex/section_type_spec.rb:7:in `block (2 levels) in <module:Redex>'
+
+  58) Redex::SectionType should allow nested content types
+     Failure/Error: add_dictionaries
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/dictionary.rb:53:in `update'
+     # ./lib/redex/dictionary.rb:82:in `add_items'
+     # ./lib/redex/dictionary.rb:33:in `<<'
+     # ./spec/support/redex_helper.rb:10:in `add_dictionaries'
+     # spec/redex/section_type_spec.rb:7:in `block (2 levels) in <module:Redex>'
+
+  59) Redex::SectionType should assign a start dictionary
+     Failure/Error: add_dictionaries
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/dictionary.rb:53:in `update'
+     # ./lib/redex/dictionary.rb:82:in `add_items'
+     # ./lib/redex/dictionary.rb:33:in `<<'
+     # ./spec/support/redex_helper.rb:10:in `add_dictionaries'
+     # spec/redex/section_type_spec.rb:7:in `block (2 levels) in <module:Redex>'
+
+  60) Redex::SectionType should assign a start dictionary
+     Failure/Error: add_dictionaries
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/dictionary.rb:53:in `update'
+     # ./lib/redex/dictionary.rb:82:in `add_items'
+     # ./lib/redex/dictionary.rb:33:in `<<'
+     # ./spec/support/redex_helper.rb:10:in `add_dictionaries'
+     # spec/redex/section_type_spec.rb:7:in `block (2 levels) in <module:Redex>'
+
+  61) Redex::SectionType should contain section types and content types
+     Failure/Error: add_dictionaries
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/dictionary.rb:53:in `update'
+     # ./lib/redex/dictionary.rb:82:in `add_items'
+     # ./lib/redex/dictionary.rb:33:in `<<'
+     # ./spec/support/redex_helper.rb:10:in `add_dictionaries'
+     # spec/redex/section_type_spec.rb:7:in `block (2 levels) in <module:Redex>'
+
+  62) Redex::SectionType should assign a start dictionary and content type
+     Failure/Error: add_dictionaries
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/dictionary.rb:53:in `update'
+     # ./lib/redex/dictionary.rb:82:in `add_items'
+     # ./lib/redex/dictionary.rb:33:in `<<'
+     # ./spec/support/redex_helper.rb:10:in `add_dictionaries'
+     # spec/redex/section_type_spec.rb:7:in `block (2 levels) in <module:Redex>'
+
+  63) Redex::SectionType should assign an end dictionary and content type
+     Failure/Error: add_dictionaries
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # ./lib/redex/dictionary.rb:53:in `update'
+     # ./lib/redex/dictionary.rb:82:in `add_items'
+     # ./lib/redex/dictionary.rb:33:in `<<'
+     # ./spec/support/redex_helper.rb:10:in `add_dictionaries'
+     # spec/redex/section_type_spec.rb:7:in `block (2 levels) in <module:Redex>'
+
+  64) Redex should connect to a redis instance
+     Failure/Error: Redex.db.info.should include "redis_version"
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # spec/redex_spec.rb:24:in `block (2 levels) in <top (required)>'
+
+  65) Redex should be configurable
+     Failure/Error: Redex.db.flushdb
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # spec/redex_spec.rb:82:in `block (2 levels) in <top (required)>'
+
+  66) Redex should add a new document to the global document type hash
+     Failure/Error: Redex.db.flushdb
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # spec/redex_spec.rb:82:in `block (2 levels) in <top (required)>'
+
+  67) Redex should raise an exception if the doc type's name is not unique
+     Failure/Error: Redex.db.flushdb
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # spec/redex_spec.rb:82:in `block (2 levels) in <top (required)>'
+
+  68) Redex should allow new document types to be defined
+     Failure/Error: Redex.db.flushdb
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # spec/redex_spec.rb:82:in `block (2 levels) in <top (required)>'
+
+  69) Redex should have a list of defined document types
+     Failure/Error: Redex.db.flushdb
+     Errno::ECONNREFUSED:
+       Connection refused - Unable to connect to Redis on 127.0.0.1:6379
+     # spec/redex_spec.rb:82:in `block (2 levels) in <top (required)>'
+
+Finished in 0.33056 seconds
+91 examples, 69 failures, 1 pending
+================================================================================
+lib/redex/parser.rb
+================================================================================
+!! module Redex
+     class Parser
+   
+!! #   Searches a line for dictionary terms
+!! #   Stops searching once a match is found and returns a match object
+!! #   Returns nil if no match is found
+!! #   Increments the score of the corresponding dictionary item when a match is created
+!!     def find_match(dictionary, line)
+         first_match = dictionary.detect do |item|
+!!         item.match?(line)
+!!       end
+!!       if first_match
+!!         match = Match.new(first_match, line)
+!!         puts "MATCH FOUND: #{match.inspect}"
+!!         match
+!!       else
+!!         nil
+!!       end
+!!     end
+!! 
+!!     def match_section(section_type_name, document)
+         matches = []
+!!       start_match = match_section_start(section_type_name, document)
+!!       puts "START MATCH: #{start_match.inspect}"
+!!       matches << start_match unless start_match.nil?
+!!       end_match = match_section_end(section_type_name, document)
+!!       puts "END MATCH: #{end_match.inspect}"
+!!       matches << end_match unless end_match.nil?
+!!     end
+!! 
+!!     def match_section_start(section_type_name, document_or_section)
+         match = nil
+!!       section_type = get_section_type(section_type_name, document_or_section)
+!!       document_or_section.lines.each do |line|
+!!         match = find_match(section_type.end_dictionary, line)
+!!         if match
+!!           match.add_flag :start_section
+!!           match.add_flag :content
+!!           @last_line = line.number
+!!           break
+!!         end
+!!       end
+!!       match
+!!     end
+!! 
+!!     def match_section_end(section_type_name, document_or_section)
+         match = nil
+!!       section_type = get_section_type(section_type_name, document_or_section)
+!!       puts "LAST LINE -- #{@last_line}"
+!!       puts "NUM LINES -- #{document_or_section.number_of_lines}"
+!!       total_lines = document_or_section.number_of_lines
+!!       document_or_section.lines(@last_line..total_lines).each do |line|
+!!         puts "LINE #{line.number}: #{line.inspect}"
+!!         match = find_match(section_type.end_dictionary, line)
+!!         if match
+!!           match.add_flag :end_section
+!!           match.add_flag :content
+!!           @last_line = line.number
+!!           break
+!!         end
+!!       end
+!!       match
+!!     end
+!! 
+!!     def get_section_type(name, document)
+         DocumentType.get(document.type).section_types.select {
+             |sec_type| sec_type.name == name
+!!       }.first
+!!     end
+!! 
+!! 
+!!     def parse_content(content_type, document)
+   
+!!     end
+!! 
+!!     def parse_outer_sections(document)
+   #      dictionaries = @doc_type.section_types.map { |section_type| section_type. }
+!!       document.lines.each do |line|
+!! 
+!!       end
+!!     end
+!! 
+!!   end
+   end
+================================================================================
+lib/redex/document.rb
+================================================================================
+!! require "redex/helper"
+   require "redex/document_content"
+   require "redex/document_section"
+   module Redex
+   # Represents a document stored in Redis as a list,
+!! # with each line is stored as a list item
+!!   class Document
+   
+!!     extend Helper::Data
+       extend Helper::FileUtil::Import
+       include Enumerable
+   
+!! #   Prefix used in Redis
+!!     NAMESPACE = :file
+   
+!! #   Unique name for document
+!!     attr_reader :name
+   
+!! #   Type of document
+!!     attr_accessor :type
+   
+!! #   Array containing parsed sections of a document
+!!     attr_reader :sections
+   
+!! #   Array containing parsed contents of a document
+!!     attr_reader :contents
+   
+!! #   Number of lines
+!!     attr_reader :number_of_lines
+   
+!!     def initialize(name)
+         @name = name
+         @parsed = false
+         @number_of_lines = Document.db.llen @name
+       end
+!! 
+!! #   Saves a single line or an array of lines to a document (stored in Redis)
+!!     def <<(line_or_lines)
+         case line_or_lines
+!!         when String
+!!           add_line line_or_lines
+!!         when Array
+!!           add_lines line_or_lines
+!!         else
+!!           raise "#{line_or_lines} must be a string or an array."
+!!       end
+!!       self
+!!     end
+!! 
+!! #   Retrieves a single document line from Redis and returns a line object
+!!     def line(number)
+         value = nil
+!!       update do
+!!         value = Document.db.lindex @name, number - 1
+!!       end
+!!       Line.new self, value, number
+!!     end
+!! 
+!! #   Returns all document lines from Redis and as an array of line objects
+!! #   Returns a range of lines when a range object is supplied
+!!     def lines(range=nil)
+         values = []
+!!       if range
+!!         update { values = Document.db.lrange(@name, range.first - 1, range.last - 1) }
+!!       else
+!!         update { values = Document.db.lrange(@name, 0, @number_of_lines) }
+!!       end
+!!       values.each_with_index.map { |val, index| Line.new(self, val, index + 1) }
+!!     end
+!! 
+!! #   Performs an atomic update on a document
+!!     def update
+         yield self
+!!       @number_of_lines = Document.db.llen @name
+!!     end
+!! 
+!! #   Take lines from Redis
+!!     def each
+         current_line = 1
+!!       update do
+!!         until current_line > @number_of_lines
+!!           index = current_line - 1
+!!           value = Document.db.lrange self.name, index, index
+!!           line = Line.new(self, value[0], current_line)
+!!           yield line
+!!           current_line += 1
+!!         end
+!!       end
+!!     end
+!! 
+!! #   Name-based equality (name is stored as key in Redis)
+!!     def ==(other)
+         self.name == other.name
+       end
+!! 
+!! #   Boolean specifying whether parsing has completed for the document
+!!     def parsed?
+         @parsed
+       end
+!! 
+!!     def add_section(section)
+         @sections ||= []
+!!       @sections << DocumentSection.new(self)
+!!     end
+!! 
+!!     def add_content(content)
+   
+!!     end
+!! 
+!!     private
+       def add_line(line)
+         update do
+!!         Document.db.rpush @name, line
+!!       end
+!!       self
+!!     end
+!! 
+!!     def add_lines(lines)
+         update do
+!!         lines.each do |line|
+!!           add_line line
+!!         end
+!!       end
+!!       self
+!!     end
+!!   end
+   end
+================================================================================
+lib/redex/runner.rb
+================================================================================
+!! module Redex
+     class Runner
+       def self.import_dictionaries
+         @dictionaries = Dictionary.import(Redex.configuration.load_path)
+!!       @dictionaries.each do |dict|
+!!         Redex.configuration.dictionaries[dict.name.to_sym] = dict
+!!       end
+!!     end
+!! 
+!!     def self.import_documents
+         @documents = []
+         Redex.document_types.each_pair do |key, doc_type|
+           @documents << Document.import(doc_type.load_path, :type => key)
+         end
+!!       @documents.flatten!
+!!       @documents.each do |doc|
+!!         puts "DOCUMENTS: #{@documents.inspect}"
+!!         Redex.configuration.documents[doc.name.to_sym] = doc
+!!       end
+!!     end
+!! 
+!! 
+!! 
+!! #   Find matches for the specified document type
+!!     def self.find_matches(doc_type)
+         parser = Parser.new
+!!       @matches = []
+!!       docs = Redex.configuration.documents.select { |doc| doc.type == doc_type }
+!!       docs.each do |doc|
+!!         doc.lines.each do |line|
+!!           DocumentType.get(doc_type)
+!!           match = parser.find_match(line)
+!!           @matches << match if match
+!!         end
+!! 
+!!       end
+!!       @matches
+!!     end
+!! 
+!!   end
+   end
+================================================================================
+lib/redex/line.rb
+================================================================================
+!! module Redex
+   # Represents a single line of a document (typically stored in Redis)
+!!   class Line
+   #   Content of the line
+!!     attr_reader :value
+   #   Line number (1-based)
+!!     attr_reader :number
+       
+!!     def initialize(document, value, number)
+         @document_name = document.name || document
+!!       @value = value
+!!       @number = number
+!!     end
+!! 
+!! #   Retrieve document object lazily
+!!     def document
+         @document ||= Document.new(@document_name)
+       end
+!! 
+!! #   Sort by line number
+!!     def <=>(other)
+         self.number <=> other.number
+       end
+   
+     end
+   end
+================================================================================
+lib/redex/dictionary.rb
+================================================================================
+!! module Redex
+   # Reads from / writes to a sorted set of words or regular expressions
+!!   class Dictionary
+   
+!!     extend Helper::Data
+       extend Helper::FileUtil::Import
+       include Enumerable
+       
+!!     NAMESPACE = :dict
+   
+!!     attr_reader :name
+   
+!!     def initialize(name)
+         @name = name
+       end
+   
+!! #   Retrieve a dictionary by name (takes a symbol)
+!!     def self.get(name)
+         if Redex.configuration.dictionaries[name]
+           Redex.configuration.dictionaries[name]
+         else
+!!         raise "Dictionary #{name} not found"
+!!       end
+!!     end
+   
+!! #   Add an item or an array of items to a dictionary
+!! #   Returns the dictionary object
+!!     def <<(item_or_items)
+         case item_or_items
+           when String
+!!           add_item item_or_items
+           when Array
+!!           add_items item_or_items
+           else
+!!           raise ArgumentError("#{item_or_items} must be a string or an array.")
+!!       end
+!!       self
+!!     end
+!! 
+!!     def items
+         Dictionary.db.zrangebyscore(@name, "-inf", "+inf")
+       end
+!! 
+!!     def [](index)
+         Dictionary.db.zrange(@name, index, index)
+       end
+!! 
+!!     def size
+         Dictionary.db.zcount("#{NAMESPACE}:#{@name}", "-inf", "+inf").to_i
+       end
+!! 
+!!     def update
+         Document.db.multi do
+           yield self
+         end
+       end
+!! 
+!! #   fetch dictionary items one by one from Redis
+!!     def each
+         current_index = size - 1
+!!       while current_index >= 0
+!!         value = Dictionary.db.zrange self.name, current_index, current_index
+!!         item = DictionaryItem.new(self, value[0])
+!!         yield item if block_given?
+!!         current_index -= 1
+!!       end
+!!     end
+!!     
+!! #   Name-based equality
+!!     def ==(other)
+         self.name == other.name
+       end
+!! 
+!!     private
+   
+!!     def add_item(item)
+         sanitized_value = item.strip.chomp.sub("\t", "")
+         Dictionary.db.zadd @name, 0, sanitized_value unless sanitized_value.empty?
+       end
+!! 
+!!     def add_items(items)
+         update do |dict|
+           items.each do |item|
+!!           add_item item
+!!         end
+!!       end
+!!     end
+!!   end
+   end
+================================================================================
+lib/redex/match.rb
+================================================================================
+!! module Redex
+   # Represents a dictionary match found within a document
+!!   class Match
+   
+       FLAGS = [
+         :content,
+         :start_section,
+         :end_section
+       ]
+!! 
+!! #   Dictionary item that was matched
+!!     attr_reader :dictionary_item
+   #   Line that was matched
+!!     attr_reader :line
+   #   Flag(s) associated with this match
+!!     attr_reader :flags
+   
+!!     extend Helper::Data
+   
+!! #   Increment score of dictionary item when match is created
+!!     def initialize(dict_item, line)
+         @dictionary_item = dict_item
+!!       @line = line
+!!       @dictionary_item.increment
+!!     end
+!! 
+!! #   Retrieve related dictionary by its key
+!!     def dictionary
+         @dictionary ||= Dictionary.new(@dictionary_item.key)
+       end
+!! 
+!! #   Retrieve matched document
+!!     def document
+         @line.document
+       end
+!! 
+!!     def add_flag(flag)
+         raise ArgumentError("Invalid type: #{flag}") unless FLAGS.include?(flag)
+!!       @flags ||= []
+!!       @flags << flag unless @flags.include? flag
+!!     end
+!!     
+!! #   Retrieve content matched
+!!     def content
+         @content ||= @dictionary_item.match(@line)
+       end
+     end
+   end
+================================================================================
+lib/redex/configuration.rb
+================================================================================
+!! module Redex
+     class Configuration
+   #   Add global configuration option
+!!     def self.define_setting(setting, options={})
+         define_method("#{setting}=") { |value| settings[setting] = value }
+         define_method(setting) { settings.has_key?(setting) ? settings[setting] : options[:default] }
+       end
+   
+!! #   Path where dictionaries are located
+!!     define_setting :load_path, :default => []
+   #   Path where new dictionary files are written
+!!     define_setting :write_path
+   #   Global hash of user-defined document types
+!!     define_setting :document_types, :default => {}
+   #   Global hash of dictionaries
+!!     define_setting :dictionaries, :default => {}
+   #   Global hash of documents
+!!     define_setting :documents, :default => {}
+   
+!! #   Returns the global hash of settings
+!!     def settings
+         @settings ||= {}
+       end
+     end
+   end
+================================================================================
+lib/redex/document_section.rb
+================================================================================
+!! module Redex
+     class DocumentSection
+       include Helper::ActsAsParent
+       include Helper::ActsAsChild
+   
+!! #   Type of section (e.g. header, footer)
+!!     attr_reader :type
+   
+!! #   The document containing this section
+!!     attr_reader :document
+   
+!!     def initialize(type, document, line_numbers)
+         @type = type
+!!       @document = document
+!!       @line_numbers = line_numbers
+!!     end
+!! 
+!!     def starts_with(options)
+         self.has_section
+       end
+!! 
+!! #   Array of lines that the section contains
+!!     def lines
+         @document.lines @line_numbers
+       end
+   
+   
+     end
+   end
+================================================================================
+lib/redex/dictionary_item.rb
+================================================================================
+!! module Redex
+     class DictionaryItem
+   #   Key of the dictionary containing this item
+!!     attr_reader :key
+   #   Value of dictionary item (string)
+!!     attr_reader :value
+   
+!! #   Accepts a dictionary object or a dictionary
+!!     def initialize(dictionary, value)
+         @key = dictionary.name || dictionary
+!!       @value = value
+!!     end
+!! 
+!! #   Get the item index from Redis
+!!     def index
+         Dictionary.db.zrank(@key, @value).to_i
+       end
+!! 
+!! #   Retrieve the score from Redis
+!!     def score
+         Dictionary.db.zscore(@key, @value).to_i
+       end
+!! 
+!! #   Bump up the score in Redis
+!!     def increment
+         Dictionary.db.zincrby @key, 1, @value
+       end
+!! 
+!! #   Convert value to a basic regular expression
+!!     def to_regexp
+         Regexp.new(@value)
+       end
+!! 
+!! #   Convert value to regex and return the first capture
+!!     def match(line)
+         self.to_regexp.match(line.value).to_s
+       end
+!! 
+!! #   Return true (match found) or false (no match found)
+!!     def match?(line)
+         return false unless self.to_regexp.match(line.value)
+!!       true
+!!     end
+!! 
+!!     def dictionary
+         Dictionary.new(@key)
+       end
+!!     
+!! #   compare based on index
+!!     def <=>(other)
+         self.index <=> other.index
+       end
+     end
+   end
+================================================================================
+lib/redex/document_type.rb
+================================================================================
+!! module Redex
+   # Type of document to be parsed
+!!   class DocumentType
+   
+!!     include Helper::ActsAsParent
+       include Helper::Type
+   
+!! #   Unique name of the type of document containing the content to be extracted (letter, resume, etc).
+!!     attr_reader :name
+       
+!! #   Path where this type of document is stored
+!!     attr_accessor :load_path
+   
+!! #   Accepts a unique name
+!!     def initialize(name)
+         @name = name
+         yield self if block_given?
+       end
+   
+!! #   Returns the document type object associated with the supplied name
+!!     def self.get(name)
+         Redex.document_types[name]
+       end
+   
+!! #   Types of content found in this doc type
+!!     def content_types
+         self.children.select { |child| child.class == ContentType }
+       end
+   
+!! #   Types of sections found in this doc type
+!!     def section_types
+         self.children.select { |child| child.class == SectionType }
+       end
+     end
+   end
+================================================================================
+lib/redex/content_type.rb
+================================================================================
+!! module Redex
+     class ContentType
+       include Helper::ActsAsChild
+   
+!! #   Name of the section type (i.e. header, footer)
+!!     attr_reader :name
+   #   List of matching regular expressions
+!!     attr_accessor :dictionary
+   
+!!     def initialize(name)
+         @name = name
+       end
+     end
+   end
+================================================================================
+lib/redex/section_type.rb
+================================================================================
+!! module Redex
+   # Represents the types of sections that can occur within
+!! # a document or another section
+!!   class SectionType
+       include Helper::Type
+       include Helper::ActsAsParent
+       include Helper::ActsAsChild
+   #   Name of the section type (i.e. header, footer)
+!!     attr_reader :name
+   
+!! #   Dictionary terms signaling the start of the section
+!!     attr_reader :start_dictionary
+   
+!! #   Dictionary terms signaling the end of the section
+!!     attr_reader :end_dictionary
+   
+!! 
+!!     def initialize(name)
+         @name = name
+       end
+   
+!! #   Set start dictionary
+!!     def starts_with(options)
+         @start_dictionary = Dictionary.get(options[:dictionary])
+       end
+   
+!! #   Set end dictionary
+!!     def ends_with(options)
+         @end_dictionary = Dictionary.get(options[:dictionary])
+       end
+   
+!!     def starts_with_content(name, options={})
+         starts_with(options)
+         has_content(name, options)
+       end
+   
+!!     def ends_with_content(name, options={})
+         ends_with(options)
+         has_content(name, options)
+       end
+     end
+   end
+================================================================================
+lib/redex/helper/file_util.rb
+================================================================================
+!! require 'nokogiri'
+   require 'open-uri'
+   require 'csv'
+   module Redex
+     module Helper
+       module FileUtil
+   
+!!       def self.generate(dictionary_name, source_file_or_url, *css_or_xpath)
+           lines = []
+           if source_file_or_url =~ /.csv$/
+             CSV.foreach(source_file_or_url) do |row|
+               lines << row[0]
+             end
+!!         else
+!!           doc = open_page(source_file_or_url)
+             doc.search(*css_or_xpath).each do |node|
+               lines << node.content
+             end
+           end
+!!         raise empty_msg if lines.empty?
+           create_file(dictionary_name, lines)
+         end
+   
+!!       private
+   
+!!       # Creates file with a line for each item in the supplied array
+!!       def self.create_file(name, lines)
+           file_path = File.join(Redex.configuration.write_path, name)
+           File.open(file_path, "w") do |f|
+             lines.each do |line|
+               stripped_line = line.strip
+               f.puts stripped_line unless stripped_line.empty?
+             end
+           end
+!!         puts "Created file #{name} in #{Redex.configuration.write_path}"
+           file_path
+         end
+   
+!!       # opens url and parses document
+!!       def self.open_page(url)
+           Nokogiri.parse(open url)
+         end
+   
+!!       def self.empty_msg
+           msg = %q{ No items found. Please double check your css or xpath selectors
+         and ensure that the site you are trying to reach does not block scripts. }
+         end
+   
+!!       module Import
+   #       Load document(s) from file into Redis
+!!         def import(thing, options={})
+             if File.directory? thing
+               add_directory thing, options
+             elsif File.file? thing
+               add_file thing, options
+             else
+!!             raise "#{thing} must be a valid file or directory"
+!!           end
+!!         end
+!! 
+!!         private
+   #       Adds files in supplied directory to Redis
+!!         def add_directory(directory, options={})
+             docs = []
+             Dir.foreach(directory) do |file|
+               file_path = File.join(File.expand_path(directory), file)
+               docs << add_file(file_path, options) unless File.directory? file_path
+             end
+!!           docs
+!!         end
+!! 
+!! #       Adds file to Redis (as a list)
+!!         def add_file(path_to_file, options={})
+             name = options[:name] || File.basename(path_to_file)
+             redis_collection = new(name)
+             redis_collection.update do |d|
+               IO.foreach path_to_file do |line|
+!!               d << line
+!!             end
+!!           end
+!!           redis_collection.type = options[:type] if options[:type]
+!!           redis_collection
+!!         end
+!!       end
+       end
+     end
+   end
+================================================================================
+lib/redex/helper/data.rb
+================================================================================
+!! module Redex
+     module Helper
+   #   Helper methods related to data access
+!!     module Data
+   #     Clears all data out of the namespaced instance
+!!       def clear
+           db.keys.each { |key| db.del key }
+         end
+!! 
+!! #     Namespaced Redis Instance
+!!       def db
+           if const_defined?(:NAMESPACE)
+             @redis ||= Redis::Namespace.new(const_get(:NAMESPACE), :redis => Redex.db)
+           else
+!!           @redis ||= Redis.new
+           end
+         end
+       end
+     end
+   end
+================================================================================
+lib/redex/helper/acts_as_child.rb
+================================================================================
+!! module Redex
+     module Helper
+       module ActsAsChild
+   #     Set parent
+!!       def parent=(parent)
+           @parent = parent
+         end
+   
+!! #     Get parent
+!!       def parent
+           @parent
+         end
+   
+!! #     Returns true if the section or content is not nested inside another
+!!       def top_level?
+           true unless self.parent
+         end
+       end
+     end
+   end
+================================================================================
+lib/redex/helper/acts_as_parent.rb
+================================================================================
+!! module Redex
+     module Helper
+       module ActsAsParent
+   #     Add child
+!!       def add_child(child)
+           @children ||= []
+           @children << child
+         end
+   #     Get children
+!!       def children
+           @children
+         end
+   
+!!       def parent?
+           true if self.children
+         end
+       end
+     end
+   end
+================================================================================
+lib/redex.rb
+================================================================================
+!! require 'redis-namespace'
+   require 'redex/configuration'
+   require 'redex/helper'
+   require 'redex/document'
+   require 'redex/content_type'
+   require 'redex/section_type'
+   require 'redex/document_type'
+   require 'redex/line'
+   require 'redex/dictionary_item'
+   require 'redex/dictionary'
+   require 'redex/match'
+   require 'redex/parser'
+   require 'redex/runner'
+   
+!! module Redex
+     extend Helper::Data
+   
+!!   def self.configuration
+       @configuration ||= Configuration.new
+     end
+   
+!!   def self.configure
+       yield configuration if block_given?
+     end
+   
+!!   def self.document_types
+       configuration.document_types
+     end
+   
+!!   def self.define_doc_type(name)
+       doc_type = DocumentType.new name
+       yield doc_type if block_given?
+       if configuration.document_types.keys.include? name
+         raise "Doctype #{name} cannot be added because it already exists"
+       end
+!!     configuration.document_types[name] = doc_type
+     end
+   end
+================================================================================
+lib/redex/document_content.rb
+================================================================================
+!! module Redex
+     class DocumentContent
+       include Helper::ActsAsChild
+   
+     end
+   end
+================================================================================
+lib/redex/helper/type.rb
+================================================================================
+!! module Redex
+     module Helper
+       module Type
+   #     Adds new section to look for within this section type
+!!       def has_section(name, options={})
+           new_section_type = SectionType.new(name)
+           new_section_type.parent = self
+           yield new_section_type if block_given?
+           add_child new_section_type
+         end
+   
+!! #     Adds new content to look for within this section type
+!!       def has_content(name, options={})
+           new_content_type = ContentType.new(name)
+           new_content_type.parent = self
+           if options[:dictionary]
+             new_content_type.dictionary = Redex.configuration.dictionaries[options[:dictionary]]
+           end
+!!         yield new_content_type if block_given?
+           add_child new_content_type
+         end
+       end
+     end
+   end
+================================================================================
+lib/redex/helper.rb
+================================================================================
+!! require "redex/helper/data"
+   require "redex/helper/acts_as_parent"
+   require "redex/helper/acts_as_child"
+   require "redex/helper/file_util"
+   require "redex/helper/type"
+   module Redex
+     module Helper
+       
+     end
+   end

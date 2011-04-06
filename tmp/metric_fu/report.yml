@@ -1,0 +1,5160 @@
+---
+:churn:
+  :changes:
+  - :file_path: spec/redex_spec.rb
+    :times_changed: 8
+  - :file_path: lib/redex/parser.rb
+    :times_changed: 7
+  - :file_path: spec/redex/runner_spec.rb
+    :times_changed: 7
+  - :file_path: lib/redex/section_type.rb
+    :times_changed: 6
+  - :file_path: lib/redex/document_type.rb
+    :times_changed: 6
+  - :file_path: lib/redex/runner.rb
+    :times_changed: 6
+  - :file_path: spec/redex/section_type_spec.rb
+    :times_changed: 6
+  - :file_path: spec/redex/parser_spec.rb
+    :times_changed: 6
+  - :file_path: spec/redex/document_type_spec.rb
+    :times_changed: 6
+  - :file_path: spec/redex/match_spec.rb
+    :times_changed: 6
+  - :file_path: lib/redex/Document.rb
+    :times_changed: 5
+  - :file_path: spec/redex/document_spec.rb
+    :times_changed: 5
+  - :file_path: lib/redex/configuration.rb
+    :times_changed: 5
+  - :file_path: lib/redex/match.rb
+    :times_changed: 5
+  - :file_path: lib/redex/helper/type.rb
+    :times_changed: 5
+  - :file_path: spec/redex/document_section_spec.rb
+    :times_changed: 4
+  - :file_path: lib/redex/document_section.rb
+    :times_changed: 4
+  - :file_path: spec/redex/line_spec.rb
+    :times_changed: 4
+  - :file_path: lib/redex/dictionary.rb
+    :times_changed: 4
+  - :file_path: spec/redex/dictionary_spec.rb
+    :times_changed: 4
+  - :file_path: lib/redex.rb
+    :times_changed: 4
+  - :file_path: spec/redex/content_type_spec.rb
+    :times_changed: 4
+  - :file_path: lib/redex/helper/file_util.rb
+    :times_changed: 4
+  - :file_path: lib/redex/helper.rb
+    :times_changed: 3
+  - :file_path: spec/redex/dictionary_item_spec.rb
+    :times_changed: 3
+  - :file_path: redex.gemspec
+    :times_changed: 3
+  - :file_path: spec/dictionary_files/two.txt
+    :times_changed: 3
+  - :file_path: spec/redex/file_helper_spec.rb
+    :times_changed: 3
+  - :file_path: lib/redex/document_content.rb
+    :times_changed: 3
+  - :file_path: spec/test_files/episodes.txt
+    :times_changed: 3
+  - :file_path: spec/test_files/test2.txt
+    :times_changed: 3
+  - :file_path: lib/redex/content_type.rb
+    :times_changed: 3
+  - :file_path: .idea/dictionaries/mhickman84.xml
+    :times_changed: 3
+  - :file_path: .idea/workspace.xml
+    :times_changed: 3
+  :class_churn:
+  - klass: &2156355320
+      file: lib/redex/Document.rb
+      klass: Document
+    times_changed: 1
+  - klass: &2156352400
+      file: lib/redex/document_type.rb
+      klass: DocumentType
+    times_changed: 1
+  - klass: &2156345900
+      file: lib/redex/match.rb
+      klass: Match
+    times_changed: 1
+  - klass: &2156343920
+      file: lib/redex/parser.rb
+      klass: Parser
+    times_changed: 1
+  - klass: &2156339740
+      file: lib/redex/section_type.rb
+      klass: SectionType
+    times_changed: 1
+  :method_churn:
+  - method: &2156336700
+      file: lib/redex/Document.rb
+      klass: Document
+      method: Document#initialize
+    times_changed: 1
+  - method: &2156333120
+      file: lib/redex/Document.rb
+      klass: Document
+      method: Document#<<
+    times_changed: 1
+  - method: &2156330220
+      file: lib/redex/Document.rb
+      klass: Document
+      method: Document#line
+    times_changed: 1
+  - method: &2156327380
+      file: lib/redex/Document.rb
+      klass: Document
+      method: Document#lines
+    times_changed: 1
+  - method: &2156323980
+      file: lib/redex/Document.rb
+      klass: Document
+      method: Document#update
+    times_changed: 1
+  - method: &2156320500
+      file: lib/redex/Document.rb
+      klass: Document
+      method: Document#each
+    times_changed: 1
+  - method: &2156317520
+      file: lib/redex/Document.rb
+      klass: Document
+      method: Document#==
+    times_changed: 1
+  - method: &2156314280
+      file: lib/redex/Document.rb
+      klass: Document
+      method: Document#parsed?
+    times_changed: 1
+  - method: &2156310740
+      file: lib/redex/Document.rb
+      klass: Document
+      method: Document#add_section
+    times_changed: 1
+  - method: &2156306580
+      file: lib/redex/Document.rb
+      klass: Document
+      method: Document#add_content
+    times_changed: 1
+  - method: &2156301720
+      file: lib/redex/Document.rb
+      klass: Document
+      method: Document#add_line
+    times_changed: 1
+  - method: &2156297680
+      file: lib/redex/Document.rb
+      klass: Document
+      method: Document#add_lines
+    times_changed: 1
+  - method: &2156295440
+      file: lib/redex/document_type.rb
+      klass: DocumentType
+      method: DocumentType#content_types
+    times_changed: 1
+  - method: &2156293460
+      file: lib/redex/document_type.rb
+      klass: DocumentType
+      method: DocumentType#section_types
+    times_changed: 1
+  - method: &2156291340
+      file: lib/redex/helper/acts_as_parent.rb
+      klass: ''
+      method: ! '#add_child'
+    times_changed: 1
+  - method: &2156279360
+      file: lib/redex/helper/type.rb
+      klass: ''
+      method: ! '#has_section'
+    times_changed: 1
+  - method: &2156250380
+      file: lib/redex/helper/type.rb
+      klass: ''
+      method: ! '#has_content'
+    times_changed: 1
+  - method: &2156235560
+      file: lib/redex/match.rb
+      klass: Match
+      method: Match#add_flag
+    times_changed: 1
+  - method: &2156232080
+      file: lib/redex/parser.rb
+      klass: Parser
+      method: Parser#find_match
+    times_changed: 1
+  - method: &2156229260
+      file: lib/redex/parser.rb
+      klass: Parser
+      method: Parser#match_section
+    times_changed: 1
+  - method: &2156225700
+      file: lib/redex/parser.rb
+      klass: Parser
+      method: Parser#match_section_start
+    times_changed: 1
+  - method: &2156222260
+      file: lib/redex/parser.rb
+      klass: Parser
+      method: Parser#match_section_end
+    times_changed: 1
+  - method: &2156218440
+      file: lib/redex/parser.rb
+      klass: Parser
+      method: Parser#get_section_type
+    times_changed: 1
+  - method: &2156216040
+      file: lib/redex/parser.rb
+      klass: Parser
+      method: Parser#parse_content
+    times_changed: 1
+  - method: &2156214280
+      file: lib/redex/parser.rb
+      klass: Parser
+      method: Parser#parse_outer_sections
+    times_changed: 1
+  - method: &2156212340
+      file: lib/redex/section_type.rb
+      klass: SectionType
+      method: SectionType#starts_with_content
+    times_changed: 1
+  - method: &2156210380
+      file: lib/redex/section_type.rb
+      klass: SectionType
+      method: SectionType#ends_with_content
+    times_changed: 1
+  :changed_files:
+  - lib/redex/Document.rb
+  - lib/redex/document_type.rb
+  - lib/redex/helper/acts_as_parent.rb
+  - lib/redex/helper/type.rb
+  - lib/redex/match.rb
+  - lib/redex/parser.rb
+  - lib/redex/section_type.rb
+  - spec/redex/content_type_spec.rb
+  - spec/redex/document_spec.rb
+  - spec/redex/document_type_spec.rb
+  - spec/redex/match_spec.rb
+  - spec/redex/parser_spec.rb
+  - spec/redex/runner_spec.rb
+  - spec/redex/section_type_spec.rb
+  - spec/redex_spec.rb
+  - spec/support/redex_helper.rb
+  - /dev/null
+  :changed_classes:
+  - *2156355320
+  - *2156352400
+  - *2156345900
+  - *2156343920
+  - *2156339740
+  :changed_methods:
+  - *2156336700
+  - *2156333120
+  - *2156330220
+  - *2156327380
+  - *2156323980
+  - *2156320500
+  - *2156317520
+  - *2156314280
+  - *2156310740
+  - *2156306580
+  - *2156301720
+  - *2156297680
+  - *2156295440
+  - *2156293460
+  - *2156291340
+  - *2156279360
+  - *2156250380
+  - *2156235560
+  - *2156232080
+  - *2156229260
+  - *2156225700
+  - *2156222260
+  - *2156218440
+  - *2156216040
+  - *2156214280
+  - *2156212340
+  - *2156210380
+:flog:
+  :total: 633.651180548407
+  :average: 6.600533130712573
+  :method_containers:
+  - :name: main
+    :path: ''
+    :total_score: 26.40000000000001
+    :highest_score: 26.40000000000001
+    :average_score: 26.40000000000001
+    :methods:
+      main#none:
+        :operators:
+          :require: 26.40000000000001
+        :score: 26.40000000000001
+        :path: !!null 
+  - :name: Redex::Document
+    :path: lib/redex/document.rb
+    :total_score: 100.18412524321708
+    :highest_score: 26.11819289307744
+    :average_score: 9.107647749383371
+    :methods:
+      Redex::Document#none:
+        :operators:
+          :extend: 4.800000000000001
+          :include: 2.4000000000000004
+          :attr_reader: 4.800000000000001
+          :attr_accessor: 1.2000000000000002
+          :private: 1.2000000000000006
+        :score: 14.400000000000004
+        :path: !!null 
+      Redex::Document#initialize:
+        :operators:
+          :assignment: 3.900000000000001
+          :db: 1.5000000000000002
+          :llen: 1.3000000000000003
+        :score: 4.801041553663123
+        :path: lib/redex/document.rb:31
+      Redex::Document#<<:
+        :operators:
+          :branch: 4.100000000000001
+          :add_line: 1.5000000000000004
+          :add_lines: 1.5000000000000004
+          :raise: 1.4000000000000004
+        :score: 6.0141499815019595
+        :path: lib/redex/document.rb:38
+      Redex::Document#line:
+        :operators:
+          :assignment: 2.7000000000000006
+          :branch: 1.3000000000000003
+          :update: 1.3000000000000003
+          :db: 1.6000000000000003
+          :lit_fixnum: 0.45000000000000007
+          :-: 1.6000000000000003
+          :lindex: 1.4000000000000004
+          :new: 1.3000000000000003
+        :score: 8.21599050632363
+        :path: lib/redex/document.rb:51
+      Redex::Document#lines:
+        :operators:
+          :assignment: 9.800000000000004
+          :branch: 5.400000000000002
+          :update: 2.8000000000000007
+          :db: 3.4000000000000012
+          :first: 1.9000000000000006
+          :lit_fixnum: 1.4000000000000004
+          :-: 3.4000000000000012
+          :last: 1.9000000000000006
+          :lrange: 3.0000000000000013
+          :each_with_index: 1.5000000000000004
+          :map: 1.3000000000000005
+          :+: 1.6000000000000005
+          :new: 1.4000000000000006
+        :score: 26.11819289307744
+        :path: lib/redex/document.rb:61
+      Redex::Document#update:
+        :operators:
+          :yield: 1.3000000000000005
+          :assignment: 1.3000000000000005
+          :db: 1.5000000000000004
+          :llen: 1.3000000000000005
+        :score: 4.301162633521315
+        :path: lib/redex/document.rb:72
+      Redex::Document#each:
+        :operators:
+          :assignment: 7.700000000000005
+          :lit_fixnum: 1.2250000000000005
+          :branch: 2.700000000000001
+          :update: 1.3000000000000005
+          :>: 1.5000000000000007
+          :-: 1.6000000000000008
+          :db: 1.800000000000001
+          :name: 1.800000000000001
+          :lrange: 1.600000000000001
+          :[]: 1.800000000000001
+          :new: 1.600000000000001
+          :yield: 1.600000000000001
+          :+: 1.600000000000001
+        :score: 19.240858218904908
+        :path: lib/redex/document.rb:78
+      Redex::Document#==:
+        :operators:
+          :name: 3.0000000000000013
+          :==: 1.3000000000000007
+        :score: 4.3000000000000025
+        :path: lib/redex/document.rb:92
+      Redex::Document#add_section:
+        :operators:
+          :assignment: 1.3000000000000007
+          :new: 1.5000000000000007
+          :<<: 1.3000000000000007
+        :score: 3.087069808086628
+        :path: lib/redex/document.rb:101
+      Redex::Document#add_line:
+        :operators:
+          :branch: 1.3000000000000007
+          :update: 1.3000000000000007
+          :db: 1.6000000000000008
+          :rpush: 1.4000000000000008
+        :score: 4.492215489043243
+        :path: lib/redex/document.rb:111
+      Redex::Document#add_lines:
+        :operators:
+          :branch: 2.7000000000000015
+          :update: 1.3000000000000007
+          :each: 1.4000000000000008
+          :assignment: 1.5000000000000009
+          :add_line: 1.5000000000000009
+        :score: 5.213444159094833
+        :path: lib/redex/document.rb:118
+  - :name: Redex::Parser
+    :path: lib/redex/parser.rb
+    :total_score: 72.55358750134937
+    :highest_score: 22.77301034119119
+    :average_score: 12.092264583558228
+    :methods:
+      Redex::Parser#find_match:
+        :operators:
+          :assignment: 3.900000000000002
+          :branch: 2.4000000000000012
+          :detect: 1.2000000000000006
+          :match?: 1.3000000000000007
+          :new: 1.4000000000000008
+          :inspect: 1.6000000000000008
+          :puts: 1.4000000000000008
+        :score: 8.281304245105362
+        :path: lib/redex/parser.rb:8
+      Redex::Parser#match_section:
+        :operators:
+          :assignment: 3.600000000000002
+          :match_section_start: 1.2000000000000006
+          :inspect: 2.800000000000001
+          :puts: 2.4000000000000012
+          :branch: 2.4000000000000012
+          :nil?: 2.4000000000000012
+          :<<: 2.6000000000000014
+          :match_section_end: 1.2000000000000006
+        :score: 13.322161986704717
+        :path: lib/redex/parser.rb:21
+      Redex::Parser#match_section_start:
+        :operators:
+          :assignment: 6.700000000000005
+          :get_section_type: 1.2000000000000006
+          :branch: 2.6000000000000014
+          :lines: 1.4000000000000006
+          :each: 1.2000000000000006
+          :end_dictionary: 1.6000000000000008
+          :find_match: 1.4000000000000008
+          :add_flag: 3.200000000000002
+          :number: 1.600000000000001
+        :score: 13.645878498653
+        :path: lib/redex/parser.rb:31
+      Redex::Parser#match_section_end:
+        :operators:
+          :assignment: 7.900000000000004
+          :get_section_type: 1.2000000000000006
+          :puts: 3.800000000000002
+          :number_of_lines: 2.6000000000000014
+          :branch: 2.6000000000000014
+          :lines: 1.4000000000000006
+          :each: 1.2000000000000006
+          :number: 3.200000000000002
+          :inspect: 1.6000000000000008
+          :end_dictionary: 1.6000000000000008
+          :find_match: 1.4000000000000008
+          :add_flag: 3.200000000000002
+        :score: 22.77301034119119
+        :path: lib/redex/parser.rb:46
+      Redex::Parser#get_section_type:
+        :operators:
+          :branch: 1.4000000000000006
+          :type: 2.0000000000000004
+          :get: 1.8000000000000005
+          :section_types: 1.6000000000000005
+          :select: 1.4000000000000006
+          :assignment: 1.5000000000000007
+          :name: 1.7000000000000006
+          :==: 1.5000000000000007
+          :first: 1.2000000000000006
+        :score: 11.386395390991833
+        :path: lib/redex/parser.rb:65
+      Redex::Parser#parse_outer_sections:
+        :operators:
+          :branch: 1.2000000000000006
+          :lines: 1.4000000000000006
+          :each: 1.2000000000000006
+          :assignment: 1.3000000000000007
+        :score: 3.144837038703279
+        :path: lib/redex/parser.rb:76
+  - :name: Redex::Configuration::define_setting
+    :path: lib/redex/configuration.rb
+    :total_score: 21.174985242025556
+    :highest_score: 21.174985242025556
+    :average_score: 21.174985242025556
+    :methods:
+      Redex::Configuration::define_setting:
+        :operators:
+          :assignment: 3.8000000000000007
+          :branch: 3.7000000000000006
+          :define_method: 12.000000000000002
+          :settings: 4.400000000000001
+          :has_key?: 1.3000000000000003
+          :[]: 2.8000000000000007
+        :score: 21.174985242025556
+        :path: lib/redex/configuration.rb:4
+  - :name: Redex::Runner::import_documents
+    :path: lib/redex/runner.rb
+    :total_score: 20.220039564748642
+    :highest_score: 20.220039564748642
+    :average_score: 20.220039564748642
+    :methods:
+      Redex::Runner::import_documents:
+        :operators:
+          :assignment: 7.800000000000004
+          :branch: 2.4000000000000012
+          :document_types: 1.4000000000000006
+          :each_pair: 1.2000000000000006
+          :load_path: 1.7000000000000006
+          :import: 1.5000000000000007
+          :<<: 1.3000000000000007
+          :flatten!: 1.2000000000000006
+          :each: 1.2000000000000006
+          :inspect: 1.6000000000000008
+          :puts: 1.4000000000000008
+          :configuration: 1.6000000000000008
+          :documents: 1.4000000000000008
+          :name: 1.6000000000000008
+          :to_sym: 1.4000000000000008
+        :score: 20.220039564748642
+        :path: lib/redex/runner.rb:10
+  - :name: Redex::Helper::FileUtil::generate
+    :path: lib/redex/helper/file_util.rb
+    :total_score: 19.998749960935072
+    :highest_score: 19.998749960935072
+    :average_score: 19.998749960935072
+    :methods:
+      Redex::Helper::FileUtil::generate:
+        :operators:
+          :assignment: 5.900000000000004
+          :branch: 5.5000000000000036
+          :foreach: 1.4000000000000008
+          :[]: 1.7000000000000008
+          :<<: 3.100000000000002
+          :open_page: 1.5000000000000009
+          :search: 1.7000000000000008
+          :each: 1.5000000000000009
+          :content: 1.800000000000001
+          :empty?: 1.3000000000000007
+          :empty_msg: 1.6000000000000008
+          :raise: 1.4000000000000008
+          :create_file: 1.3000000000000007
+        :score: 19.998749960935072
+        :path: lib/redex/helper/file_util.rb:8
+  - :name: Redex::Runner::find_matches
+    :path: lib/redex/runner.rb
+    :total_score: 19.801262586006995
+    :highest_score: 19.801262586006995
+    :average_score: 19.801262586006995
+    :methods:
+      Redex::Runner::find_matches:
+        :operators:
+          :assignment: 9.100000000000005
+          :new: 1.2000000000000006
+          :branch: 5.200000000000003
+          :configuration: 1.6000000000000005
+          :documents: 1.4000000000000006
+          :select: 1.2000000000000006
+          :type: 1.5000000000000007
+          :==: 1.3000000000000007
+          :each: 2.5000000000000013
+          :lines: 1.5000000000000007
+          :get: 1.5000000000000009
+          :find_match: 1.5000000000000009
+          :<<: 1.600000000000001
+        :score: 19.801262586006995
+        :path: lib/redex/runner.rb:25
+  - :name: Redex::Helper::FileUtil::create_file
+    :path: lib/redex/helper/file_util.rb
+    :total_score: 18.102209809854717
+    :highest_score: 18.102209809854717
+    :average_score: 18.102209809854717
+    :methods:
+      Redex::Helper::FileUtil::create_file:
+        :operators:
+          :assignment: 5.800000000000004
+          :configuration: 3.4000000000000012
+          :write_path: 3.0000000000000013
+          :join: 1.3000000000000007
+          :branch: 4.3000000000000025
+          :open: 1.3000000000000007
+          :each: 1.4000000000000008
+          :strip: 1.600000000000001
+          :empty?: 1.600000000000001
+          :puts: 3.0000000000000018
+        :score: 18.102209809854717
+        :path: lib/redex/helper/file_util.rb:27
+  - :name: Redex::Dictionary
+    :path: lib/redex/dictionary.rb
+    :total_score: 65.58545757108838
+    :highest_score: 17.601775478627154
+    :average_score: 5.962314324644399
+    :methods:
+      Redex::Dictionary#none:
+        :operators:
+          :extend: 4.4
+          :include: 2.2
+          :attr_reader: 1.1
+          :private: 1.1
+        :score: 8.8
+        :path: !!null 
+      Redex::Dictionary#initialize:
+        :operators:
+          :assignment: 1.2000000000000002
+        :score: 1.2000000000000002
+        :path: lib/redex/dictionary.rb:13
+      Redex::Dictionary#<<:
+        :operators:
+          :branch: 3.8000000000000007
+          :add_item: 1.4000000000000004
+          :add_items: 1.4000000000000004
+          :ArgumentError: 1.5000000000000002
+          :raise: 1.3000000000000003
+        :score: 6.767569726275454
+        :path: lib/redex/dictionary.rb:28
+      Redex::Dictionary#items:
+        :operators:
+          :db: 1.4000000000000001
+          :zrangebyscore: 1.2000000000000002
+        :score: 2.6000000000000005
+        :path: lib/redex/dictionary.rb:40
+      Redex::Dictionary#[]:
+        :operators:
+          :db: 1.4000000000000001
+          :zrange: 1.2000000000000002
+        :score: 2.6000000000000005
+        :path: lib/redex/dictionary.rb:44
+      Redex::Dictionary#size:
+        :operators:
+          :db: 1.6
+          :zcount: 1.4000000000000001
+          :to_i: 1.2000000000000002
+        :score: 4.2
+        :path: lib/redex/dictionary.rb:48
+      Redex::Dictionary#update:
+        :operators:
+          :branch: 1.2000000000000002
+          :db: 1.4000000000000001
+          :multi: 1.2000000000000002
+          :yield: 1.3000000000000003
+        :score: 4.080441152620634
+        :path: lib/redex/dictionary.rb:52
+      Redex::Dictionary#each:
+        :operators:
+          :assignment: 5.400000000000001
+          :size: 1.4000000000000001
+          :lit_fixnum: 0.7500000000000001
+          :-: 2.6000000000000005
+          :branch: 2.6000000000000005
+          :>=: 1.3000000000000003
+          :db: 1.6000000000000003
+          :name: 1.6000000000000003
+          :zrange: 1.4000000000000004
+          :[]: 1.6000000000000003
+          :new: 1.4000000000000004
+          :block_given?: 1.4000000000000004
+          :yield: 1.5000000000000004
+        :score: 17.601775478627154
+        :path: lib/redex/dictionary.rb:59
+      Redex::Dictionary#==:
+        :operators:
+          :name: 2.8000000000000003
+          :==: 1.2000000000000002
+        :score: 4.0
+        :path: lib/redex/dictionary.rb:70
+      Redex::Dictionary#add_item:
+        :operators:
+          :assignment: 1.2000000000000002
+          :strip: 1.6
+          :chomp: 1.4000000000000001
+          :sub: 1.2000000000000002
+          :branch: 1.2000000000000002
+          :empty?: 1.2000000000000002
+          :db: 1.5000000000000002
+          :zadd: 1.3000000000000003
+        :score: 8.37376856618333
+        :path: lib/redex/dictionary.rb:76
+      Redex::Dictionary#add_items:
+        :operators:
+          :branch: 2.5000000000000004
+          :update: 1.2000000000000002
+          :assignment: 2.7000000000000006
+          :each: 1.3000000000000003
+          :add_item: 1.4000000000000004
+        :score: 5.361902647381806
+        :path: lib/redex/dictionary.rb:81
+  - :name: Redex::Helper::FileUtil::Import
+    :path: lib/redex/helper/file_util.rb
+    :total_score: 37.331290190620734
+    :highest_score: 15.785119575093509
+    :average_score: 9.332822547655184
+    :methods:
+      Redex::Helper::FileUtil::Import#import:
+        :operators:
+          :assignment: 1.4000000000000008
+          :branch: 2.9000000000000017
+          :directory?: 1.4000000000000008
+          :add_directory: 1.5000000000000009
+          :file?: 1.5000000000000009
+          :add_file: 1.600000000000001
+          :raise: 1.600000000000001
+        :score: 8.254089895318568
+        :path: lib/redex/helper/file_util.rb:51
+      Redex::Helper::FileUtil::Import#none:
+        :operators:
+          :private: 1.3000000000000007
+        :score: 1.3000000000000007
+        :path: !!null 
+      Redex::Helper::FileUtil::Import#add_directory:
+        :operators:
+          :assignment: 5.900000000000004
+          :branch: 3.0000000000000018
+          :foreach: 1.4000000000000008
+          :expand_path: 1.800000000000001
+          :join: 1.600000000000001
+          :directory?: 1.600000000000001
+          :add_file: 1.900000000000001
+          :<<: 1.700000000000001
+        :score: 11.992080720208657
+        :path: lib/redex/helper/file_util.rb:63
+      Redex::Helper::FileUtil::Import#add_file:
+        :operators:
+          :assignment: 8.800000000000004
+          :branch: 5.700000000000003
+          :[]: 4.400000000000002
+          :basename: 1.5000000000000009
+          :new: 1.4000000000000008
+          :update: 1.4000000000000008
+          :foreach: 1.5000000000000009
+          :<<: 1.600000000000001
+        :score: 15.785119575093509
+        :path: lib/redex/helper/file_util.rb:73
+  - :name: Redex::define_doc_type
+    :path: lib/redex.rb
+    :total_score: 15.055895855112711
+    :highest_score: 15.055895855112711
+    :average_score: 15.055895855112711
+    :methods:
+      Redex::define_doc_type:
+        :operators:
+          :assignment: 2.6000000000000005
+          :new: 1.3000000000000003
+          :branch: 2.6000000000000005
+          :block_given?: 1.3000000000000003
+          :yield: 1.4000000000000004
+          :configuration: 3.4000000000000004
+          :document_types: 3.0000000000000004
+          :keys: 1.5000000000000002
+          :include?: 1.3000000000000003
+          :raise: 1.4000000000000004
+        :score: 15.055895855112711
+        :path: lib/redex.rb:30
+  - :name: Redex::Helper::Type
+    :path: lib/redex/helper/type.rb
+    :total_score: 19.470861605952695
+    :highest_score: 13.273281433014226
+    :average_score: 9.735430802976348
+    :methods:
+      Redex::Helper::Type#has_section:
+        :operators:
+          :assignment: 3.600000000000002
+          :new: 1.2000000000000006
+          :branch: 1.2000000000000006
+          :block_given?: 1.2000000000000006
+          :yield: 1.3000000000000007
+          :add_child: 1.2000000000000006
+        :score: 6.19758017293847
+        :path: lib/redex/helper/type.rb:5
+      Redex::Helper::Type#has_content:
+        :operators:
+          :assignment: 4.900000000000002
+          :new: 1.2000000000000006
+          :branch: 2.4000000000000012
+          :[]: 4.000000000000002
+          :configuration: 1.7000000000000006
+          :dictionaries: 1.5000000000000007
+          :block_given?: 1.2000000000000006
+          :yield: 1.3000000000000007
+          :add_child: 1.2000000000000006
+        :score: 13.273281433014226
+        :path: lib/redex/helper/type.rb:13
+  - :name: Redex::Runner::import_dictionaries
+    :path: lib/redex/runner.rb
+    :total_score: 11.69957264176774
+    :highest_score: 11.69957264176774
+    :average_score: 11.69957264176774
+    :methods:
+      Redex::Runner::import_dictionaries:
+        :operators:
+          :assignment: 3.800000000000002
+          :configuration: 3.1000000000000014
+          :load_path: 1.4000000000000006
+          :import: 1.2000000000000006
+          :branch: 1.2000000000000006
+          :each: 1.2000000000000006
+          :dictionaries: 1.3000000000000007
+          :name: 1.5000000000000007
+          :to_sym: 1.3000000000000007
+        :score: 11.69957264176774
+        :path: lib/redex/runner.rb:3
+  - :name: Redex::Dictionary::get
+    :path: lib/redex/dictionary.rb
+    :total_score: 10.07174264961134
+    :highest_score: 10.07174264961134
+    :average_score: 10.07174264961134
+    :methods:
+      Redex::Dictionary::get:
+        :operators:
+          :branch: 1.2000000000000002
+          :configuration: 3.3000000000000003
+          :dictionaries: 2.9000000000000004
+          :[]: 2.5000000000000004
+          :raise: 1.3000000000000003
+        :score: 10.07174264961134
+        :path: lib/redex/dictionary.rb:18
+  - :name: Redex::SectionType
+    :path: lib/redex/section_type.rb
+    :total_score: 22.19369157131005
+    :highest_score: 9.900000000000006
+    :average_score: 3.698948595218342
+    :methods:
+      Redex::SectionType#none:
+        :operators:
+          :include: 6.600000000000003
+          :attr_reader: 3.3000000000000016
+        :score: 9.900000000000006
+        :path: !!null 
+      Redex::SectionType#initialize:
+        :operators:
+          :assignment: 1.2000000000000006
+        :score: 1.2000000000000006
+        :path: lib/redex/section_type.rb:18
+      Redex::SectionType#starts_with:
+        :operators:
+          :assignment: 1.2000000000000006
+          :[]: 1.4000000000000006
+          :get: 1.2000000000000006
+        :score: 2.8635642126552723
+        :path: lib/redex/section_type.rb:23
+      Redex::SectionType#ends_with:
+        :operators:
+          :assignment: 1.2000000000000006
+          :[]: 1.4000000000000006
+          :get: 1.2000000000000006
+        :score: 2.8635642126552723
+        :path: lib/redex/section_type.rb:28
+      Redex::SectionType#starts_with_content:
+        :operators:
+          :assignment: 1.2000000000000006
+          :starts_with: 1.2000000000000006
+          :has_content: 1.2000000000000006
+        :score: 2.683281572999749
+        :path: lib/redex/section_type.rb:32
+      Redex::SectionType#ends_with_content:
+        :operators:
+          :assignment: 1.2000000000000006
+          :ends_with: 1.2000000000000006
+          :has_content: 1.2000000000000006
+        :score: 2.683281572999749
+        :path: lib/redex/section_type.rb:37
+  - :name: Redex::Helper::Data
+    :path: lib/redex/helper/data.rb
+    :total_score: 14.598457500752573
+    :highest_score: 7.3783466982786905
+    :average_score: 7.299228750376287
+    :methods:
+      Redex::Helper::Data#clear:
+        :operators:
+          :branch: 1.2000000000000006
+          :db: 3.1000000000000014
+          :keys: 1.4000000000000006
+          :each: 1.2000000000000006
+          :assignment: 1.3000000000000007
+          :del: 1.3000000000000007
+        :score: 7.220110802473883
+        :path: lib/redex/helper/data.rb:6
+      Redex::Helper::Data#db:
+        :operators:
+          :branch: 1.2000000000000006
+          :const_defined?: 1.2000000000000006
+          :assignment: 2.6000000000000014
+          :const_get: 1.5000000000000007
+          :db: 1.5000000000000007
+          :new: 2.6000000000000014
+        :score: 7.3783466982786905
+        :path: lib/redex/helper/data.rb:11
+  - :name: Redex::Match
+    :path: lib/redex/match.rb
+    :total_score: 20.97597145720241
+    :highest_score: 7.03206939669967
+    :average_score: 3.495995242867068
+    :methods:
+      Redex::Match#none:
+        :operators:
+          :attr_reader: 3.3000000000000016
+          :extend: 2.200000000000001
+        :score: 5.500000000000003
+        :path: !!null 
+      Redex::Match#initialize:
+        :operators:
+          :assignment: 2.4000000000000012
+          :increment: 1.2000000000000006
+        :score: 2.683281572999749
+        :path: lib/redex/match.rb:21
+      Redex::Match#dictionary:
+        :operators:
+          :assignment: 1.2000000000000006
+          :key: 1.4000000000000006
+          :new: 1.2000000000000006
+        :score: 2.8635642126552723
+        :path: lib/redex/match.rb:28
+      Redex::Match#document:
+        :operators:
+          :document: 1.2000000000000006
+        :score: 1.2000000000000006
+        :path: lib/redex/match.rb:33
+      Redex::Match#add_flag:
+        :operators:
+          :branch: 2.4000000000000012
+          :include?: 2.4000000000000012
+          :ArgumentError: 1.5000000000000007
+          :raise: 1.3000000000000007
+          :assignment: 1.2000000000000006
+          :<<: 1.3000000000000007
+        :score: 7.03206939669967
+        :path: lib/redex/match.rb:37
+      Redex::Match#content:
+        :operators:
+          :assignment: 1.2000000000000006
+          :match: 1.2000000000000006
+        :score: 1.697056274847715
+        :path: lib/redex/match.rb:44
+  - :name: Redex::DocumentType
+    :path: lib/redex/document_type.rb
+    :total_score: 20.986447102087936
+    :highest_score: 6.600000000000003
+    :average_score: 5.246611775521984
+    :methods:
+      Redex::DocumentType#none:
+        :operators:
+          :include: 4.400000000000002
+          :attr_reader: 1.1000000000000005
+          :attr_accessor: 1.1000000000000005
+        :score: 6.600000000000003
+        :path: !!null 
+      Redex::DocumentType#initialize:
+        :operators:
+          :assignment: 1.2000000000000006
+          :branch: 1.2000000000000006
+          :block_given?: 1.2000000000000006
+          :yield: 1.3000000000000007
+        :score: 3.021588985947627
+        :path: lib/redex/document_type.rb:15
+      Redex::DocumentType#content_types:
+        :operators:
+          :branch: 1.2000000000000006
+          :children: 1.4000000000000006
+          :select: 1.2000000000000006
+          :assignment: 1.3000000000000007
+          :class: 1.5000000000000007
+          :==: 1.3000000000000007
+        :score: 5.682429058070152
+        :path: lib/redex/document_type.rb:26
+      Redex::DocumentType#section_types:
+        :operators:
+          :branch: 1.2000000000000006
+          :children: 1.4000000000000006
+          :select: 1.2000000000000006
+          :assignment: 1.3000000000000007
+          :class: 1.5000000000000007
+          :==: 1.3000000000000007
+        :score: 5.682429058070152
+        :path: lib/redex/document_type.rb:31
+  - :name: Redex::DocumentSection
+    :path: lib/redex/document_section.rb
+    :total_score: 12.600000000000007
+    :highest_score: 6.600000000000003
+    :average_score: 3.1500000000000017
+    :methods:
+      Redex::DocumentSection#none:
+        :operators:
+          :include: 4.400000000000002
+          :attr_reader: 2.200000000000001
+        :score: 6.600000000000003
+        :path: !!null 
+      Redex::DocumentSection#initialize:
+        :operators:
+          :assignment: 3.600000000000002
+        :score: 3.600000000000002
+        :path: lib/redex/document_section.rb:12
+      Redex::DocumentSection#starts_with:
+        :operators:
+          :has_section: 1.2000000000000006
+        :score: 1.2000000000000006
+        :path: lib/redex/document_section.rb:18
+      Redex::DocumentSection#lines:
+        :operators:
+          :lines: 1.2000000000000006
+        :score: 1.2000000000000006
+        :path: lib/redex/document_section.rb:23
+  - :name: Redex::DictionaryItem
+    :path: lib/redex/dictionary_item.rb
+    :total_score: 32.907732906739334
+    :highest_score: 5.800000000000001
+    :average_score: 3.2907732906739335
+    :methods:
+      Redex::DictionaryItem#none:
+        :operators:
+          :attr_reader: 2.2
+        :score: 2.2
+        :path: !!null 
+      Redex::DictionaryItem#initialize:
+        :operators:
+          :assignment: 2.4000000000000004
+          :branch: 1.2000000000000002
+          :name: 1.3000000000000003
+        :score: 2.981610303175115
+        :path: lib/redex/dictionary_item.rb:9
+      Redex::DictionaryItem#index:
+        :operators:
+          :db: 1.6
+          :zrank: 1.4000000000000001
+          :to_i: 1.2000000000000002
+        :score: 4.2
+        :path: lib/redex/dictionary_item.rb:15
+      Redex::DictionaryItem#score:
+        :operators:
+          :db: 1.6
+          :zscore: 1.4000000000000001
+          :to_i: 1.2000000000000002
+        :score: 4.2
+        :path: lib/redex/dictionary_item.rb:20
+      Redex::DictionaryItem#increment:
+        :operators:
+          :db: 1.4000000000000001
+          :lit_fixnum: 0.35000000000000003
+          :zincrby: 1.2000000000000002
+        :score: 2.95
+        :path: lib/redex/dictionary_item.rb:25
+      Redex::DictionaryItem#to_regexp:
+        :operators:
+          :new: 1.2000000000000002
+        :score: 1.2000000000000002
+        :path: lib/redex/dictionary_item.rb:30
+      Redex::DictionaryItem#match:
+        :operators:
+          :to_regexp: 1.6
+          :value: 1.6
+          :match: 1.4000000000000001
+          :to_s: 1.2000000000000002
+        :score: 5.800000000000001
+        :path: lib/redex/dictionary_item.rb:35
+      Redex::DictionaryItem#match?:
+        :operators:
+          :branch: 1.2000000000000002
+          :to_regexp: 1.4000000000000001
+          :value: 1.4000000000000001
+          :match: 1.2000000000000002
+        :score: 4.17612260356422
+        :path: lib/redex/dictionary_item.rb:40
+      Redex::DictionaryItem#dictionary:
+        :operators:
+          :new: 1.2000000000000002
+        :score: 1.2000000000000002
+        :path: lib/redex/dictionary_item.rb:45
+      Redex::DictionaryItem#<=>:
+        :operators:
+          :index: 2.8000000000000003
+          :<=>: 1.2000000000000002
+        :score: 4.0
+        :path: lib/redex/dictionary_item.rb:50
+  - :name: Redex::Configuration
+    :path: lib/redex/configuration.rb
+    :total_score: 6.7
+    :highest_score: 5.5
+    :average_score: 3.35
+    :methods:
+      Redex::Configuration#none:
+        :operators:
+          :define_setting: 5.5
+        :score: 5.5
+        :path: !!null 
+      Redex::Configuration#settings:
+        :operators:
+          :assignment: 1.2000000000000002
+        :score: 1.2000000000000002
+        :path: lib/redex/configuration.rb:21
+  - :name: Redex::ContentType
+    :path: lib/redex/content_type.rb
+    :total_score: 5.6000000000000005
+    :highest_score: 4.4
+    :average_score: 2.8000000000000003
+    :methods:
+      Redex::ContentType#none:
+        :operators:
+          :include: 2.2
+          :attr_reader: 1.1
+          :attr_accessor: 1.1
+        :score: 4.4
+        :path: !!null 
+      Redex::ContentType#initialize:
+        :operators:
+          :assignment: 1.2000000000000002
+        :score: 1.2000000000000002
+        :path: lib/redex/content_type.rb:10
+  - :name: Redex::configure
+    :path: lib/redex.rb
+    :total_score: 4.301162633521315
+    :highest_score: 4.301162633521315
+    :average_score: 4.301162633521315
+    :methods:
+      Redex::configure:
+        :operators:
+          :branch: 1.3000000000000003
+          :block_given?: 1.3000000000000003
+          :yield: 1.4000000000000004
+          :configuration: 1.4000000000000004
+        :score: 4.301162633521315
+        :path: lib/redex.rb:22
+  - :name: Redex::Line
+    :path: lib/redex/line.rb
+    :total_score: 11.908290498874036
+    :highest_score: 4.011234224026318
+    :average_score: 2.977072624718509
+    :methods:
+      Redex::Line#none:
+        :operators:
+          :attr_reader: 2.200000000000001
+        :score: 2.200000000000001
+        :path: !!null 
+      Redex::Line#initialize:
+        :operators:
+          :assignment: 3.600000000000002
+          :branch: 1.2000000000000006
+          :name: 1.3000000000000007
+        :score: 4.011234224026318
+        :path: lib/redex/line.rb:9
+      Redex::Line#document:
+        :operators:
+          :assignment: 1.2000000000000006
+          :new: 1.2000000000000006
+        :score: 1.697056274847715
+        :path: lib/redex/line.rb:16
+      Redex::Line#<=>:
+        :operators:
+          :number: 2.800000000000001
+          :<=>: 1.2000000000000006
+        :score: 4.000000000000002
+        :path: lib/redex/line.rb:21
+  - :name: Redex::Helper::FileUtil::open_page
+    :path: lib/redex/helper/file_util.rb
+    :total_score: 2.8000000000000016
+    :highest_score: 2.8000000000000016
+    :average_score: 2.8000000000000016
+    :methods:
+      Redex::Helper::FileUtil::open_page:
+        :operators:
+          :open: 1.5000000000000007
+          :parse: 1.3000000000000007
+        :score: 2.8000000000000016
+        :path: lib/redex/helper/file_util.rb:40
+  - :name: Redex::document_types
+    :path: lib/redex.rb
+    :total_score: 2.8000000000000007
+    :highest_score: 2.8000000000000007
+    :average_score: 2.8000000000000007
+    :methods:
+      Redex::document_types:
+        :operators:
+          :configuration: 1.5000000000000002
+          :document_types: 1.3000000000000003
+        :score: 2.8000000000000007
+        :path: lib/redex.rb:26
+  - :name: Redex::DocumentType::get
+    :path: lib/redex/document_type.rb
+    :total_score: 2.6000000000000014
+    :highest_score: 2.6000000000000014
+    :average_score: 2.6000000000000014
+    :methods:
+      Redex::DocumentType::get:
+        :operators:
+          :document_types: 1.4000000000000006
+          :[]: 1.2000000000000006
+        :score: 2.6000000000000014
+        :path: lib/redex/document_type.rb:21
+  - :name: Redex
+    :path: ''
+    :total_score: 2.4000000000000004
+    :highest_score: 2.4000000000000004
+    :average_score: 2.4000000000000004
+    :methods:
+      Redex#none:
+        :operators:
+          :extend: 2.4000000000000004
+        :score: 2.4000000000000004
+        :path: !!null 
+  - :name: Redex::DocumentContent
+    :path: ''
+    :total_score: 2.000000000000001
+    :highest_score: 2.000000000000001
+    :average_score: 2.000000000000001
+    :methods:
+      Redex::DocumentContent#none:
+        :operators:
+          :include: 2.000000000000001
+        :score: 2.000000000000001
+        :path: !!null 
+  - :name: Redex::configuration
+    :path: lib/redex.rb
+    :total_score: 1.838477631085024
+    :highest_score: 1.838477631085024
+    :average_score: 1.838477631085024
+    :methods:
+      Redex::configuration:
+        :operators:
+          :assignment: 1.3000000000000003
+          :new: 1.3000000000000003
+        :score: 1.838477631085024
+        :path: lib/redex.rb:18
+  - :name: Redex::Helper::ActsAsParent
+    :path: lib/redex/helper/acts_as_parent.rb
+    :total_score: 3.39411254969543
+    :highest_score: 1.697056274847715
+    :average_score: 1.697056274847715
+    :methods:
+      Redex::Helper::ActsAsParent#add_child:
+        :operators:
+          :assignment: 1.2000000000000006
+          :<<: 1.2000000000000006
+        :score: 1.697056274847715
+        :path: lib/redex/helper/acts_as_parent.rb:5
+      Redex::Helper::ActsAsParent#parent?:
+        :operators:
+          :branch: 1.2000000000000006
+          :children: 1.2000000000000006
+        :score: 1.697056274847715
+        :path: lib/redex/helper/acts_as_parent.rb:14
+  - :name: Redex::Helper::ActsAsChild
+    :path: lib/redex/helper/acts_as_child.rb
+    :total_score: 2.8970562748477153
+    :highest_score: 1.697056274847715
+    :average_score: 1.4485281374238577
+    :methods:
+      Redex::Helper::ActsAsChild#parent=:
+        :operators:
+          :assignment: 1.2000000000000006
+        :score: 1.2000000000000006
+        :path: lib/redex/helper/acts_as_child.rb:5
+      Redex::Helper::ActsAsChild#top_level?:
+        :operators:
+          :branch: 1.2000000000000006
+          :parent: 1.2000000000000006
+        :score: 1.697056274847715
+        :path: lib/redex/helper/acts_as_child.rb:15
+  - :name: Redex::Helper::FileUtil::empty_msg
+    :path: lib/redex/helper/file_util.rb
+    :total_score: 1.3000000000000007
+    :highest_score: 1.3000000000000007
+    :average_score: 1.3000000000000007
+    :methods:
+      Redex::Helper::FileUtil::empty_msg:
+        :operators:
+          :assignment: 1.3000000000000007
+        :score: 1.3000000000000007
+        :path: lib/redex/helper/file_util.rb:44
+  - :name: Redex::Helper::FileUtil
+    :path: ''
+    :total_score: 1.2000000000000006
+    :highest_score: 1.2000000000000006
+    :average_score: 1.2000000000000006
+    :methods:
+      Redex::Helper::FileUtil#none:
+        :operators:
+          :private: 1.2000000000000006
+        :score: 1.2000000000000006
+        :path: !!null 
+:flay:
+  :total_score: '0'
+  :matches: []
+:reek:
+  :matches:
+  - :file_path: lib/redex.rb
+    :code_smells:
+    - :method: Redex#self.define_doc_type
+      :message: calls configuration twice
+      :type: Duplication
+    - :method: Redex#self.define_doc_type
+      :message: calls configuration.document_types twice
+      :type: Duplication
+  - :file_path: lib/redex/configuration.rb
+    :code_smells:
+    - :method: Redex::Configuration
+      :message: has no descriptive comment
+      :type: IrresponsibleModule
+    - :method: Redex::Configuration#self.define_setting
+      :message: calls settings 3 times
+      :type: Duplication
+  - :file_path: lib/redex/content_type.rb
+    :code_smells:
+    - :method: Redex::ContentType
+      :message: has no descriptive comment
+      :type: IrresponsibleModule
+  - :file_path: lib/redex/dictionary.rb
+    :code_smells:
+    - :method: Redex::Dictionary#add_items
+      :message: contains iterators nested 2 deep
+      :type: NestedIterators
+    - :method: Redex::Dictionary#self.get
+      :message: calls Redex.configuration twice
+      :type: Duplication
+    - :method: Redex::Dictionary#self.get
+      :message: calls Redex.configuration.dictionaries twice
+      :type: Duplication
+    - :method: Redex::Dictionary#self.get
+      :message: calls Redex.configuration.dictionaries[name] twice
+      :type: Duplication
+  - :file_path: lib/redex/dictionary_item.rb
+    :code_smells:
+    - :method: Redex::DictionaryItem
+      :message: has no descriptive comment
+      :type: IrresponsibleModule
+  - :file_path: lib/redex/document.rb
+    :code_smells:
+    - :method: Redex::Document#add_lines
+      :message: contains iterators nested 2 deep
+      :type: NestedIterators
+    - :method: Redex::Document#each
+      :message: has approx 6 statements
+      :type: LongMethod
+    - :method: Redex::Document#lines
+      :message: calls Document.db twice
+      :type: Duplication
+    - :method: Redex::Document#lines
+      :message: calls update twice
+      :type: Duplication
+    - :method: Redex::Document#lines
+      :message: is controlled by argument range
+      :type: ControlCouple
+  - :file_path: lib/redex/document_content.rb
+    :code_smells:
+    - :method: Redex::DocumentContent
+      :message: has no descriptive comment
+      :type: IrresponsibleModule
+  - :file_path: lib/redex/document_section.rb
+    :code_smells:
+    - :method: Redex::DocumentSection
+      :message: has no descriptive comment
+      :type: IrresponsibleModule
+  - :file_path: lib/redex/document_type.rb
+    :code_smells: []
+  - :file_path: lib/redex/helper.rb
+    :code_smells: []
+  - :file_path: lib/redex/helper/acts_as_child.rb
+    :code_smells: []
+  - :file_path: lib/redex/helper/acts_as_parent.rb
+    :code_smells: []
+  - :file_path: lib/redex/helper/data.rb
+    :code_smells:
+    - :method: Redex::Helper::Data#clear
+      :message: calls db twice
+      :type: Duplication
+  - :file_path: lib/redex/helper/file_util.rb
+    :code_smells:
+    - :method: Redex::Helper::FileUtil#self.create_file
+      :message: calls Redex.configuration twice
+      :type: Duplication
+    - :method: Redex::Helper::FileUtil#self.create_file
+      :message: calls Redex.configuration.write_path twice
+      :type: Duplication
+    - :method: Redex::Helper::FileUtil#self.create_file
+      :message: contains iterators nested 2 deep
+      :type: NestedIterators
+    - :method: Redex::Helper::FileUtil#self.create_file
+      :message: has approx 6 statements
+      :type: LongMethod
+    - :method: Redex::Helper::FileUtil#self.create_file
+      :message: has the variable name 'f'
+      :type: UncommunicativeName
+    - :method: Redex::Helper::FileUtil#self.generate
+      :message: has approx 6 statements
+      :type: LongMethod
+    - :method: Redex::Helper::FileUtil::Import#add_file
+      :message: calls options[:type] twice
+      :type: Duplication
+    - :method: Redex::Helper::FileUtil::Import#add_file
+      :message: contains iterators nested 2 deep
+      :type: NestedIterators
+    - :method: Redex::Helper::FileUtil::Import#add_file
+      :message: has the variable name 'd'
+      :type: UncommunicativeName
+    - :method: Redex::Helper::FileUtil::Import#add_file
+      :message: refers to options more than self
+      :type: LowCohesion
+  - :file_path: lib/redex/helper/type.rb
+    :code_smells:
+    - :method: Redex::Helper::Type#has_content
+      :message: calls options[:dictionary] twice
+      :type: Duplication
+  - :file_path: lib/redex/line.rb
+    :code_smells: []
+  - :file_path: lib/redex/match.rb
+    :code_smells: []
+  - :file_path: lib/redex/parser.rb
+    :code_smells:
+    - :method: Redex::Parser
+      :message: has no descriptive comment
+      :type: IrresponsibleModule
+    - :method: Redex::Parser#get_section_type
+      :message: doesn't depend on instance state
+      :type: LowCohesion
+    - :method: Redex::Parser#get_section_type
+      :message: refers to document more than self
+      :type: LowCohesion
+    - :method: Redex::Parser#get_section_type
+      :message: refers to sec_type more than self
+      :type: LowCohesion
+    - :method: Redex::Parser#match_section
+      :message: has approx 7 statements
+      :type: LongMethod
+    - :method: Redex::Parser#match_section_end
+      :message: calls document_or_section.number_of_lines twice
+      :type: Duplication
+    - :method: Redex::Parser#match_section_end
+      :message: calls line.number twice
+      :type: Duplication
+    - :method: Redex::Parser#match_section_end
+      :message: has approx 13 statements
+      :type: LongMethod
+    - :method: Redex::Parser#match_section_start
+      :message: has approx 9 statements
+      :type: LongMethod
+    - :method: Redex::Parser#parse_outer_sections
+      :message: doesn't depend on instance state
+      :type: LowCohesion
+    - :method: Redex::Parser#parse_outer_sections
+      :message: refers to document more than self
+      :type: LowCohesion
+  - :file_path: lib/redex/runner.rb
+    :code_smells:
+    - :method: Redex::Runner
+      :message: has no descriptive comment
+      :type: IrresponsibleModule
+    - :method: Redex::Runner#self.find_matches
+      :message: contains iterators nested 2 deep
+      :type: NestedIterators
+    - :method: Redex::Runner#self.find_matches
+      :message: has approx 8 statements
+      :type: LongMethod
+    - :method: Redex::Runner#self.import_dictionaries
+      :message: calls Redex.configuration twice
+      :type: Duplication
+    - :method: Redex::Runner#self.import_documents
+      :message: has approx 6 statements
+      :type: LongMethod
+  - :file_path: lib/redex/section_type.rb
+    :code_smells: []
+:roodi:
+  :total: !!null 
+  :problems: []
+:rcov:
+  lib/redex/parser.rb:
+    :lines:
+    - :content: module Redex
+      :was_run: false
+    - :content: ! '  class Parser'
+      :was_run: true
+    - :content: ! '#   Searches a line for dictionary terms'
+      :was_run: false
+    - :content: ! '#   Stops searching once a match is found and returns a match object'
+      :was_run: false
+    - :content: ! '#   Returns nil if no match is found'
+      :was_run: false
+    - :content: ! '#   Increments the score of the corresponding dictionary item when
+        a match is created'
+      :was_run: false
+    - :content: ! '    def find_match(dictionary, line)'
+      :was_run: false
+    - :content: ! '      first_match = dictionary.detect do |item|'
+      :was_run: true
+    - :content: ! '        item.match?(line)'
+      :was_run: false
+    - :content: ! '      end'
+      :was_run: false
+    - :content: ! '      if first_match'
+      :was_run: false
+    - :content: ! '        match = Match.new(first_match, line)'
+      :was_run: false
+    - :content: ! '        puts "MATCH FOUND: #{match.inspect}"'
+      :was_run: false
+    - :content: ! '        match'
+      :was_run: false
+    - :content: ! '      else'
+      :was_run: false
+    - :content: ! '        nil'
+      :was_run: false
+    - :content: ! '      end'
+      :was_run: false
+    - :content: ! '    end'
+      :was_run: false
+    - :content: ! '    def match_section(section_type_name, document)'
+      :was_run: false
+    - :content: ! '      matches = []'
+      :was_run: true
+    - :content: ! '      start_match = match_section_start(section_type_name, document)'
+      :was_run: false
+    - :content: ! '      puts "START MATCH: #{start_match.inspect}"'
+      :was_run: false
+    - :content: ! '      matches << start_match unless start_match.nil?'
+      :was_run: false
+    - :content: ! '      end_match = match_section_end(section_type_name, document)'
+      :was_run: false
+    - :content: ! '      puts "END MATCH: #{end_match.inspect}"'
+      :was_run: false
+    - :content: ! '      matches << end_match unless end_match.nil?'
+      :was_run: false
+    - :content: ! '    end'
+      :was_run: false
+    - :content: ! '    def match_section_start(section_type_name, document_or_section)'
+      :was_run: false
+    - :content: ! '      match = nil'
+      :was_run: true
+    - :content: ! '      section_type = get_section_type(section_type_name, document_or_section)'
+      :was_run: false
+    - :content: ! '      document_or_section.lines.each do |line|'
+      :was_run: false
+    - :content: ! '        match = find_match(section_type.end_dictionary, line)'
+      :was_run: false
+    - :content: ! '        if match'
+      :was_run: false
+    - :content: ! '          match.add_flag :start_section'
+      :was_run: false
+    - :content: ! '          match.add_flag :content'
+      :was_run: false
+    - :content: ! '          @last_line = line.number'
+      :was_run: false
+    - :content: ! '          break'
+      :was_run: false
+    - :content: ! '        end'
+      :was_run: false
+    - :content: ! '      end'
+      :was_run: false
+    - :content: ! '      match'
+      :was_run: false
+    - :content: ! '    end'
+      :was_run: false
+    - :content: ! '    def match_section_end(section_type_name, document_or_section)'
+      :was_run: false
+    - :content: ! '      match = nil'
+      :was_run: true
+    - :content: ! '      section_type = get_section_type(section_type_name, document_or_section)'
+      :was_run: false
+    - :content: ! '      puts "LAST LINE -- #{@last_line}"'
+      :was_run: false
+    - :content: ! '      puts "NUM LINES -- #{document_or_section.number_of_lines}"'
+      :was_run: false
+    - :content: ! '      total_lines = document_or_section.number_of_lines'
+      :was_run: false
+    - :content: ! '      document_or_section.lines(@last_line..total_lines).each do
+        |line|'
+      :was_run: false
+    - :content: ! '        puts "LINE #{line.number}: #{line.inspect}"'
+      :was_run: false
+    - :content: ! '        match = find_match(section_type.end_dictionary, line)'
+      :was_run: false
+    - :content: ! '        if match'
+      :was_run: false
+    - :content: ! '          match.add_flag :end_section'
+      :was_run: false
+    - :content: ! '          match.add_flag :content'
+      :was_run: false
+    - :content: ! '          @last_line = line.number'
+      :was_run: false
+    - :content: ! '          break'
+      :was_run: false
+    - :content: ! '        end'
+      :was_run: false
+    - :content: ! '      end'
+      :was_run: false
+    - :content: ! '      match'
+      :was_run: false
+    - :content: ! '    end'
+      :was_run: false
+    - :content: ! '    def get_section_type(name, document)'
+      :was_run: false
+    - :content: ! '      DocumentType.get(document.type).section_types.select {'
+      :was_run: true
+    - :content: ! '          |sec_type| sec_type.name == name'
+      :was_run: true
+    - :content: ! '      }.first'
+      :was_run: false
+    - :content: ! '    end'
+      :was_run: false
+    - :content: ! '    def parse_content(content_type, document)'
+      :was_run: false
+    - :content: ! '    end'
+      :was_run: false
+    - :content: ! '    def parse_outer_sections(document)'
+      :was_run: false
+    - :content: ! '#      dictionaries = @doc_type.section_types.map { |section_type|
+        section_type. }'
+      :was_run: true
+    - :content: ! '      document.lines.each do |line|'
+      :was_run: false
+    - :content: ! '      end'
+      :was_run: false
+    - :content: ! '    end'
+      :was_run: false
+    - :content: ! '  end'
+      :was_run: false
+    - :content: end
+      :was_run: true
+    :percent_run: 12
+    :methods:
+      Redex::Parser#find_match: 91.66666666666666
+      Redex::Parser#match_section: 88.88888888888889
+      Redex::Parser#match_section_start: 92.85714285714286
+      Redex::Parser#match_section_end: 94.44444444444444
+      Redex::Parser#get_section_type: 60.0
+      Redex::Parser#parse_content: 100.0
+      Redex::Parser#parse_outer_sections: 80.0
+  lib/redex/document.rb:
+    :lines:
+    - :content: require "redex/helper"
+      :was_run: false
+    - :content: require "redex/document_content"
+      :was_run: true
+    - :content: require "redex/document_section"
+      :was_run: true
+    - :content: module Redex
+      :was_run: true
+    - :content: ! '# Represents a document stored in Redis as a list,'
+      :was_run: true
+    - :content: ! '# with each line is stored as a list item'
+      :was_run: false
+    - :content: ! '  class Document'
+      :was_run: false
+    - :content: ! '    extend Helper::Data'
+      :was_run: false
+    - :content: ! '    extend Helper::FileUtil::Import'
+      :was_run: true
+    - :content: ! '    include Enumerable'
+      :was_run: true
+    - :content: ! '#   Prefix used in Redis'
+      :was_run: false
+    - :content: ! '    NAMESPACE = :file'
+      :was_run: false
+    - :content: ! '#   Unique name for document'
+      :was_run: false
+    - :content: ! '    attr_reader :name'
+      :was_run: false
+    - :content: ! '#   Type of document'
+      :was_run: false
+    - :content: ! '    attr_accessor :type'
+      :was_run: false
+    - :content: ! '#   Array containing parsed sections of a document'
+      :was_run: false
+    - :content: ! '    attr_reader :sections'
+      :was_run: false
+    - :content: ! '#   Array containing parsed contents of a document'
+      :was_run: false
+    - :content: ! '    attr_reader :contents'
+      :was_run: false
+    - :content: ! '#   Number of lines'
+      :was_run: false
+    - :content: ! '    attr_reader :number_of_lines'
+      :was_run: false
+    - :content: ! '    def initialize(name)'
+      :was_run: false
+    - :content: ! '      @name = name'
+      :was_run: true
+    - :content: ! '      @parsed = false'
+      :was_run: true
+    - :content: ! '      @number_of_lines = Document.db.llen @name'
+      :was_run: true
+    - :content: ! '    end'
+      :was_run: true
+    - :content: ! '#   Saves a single line or an array of lines to a document (stored
+        in Redis)'
+      :was_run: false
+    - :content: ! '    def <<(line_or_lines)'
+      :was_run: false
+    - :content: ! '      case line_or_lines'
+      :was_run: true
+    - :content: ! '        when String'
+      :was_run: false
+    - :content: ! '          add_line line_or_lines'
+      :was_run: false
+    - :content: ! '        when Array'
+      :was_run: false
+    - :content: ! '          add_lines line_or_lines'
+      :was_run: false
+    - :content: ! '        else'
+      :was_run: false
+    - :content: ! '          raise "#{line_or_lines} must be a string or an array."'
+      :was_run: false
+    - :content: ! '      end'
+      :was_run: false
+    - :content: ! '      self'
+      :was_run: false
+    - :content: ! '    end'
+      :was_run: false
+    - :content: ! '#   Retrieves a single document line from Redis and returns a line
+        object'
+      :was_run: false
+    - :content: ! '    def line(number)'
+      :was_run: false
+    - :content: ! '      value = nil'
+      :was_run: true
+    - :content: ! '      update do'
+      :was_run: false
+    - :content: ! '        value = Document.db.lindex @name, number - 1'
+      :was_run: false
+    - :content: ! '      end'
+      :was_run: false
+    - :content: ! '      Line.new self, value, number'
+      :was_run: false
+    - :content: ! '    end'
+      :was_run: false
+    - :content: ! '#   Returns all document lines from Redis and as an array of line
+        objects'
+      :was_run: false
+    - :content: ! '#   Returns a range of lines when a range object is supplied'
+      :was_run: false
+    - :content: ! '    def lines(range=nil)'
+      :was_run: false
+    - :content: ! '      values = []'
+      :was_run: true
+    - :content: ! '      if range'
+      :was_run: false
+    - :content: ! '        update { values = Document.db.lrange(@name, range.first
+        - 1, range.last - 1) }'
+      :was_run: false
+    - :content: ! '      else'
+      :was_run: false
+    - :content: ! '        update { values = Document.db.lrange(@name, 0, @number_of_lines)
+        }'
+      :was_run: false
+    - :content: ! '      end'
+      :was_run: false
+    - :content: ! '      values.each_with_index.map { |val, index| Line.new(self,
+        val, index + 1) }'
+      :was_run: false
+    - :content: ! '    end'
+      :was_run: false
+    - :content: ! '#   Performs an atomic update on a document'
+      :was_run: false
+    - :content: ! '    def update'
+      :was_run: false
+    - :content: ! '      yield self'
+      :was_run: true
+    - :content: ! '      @number_of_lines = Document.db.llen @name'
+      :was_run: false
+    - :content: ! '    end'
+      :was_run: false
+    - :content: ! '#   Take lines from Redis'
+      :was_run: false
+    - :content: ! '    def each'
+      :was_run: false
+    - :content: ! '      current_line = 1'
+      :was_run: true
+    - :content: ! '      update do'
+      :was_run: false
+    - :content: ! '        until current_line > @number_of_lines'
+      :was_run: false
+    - :content: ! '          index = current_line - 1'
+      :was_run: false
+    - :content: ! '          value = Document.db.lrange self.name, index, index'
+      :was_run: false
+    - :content: ! '          line = Line.new(self, value[0], current_line)'
+      :was_run: false
+    - :content: ! '          yield line'
+      :was_run: false
+    - :content: ! '          current_line += 1'
+      :was_run: false
+    - :content: ! '        end'
+      :was_run: false
+    - :content: ! '      end'
+      :was_run: false
+    - :content: ! '    end'
+      :was_run: false
+    - :content: ! '#   Name-based equality (name is stored as key in Redis)'
+      :was_run: false
+    - :content: ! '    def ==(other)'
+      :was_run: false
+    - :content: ! '      self.name == other.name'
+      :was_run: true
+    - :content: ! '    end'
+      :was_run: true
+    - :content: ! '#   Boolean specifying whether parsing has completed for the document'
+      :was_run: false
+    - :content: ! '    def parsed?'
+      :was_run: false
+    - :content: ! '      @parsed'
+      :was_run: true
+    - :content: ! '    end'
+      :was_run: true
+    - :content: ! '    def add_section(section)'
+      :was_run: false
+    - :content: ! '      @sections ||= []'
+      :was_run: true
+    - :content: ! '      @sections << DocumentSection.new(self)'
+      :was_run: false
+    - :content: ! '    end'
+      :was_run: false
+    - :content: ! '    def add_content(content)'
+      :was_run: false
+    - :content: ! '    end'
+      :was_run: false
+    - :content: ! '    private'
+      :was_run: false
+    - :content: ! '    def add_line(line)'
+      :was_run: true
+    - :content: ! '      update do'
+      :was_run: true
+    - :content: ! '        Document.db.rpush @name, line'
+      :was_run: false
+    - :content: ! '      end'
+      :was_run: false
+    - :content: ! '      self'
+      :was_run: false
+    - :content: ! '    end'
+      :was_run: false
+    - :content: ! '    def add_lines(lines)'
+      :was_run: false
+    - :content: ! '      update do'
+      :was_run: true
+    - :content: ! '        lines.each do |line|'
+      :was_run: false
+    - :content: ! '          add_line line'
+      :was_run: false
+    - :content: ! '        end'
+      :was_run: false
+    - :content: ! '      end'
+      :was_run: false
+    - :content: ! '      self'
+      :was_run: false
+    - :content: ! '    end'
+      :was_run: false
+    - :content: ! '  end'
+      :was_run: false
+    - :content: end
+      :was_run: true
+    :percent_run: 22
+    :methods:
+      Document#initialize: 20.0
+      Document#<<: 90.9090909090909
+      Document#line: 85.71428571428571
+      Document#lines: 88.88888888888889
+      Document#update: 75.0
+      Document#each: 91.66666666666666
+      Document#==: 33.33333333333333
+      Document#parsed?: 33.33333333333333
+      Document#add_section: 75.0
+      Document#add_content: 100.0
+      Document#add_line: 66.66666666666666
+      Document#add_lines: 87.5
+  lib/redex/runner.rb:
+    :lines:
+    - :content: module Redex
+      :was_run: false
+    - :content: ! '  class Runner'
+      :was_run: true
+    - :content: ! '    def self.import_dictionaries'
+      :was_run: true
+    - :content: ! '      @dictionaries = Dictionary.import(Redex.configuration.load_path)'
+      :was_run: true
+    - :content: ! '      @dictionaries.each do |dict|'
+      :was_run: false
+    - :content: ! '        Redex.configuration.dictionaries[dict.name.to_sym] = dict'
+      :was_run: false
+    - :content: ! '      end'
+      :was_run: false
+    - :content: ! '    end'
+      :was_run: false
+    - :content: ! '    def self.import_documents'
+      :was_run: false
+    - :content: ! '      @documents = []'
+      :was_run: true
+    - :content: ! '      Redex.document_types.each_pair do |key, doc_type|'
+      :was_run: true
+    - :content: ! '        @documents << Document.import(doc_type.load_path, :type
+        => key)'
+      :was_run: true
+    - :content: ! '      end'
+      :was_run: true
+    - :content: ! '      @documents.flatten!'
+      :was_run: false
+    - :content: ! '      @documents.each do |doc|'
+      :was_run: false
+    - :content: ! '        puts "DOCUMENTS: #{@documents.inspect}"'
+      :was_run: false
+    - :content: ! '        Redex.configuration.documents[doc.name.to_sym] = doc'
+      :was_run: false
+    - :content: ! '      end'
+      :was_run: false
+    - :content: ! '    end'
+      :was_run: false
+    - :content: ! '#   Find matches for the specified document type'
+      :was_run: false
+    - :content: ! '    def self.find_matches(doc_type)'
+      :was_run: false
+    - :content: ! '      parser = Parser.new'
+      :was_run: true
+    - :content: ! '      @matches = []'
+      :was_run: false
+    - :content: ! '      docs = Redex.configuration.documents.select { |doc| doc.type
+        == doc_type }'
+      :was_run: false
+    - :content: ! '      docs.each do |doc|'
+      :was_run: false
+    - :content: ! '        doc.lines.each do |line|'
+      :was_run: false
+    - :content: ! '          DocumentType.get(doc_type)'
+      :was_run: false
+    - :content: ! '          match = parser.find_match(line)'
+      :was_run: false
+    - :content: ! '          @matches << match if match'
+      :was_run: false
+    - :content: ! '        end'
+      :was_run: false
+    - :content: ! '      end'
+      :was_run: false
+    - :content: ! '      @matches'
+      :was_run: false
+    - :content: ! '    end'
+      :was_run: false
+    - :content: ! '  end'
+      :was_run: false
+    - :content: end
+      :was_run: true
+    :percent_run: 26
+    :methods:
+      Redex::Runner::import_dictionaries: 66.66666666666666
+      Redex::Runner::import_documents: 63.63636363636363
+      Redex::Runner::find_matches: 92.3076923076923
+  lib/redex/line.rb:
+    :lines:
+    - :content: module Redex
+      :was_run: false
+    - :content: ! '# Represents a single line of a document (typically stored in Redis)'
+      :was_run: true
+    - :content: ! '  class Line'
+      :was_run: false
+    - :content: ! '#   Content of the line'
+      :was_run: true
+    - :content: ! '    attr_reader :value'
+      :was_run: false
+    - :content: ! '#   Line number (1-based)'
+      :was_run: true
+    - :content: ! '    attr_reader :number'
+      :was_run: false
+    - :content: ! '    def initialize(document, value, number)'
+      :was_run: false
+    - :content: ! '      @document_name = document.name || document'
+      :was_run: true
+    - :content: ! '      @value = value'
+      :was_run: false
+    - :content: ! '      @number = number'
+      :was_run: false
+    - :content: ! '    end'
+      :was_run: false
+    - :content: ! '#   Retrieve document object lazily'
+      :was_run: false
+    - :content: ! '    def document'
+      :was_run: false
+    - :content: ! '      @document ||= Document.new(@document_name)'
+      :was_run: true
+    - :content: ! '    end'
+      :was_run: true
+    - :content: ! '#   Sort by line number'
+      :was_run: false
+    - :content: ! '    def <=>(other)'
+      :was_run: false
+    - :content: ! '      self.number <=> other.number'
+      :was_run: true
+    - :content: ! '    end'
+      :was_run: true
+    - :content: ! '  end'
+      :was_run: true
+    - :content: end
+      :was_run: true
+    :percent_run: 45
+    :methods:
+      Redex::Line#initialize: 80.0
+      Redex::Line#document: 33.33333333333333
+      Redex::Line#<=>: 33.33333333333333
+  lib/redex/dictionary.rb:
+    :lines:
+    - :content: module Redex
+      :was_run: false
+    - :content: ! '# Reads from / writes to a sorted set of words or regular expressions'
+      :was_run: true
+    - :content: ! '  class Dictionary'
+      :was_run: false
+    - :content: ! '    extend Helper::Data'
+      :was_run: false
+    - :content: ! '    extend Helper::FileUtil::Import'
+      :was_run: true
+    - :content: ! '    include Enumerable'
+      :was_run: true
+    - :content: ! '    NAMESPACE = :dict'
+      :was_run: false
+    - :content: ! '    attr_reader :name'
+      :was_run: false
+    - :content: ! '    def initialize(name)'
+      :was_run: false
+    - :content: ! '      @name = name'
+      :was_run: true
+    - :content: ! '    end'
+      :was_run: true
+    - :content: ! '#   Retrieve a dictionary by name (takes a symbol)'
+      :was_run: false
+    - :content: ! '    def self.get(name)'
+      :was_run: false
+    - :content: ! '      if Redex.configuration.dictionaries[name]'
+      :was_run: true
+    - :content: ! '        Redex.configuration.dictionaries[name]'
+      :was_run: true
+    - :content: ! '      else'
+      :was_run: true
+    - :content: ! '        raise "Dictionary #{name} not found"'
+      :was_run: false
+    - :content: ! '      end'
+      :was_run: false
+    - :content: ! '    end'
+      :was_run: false
+    - :content: ! '#   Add an item or an array of items to a dictionary'
+      :was_run: false
+    - :content: ! '#   Returns the dictionary object'
+      :was_run: false
+    - :content: ! '    def <<(item_or_items)'
+      :was_run: false
+    - :content: ! '      case item_or_items'
+      :was_run: true
+    - :content: ! '        when String'
+      :was_run: true
+    - :content: ! '          add_item item_or_items'
+      :was_run: false
+    - :content: ! '        when Array'
+      :was_run: true
+    - :content: ! '          add_items item_or_items'
+      :was_run: false
+    - :content: ! '        else'
+      :was_run: true
+    - :content: ! '          raise ArgumentError("#{item_or_items} must be a string
+        or an array.")'
+      :was_run: false
+    - :content: ! '      end'
+      :was_run: false
+    - :content: ! '      self'
+      :was_run: false
+    - :content: ! '    end'
+      :was_run: false
+    - :content: ! '    def items'
+      :was_run: false
+    - :content: ! '      Dictionary.db.zrangebyscore(@name, "-inf", "+inf")'
+      :was_run: true
+    - :content: ! '    end'
+      :was_run: true
+    - :content: ! '    def [](index)'
+      :was_run: false
+    - :content: ! '      Dictionary.db.zrange(@name, index, index)'
+      :was_run: true
+    - :content: ! '    end'
+      :was_run: true
+    - :content: ! '    def size'
+      :was_run: false
+    - :content: ! '      Dictionary.db.zcount("#{NAMESPACE}:#{@name}", "-inf", "+inf").to_i'
+      :was_run: true
+    - :content: ! '    end'
+      :was_run: true
+    - :content: ! '    def update'
+      :was_run: false
+    - :content: ! '      Document.db.multi do'
+      :was_run: true
+    - :content: ! '        yield self'
+      :was_run: true
+    - :content: ! '      end'
+      :was_run: true
+    - :content: ! '    end'
+      :was_run: true
+    - :content: ! '#   fetch dictionary items one by one from Redis'
+      :was_run: false
+    - :content: ! '    def each'
+      :was_run: false
+    - :content: ! '      current_index = size - 1'
+      :was_run: true
+    - :content: ! '      while current_index >= 0'
+      :was_run: false
+    - :content: ! '        value = Dictionary.db.zrange self.name, current_index,
+        current_index'
+      :was_run: false
+    - :content: ! '        item = DictionaryItem.new(self, value[0])'
+      :was_run: false
+    - :content: ! '        yield item if block_given?'
+      :was_run: false
+    - :content: ! '        current_index -= 1'
+      :was_run: false
+    - :content: ! '      end'
+      :was_run: false
+    - :content: ! '    end'
+      :was_run: false
+    - :content: ! '#   Name-based equality'
+      :was_run: false
+    - :content: ! '    def ==(other)'
+      :was_run: false
+    - :content: ! '      self.name == other.name'
+      :was_run: true
+    - :content: ! '    end'
+      :was_run: true
+    - :content: ! '    private'
+      :was_run: false
+    - :content: ! '    def add_item(item)'
+      :was_run: false
+    - :content: ! '      sanitized_value = item.strip.chomp.sub("\t", "")'
+      :was_run: true
+    - :content: ! '      Dictionary.db.zadd @name, 0, sanitized_value unless sanitized_value.empty?'
+      :was_run: true
+    - :content: ! '    end'
+      :was_run: true
+    - :content: ! '    def add_items(items)'
+      :was_run: false
+    - :content: ! '      update do |dict|'
+      :was_run: true
+    - :content: ! '        items.each do |item|'
+      :was_run: true
+    - :content: ! '          add_item item'
+      :was_run: false
+    - :content: ! '        end'
+      :was_run: false
+    - :content: ! '      end'
+      :was_run: false
+    - :content: ! '    end'
+      :was_run: false
+    - :content: ! '  end'
+      :was_run: false
+    - :content: end
+      :was_run: true
+    :percent_run: 42
+    :methods:
+      Redex::Dictionary#initialize: 33.33333333333333
+      Redex::Dictionary::get: 57.14285714285714
+      Redex::Dictionary#<<: 63.63636363636363
+      Redex::Dictionary#items: 33.33333333333333
+      Redex::Dictionary#[]: 33.33333333333333
+      Redex::Dictionary#size: 33.33333333333333
+      Redex::Dictionary#update: 20.0
+      Redex::Dictionary#each: 88.88888888888889
+      Redex::Dictionary#==: 33.33333333333333
+      Redex::Dictionary#add_item: 25.0
+      Redex::Dictionary#add_items: 71.42857142857143
+  lib/redex/match.rb:
+    :lines:
+    - :content: module Redex
+      :was_run: false
+    - :content: ! '# Represents a dictionary match found within a document'
+      :was_run: true
+    - :content: ! '  class Match'
+      :was_run: false
+    - :content: ! '    FLAGS = ['
+      :was_run: true
+    - :content: ! '      :content,'
+      :was_run: true
+    - :content: ! '      :start_section,'
+      :was_run: true
+    - :content: ! '      :end_section'
+      :was_run: true
+    - :content: ! '    ]'
+      :was_run: true
+    - :content: ! '#   Dictionary item that was matched'
+      :was_run: false
+    - :content: ! '    attr_reader :dictionary_item'
+      :was_run: false
+    - :content: ! '#   Line that was matched'
+      :was_run: true
+    - :content: ! '    attr_reader :line'
+      :was_run: false
+    - :content: ! '#   Flag(s) associated with this match'
+      :was_run: true
+    - :content: ! '    attr_reader :flags'
+      :was_run: false
+    - :content: ! '    extend Helper::Data'
+      :was_run: false
+    - :content: ! '#   Increment score of dictionary item when match is created'
+      :was_run: false
+    - :content: ! '    def initialize(dict_item, line)'
+      :was_run: false
+    - :content: ! '      @dictionary_item = dict_item'
+      :was_run: true
+    - :content: ! '      @line = line'
+      :was_run: false
+    - :content: ! '      @dictionary_item.increment'
+      :was_run: false
+    - :content: ! '    end'
+      :was_run: false
+    - :content: ! '#   Retrieve related dictionary by its key'
+      :was_run: false
+    - :content: ! '    def dictionary'
+      :was_run: false
+    - :content: ! '      @dictionary ||= Dictionary.new(@dictionary_item.key)'
+      :was_run: true
+    - :content: ! '    end'
+      :was_run: true
+    - :content: ! '#   Retrieve matched document'
+      :was_run: false
+    - :content: ! '    def document'
+      :was_run: false
+    - :content: ! '      @line.document'
+      :was_run: true
+    - :content: ! '    end'
+      :was_run: true
+    - :content: ! '    def add_flag(flag)'
+      :was_run: false
+    - :content: ! '      raise ArgumentError("Invalid type: #{flag}") unless FLAGS.include?(flag)'
+      :was_run: true
+    - :content: ! '      @flags ||= []'
+      :was_run: false
+    - :content: ! '      @flags << flag unless @flags.include? flag'
+      :was_run: false
+    - :content: ! '    end'
+      :was_run: false
+    - :content: ! '#   Retrieve content matched'
+      :was_run: false
+    - :content: ! '    def content'
+      :was_run: false
+    - :content: ! '      @content ||= @dictionary_item.match(@line)'
+      :was_run: true
+    - :content: ! '    end'
+      :was_run: true
+    - :content: ! '  end'
+      :was_run: true
+    - :content: end
+      :was_run: true
+    :percent_run: 45
+    :methods:
+      Redex::Match#initialize: 80.0
+      Redex::Match#dictionary: 33.33333333333333
+      Redex::Match#document: 33.33333333333333
+      Redex::Match#add_flag: 80.0
+      Redex::Match#content: 33.33333333333333
+  lib/redex/configuration.rb:
+    :lines:
+    - :content: module Redex
+      :was_run: false
+    - :content: ! '  class Configuration'
+      :was_run: true
+    - :content: ! '#   Add global configuration option'
+      :was_run: true
+    - :content: ! '    def self.define_setting(setting, options={})'
+      :was_run: false
+    - :content: ! '      define_method("#{setting}=") { |value| settings[setting]
+        = value }'
+      :was_run: true
+    - :content: ! '      define_method(setting) { settings.has_key?(setting) ? settings[setting]
+        : options[:default] }'
+      :was_run: true
+    - :content: ! '    end'
+      :was_run: true
+    - :content: ! '#   Path where dictionaries are located'
+      :was_run: false
+    - :content: ! '    define_setting :load_path, :default => []'
+      :was_run: false
+    - :content: ! '#   Path where new dictionary files are written'
+      :was_run: true
+    - :content: ! '    define_setting :write_path'
+      :was_run: false
+    - :content: ! '#   Global hash of user-defined document types'
+      :was_run: true
+    - :content: ! '    define_setting :document_types, :default => {}'
+      :was_run: false
+    - :content: ! '#   Global hash of dictionaries'
+      :was_run: true
+    - :content: ! '    define_setting :dictionaries, :default => {}'
+      :was_run: false
+    - :content: ! '#   Global hash of documents'
+      :was_run: true
+    - :content: ! '    define_setting :documents, :default => {}'
+      :was_run: false
+    - :content: ! '#   Returns the global hash of settings'
+      :was_run: false
+    - :content: ! '    def settings'
+      :was_run: false
+    - :content: ! '      @settings ||= {}'
+      :was_run: true
+    - :content: ! '    end'
+      :was_run: true
+    - :content: ! '  end'
+      :was_run: true
+    - :content: end
+      :was_run: true
+    :percent_run: 57
+    :methods:
+      Redex::Configuration::define_setting: 25.0
+      Redex::Configuration#settings: 33.33333333333333
+  lib/redex/document_section.rb:
+    :lines:
+    - :content: module Redex
+      :was_run: false
+    - :content: ! '  class DocumentSection'
+      :was_run: true
+    - :content: ! '    include Helper::ActsAsParent'
+      :was_run: true
+    - :content: ! '    include Helper::ActsAsChild'
+      :was_run: true
+    - :content: ! '#   Type of section (e.g. header, footer)'
+      :was_run: false
+    - :content: ! '    attr_reader :type'
+      :was_run: false
+    - :content: ! '#   The document containing this section'
+      :was_run: false
+    - :content: ! '    attr_reader :document'
+      :was_run: false
+    - :content: ! '    def initialize(type, document, line_numbers)'
+      :was_run: false
+    - :content: ! '      @type = type'
+      :was_run: true
+    - :content: ! '      @document = document'
+      :was_run: false
+    - :content: ! '      @line_numbers = line_numbers'
+      :was_run: false
+    - :content: ! '    end'
+      :was_run: false
+    - :content: ! '    def starts_with(options)'
+      :was_run: false
+    - :content: ! '      self.has_section'
+      :was_run: true
+    - :content: ! '    end'
+      :was_run: true
+    - :content: ! '#   Array of lines that the section contains'
+      :was_run: false
+    - :content: ! '    def lines'
+      :was_run: false
+    - :content: ! '      @document.lines @line_numbers'
+      :was_run: true
+    - :content: ! '    end'
+      :was_run: true
+    - :content: ! '  end'
+      :was_run: true
+    - :content: end
+      :was_run: true
+    :percent_run: 45
+    :methods:
+      Redex::DocumentSection#initialize: 80.0
+      Redex::DocumentSection#starts_with: 33.33333333333333
+      Redex::DocumentSection#lines: 33.33333333333333
+  lib/redex/dictionary_item.rb:
+    :lines:
+    - :content: module Redex
+      :was_run: false
+    - :content: ! '  class DictionaryItem'
+      :was_run: true
+    - :content: ! '#   Key of the dictionary containing this item'
+      :was_run: true
+    - :content: ! '    attr_reader :key'
+      :was_run: false
+    - :content: ! '#   Value of dictionary item (string)'
+      :was_run: true
+    - :content: ! '    attr_reader :value'
+      :was_run: false
+    - :content: ! '#   Accepts a dictionary object or a dictionary'
+      :was_run: false
+    - :content: ! '    def initialize(dictionary, value)'
+      :was_run: false
+    - :content: ! '      @key = dictionary.name || dictionary'
+      :was_run: true
+    - :content: ! '      @value = value'
+      :was_run: false
+    - :content: ! '    end'
+      :was_run: false
+    - :content: ! '#   Get the item index from Redis'
+      :was_run: false
+    - :content: ! '    def index'
+      :was_run: false
+    - :content: ! '      Dictionary.db.zrank(@key, @value).to_i'
+      :was_run: true
+    - :content: ! '    end'
+      :was_run: true
+    - :content: ! '#   Retrieve the score from Redis'
+      :was_run: false
+    - :content: ! '    def score'
+      :was_run: false
+    - :content: ! '      Dictionary.db.zscore(@key, @value).to_i'
+      :was_run: true
+    - :content: ! '    end'
+      :was_run: true
+    - :content: ! '#   Bump up the score in Redis'
+      :was_run: false
+    - :content: ! '    def increment'
+      :was_run: false
+    - :content: ! '      Dictionary.db.zincrby @key, 1, @value'
+      :was_run: true
+    - :content: ! '    end'
+      :was_run: true
+    - :content: ! '#   Convert value to a basic regular expression'
+      :was_run: false
+    - :content: ! '    def to_regexp'
+      :was_run: false
+    - :content: ! '      Regexp.new(@value)'
+      :was_run: true
+    - :content: ! '    end'
+      :was_run: true
+    - :content: ! '#   Convert value to regex and return the first capture'
+      :was_run: false
+    - :content: ! '    def match(line)'
+      :was_run: false
+    - :content: ! '      self.to_regexp.match(line.value).to_s'
+      :was_run: true
+    - :content: ! '    end'
+      :was_run: true
+    - :content: ! '#   Return true (match found) or false (no match found)'
+      :was_run: false
+    - :content: ! '    def match?(line)'
+      :was_run: false
+    - :content: ! '      return false unless self.to_regexp.match(line.value)'
+      :was_run: true
+    - :content: ! '      true'
+      :was_run: false
+    - :content: ! '    end'
+      :was_run: false
+    - :content: ! '    def dictionary'
+      :was_run: false
+    - :content: ! '      Dictionary.new(@key)'
+      :was_run: true
+    - :content: ! '    end'
+      :was_run: true
+    - :content: ! '#   compare based on index'
+      :was_run: false
+    - :content: ! '    def <=>(other)'
+      :was_run: false
+    - :content: ! '      self.index <=> other.index'
+      :was_run: true
+    - :content: ! '    end'
+      :was_run: true
+    - :content: ! '  end'
+      :was_run: true
+    - :content: end
+      :was_run: true
+    :percent_run: 47
+    :methods:
+      Redex::DictionaryItem#initialize: 75.0
+      Redex::DictionaryItem#index: 33.33333333333333
+      Redex::DictionaryItem#score: 33.33333333333333
+      Redex::DictionaryItem#increment: 33.33333333333333
+      Redex::DictionaryItem#to_regexp: 33.33333333333333
+      Redex::DictionaryItem#match: 33.33333333333333
+      Redex::DictionaryItem#match?: 75.0
+      Redex::DictionaryItem#dictionary: 33.33333333333333
+      Redex::DictionaryItem#<=>: 33.33333333333333
+  lib/redex/document_type.rb:
+    :lines:
+    - :content: module Redex
+      :was_run: false
+    - :content: ! '# Type of document to be parsed'
+      :was_run: true
+    - :content: ! '  class DocumentType'
+      :was_run: false
+    - :content: ! '    include Helper::ActsAsParent'
+      :was_run: false
+    - :content: ! '    include Helper::Type'
+      :was_run: true
+    - :content: ! '#   Unique name of the type of document containing the content
+        to be extracted (letter, resume, etc).'
+      :was_run: false
+    - :content: ! '    attr_reader :name'
+      :was_run: false
+    - :content: ! '#   Path where this type of document is stored'
+      :was_run: false
+    - :content: ! '    attr_accessor :load_path'
+      :was_run: false
+    - :content: ! '#   Accepts a unique name'
+      :was_run: false
+    - :content: ! '    def initialize(name)'
+      :was_run: false
+    - :content: ! '      @name = name'
+      :was_run: true
+    - :content: ! '      yield self if block_given?'
+      :was_run: true
+    - :content: ! '    end'
+      :was_run: true
+    - :content: ! '#   Returns the document type object associated with the supplied
+        name'
+      :was_run: false
+    - :content: ! '    def self.get(name)'
+      :was_run: false
+    - :content: ! '      Redex.document_types[name]'
+      :was_run: true
+    - :content: ! '    end'
+      :was_run: true
+    - :content: ! '#   Types of content found in this doc type'
+      :was_run: false
+    - :content: ! '    def content_types'
+      :was_run: false
+    - :content: ! '      self.children.select { |child| child.class == ContentType
+        }'
+      :was_run: true
+    - :content: ! '    end'
+      :was_run: true
+    - :content: ! '#   Types of sections found in this doc type'
+      :was_run: false
+    - :content: ! '    def section_types'
+      :was_run: false
+    - :content: ! '      self.children.select { |child| child.class == SectionType
+        }'
+      :was_run: true
+    - :content: ! '    end'
+      :was_run: true
+    - :content: ! '  end'
+      :was_run: true
+    - :content: end
+      :was_run: true
+    :percent_run: 46
+    :methods:
+      Redex::DocumentType#initialize: 25.0
+      Redex::DocumentType::get: 33.33333333333333
+      Redex::DocumentType#content_types: 33.33333333333333
+      Redex::DocumentType#section_types: 33.33333333333333
+  lib/redex/content_type.rb:
+    :lines:
+    - :content: module Redex
+      :was_run: false
+    - :content: ! '  class ContentType'
+      :was_run: true
+    - :content: ! '    include Helper::ActsAsChild'
+      :was_run: true
+    - :content: ! '#   Name of the section type (i.e. header, footer)'
+      :was_run: false
+    - :content: ! '    attr_reader :name'
+      :was_run: false
+    - :content: ! '#   List of matching regular expressions'
+      :was_run: true
+    - :content: ! '    attr_accessor :dictionary'
+      :was_run: false
+    - :content: ! '    def initialize(name)'
+      :was_run: false
+    - :content: ! '      @name = name'
+      :was_run: true
+    - :content: ! '    end'
+      :was_run: true
+    - :content: ! '  end'
+      :was_run: true
+    - :content: end
+      :was_run: true
+    :percent_run: 58
+    :methods:
+      Redex::ContentType#initialize: 33.33333333333333
+  lib/redex/section_type.rb:
+    :lines:
+    - :content: module Redex
+      :was_run: false
+    - :content: ! '# Represents the types of sections that can occur within'
+      :was_run: true
+    - :content: ! '# a document or another section'
+      :was_run: false
+    - :content: ! '  class SectionType'
+      :was_run: false
+    - :content: ! '    include Helper::Type'
+      :was_run: true
+    - :content: ! '    include Helper::ActsAsParent'
+      :was_run: true
+    - :content: ! '    include Helper::ActsAsChild'
+      :was_run: true
+    - :content: ! '#   Name of the section type (i.e. header, footer)'
+      :was_run: true
+    - :content: ! '    attr_reader :name'
+      :was_run: false
+    - :content: ! '#   Dictionary terms signaling the start of the section'
+      :was_run: false
+    - :content: ! '    attr_reader :start_dictionary'
+      :was_run: false
+    - :content: ! '#   Dictionary terms signaling the end of the section'
+      :was_run: false
+    - :content: ! '    attr_reader :end_dictionary'
+      :was_run: false
+    - :content: ! '    def initialize(name)'
+      :was_run: false
+    - :content: ! '      @name = name'
+      :was_run: true
+    - :content: ! '    end'
+      :was_run: true
+    - :content: ! '#   Set start dictionary'
+      :was_run: false
+    - :content: ! '    def starts_with(options)'
+      :was_run: false
+    - :content: ! '      @start_dictionary = Dictionary.get(options[:dictionary])'
+      :was_run: true
+    - :content: ! '    end'
+      :was_run: true
+    - :content: ! '#   Set end dictionary'
+      :was_run: false
+    - :content: ! '    def ends_with(options)'
+      :was_run: false
+    - :content: ! '      @end_dictionary = Dictionary.get(options[:dictionary])'
+      :was_run: true
+    - :content: ! '    end'
+      :was_run: true
+    - :content: ! '    def starts_with_content(name, options={})'
+      :was_run: false
+    - :content: ! '      starts_with(options)'
+      :was_run: true
+    - :content: ! '      has_content(name, options)'
+      :was_run: true
+    - :content: ! '    end'
+      :was_run: true
+    - :content: ! '    def ends_with_content(name, options={})'
+      :was_run: false
+    - :content: ! '      ends_with(options)'
+      :was_run: true
+    - :content: ! '      has_content(name, options)'
+      :was_run: true
+    - :content: ! '    end'
+      :was_run: true
+    - :content: ! '  end'
+      :was_run: true
+    - :content: end
+      :was_run: true
+    :percent_run: 56
+    :methods:
+      Redex::SectionType#initialize: 33.33333333333333
+      Redex::SectionType#starts_with: 33.33333333333333
+      Redex::SectionType#ends_with: 33.33333333333333
+      Redex::SectionType#starts_with_content: 25.0
+      Redex::SectionType#ends_with_content: 25.0
+  lib/redex/helper/file_util.rb:
+    :lines:
+    - :content: require 'nokogiri'
+      :was_run: false
+    - :content: require 'open-uri'
+      :was_run: true
+    - :content: require 'csv'
+      :was_run: true
+    - :content: module Redex
+      :was_run: true
+    - :content: ! '  module Helper'
+      :was_run: true
+    - :content: ! '    module FileUtil'
+      :was_run: true
+    - :content: ! '      def self.generate(dictionary_name, source_file_or_url, *css_or_xpath)'
+      :was_run: false
+    - :content: ! '        lines = []'
+      :was_run: true
+    - :content: ! '        if source_file_or_url =~ /.csv$/'
+      :was_run: true
+    - :content: ! '          CSV.foreach(source_file_or_url) do |row|'
+      :was_run: true
+    - :content: ! '            lines << row[0]'
+      :was_run: true
+    - :content: ! '          end'
+      :was_run: true
+    - :content: ! '        else'
+      :was_run: false
+    - :content: ! '          doc = open_page(source_file_or_url)'
+      :was_run: false
+    - :content: ! '          doc.search(*css_or_xpath).each do |node|'
+      :was_run: true
+    - :content: ! '            lines << node.content'
+      :was_run: true
+    - :content: ! '          end'
+      :was_run: true
+    - :content: ! '        end'
+      :was_run: true
+    - :content: ! '        raise empty_msg if lines.empty?'
+      :was_run: false
+    - :content: ! '        create_file(dictionary_name, lines)'
+      :was_run: true
+    - :content: ! '      end'
+      :was_run: true
+    - :content: ! '      private'
+      :was_run: false
+    - :content: ! '      # Creates file with a line for each item in the supplied
+        array'
+      :was_run: false
+    - :content: ! '      def self.create_file(name, lines)'
+      :was_run: false
+    - :content: ! '        file_path = File.join(Redex.configuration.write_path, name)'
+      :was_run: true
+    - :content: ! '        File.open(file_path, "w") do |f|'
+      :was_run: true
+    - :content: ! '          lines.each do |line|'
+      :was_run: true
+    - :content: ! '            stripped_line = line.strip'
+      :was_run: true
+    - :content: ! '            f.puts stripped_line unless stripped_line.empty?'
+      :was_run: true
+    - :content: ! '          end'
+      :was_run: true
+    - :content: ! '        end'
+      :was_run: true
+    - :content: ! '        puts "Created file #{name} in #{Redex.configuration.write_path}"'
+      :was_run: false
+    - :content: ! '        file_path'
+      :was_run: true
+    - :content: ! '      end'
+      :was_run: true
+    - :content: ! '      # opens url and parses document'
+      :was_run: false
+    - :content: ! '      def self.open_page(url)'
+      :was_run: false
+    - :content: ! '        Nokogiri.parse(open url)'
+      :was_run: true
+    - :content: ! '      end'
+      :was_run: true
+    - :content: ! '      def self.empty_msg'
+      :was_run: false
+    - :content: ! '        msg = %q{ No items found. Please double check your css
+        or xpath selectors'
+      :was_run: true
+    - :content: ! '      and ensure that the site you are trying to reach does not
+        block scripts. }'
+      :was_run: true
+    - :content: ! '      end'
+      :was_run: true
+    - :content: ! '      module Import'
+      :was_run: false
+    - :content: ! '#       Load document(s) from file into Redis'
+      :was_run: true
+    - :content: ! '        def import(thing, options={})'
+      :was_run: false
+    - :content: ! '          if File.directory? thing'
+      :was_run: true
+    - :content: ! '            add_directory thing, options'
+      :was_run: true
+    - :content: ! '          elsif File.file? thing'
+      :was_run: true
+    - :content: ! '            add_file thing, options'
+      :was_run: true
+    - :content: ! '          else'
+      :was_run: true
+    - :content: ! '            raise "#{thing} must be a valid file or directory"'
+      :was_run: false
+    - :content: ! '          end'
+      :was_run: false
+    - :content: ! '        end'
+      :was_run: false
+    - :content: ! '        private'
+      :was_run: false
+    - :content: ! '#       Adds files in supplied directory to Redis'
+      :was_run: true
+    - :content: ! '        def add_directory(directory, options={})'
+      :was_run: false
+    - :content: ! '          docs = []'
+      :was_run: true
+    - :content: ! '          Dir.foreach(directory) do |file|'
+      :was_run: true
+    - :content: ! '            file_path = File.join(File.expand_path(directory),
+        file)'
+      :was_run: true
+    - :content: ! '            docs << add_file(file_path, options) unless File.directory?
+        file_path'
+      :was_run: true
+    - :content: ! '          end'
+      :was_run: true
+    - :content: ! '          docs'
+      :was_run: false
+    - :content: ! '        end'
+      :was_run: false
+    - :content: ! '#       Adds file to Redis (as a list)'
+      :was_run: false
+    - :content: ! '        def add_file(path_to_file, options={})'
+      :was_run: false
+    - :content: ! '          name = options[:name] || File.basename(path_to_file)'
+      :was_run: true
+    - :content: ! '          redis_collection = new(name)'
+      :was_run: true
+    - :content: ! '          redis_collection.update do |d|'
+      :was_run: true
+    - :content: ! '            IO.foreach path_to_file do |line|'
+      :was_run: true
+    - :content: ! '              d << line'
+      :was_run: false
+    - :content: ! '            end'
+      :was_run: false
+    - :content: ! '          end'
+      :was_run: false
+    - :content: ! '          redis_collection.type = options[:type] if options[:type]'
+      :was_run: false
+    - :content: ! '          redis_collection'
+      :was_run: false
+    - :content: ! '        end'
+      :was_run: false
+    - :content: ! '      end'
+      :was_run: false
+    - :content: ! '    end'
+      :was_run: true
+    - :content: ! '  end'
+      :was_run: true
+    - :content: end
+      :was_run: true
+    :percent_run: 62
+    :methods: {}
+  lib/redex/helper/data.rb:
+    :lines:
+    - :content: module Redex
+      :was_run: false
+    - :content: ! '  module Helper'
+      :was_run: true
+    - :content: ! '#   Helper methods related to data access'
+      :was_run: true
+    - :content: ! '    module Data'
+      :was_run: false
+    - :content: ! '#     Clears all data out of the namespaced instance'
+      :was_run: true
+    - :content: ! '      def clear'
+      :was_run: false
+    - :content: ! '        db.keys.each { |key| db.del key }'
+      :was_run: true
+    - :content: ! '      end'
+      :was_run: true
+    - :content: ! '#     Namespaced Redis Instance'
+      :was_run: false
+    - :content: ! '      def db'
+      :was_run: false
+    - :content: ! '        if const_defined?(:NAMESPACE)'
+      :was_run: true
+    - :content: ! '          @redis ||= Redis::Namespace.new(const_get(:NAMESPACE),
+        :redis => Redex.db)'
+      :was_run: true
+    - :content: ! '        else'
+      :was_run: true
+    - :content: ! '          @redis ||= Redis.new'
+      :was_run: false
+    - :content: ! '        end'
+      :was_run: true
+    - :content: ! '      end'
+      :was_run: true
+    - :content: ! '    end'
+      :was_run: true
+    - :content: ! '  end'
+      :was_run: true
+    - :content: end
+      :was_run: true
+    :percent_run: 68
+    :methods:
+      Redex#clear: 33.33333333333333
+      Redex#db: 28.57142857142857
+  lib/redex/helper/acts_as_child.rb:
+    :lines:
+    - :content: module Redex
+      :was_run: false
+    - :content: ! '  module Helper'
+      :was_run: true
+    - :content: ! '    module ActsAsChild'
+      :was_run: true
+    - :content: ! '#     Set parent'
+      :was_run: true
+    - :content: ! '      def parent=(parent)'
+      :was_run: false
+    - :content: ! '        @parent = parent'
+      :was_run: true
+    - :content: ! '      end'
+      :was_run: true
+    - :content: ! '#     Get parent'
+      :was_run: false
+    - :content: ! '      def parent'
+      :was_run: false
+    - :content: ! '        @parent'
+      :was_run: true
+    - :content: ! '      end'
+      :was_run: true
+    - :content: ! '#     Returns true if the section or content is not nested inside
+        another'
+      :was_run: false
+    - :content: ! '      def top_level?'
+      :was_run: false
+    - :content: ! '        true unless self.parent'
+      :was_run: true
+    - :content: ! '      end'
+      :was_run: true
+    - :content: ! '    end'
+      :was_run: true
+    - :content: ! '  end'
+      :was_run: true
+    - :content: end
+      :was_run: true
+    :percent_run: 67
+    :methods:
+      Redex#parent=: 33.33333333333333
+      Redex#parent: 33.33333333333333
+      Redex#top_level?: 33.33333333333333
+  lib/redex/helper/acts_as_parent.rb:
+    :lines:
+    - :content: module Redex
+      :was_run: false
+    - :content: ! '  module Helper'
+      :was_run: true
+    - :content: ! '    module ActsAsParent'
+      :was_run: true
+    - :content: ! '#     Add child'
+      :was_run: true
+    - :content: ! '      def add_child(child)'
+      :was_run: false
+    - :content: ! '        @children ||= []'
+      :was_run: true
+    - :content: ! '        @children << child'
+      :was_run: true
+    - :content: ! '      end'
+      :was_run: true
+    - :content: ! '#     Get children'
+      :was_run: true
+    - :content: ! '      def children'
+      :was_run: false
+    - :content: ! '        @children'
+      :was_run: true
+    - :content: ! '      end'
+      :was_run: true
+    - :content: ! '      def parent?'
+      :was_run: false
+    - :content: ! '        true if self.children'
+      :was_run: true
+    - :content: ! '      end'
+      :was_run: true
+    - :content: ! '    end'
+      :was_run: true
+    - :content: ! '  end'
+      :was_run: true
+    - :content: end
+      :was_run: true
+    :percent_run: 78
+    :methods:
+      Redex#add_child: 25.0
+      Redex#children: 33.33333333333333
+      Redex#parent?: 33.33333333333333
+  lib/redex.rb:
+    :lines:
+    - :content: require 'redis-namespace'
+      :was_run: false
+    - :content: require 'redex/configuration'
+      :was_run: true
+    - :content: require 'redex/helper'
+      :was_run: true
+    - :content: require 'redex/document'
+      :was_run: true
+    - :content: require 'redex/content_type'
+      :was_run: true
+    - :content: require 'redex/section_type'
+      :was_run: true
+    - :content: require 'redex/document_type'
+      :was_run: true
+    - :content: require 'redex/line'
+      :was_run: true
+    - :content: require 'redex/dictionary_item'
+      :was_run: true
+    - :content: require 'redex/dictionary'
+      :was_run: true
+    - :content: require 'redex/match'
+      :was_run: true
+    - :content: require 'redex/parser'
+      :was_run: true
+    - :content: require 'redex/runner'
+      :was_run: true
+    - :content: module Redex
+      :was_run: false
+    - :content: ! '  extend Helper::Data'
+      :was_run: true
+    - :content: ! '  def self.configuration'
+      :was_run: false
+    - :content: ! '    @configuration ||= Configuration.new'
+      :was_run: true
+    - :content: ! '  end'
+      :was_run: true
+    - :content: ! '  def self.configure'
+      :was_run: false
+    - :content: ! '    yield configuration if block_given?'
+      :was_run: true
+    - :content: ! '  end'
+      :was_run: true
+    - :content: ! '  def self.document_types'
+      :was_run: false
+    - :content: ! '    configuration.document_types'
+      :was_run: true
+    - :content: ! '  end'
+      :was_run: true
+    - :content: ! '  def self.define_doc_type(name)'
+      :was_run: false
+    - :content: ! '    doc_type = DocumentType.new name'
+      :was_run: true
+    - :content: ! '    yield doc_type if block_given?'
+      :was_run: true
+    - :content: ! '    if configuration.document_types.keys.include? name'
+      :was_run: true
+    - :content: ! '      raise "Doctype #{name} cannot be added because it already
+        exists"'
+      :was_run: true
+    - :content: ! '    end'
+      :was_run: true
+    - :content: ! '    configuration.document_types[name] = doc_type'
+      :was_run: false
+    - :content: ! '  end'
+      :was_run: true
+    - :content: end
+      :was_run: true
+    :percent_run: 79
+    :methods: {}
+  lib/redex/document_content.rb:
+    :lines:
+    - :content: module Redex
+      :was_run: false
+    - :content: ! '  class DocumentContent'
+      :was_run: true
+    - :content: ! '    include Helper::ActsAsChild'
+      :was_run: true
+    - :content: ! '  end'
+      :was_run: true
+    - :content: end
+      :was_run: true
+    :percent_run: 80
+    :methods: {}
+  lib/redex/helper/type.rb:
+    :lines:
+    - :content: module Redex
+      :was_run: false
+    - :content: ! '  module Helper'
+      :was_run: true
+    - :content: ! '    module Type'
+      :was_run: true
+    - :content: ! '#     Adds new section to look for within this section type'
+      :was_run: true
+    - :content: ! '      def has_section(name, options={})'
+      :was_run: false
+    - :content: ! '        new_section_type = SectionType.new(name)'
+      :was_run: true
+    - :content: ! '        new_section_type.parent = self'
+      :was_run: true
+    - :content: ! '        yield new_section_type if block_given?'
+      :was_run: true
+    - :content: ! '        add_child new_section_type'
+      :was_run: true
+    - :content: ! '      end'
+      :was_run: true
+    - :content: ! '#     Adds new content to look for within this section type'
+      :was_run: false
+    - :content: ! '      def has_content(name, options={})'
+      :was_run: false
+    - :content: ! '        new_content_type = ContentType.new(name)'
+      :was_run: true
+    - :content: ! '        new_content_type.parent = self'
+      :was_run: true
+    - :content: ! '        if options[:dictionary]'
+      :was_run: true
+    - :content: ! '          new_content_type.dictionary = Redex.configuration.dictionaries[options[:dictionary]]'
+      :was_run: true
+    - :content: ! '        end'
+      :was_run: true
+    - :content: ! '        yield new_content_type if block_given?'
+      :was_run: false
+    - :content: ! '        add_child new_content_type'
+      :was_run: true
+    - :content: ! '      end'
+      :was_run: true
+    - :content: ! '    end'
+      :was_run: true
+    - :content: ! '  end'
+      :was_run: true
+    - :content: end
+      :was_run: true
+    :percent_run: 78
+    :methods:
+      Redex#has_section: 16.666666666666664
+      Redex#has_content: 22.22222222222222
+  lib/redex/helper.rb:
+    :lines:
+    - :content: require "redex/helper/data"
+      :was_run: false
+    - :content: require "redex/helper/acts_as_parent"
+      :was_run: true
+    - :content: require "redex/helper/acts_as_child"
+      :was_run: true
+    - :content: require "redex/helper/file_util"
+      :was_run: true
+    - :content: require "redex/helper/type"
+      :was_run: true
+    - :content: module Redex
+      :was_run: true
+    - :content: ! '  module Helper'
+      :was_run: true
+    - :content: ! '  end'
+      :was_run: true
+    - :content: end
+      :was_run: true
+    :percent_run: 89
+    :methods: {}
+  :global_percent_run: 45.6
+:hotspots:
+  :files:
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/parser.rb
+      class_name: !!null 
+      method_name: !!null 
+      hash: 2680496286801518750
+    :details:
+      :reek: found 11 code smells
+      :churn: detected high level of churn (changed 7 times)
+      :rcov: average uncovered code is 86.8%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/runner.rb
+      class_name: !!null 
+      method_name: !!null 
+      hash: 3201140269916130919
+    :details:
+      :reek: found 5 code smells
+      :churn: detected high level of churn (changed 6 times)
+      :rcov: average uncovered code is 74.2%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/document.rb
+      class_name: !!null 
+      method_name: !!null 
+      hash: 1063041618455727338
+    :details:
+      :reek: found 5 code smells
+      :rcov: average uncovered code is 70.7%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/match.rb
+      class_name: !!null 
+      method_name: !!null 
+      hash: -4586801530231361065
+    :details:
+      :churn: detected high level of churn (changed 5 times)
+      :rcov: average uncovered code is 52.0%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/document_section.rb
+      class_name: !!null 
+      method_name: !!null 
+      hash: 4031402299572810429
+    :details:
+      :reek: found 1 code smells
+      :churn: detected high level of churn (changed 4 times)
+      :rcov: average uncovered code is 48.9%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/line.rb
+      class_name: !!null 
+      method_name: !!null 
+      hash: -39512042451562895
+    :details:
+      :rcov: average uncovered code is 48.9%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/dictionary.rb
+      class_name: !!null 
+      method_name: !!null 
+      hash: 1824855957699971736
+    :details:
+      :reek: found 4 code smells
+      :churn: detected high level of churn (changed 4 times)
+      :rcov: average uncovered code is 44.8%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/dictionary_item.rb
+      class_name: !!null 
+      method_name: !!null 
+      hash: 4244296804340370804
+    :details:
+      :reek: found 1 code smells
+      :rcov: average uncovered code is 42.6%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/content_type.rb
+      class_name: !!null 
+      method_name: !!null 
+      hash: 2792140446814056538
+    :details:
+      :reek: found 1 code smells
+      :churn: detected high level of churn (changed 3 times)
+      :rcov: uncovered code is 33.3%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/helper/acts_as_child.rb
+      class_name: !!null 
+      method_name: !!null 
+      hash: -1974414299225898977
+    :details:
+      :rcov: average uncovered code is 33.3%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/document_type.rb
+      class_name: !!null 
+      method_name: !!null 
+      hash: 1527551389034797552
+    :details:
+      :churn: detected high level of churn (changed 6 times)
+      :rcov: average uncovered code is 31.2%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/helper/data.rb
+      class_name: !!null 
+      method_name: !!null 
+      hash: -2912510360060764427
+    :details:
+      :reek: found 1 code smells
+      :rcov: average uncovered code is 31.0%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/helper/acts_as_parent.rb
+      class_name: !!null 
+      method_name: !!null 
+      hash: -2988899594542650926
+    :details:
+      :rcov: average uncovered code is 30.6%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/section_type.rb
+      class_name: !!null 
+      method_name: !!null 
+      hash: 2331028710216349764
+    :details:
+      :churn: detected high level of churn (changed 6 times)
+      :rcov: average uncovered code is 30.0%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/configuration.rb
+      class_name: !!null 
+      method_name: !!null 
+      hash: -1431785058646330533
+    :details:
+      :reek: found 2 code smells
+      :churn: detected high level of churn (changed 5 times)
+      :rcov: average uncovered code is 29.2%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/document.rb:61
+      class_name: !!null 
+      method_name: !!null 
+      hash: -4059551147224639836
+    :details:
+      :flog: complexity is 26.1
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/parser.rb:46
+      class_name: !!null 
+      method_name: !!null 
+      hash: -2339671220358549475
+    :details:
+      :flog: complexity is 22.8
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/configuration.rb:4
+      class_name: !!null 
+      method_name: !!null 
+      hash: -695654844523999840
+    :details:
+      :flog: complexity is 21.2
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/runner.rb:10
+      class_name: !!null 
+      method_name: !!null 
+      hash: 2770731640393700538
+    :details:
+      :flog: complexity is 20.2
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/helper/type.rb
+      class_name: !!null 
+      method_name: !!null 
+      hash: 893323011795066280
+    :details:
+      :reek: found 1 code smells
+      :churn: detected high level of churn (changed 5 times)
+      :rcov: average uncovered code is 19.4%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/helper/file_util.rb:8
+      class_name: !!null 
+      method_name: !!null 
+      hash: 2853705886154302854
+    :details:
+      :flog: complexity is 20.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/runner.rb:25
+      class_name: !!null 
+      method_name: !!null 
+      hash: 3104355013832537461
+    :details:
+      :flog: complexity is 19.8
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/document.rb:78
+      class_name: !!null 
+      method_name: !!null 
+      hash: 582488585331794598
+    :details:
+      :flog: complexity is 19.2
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/helper/file_util.rb:27
+      class_name: !!null 
+      method_name: !!null 
+      hash: -3092919623179164800
+    :details:
+      :flog: complexity is 18.1
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/dictionary.rb:59
+      class_name: !!null 
+      method_name: !!null 
+      hash: 289624147553876285
+    :details:
+      :flog: complexity is 17.6
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/helper/file_util.rb:73
+      class_name: !!null 
+      method_name: !!null 
+      hash: 2374578571608776337
+    :details:
+      :flog: complexity is 15.8
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex.rb:30
+      class_name: !!null 
+      method_name: !!null 
+      hash: -4252320069116944601
+    :details:
+      :flog: complexity is 15.1
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/parser.rb:31
+      class_name: !!null 
+      method_name: !!null 
+      hash: -2835818253340700122
+    :details:
+      :flog: complexity is 13.6
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/parser.rb:21
+      class_name: !!null 
+      method_name: !!null 
+      hash: -314322473329998160
+    :details:
+      :flog: complexity is 13.3
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/helper/type.rb:13
+      class_name: !!null 
+      method_name: !!null 
+      hash: 191379443148632722
+    :details:
+      :flog: complexity is 13.3
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/helper/file_util.rb:63
+      class_name: !!null 
+      method_name: !!null 
+      hash: 2717051080457276844
+    :details:
+      :flog: complexity is 12.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/runner.rb:3
+      class_name: !!null 
+      method_name: !!null 
+      hash: -3183321406916556385
+    :details:
+      :flog: complexity is 11.7
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/parser.rb:65
+      class_name: !!null 
+      method_name: !!null 
+      hash: -555776564263595101
+    :details:
+      :flog: complexity is 11.4
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/dictionary.rb:18
+      class_name: !!null 
+      method_name: !!null 
+      hash: -555744317384358838
+    :details:
+      :flog: complexity is 10.1
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/dictionary.rb:76
+      class_name: !!null 
+      method_name: !!null 
+      hash: 2401723368966068496
+    :details:
+      :flog: complexity is 8.4
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/parser.rb:8
+      class_name: !!null 
+      method_name: !!null 
+      hash: -2308083339493733579
+    :details:
+      :flog: complexity is 8.3
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/helper/file_util.rb:51
+      class_name: !!null 
+      method_name: !!null 
+      hash: -3953557198485997559
+    :details:
+      :flog: complexity is 8.3
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/document.rb:51
+      class_name: !!null 
+      method_name: !!null 
+      hash: 2994995152707669726
+    :details:
+      :flog: complexity is 8.2
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/helper/data.rb:11
+      class_name: !!null 
+      method_name: !!null 
+      hash: -4282301973942399541
+    :details:
+      :flog: complexity is 7.4
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/helper/data.rb:6
+      class_name: !!null 
+      method_name: !!null 
+      hash: 3232765081778279316
+    :details:
+      :flog: complexity is 7.2
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/match.rb:37
+      class_name: !!null 
+      method_name: !!null 
+      hash: -2360484659175249075
+    :details:
+      :flog: complexity is 7.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/dictionary.rb:28
+      class_name: !!null 
+      method_name: !!null 
+      hash: -2720295337977735966
+    :details:
+      :flog: complexity is 6.8
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/helper/type.rb:5
+      class_name: !!null 
+      method_name: !!null 
+      hash: 4257431666411357880
+    :details:
+      :flog: complexity is 6.2
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/document.rb:38
+      class_name: !!null 
+      method_name: !!null 
+      hash: 3373360816701618310
+    :details:
+      :flog: complexity is 6.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/dictionary_item.rb:35
+      class_name: !!null 
+      method_name: !!null 
+      hash: -1166761282255019913
+    :details:
+      :flog: complexity is 5.8
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/document_type.rb:31
+      class_name: !!null 
+      method_name: !!null 
+      hash: 343163640558542012
+    :details:
+      :flog: complexity is 5.7
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/document_type.rb:26
+      class_name: !!null 
+      method_name: !!null 
+      hash: 2638982244594943101
+    :details:
+      :flog: complexity is 5.7
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/dictionary.rb:81
+      class_name: !!null 
+      method_name: !!null 
+      hash: -3860471577649625381
+    :details:
+      :flog: complexity is 5.4
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/document.rb:118
+      class_name: !!null 
+      method_name: !!null 
+      hash: -4520387837043914134
+    :details:
+      :flog: complexity is 5.2
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/document.rb:31
+      class_name: !!null 
+      method_name: !!null 
+      hash: 816683961247054822
+    :details:
+      :flog: complexity is 4.8
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/document.rb:111
+      class_name: !!null 
+      method_name: !!null 
+      hash: 277107753098784664
+    :details:
+      :flog: complexity is 4.5
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex.rb:22
+      class_name: !!null 
+      method_name: !!null 
+      hash: -4412543727672658218
+    :details:
+      :flog: complexity is 4.3
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/document.rb:72
+      class_name: !!null 
+      method_name: !!null 
+      hash: 3622003233965502674
+    :details:
+      :flog: complexity is 4.3
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/document.rb:92
+      class_name: !!null 
+      method_name: !!null 
+      hash: 2427420152335537201
+    :details:
+      :flog: complexity is 4.3
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/dictionary_item.rb:15
+      class_name: !!null 
+      method_name: !!null 
+      hash: 3386746747223242261
+    :details:
+      :flog: complexity is 4.2
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/dictionary.rb:48
+      class_name: !!null 
+      method_name: !!null 
+      hash: 2773053726639674440
+    :details:
+      :flog: complexity is 4.2
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/dictionary_item.rb:20
+      class_name: !!null 
+      method_name: !!null 
+      hash: 4061134097308943446
+    :details:
+      :flog: complexity is 4.2
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/dictionary_item.rb:40
+      class_name: !!null 
+      method_name: !!null 
+      hash: 3420564853528472207
+    :details:
+      :flog: complexity is 4.2
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/dictionary.rb:52
+      class_name: !!null 
+      method_name: !!null 
+      hash: 2475472131150476015
+    :details:
+      :flog: complexity is 4.1
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/line.rb:9
+      class_name: !!null 
+      method_name: !!null 
+      hash: -4526477341175324513
+    :details:
+      :flog: complexity is 4.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/line.rb:21
+      class_name: !!null 
+      method_name: !!null 
+      hash: -2110024033753534941
+    :details:
+      :flog: complexity is 4.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/dictionary.rb:70
+      class_name: !!null 
+      method_name: !!null 
+      hash: 1421398375615392607
+    :details:
+      :flog: complexity is 4.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/dictionary_item.rb:50
+      class_name: !!null 
+      method_name: !!null 
+      hash: 2231396332027810784
+    :details:
+      :flog: complexity is 4.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/document_section.rb:12
+      class_name: !!null 
+      method_name: !!null 
+      hash: -2076203799552254384
+    :details:
+      :flog: complexity is 3.6
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/parser.rb:76
+      class_name: !!null 
+      method_name: !!null 
+      hash: -3373444653849788064
+    :details:
+      :flog: complexity is 3.1
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/document.rb:101
+      class_name: !!null 
+      method_name: !!null 
+      hash: 3808700860996258625
+    :details:
+      :flog: complexity is 3.1
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/document_type.rb:15
+      class_name: !!null 
+      method_name: !!null 
+      hash: -2961340864545290822
+    :details:
+      :flog: complexity is 3.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/dictionary_item.rb:9
+      class_name: !!null 
+      method_name: !!null 
+      hash: -4214820781154789207
+    :details:
+      :flog: complexity is 3.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/dictionary_item.rb:25
+      class_name: !!null 
+      method_name: !!null 
+      hash: 1843672362018463865
+    :details:
+      :flog: complexity is 3.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/section_type.rb:28
+      class_name: !!null 
+      method_name: !!null 
+      hash: -3429631504410883158
+    :details:
+      :flog: complexity is 2.9
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/section_type.rb:23
+      class_name: !!null 
+      method_name: !!null 
+      hash: -3419902357037199588
+    :details:
+      :flog: complexity is 2.9
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/match.rb:28
+      class_name: !!null 
+      method_name: !!null 
+      hash: 3984070848955076539
+    :details:
+      :flog: complexity is 2.9
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/helper/file_util.rb:40
+      class_name: !!null 
+      method_name: !!null 
+      hash: -3814002007307056790
+    :details:
+      :flog: complexity is 2.8
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex.rb:26
+      class_name: !!null 
+      method_name: !!null 
+      hash: -385315130090637136
+    :details:
+      :flog: complexity is 2.8
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/section_type.rb:37
+      class_name: !!null 
+      method_name: !!null 
+      hash: 1307522478186856259
+    :details:
+      :flog: complexity is 2.7
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/section_type.rb:32
+      class_name: !!null 
+      method_name: !!null 
+      hash: 4114281383940339137
+    :details:
+      :flog: complexity is 2.7
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/match.rb:21
+      class_name: !!null 
+      method_name: !!null 
+      hash: -3531116018614260089
+    :details:
+      :flog: complexity is 2.7
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/document_type.rb:21
+      class_name: !!null 
+      method_name: !!null 
+      hash: 2719541516626100832
+    :details:
+      :flog: complexity is 2.6
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/dictionary.rb:40
+      class_name: !!null 
+      method_name: !!null 
+      hash: 1592038080030719087
+    :details:
+      :flog: complexity is 2.6
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/dictionary.rb:44
+      class_name: !!null 
+      method_name: !!null 
+      hash: 475481810654082519
+    :details:
+      :flog: complexity is 2.6
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex.rb:18
+      class_name: !!null 
+      method_name: !!null 
+      hash: 2579043983756754128
+    :details:
+      :flog: complexity is 1.8
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/helper/acts_as_parent.rb:14
+      class_name: !!null 
+      method_name: !!null 
+      hash: -2118956278142867158
+    :details:
+      :flog: complexity is 1.7
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/helper/acts_as_parent.rb:5
+      class_name: !!null 
+      method_name: !!null 
+      hash: 1082892946116077265
+    :details:
+      :flog: complexity is 1.7
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/line.rb:16
+      class_name: !!null 
+      method_name: !!null 
+      hash: -1012806877853855210
+    :details:
+      :flog: complexity is 1.7
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/helper/acts_as_child.rb:15
+      class_name: !!null 
+      method_name: !!null 
+      hash: 1803954993371254368
+    :details:
+      :flog: complexity is 1.7
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/match.rb:44
+      class_name: !!null 
+      method_name: !!null 
+      hash: 271945061197945642
+    :details:
+      :flog: complexity is 1.7
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/helper/file_util.rb
+      class_name: !!null 
+      method_name: !!null 
+      hash: 2728385753135739811
+    :details:
+      :reek: found 10 code smells
+      :churn: detected high level of churn (changed 4 times)
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/helper/file_util.rb:44
+      class_name: !!null 
+      method_name: !!null 
+      hash: -4477934442043440749
+    :details:
+      :flog: complexity is 1.3
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/document_section.rb:23
+      class_name: !!null 
+      method_name: !!null 
+      hash: 1246275180356119684
+    :details:
+      :flog: complexity is 1.2
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/match.rb:33
+      class_name: !!null 
+      method_name: !!null 
+      hash: 810219487304922068
+    :details:
+      :flog: complexity is 1.2
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/section_type.rb:18
+      class_name: !!null 
+      method_name: !!null 
+      hash: -2001176411517808533
+    :details:
+      :flog: complexity is 1.2
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/helper/acts_as_child.rb:5
+      class_name: !!null 
+      method_name: !!null 
+      hash: 1675118098346228682
+    :details:
+      :flog: complexity is 1.2
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/document_section.rb:18
+      class_name: !!null 
+      method_name: !!null 
+      hash: -2598780017227453516
+    :details:
+      :flog: complexity is 1.2
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/content_type.rb:10
+      class_name: !!null 
+      method_name: !!null 
+      hash: 1829401181499925688
+    :details:
+      :flog: complexity is 1.2
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/dictionary_item.rb:45
+      class_name: !!null 
+      method_name: !!null 
+      hash: 734937643568925950
+    :details:
+      :flog: complexity is 1.2
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/dictionary.rb:13
+      class_name: !!null 
+      method_name: !!null 
+      hash: -1959477063288908930
+    :details:
+      :flog: complexity is 1.2
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/configuration.rb:21
+      class_name: !!null 
+      method_name: !!null 
+      hash: -1129535133771885187
+    :details:
+      :flog: complexity is 1.2
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/dictionary_item.rb:30
+      class_name: !!null 
+      method_name: !!null 
+      hash: 262521096268957752
+    :details:
+      :flog: complexity is 1.2
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex.rb
+      class_name: !!null 
+      method_name: !!null 
+      hash: 3282137336366377949
+    :details:
+      :reek: found 2 code smells
+      :churn: detected high level of churn (changed 4 times)
+  - :location: !ruby/object:MetricFu::Location
+      file_path: spec/redex/parser_spec.rb
+      class_name: !!null 
+      method_name: !!null 
+      hash: -1472690968928991708
+    :details:
+      :churn: detected high level of churn (changed 6 times)
+  - :location: !ruby/object:MetricFu::Location
+      file_path: spec/redex/document_type_spec.rb
+      class_name: !!null 
+      method_name: !!null 
+      hash: -349733284557974914
+    :details:
+      :churn: detected high level of churn (changed 6 times)
+  - :location: !ruby/object:MetricFu::Location
+      file_path: spec/redex/match_spec.rb
+      class_name: !!null 
+      method_name: !!null 
+      hash: -1584227350184905974
+    :details:
+      :churn: detected high level of churn (changed 6 times)
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/Document.rb
+      class_name: !!null 
+      method_name: !!null 
+      hash: -4524639436971483054
+    :details:
+      :churn: detected high level of churn (changed 5 times)
+  - :location: !ruby/object:MetricFu::Location
+      file_path: spec/redex/document_spec.rb
+      class_name: !!null 
+      method_name: !!null 
+      hash: 3347210476803374679
+    :details:
+      :churn: detected high level of churn (changed 5 times)
+  - :location: !ruby/object:MetricFu::Location
+      file_path: spec/redex/section_type_spec.rb
+      class_name: !!null 
+      method_name: !!null 
+      hash: 1524283125024059039
+    :details:
+      :churn: detected high level of churn (changed 6 times)
+  - :location: !ruby/object:MetricFu::Location
+      file_path: spec/redex/runner_spec.rb
+      class_name: !!null 
+      method_name: !!null 
+      hash: 218755902830852925
+    :details:
+      :churn: detected high level of churn (changed 7 times)
+  - :location: !ruby/object:MetricFu::Location
+      file_path: spec/redex/line_spec.rb
+      class_name: !!null 
+      method_name: !!null 
+      hash: 2508972101401615503
+    :details:
+      :churn: detected high level of churn (changed 4 times)
+  - :location: !ruby/object:MetricFu::Location
+      file_path: spec/redex/dictionary_spec.rb
+      class_name: !!null 
+      method_name: !!null 
+      hash: -3378050562490121356
+    :details:
+      :churn: detected high level of churn (changed 4 times)
+  - :location: !ruby/object:MetricFu::Location
+      file_path: spec/redex/content_type_spec.rb
+      class_name: !!null 
+      method_name: !!null 
+      hash: -1124854744951821444
+    :details:
+      :churn: detected high level of churn (changed 4 times)
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/helper.rb
+      class_name: !!null 
+      method_name: !!null 
+      hash: -4389747078896154161
+    :details:
+      :churn: detected high level of churn (changed 3 times)
+  - :location: !ruby/object:MetricFu::Location
+      file_path: spec/redex/dictionary_item_spec.rb
+      class_name: !!null 
+      method_name: !!null 
+      hash: -67196774641881059
+    :details:
+      :churn: detected high level of churn (changed 3 times)
+  - :location: !ruby/object:MetricFu::Location
+      file_path: redex.gemspec
+      class_name: !!null 
+      method_name: !!null 
+      hash: -2828043455444170133
+    :details:
+      :churn: detected high level of churn (changed 3 times)
+  - :location: !ruby/object:MetricFu::Location
+      file_path: spec/dictionary_files/two.txt
+      class_name: !!null 
+      method_name: !!null 
+      hash: -2280099215819244926
+    :details:
+      :churn: detected high level of churn (changed 3 times)
+  - :location: !ruby/object:MetricFu::Location
+      file_path: spec/redex/file_helper_spec.rb
+      class_name: !!null 
+      method_name: !!null 
+      hash: -3761095974885580885
+    :details:
+      :churn: detected high level of churn (changed 3 times)
+  - :location: !ruby/object:MetricFu::Location
+      file_path: spec/test_files/episodes.txt
+      class_name: !!null 
+      method_name: !!null 
+      hash: -2971166082440891381
+    :details:
+      :churn: detected high level of churn (changed 3 times)
+  - :location: !ruby/object:MetricFu::Location
+      file_path: spec/test_files/test2.txt
+      class_name: !!null 
+      method_name: !!null 
+      hash: 4380205097758463149
+    :details:
+      :churn: detected high level of churn (changed 3 times)
+  - :location: !ruby/object:MetricFu::Location
+      file_path: .idea/dictionaries/mhickman84.xml
+      class_name: !!null 
+      method_name: !!null 
+      hash: 3945438219077115692
+    :details:
+      :churn: detected high level of churn (changed 3 times)
+  - :location: !ruby/object:MetricFu::Location
+      file_path: .idea/workspace.xml
+      class_name: !!null 
+      method_name: !!null 
+      hash: -1981036817711063373
+    :details:
+      :churn: detected high level of churn (changed 3 times)
+  - :location: !ruby/object:MetricFu::Location
+      file_path: spec/redex_spec.rb
+      class_name: !!null 
+      method_name: !!null 
+      hash: 4010844660799720535
+    :details:
+      :churn: detected high level of churn (changed 8 times)
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/document_content.rb
+      class_name: !!null 
+      method_name: !!null 
+      hash: 98642382674743017
+    :details:
+      :reek: found 1 code smells
+      :churn: detected high level of churn (changed 3 times)
+  - :location: !ruby/object:MetricFu::Location
+      file_path: spec/redex/document_section_spec.rb
+      class_name: !!null 
+      method_name: !!null 
+      hash: 1204096189243530783
+    :details:
+      :churn: detected high level of churn (changed 4 times)
+  :classes:
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/runner.rb:25
+      class_name: find_matches
+      method_name: !!null 
+      hash: -424483418094647685
+    :details:
+      :flog: complexity is 19.8
+      :rcov: uncovered code is 92.3%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/parser.rb
+      class_name: Parser
+      method_name: !!null 
+      hash: -1277574266992330772
+    :details:
+      :reek: found 11 code smells
+      :flog: average complexity is 12.1
+      :rcov: average uncovered code is 86.8%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/runner.rb:10
+      class_name: import_documents
+      method_name: !!null 
+      hash: -1083462988273836846
+    :details:
+      :flog: complexity is 20.2
+      :rcov: uncovered code is 63.6%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/document.rb
+      class_name: Document
+      method_name: !!null 
+      hash: 3075945508353801190
+    :details:
+      :reek: found 5 code smells
+      :flog: average complexity is 9.1
+      :rcov: average uncovered code is 70.7%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/runner.rb:3
+      class_name: import_dictionaries
+      method_name: !!null 
+      hash: -744950060568584553
+    :details:
+      :flog: complexity is 11.7
+      :rcov: uncovered code is 66.7%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: !!null 
+      class_name: Match
+      method_name: !!null 
+      hash: 307070927699304593
+    :details:
+      :flog: average complexity is 3.5
+      :rcov: average uncovered code is 52.0%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/document_section.rb
+      class_name: DocumentSection
+      method_name: !!null 
+      hash: -477348811809803488
+    :details:
+      :reek: found 1 code smells
+      :flog: average complexity is 3.2
+      :rcov: average uncovered code is 48.9%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: !!null 
+      class_name: Line
+      method_name: !!null 
+      hash: -3427904611880658970
+    :details:
+      :flog: average complexity is 3.0
+      :rcov: average uncovered code is 48.9%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/dictionary.rb:18
+      class_name: get
+      method_name: !!null 
+      hash: -2736240160458407045
+    :details:
+      :flog: average complexity is 6.3
+      :rcov: average uncovered code is 45.2%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/dictionary.rb
+      class_name: Dictionary
+      method_name: !!null 
+      hash: -937493124593858311
+    :details:
+      :reek: found 1 code smells
+      :flog: average complexity is 6.0
+      :rcov: average uncovered code is 43.6%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/dictionary_item.rb
+      class_name: DictionaryItem
+      method_name: !!null 
+      hash: -477173206931761524
+    :details:
+      :reek: found 1 code smells
+      :flog: average complexity is 3.3
+      :rcov: average uncovered code is 42.6%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/configuration.rb:4
+      class_name: define_setting
+      method_name: !!null 
+      hash: 4426554399571622787
+    :details:
+      :flog: complexity is 21.2
+      :rcov: uncovered code is 25.0%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/configuration.rb
+      class_name: Configuration
+      method_name: !!null 
+      hash: 2767746716110022178
+    :details:
+      :reek: found 1 code smells
+      :flog: average complexity is 3.4
+      :rcov: uncovered code is 33.3%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/content_type.rb
+      class_name: ContentType
+      method_name: !!null 
+      hash: -1373801961641504372
+    :details:
+      :reek: found 1 code smells
+      :flog: average complexity is 2.8
+      :rcov: uncovered code is 33.3%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: !!null 
+      class_name: DocumentType
+      method_name: !!null 
+      hash: 3541110966180248527
+    :details:
+      :flog: average complexity is 5.2
+      :rcov: average uncovered code is 30.6%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex.rb:30
+      class_name: Redex
+      method_name: !!null 
+      hash: 2558198487126516766
+    :details:
+      :flog: average complexity is 5.3
+      :rcov: average uncovered code is 29.2%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: !!null 
+      class_name: SectionType
+      method_name: !!null 
+      hash: -103840279594579800
+    :details:
+      :flog: average complexity is 3.7
+      :rcov: average uncovered code is 30.0%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: !!null 
+      class_name: main
+      method_name: !!null 
+      hash: -2160080519299911017
+    :details:
+      :flog: complexity is 26.4
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/helper/file_util.rb:8
+      class_name: generate
+      method_name: !!null 
+      hash: 4156879241442743408
+    :details:
+      :flog: complexity is 20.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/helper/file_util.rb:27
+      class_name: create_file
+      method_name: !!null 
+      hash: 3537665844357464971
+    :details:
+      :flog: complexity is 18.1
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/helper/file_util.rb
+      class_name: Import
+      method_name: !!null 
+      hash: -2947799908502729515
+    :details:
+      :reek: found 4 code smells
+      :flog: average complexity is 9.3
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/helper/type.rb
+      class_name: Type
+      method_name: !!null 
+      hash: -551133110831503460
+    :details:
+      :reek: found 1 code smells
+      :flog: average complexity is 9.7
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/helper/data.rb
+      class_name: Data
+      method_name: !!null 
+      hash: 2242356594328079185
+    :details:
+      :reek: found 1 code smells
+      :flog: average complexity is 7.3
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/helper/file_util.rb:40
+      class_name: open_page
+      method_name: !!null 
+      hash: 450371365427081856
+    :details:
+      :flog: complexity is 2.8
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/document_content.rb
+      class_name: DocumentContent
+      method_name: !!null 
+      hash: 2042066094776570147
+    :details:
+      :reek: found 1 code smells
+      :flog: complexity is 2.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/helper/acts_as_parent.rb:5
+      class_name: ActsAsParent
+      method_name: !!null 
+      hash: -2120985454466846442
+    :details:
+      :flog: average complexity is 1.7
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/helper/acts_as_child.rb:5
+      class_name: ActsAsChild
+      method_name: !!null 
+      hash: 4469210484952573324
+    :details:
+      :flog: average complexity is 1.4
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/helper/file_util.rb:44
+      class_name: empty_msg
+      method_name: !!null 
+      hash: -2873857392571852248
+    :details:
+      :flog: complexity is 1.3
+  - :location: !ruby/object:MetricFu::Location
+      file_path: !!null 
+      class_name: FileUtil
+      method_name: !!null 
+      hash: 2486799888285635879
+    :details:
+      :flog: complexity is 1.2
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/helper/file_util.rb
+      class_name: FileUtil#self
+      method_name: !!null 
+      hash: 3642905244935291575
+    :details:
+      :reek: found 6 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/runner.rb
+      class_name: Runner#self
+      method_name: !!null 
+      hash: -3760638444403497791
+    :details:
+      :reek: found 4 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/dictionary.rb
+      class_name: Dictionary#self
+      method_name: !!null 
+      hash: 2559018500241348574
+    :details:
+      :reek: found 3 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex.rb
+      class_name: Redex#self
+      method_name: !!null 
+      hash: -4372145570562049703
+    :details:
+      :reek: found 2 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/configuration.rb
+      class_name: Configuration#self
+      method_name: !!null 
+      hash: 1637508493036566144
+    :details:
+      :reek: found 1 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/runner.rb
+      class_name: Runner
+      method_name: !!null 
+      hash: -1469770822907857783
+    :details:
+      :reek: found 1 code smells
+  :methods:
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/parser.rb
+      class_name: Parser
+      method_name: Parser#match_section_end
+      simple_method_name: ! '#match_section_end'
+      hash: 1766037931934761624
+    :details:
+      :reek: found 3 code smells
+      :flog: complexity is 22.8
+      :rcov: uncovered code is 94.4%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/document.rb
+      class_name: Document
+      method_name: Document#lines
+      simple_method_name: ! '#lines'
+      hash: -1802819022946607280
+    :details:
+      :reek: found 3 code smells
+      :flog: complexity is 26.1
+      :rcov: uncovered code is 88.9%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/document.rb
+      class_name: Document
+      method_name: Document#each
+      simple_method_name: ! '#each'
+      hash: -3209900331365847232
+    :details:
+      :reek: found 1 code smells
+      :flog: complexity is 19.2
+      :rcov: uncovered code is 91.7%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/parser.rb
+      class_name: Parser
+      method_name: Parser#match_section_start
+      simple_method_name: ! '#match_section_start'
+      hash: 723370432373235176
+    :details:
+      :reek: found 1 code smells
+      :flog: complexity is 13.6
+      :rcov: uncovered code is 92.9%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/dictionary.rb:59
+      class_name: Dictionary
+      method_name: Dictionary#each
+      simple_method_name: ! '#each'
+      hash: 3004545649640633212
+    :details:
+      :flog: complexity is 17.6
+      :rcov: uncovered code is 88.9%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/parser.rb
+      class_name: Parser
+      method_name: Parser#match_section
+      simple_method_name: ! '#match_section'
+      hash: 3483365678054247424
+    :details:
+      :reek: found 1 code smells
+      :flog: complexity is 13.3
+      :rcov: uncovered code is 88.9%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/parser.rb
+      class_name: Parser
+      method_name: Parser#parse_content
+      simple_method_name: ! '#parse_content'
+      hash: -4238783830790459217
+    :details:
+      :rcov: uncovered code is 100.0%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/document.rb
+      class_name: Document
+      method_name: Document#add_content
+      simple_method_name: ! '#add_content'
+      hash: -420714698842135283
+    :details:
+      :rcov: uncovered code is 100.0%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/parser.rb:8
+      class_name: Parser
+      method_name: Parser#find_match
+      simple_method_name: ! '#find_match'
+      hash: 2137194583733795615
+    :details:
+      :flog: complexity is 8.3
+      :rcov: uncovered code is 91.7%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/document.rb:38
+      class_name: Document
+      method_name: Document#<<
+      simple_method_name: ! '#<<'
+      hash: -6857595194145382
+    :details:
+      :flog: complexity is 6.0
+      :rcov: uncovered code is 90.9%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/document.rb:51
+      class_name: Document
+      method_name: Document#line
+      simple_method_name: ! '#line'
+      hash: -2368134704566704540
+    :details:
+      :flog: complexity is 8.2
+      :rcov: uncovered code is 85.7%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/document.rb
+      class_name: Document
+      method_name: Document#add_lines
+      simple_method_name: ! '#add_lines'
+      hash: -36484184909969219
+    :details:
+      :reek: found 1 code smells
+      :flog: complexity is 5.2
+      :rcov: uncovered code is 87.5%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/match.rb:37
+      class_name: Match
+      method_name: Match#add_flag
+      simple_method_name: ! '#add_flag'
+      hash: -4284319478884758973
+    :details:
+      :flog: complexity is 7.0
+      :rcov: uncovered code is 80.0%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/line.rb:9
+      class_name: Line
+      method_name: Line#initialize
+      simple_method_name: ! '#initialize'
+      hash: -4268440853261483397
+    :details:
+      :flog: complexity is 4.0
+      :rcov: uncovered code is 80.0%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/parser.rb
+      class_name: Parser
+      method_name: Parser#parse_outer_sections
+      simple_method_name: ! '#parse_outer_sections'
+      hash: -2218617309136451733
+    :details:
+      :reek: found 2 code smells
+      :flog: complexity is 3.1
+      :rcov: uncovered code is 80.0%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/document_section.rb:12
+      class_name: DocumentSection
+      method_name: DocumentSection#initialize
+      simple_method_name: ! '#initialize'
+      hash: 2228837508216580790
+    :details:
+      :flog: complexity is 3.6
+      :rcov: uncovered code is 80.0%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/match.rb:21
+      class_name: Match
+      method_name: Match#initialize
+      simple_method_name: ! '#initialize'
+      hash: 4508321891447398188
+    :details:
+      :flog: complexity is 2.7
+      :rcov: uncovered code is 80.0%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/document.rb:72
+      class_name: Document
+      method_name: Document#update
+      simple_method_name: ! '#update'
+      hash: -4149957707020139236
+    :details:
+      :flog: complexity is 4.3
+      :rcov: uncovered code is 75.0%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/dictionary_item.rb:40
+      class_name: DictionaryItem
+      method_name: DictionaryItem#match?
+      simple_method_name: ! '#match?'
+      hash: -1627027618233692578
+    :details:
+      :flog: complexity is 4.2
+      :rcov: uncovered code is 75.0%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/document.rb:101
+      class_name: Document
+      method_name: Document#add_section
+      simple_method_name: ! '#add_section'
+      hash: -3889777077380336708
+    :details:
+      :flog: complexity is 3.1
+      :rcov: uncovered code is 75.0%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/dictionary_item.rb:9
+      class_name: DictionaryItem
+      method_name: DictionaryItem#initialize
+      simple_method_name: ! '#initialize'
+      hash: 814683727374557084
+    :details:
+      :flog: complexity is 3.0
+      :rcov: uncovered code is 75.0%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/dictionary.rb
+      class_name: Dictionary
+      method_name: Dictionary#add_items
+      simple_method_name: ! '#add_items'
+      hash: 515929468433319618
+    :details:
+      :reek: found 1 code smells
+      :flog: complexity is 5.4
+      :rcov: uncovered code is 71.4%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/parser.rb
+      class_name: Parser
+      method_name: Parser#get_section_type
+      simple_method_name: ! '#get_section_type'
+      hash: 1330967896486225086
+    :details:
+      :reek: found 3 code smells
+      :flog: complexity is 11.4
+      :rcov: uncovered code is 60.0%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/document.rb:111
+      class_name: Document
+      method_name: Document#add_line
+      simple_method_name: ! '#add_line'
+      hash: -1221201404530623216
+    :details:
+      :flog: complexity is 4.5
+      :rcov: uncovered code is 66.7%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/dictionary.rb:28
+      class_name: Dictionary
+      method_name: Dictionary#<<
+      simple_method_name: ! '#<<'
+      hash: -2343070225792251862
+    :details:
+      :flog: complexity is 6.8
+      :rcov: uncovered code is 63.6%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/dictionary_item.rb:35
+      class_name: DictionaryItem
+      method_name: DictionaryItem#match
+      simple_method_name: ! '#match'
+      hash: 2336373752020577650
+    :details:
+      :flog: complexity is 5.8
+      :rcov: uncovered code is 33.3%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/document_type.rb:31
+      class_name: DocumentType
+      method_name: DocumentType#section_types
+      simple_method_name: ! '#section_types'
+      hash: -627039171907610750
+    :details:
+      :flog: complexity is 5.7
+      :rcov: uncovered code is 33.3%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/document_type.rb:26
+      class_name: DocumentType
+      method_name: DocumentType#content_types
+      simple_method_name: ! '#content_types'
+      hash: 3862588018796289349
+    :details:
+      :flog: complexity is 5.7
+      :rcov: uncovered code is 33.3%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/document.rb:92
+      class_name: Document
+      method_name: Document#==
+      simple_method_name: ! '#=='
+      hash: -2803101722190043128
+    :details:
+      :flog: complexity is 4.3
+      :rcov: uncovered code is 33.3%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/dictionary_item.rb:15
+      class_name: DictionaryItem
+      method_name: DictionaryItem#index
+      simple_method_name: ! '#index'
+      hash: 4113951601742160081
+    :details:
+      :flog: complexity is 4.2
+      :rcov: uncovered code is 33.3%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/dictionary.rb:48
+      class_name: Dictionary
+      method_name: Dictionary#size
+      simple_method_name: ! '#size'
+      hash: 1657684252961034153
+    :details:
+      :flog: complexity is 4.2
+      :rcov: uncovered code is 33.3%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/dictionary_item.rb:20
+      class_name: DictionaryItem
+      method_name: DictionaryItem#score
+      simple_method_name: ! '#score'
+      hash: 95376133826277708
+    :details:
+      :flog: complexity is 4.2
+      :rcov: uncovered code is 33.3%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/line.rb:21
+      class_name: Line
+      method_name: Line#<=>
+      simple_method_name: ! '#<=>'
+      hash: 359396844609706831
+    :details:
+      :flog: complexity is 4.0
+      :rcov: uncovered code is 33.3%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/dictionary.rb:70
+      class_name: Dictionary
+      method_name: Dictionary#==
+      simple_method_name: ! '#=='
+      hash: 94222888530015343
+    :details:
+      :flog: complexity is 4.0
+      :rcov: uncovered code is 33.3%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/dictionary_item.rb:50
+      class_name: DictionaryItem
+      method_name: DictionaryItem#<=>
+      simple_method_name: ! '#<=>'
+      hash: -4453202867770734169
+    :details:
+      :flog: complexity is 4.0
+      :rcov: uncovered code is 33.3%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/dictionary_item.rb:25
+      class_name: DictionaryItem
+      method_name: DictionaryItem#increment
+      simple_method_name: ! '#increment'
+      hash: -2711490621469916482
+    :details:
+      :flog: complexity is 3.0
+      :rcov: uncovered code is 33.3%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/section_type.rb:23
+      class_name: SectionType
+      method_name: SectionType#starts_with
+      simple_method_name: ! '#starts_with'
+      hash: -2364491110256099623
+    :details:
+      :flog: complexity is 2.9
+      :rcov: uncovered code is 33.3%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/match.rb:28
+      class_name: Match
+      method_name: Match#dictionary
+      simple_method_name: ! '#dictionary'
+      hash: 1462587582395697118
+    :details:
+      :flog: complexity is 2.9
+      :rcov: uncovered code is 33.3%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/section_type.rb:28
+      class_name: SectionType
+      method_name: SectionType#ends_with
+      simple_method_name: ! '#ends_with'
+      hash: 1123057347362909080
+    :details:
+      :flog: complexity is 2.9
+      :rcov: uncovered code is 33.3%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/dictionary.rb:44
+      class_name: Dictionary
+      method_name: Dictionary#[]
+      simple_method_name: ! '#[]'
+      hash: 2554189275404315600
+    :details:
+      :flog: complexity is 2.6
+      :rcov: uncovered code is 33.3%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/dictionary.rb:40
+      class_name: Dictionary
+      method_name: Dictionary#items
+      simple_method_name: ! '#items'
+      hash: 961349477158103090
+    :details:
+      :flog: complexity is 2.6
+      :rcov: uncovered code is 33.3%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/line.rb:16
+      class_name: Line
+      method_name: Line#document
+      simple_method_name: ! '#document'
+      hash: 950304268331846727
+    :details:
+      :flog: complexity is 1.7
+      :rcov: uncovered code is 33.3%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/match.rb:44
+      class_name: Match
+      method_name: Match#content
+      simple_method_name: ! '#content'
+      hash: 2240004445445409941
+    :details:
+      :flog: complexity is 1.7
+      :rcov: uncovered code is 33.3%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/section_type.rb:18
+      class_name: SectionType
+      method_name: SectionType#initialize
+      simple_method_name: ! '#initialize'
+      hash: -1885701761526254495
+    :details:
+      :flog: complexity is 1.2
+      :rcov: uncovered code is 33.3%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/document_section.rb:23
+      class_name: DocumentSection
+      method_name: DocumentSection#lines
+      simple_method_name: ! '#lines'
+      hash: -1548566694767509917
+    :details:
+      :flog: complexity is 1.2
+      :rcov: uncovered code is 33.3%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/dictionary.rb:13
+      class_name: Dictionary
+      method_name: Dictionary#initialize
+      simple_method_name: ! '#initialize'
+      hash: 4425467677917148245
+    :details:
+      :flog: complexity is 1.2
+      :rcov: uncovered code is 33.3%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/configuration.rb:21
+      class_name: Configuration
+      method_name: Configuration#settings
+      simple_method_name: ! '#settings'
+      hash: 4030318105901608333
+    :details:
+      :flog: complexity is 1.2
+      :rcov: uncovered code is 33.3%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/document_section.rb:18
+      class_name: DocumentSection
+      method_name: DocumentSection#starts_with
+      simple_method_name: ! '#starts_with'
+      hash: 1006806109524743932
+    :details:
+      :flog: complexity is 1.2
+      :rcov: uncovered code is 33.3%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/dictionary_item.rb:30
+      class_name: DictionaryItem
+      method_name: DictionaryItem#to_regexp
+      simple_method_name: ! '#to_regexp'
+      hash: -987513637156090015
+    :details:
+      :flog: complexity is 1.2
+      :rcov: uncovered code is 33.3%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/content_type.rb:10
+      class_name: ContentType
+      method_name: ContentType#initialize
+      simple_method_name: ! '#initialize'
+      hash: 1328325113209782184
+    :details:
+      :flog: complexity is 1.2
+      :rcov: uncovered code is 33.3%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/match.rb:33
+      class_name: Match
+      method_name: Match#document
+      simple_method_name: ! '#document'
+      hash: -1330408901418682572
+    :details:
+      :flog: complexity is 1.2
+      :rcov: uncovered code is 33.3%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/dictionary_item.rb:45
+      class_name: DictionaryItem
+      method_name: DictionaryItem#dictionary
+      simple_method_name: ! '#dictionary'
+      hash: 2516750394645170380
+    :details:
+      :flog: complexity is 1.2
+      :rcov: uncovered code is 33.3%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/dictionary.rb:76
+      class_name: Dictionary
+      method_name: Dictionary#add_item
+      simple_method_name: ! '#add_item'
+      hash: -1253162982482492650
+    :details:
+      :flog: complexity is 8.4
+      :rcov: uncovered code is 25.0%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/helper/acts_as_child.rb
+      class_name: Redex
+      method_name: Redex#parent=
+      simple_method_name: ! '#parent='
+      hash: 208157395842786900
+    :details:
+      :rcov: uncovered code is 33.3%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/helper/data.rb
+      class_name: Redex
+      method_name: Redex#clear
+      simple_method_name: ! '#clear'
+      hash: -885112743829593937
+    :details:
+      :rcov: uncovered code is 33.3%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/document.rb
+      class_name: Document
+      method_name: Document#parsed?
+      simple_method_name: ! '#parsed?'
+      hash: 1666432132935185114
+    :details:
+      :rcov: uncovered code is 33.3%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/helper/acts_as_child.rb
+      class_name: Redex
+      method_name: Redex#top_level?
+      simple_method_name: ! '#top_level?'
+      hash: -2446848880583704659
+    :details:
+      :rcov: uncovered code is 33.3%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/helper/acts_as_parent.rb
+      class_name: Redex
+      method_name: Redex#parent?
+      simple_method_name: ! '#parent?'
+      hash: 2396657929675415638
+    :details:
+      :rcov: uncovered code is 33.3%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/helper/acts_as_parent.rb
+      class_name: Redex
+      method_name: Redex#children
+      simple_method_name: ! '#children'
+      hash: 1013330105689010660
+    :details:
+      :rcov: uncovered code is 33.3%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/helper/acts_as_child.rb
+      class_name: Redex
+      method_name: Redex#parent
+      simple_method_name: ! '#parent'
+      hash: 4276118753303408495
+    :details:
+      :rcov: uncovered code is 33.3%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/helper/data.rb
+      class_name: Redex
+      method_name: Redex#db
+      simple_method_name: ! '#db'
+      hash: -2694535907950509189
+    :details:
+      :rcov: uncovered code is 28.6%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/document_type.rb:15
+      class_name: DocumentType
+      method_name: DocumentType#initialize
+      simple_method_name: ! '#initialize'
+      hash: 2677141799261530602
+    :details:
+      :flog: complexity is 3.0
+      :rcov: uncovered code is 25.0%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/section_type.rb:37
+      class_name: SectionType
+      method_name: SectionType#ends_with_content
+      simple_method_name: ! '#ends_with_content'
+      hash: 4568991460782669720
+    :details:
+      :flog: complexity is 2.7
+      :rcov: uncovered code is 25.0%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/section_type.rb:32
+      class_name: SectionType
+      method_name: SectionType#starts_with_content
+      simple_method_name: ! '#starts_with_content'
+      hash: -278273391906194862
+    :details:
+      :flog: complexity is 2.7
+      :rcov: uncovered code is 25.0%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: !!null 
+      class_name: main
+      method_name: main#none
+      simple_method_name: ! '#none'
+      hash: -480321600564627715
+    :details:
+      :flog: complexity is 26.4
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/helper/acts_as_parent.rb
+      class_name: Redex
+      method_name: Redex#add_child
+      simple_method_name: ! '#add_child'
+      hash: 765139268055255986
+    :details:
+      :rcov: uncovered code is 25.0%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/document.rb:31
+      class_name: Document
+      method_name: Document#initialize
+      simple_method_name: ! '#initialize'
+      hash: 553104830634013953
+    :details:
+      :flog: complexity is 4.8
+      :rcov: uncovered code is 20.0%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/dictionary.rb:52
+      class_name: Dictionary
+      method_name: Dictionary#update
+      simple_method_name: ! '#update'
+      hash: -2319998714223121732
+    :details:
+      :flog: complexity is 4.1
+      :rcov: uncovered code is 20.0%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/helper/type.rb
+      class_name: Redex
+      method_name: Redex#has_content
+      simple_method_name: ! '#has_content'
+      hash: -2840744533700050605
+    :details:
+      :rcov: uncovered code is 22.2%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/helper/type.rb
+      class_name: Redex
+      method_name: Redex#has_section
+      simple_method_name: ! '#has_section'
+      hash: -4031573294445511861
+    :details:
+      :rcov: uncovered code is 16.7%
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/helper/file_util.rb
+      class_name: Import
+      method_name: Import#add_file
+      simple_method_name: ! '#add_file'
+      hash: -2034192711778744718
+    :details:
+      :reek: found 4 code smells
+      :flog: complexity is 15.8
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex.rb:30
+      class_name: Redex
+      method_name: Redex#define_doc_type
+      simple_method_name: ! '#define_doc_type'
+      hash: -3479272516977450397
+    :details:
+      :flog: complexity is 15.1
+  - :location: !ruby/object:MetricFu::Location
+      file_path: !!null 
+      class_name: Document
+      method_name: Document#none
+      simple_method_name: ! '#none'
+      hash: 2430586942464325187
+    :details:
+      :flog: complexity is 14.4
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/helper/type.rb
+      class_name: Type
+      method_name: Type#has_content
+      simple_method_name: ! '#has_content'
+      hash: -2383801302055367464
+    :details:
+      :reek: found 1 code smells
+      :flog: complexity is 13.3
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/helper/file_util.rb:63
+      class_name: Import
+      method_name: Import#add_directory
+      simple_method_name: ! '#add_directory'
+      hash: -88966723363693513
+    :details:
+      :flog: complexity is 12.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: !!null 
+      class_name: SectionType
+      method_name: SectionType#none
+      simple_method_name: ! '#none'
+      hash: 4340456636128177904
+    :details:
+      :flog: complexity is 9.9
+  - :location: !ruby/object:MetricFu::Location
+      file_path: !!null 
+      class_name: Dictionary
+      method_name: Dictionary#none
+      simple_method_name: ! '#none'
+      hash: -3520217231821034813
+    :details:
+      :flog: complexity is 8.8
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/helper/file_util.rb:51
+      class_name: Import
+      method_name: Import#import
+      simple_method_name: ! '#import'
+      hash: -2107644311363625475
+    :details:
+      :flog: complexity is 8.3
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/helper/data.rb
+      class_name: Data
+      method_name: Data#clear
+      simple_method_name: ! '#clear'
+      hash: -3632319704928167841
+    :details:
+      :reek: found 1 code smells
+      :flog: complexity is 7.2
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/helper/data.rb:11
+      class_name: Data
+      method_name: Data#db
+      simple_method_name: ! '#db'
+      hash: -3328301051130661188
+    :details:
+      :flog: complexity is 7.4
+  - :location: !ruby/object:MetricFu::Location
+      file_path: !!null 
+      class_name: DocumentSection
+      method_name: DocumentSection#none
+      simple_method_name: ! '#none'
+      hash: 3609360296334930667
+    :details:
+      :flog: complexity is 6.6
+  - :location: !ruby/object:MetricFu::Location
+      file_path: !!null 
+      class_name: DocumentType
+      method_name: DocumentType#none
+      simple_method_name: ! '#none'
+      hash: -532962145706734158
+    :details:
+      :flog: complexity is 6.6
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/helper/type.rb:5
+      class_name: Type
+      method_name: Type#has_section
+      simple_method_name: ! '#has_section'
+      hash: -145572026523902315
+    :details:
+      :flog: complexity is 6.2
+  - :location: !ruby/object:MetricFu::Location
+      file_path: !!null 
+      class_name: Match
+      method_name: Match#none
+      simple_method_name: ! '#none'
+      hash: 1099627931238909685
+    :details:
+      :flog: complexity is 5.5
+  - :location: !ruby/object:MetricFu::Location
+      file_path: !!null 
+      class_name: Configuration
+      method_name: Configuration#none
+      simple_method_name: ! '#none'
+      hash: -1730108228085518751
+    :details:
+      :flog: complexity is 5.5
+  - :location: !ruby/object:MetricFu::Location
+      file_path: !!null 
+      class_name: ContentType
+      method_name: ContentType#none
+      simple_method_name: ! '#none'
+      hash: 2675360899972828384
+    :details:
+      :flog: complexity is 4.4
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex.rb:22
+      class_name: Redex
+      method_name: Redex#configure
+      simple_method_name: ! '#configure'
+      hash: 1986150279377094415
+    :details:
+      :flog: complexity is 4.3
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex.rb:26
+      class_name: Redex
+      method_name: Redex#document_types
+      simple_method_name: ! '#document_types'
+      hash: -397154006310355598
+    :details:
+      :flog: complexity is 2.8
+  - :location: !ruby/object:MetricFu::Location
+      file_path: !!null 
+      class_name: Redex
+      method_name: Redex#none
+      simple_method_name: ! '#none'
+      hash: -907571441967533706
+    :details:
+      :flog: complexity is 2.4
+  - :location: !ruby/object:MetricFu::Location
+      file_path: !!null 
+      class_name: Line
+      method_name: Line#none
+      simple_method_name: ! '#none'
+      hash: -2632547409579397057
+    :details:
+      :flog: complexity is 2.2
+  - :location: !ruby/object:MetricFu::Location
+      file_path: !!null 
+      class_name: DictionaryItem
+      method_name: DictionaryItem#none
+      simple_method_name: ! '#none'
+      hash: 2975540479605158356
+    :details:
+      :flog: complexity is 2.2
+  - :location: !ruby/object:MetricFu::Location
+      file_path: !!null 
+      class_name: DocumentContent
+      method_name: DocumentContent#none
+      simple_method_name: ! '#none'
+      hash: -1423026298170642520
+    :details:
+      :flog: complexity is 2.0
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex.rb:18
+      class_name: Redex
+      method_name: Redex#configuration
+      simple_method_name: ! '#configuration'
+      hash: 2031652698853034513
+    :details:
+      :flog: complexity is 1.8
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/helper/acts_as_parent.rb:5
+      class_name: ActsAsParent
+      method_name: ActsAsParent#add_child
+      simple_method_name: ! '#add_child'
+      hash: -344907249210877167
+    :details:
+      :flog: complexity is 1.7
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/helper/acts_as_child.rb:15
+      class_name: ActsAsChild
+      method_name: ActsAsChild#top_level?
+      simple_method_name: ! '#top_level?'
+      hash: -3136953854789156026
+    :details:
+      :flog: complexity is 1.7
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/helper/acts_as_parent.rb:14
+      class_name: ActsAsParent
+      method_name: ActsAsParent#parent?
+      simple_method_name: ! '#parent?'
+      hash: -281237130222698618
+    :details:
+      :flog: complexity is 1.7
+  - :location: !ruby/object:MetricFu::Location
+      file_path: !!null 
+      class_name: Import
+      method_name: Import#none
+      simple_method_name: ! '#none'
+      hash: 1939389044768917236
+    :details:
+      :flog: complexity is 1.3
+  - :location: !ruby/object:MetricFu::Location
+      file_path: !!null 
+      class_name: FileUtil
+      method_name: FileUtil#none
+      simple_method_name: ! '#none'
+      hash: -1882190716589643571
+    :details:
+      :flog: complexity is 1.2
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/helper/acts_as_child.rb:5
+      class_name: ActsAsChild
+      method_name: ActsAsChild#parent=
+      simple_method_name: ! '#parent='
+      hash: 2547535384874050468
+    :details:
+      :flog: complexity is 1.2
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/helper/file_util.rb
+      class_name: FileUtil#self
+      method_name: FileUtil#self.create_file
+      simple_method_name: .create_file
+      hash: -1523115120189272234
+    :details:
+      :reek: found 5 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/dictionary.rb
+      class_name: Dictionary#self
+      method_name: Dictionary#self.get
+      simple_method_name: .get
+      hash: 2280466254047619836
+    :details:
+      :reek: found 3 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/runner.rb
+      class_name: Runner#self
+      method_name: Runner#self.find_matches
+      simple_method_name: .find_matches
+      hash: -4175199364801809083
+    :details:
+      :reek: found 2 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex.rb
+      class_name: Redex#self
+      method_name: Redex#self.define_doc_type
+      simple_method_name: .define_doc_type
+      hash: -3628210988206354083
+    :details:
+      :reek: found 2 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/helper/file_util.rb
+      class_name: FileUtil#self
+      method_name: FileUtil#self.generate
+      simple_method_name: .generate
+      hash: -1863443657580887270
+    :details:
+      :reek: found 1 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/configuration.rb
+      class_name: Configuration#self
+      method_name: Configuration#self.define_setting
+      simple_method_name: .define_setting
+      hash: 2407652724045184117
+    :details:
+      :reek: found 1 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/runner.rb
+      class_name: Runner#self
+      method_name: Runner#self.import_dictionaries
+      simple_method_name: .import_dictionaries
+      hash: 2257633207872389627
+    :details:
+      :reek: found 1 code smells
+  - :location: !ruby/object:MetricFu::Location
+      file_path: lib/redex/runner.rb
+      class_name: Runner#self
+      method_name: Runner#self.import_documents
+      simple_method_name: .import_documents
+      hash: 1116331466386313327
+    :details:
+      :reek: found 1 code smells

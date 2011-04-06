@@ -36,8 +36,9 @@ module Redex
       @item.to_regexp.should be_a Regexp
     end
 
-    it "should return the string matched within the line" do
-      @item.match(@line).should == "Frank"
+    it "should return a match object containing the matched string" do
+      @item.match(@line).should be_a MatchData
+      @item.match(@line).to_s.should == "Frank"
     end
 
     it "should return false if no match is found" do
@@ -46,7 +47,7 @@ module Redex
     end
 
     it "should return the index of the item" do
-
+      pending
     end
 
     it "should return true if a match is found" do

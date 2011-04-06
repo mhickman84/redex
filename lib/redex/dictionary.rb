@@ -38,11 +38,13 @@ module Redex
     end
 
     def items
-      Dictionary.db.zrangebyscore(@name, "-inf", "+inf")
+      values = Dictionary.db.zrangebyscore(@name, "-inf", "+inf")
+      values.map { |val| DictionaryItem.new(self, val) }
     end
 
     def [](index)
-      Dictionary.db.zrange(@name, index, index)
+      item_value = Dictionary.db.zrange(@name, index, index).first
+      DictionaryItem.new(self, item_value)
     end
 
     def size

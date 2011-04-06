@@ -13,7 +13,7 @@ module Redex
 
 #     Returns true if the section or content is not nested inside another
       def top_level?
-        true unless self.parent
+        true unless self.parent && !self.parent.is_a?(DocumentType)
       end
     end
   end

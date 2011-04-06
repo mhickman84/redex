@@ -14,18 +14,17 @@ module Redex
 
       letter_2_path = File.expand_path "../../spec/document_files/letters/sample_letter_2.txt", File.dirname(__FILE__)
       @letter_2 = Document.import(letter_2_path, :type => :letter)
-      @parser = Parser.new
+      @parser = Parser.new :letter
     end
 
     it "should create a match object when given a dictionary and a line containing a match" do
       match = @parser.find_match(@dict, @doc.line(1))
       match.should be_a Match
-      match.content.should == "Frank"
+      match.content.to_s.should == "Frank"
       match.dictionary.should == @dict
-
       match = @parser.find_match(@zip_codes, @letter.line(2))
       match.should be_a Match
-      match.content.should == "65286"
+      match.content.to_s.should == "65286"
     end
 
     it "should return nil when given a dictionary and a line that doesn't contain a match" do
@@ -42,19 +41,38 @@ module Redex
       return_address_matches.size.should == 2
       puts "RETURN ADDRESS MATCHES: #{return_address_matches.inspect}"
       return_address_matches.all? { |match| match.should be_a Match }
-      return_address_matches.first.flags.should include :start_section, :content
-      return_address_matches.last.flags.should include :end_section, :content
     end
 
-    it "should parse a single content item"
-
-    it "should parse the outer sections of a document" do
-      pending
-      @parser.parse_outer_sections(@letter)
+    it "should assign a document type on initialization" do
+      @parser.instance_variable_get(:@doc_type).should be_a DocumentType
     end
 
-    it "should parse the outer contents of a document" do
-      pending
+    it "should return a collection of outer sections to search for in the document" do
+      letter_sections = @parser.outer_section_types
+      letter_sections.size.should == 2
+      letter_sections.all? { |section| section.should be_a SectionType }
+      letter_sections.first.name.should == :return_address
+      letter_sections.last.name.should == :salutation
+    end
+
+    it "should return match objects for each of the outer sections" do
+      matches = []
+      @letter.lines.each do |line|
+         matches.concat(@parser.parse_outer_section_types line)
+      end
+      puts "MATCHES: #{matches.inspect}"
+      matches.size.should == 5
+      return_address_matches = matches.select { |match| match.belongs_to == :return_address }
+      return_address_matches.size.should == 4
+      salutation_matches = matches.select { |match| match.belongs_to == :salutation }
+      salutation_matches.size.should == 1
+      start_matches = matches.select { |match| match.type == :start_section }
+      start_matches.size.should == 3
+      end_matches = matches.select { |match| match.type == :end_section }
+      end_matches.size.should == 2
+
+      match_content = matches.map { |match| match.content[0] }
+      match_content.should include "3519 Front Street", "65286", "765 Berliner Plaza", "68534", "Dear Ms. Johnson:"
     end
 
     after :each do

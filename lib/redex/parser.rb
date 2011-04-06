@@ -1,6 +1,46 @@
 module Redex
   class Parser
 
+#   Accepts a document type (as a symbol)
+    def initialize(doc_type)
+      @doc_type = DocumentType.get(doc_type)
+    end
+
+    def outer_section_types
+      @doc_type.section_types.select do |sec_type|
+        sec_type.top_level?
+      end
+    end
+
+    def outer_content_types
+      @doc_type.content_types.select do |type|
+        type.top_level?
+      end
+    end
+
+    def parse_outer_section_types(line)
+      @matches = []
+      outer_section_types.each do |sec_type|
+        if sec_type.start_dictionary
+          @matches << find_match(sec_type.start_dictionary, line) do |match|
+            match.belongs_to = sec_type.name
+            match.type = :start_section
+          end
+        end
+        if sec_type.end_dictionary
+          @matches << find_match(sec_type.end_dictionary, line) do |match|
+            match.belongs_to = sec_type.name
+            match.type = :end_section
+          end
+        end
+      end
+      @matches.compact
+    end
+
+    def parse(document)
+
+    end
+
 #   Searches a line for dictionary terms
 #   Stops searching once a match is found and returns a match object
 #   Returns nil if no match is found
@@ -12,6 +52,7 @@ module Redex
       if first_match
         match = Match.new(first_match, line)
         puts "MATCH FOUND: #{match.inspect}"
+        yield match if block_given?
         match
       else
         nil
@@ -34,8 +75,6 @@ module Redex
       document_or_section.lines.each do |line|
         match = find_match(section_type.end_dictionary, line)
         if match
-          match.add_flag :start_section
-          match.add_flag :content
           @last_line = line.number
           break
         end
@@ -53,8 +92,6 @@ module Redex
         puts "LINE #{line.number}: #{line.inspect}"
         match = find_match(section_type.end_dictionary, line)
         if match
-          match.add_flag :end_section
-          match.add_flag :content
           @last_line = line.number
           break
         end
@@ -68,17 +105,15 @@ module Redex
       }.first
     end
 
-
     def parse_content(content_type, document)
 
     end
 
     def parse_outer_sections(document)
-#      dictionaries = @doc_type.section_types.map { |section_type| section_type. }
+#     dictionaries = @doc_type.section_types.map { |section_type| section_type. }
       document.lines.each do |line|
 
       end
     end
-
   end
 end
