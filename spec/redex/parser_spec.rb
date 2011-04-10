@@ -75,6 +75,18 @@ module Redex
       match_content.should include "3519 Front Street", "65286", "765 Berliner Plaza", "68534", "Dear Ms. Johnson:"
     end
 
+    it "should return match objects for each of the outer contents" do
+      matches = []
+      @letter.lines.each do |line|
+        matches.concat(@parser.parse_outer_content_types line)
+      end
+      puts "OUTER CONTENT MATCHES: #{matches.inspect}"
+      matches.size.should == 3
+      matches[0].content.to_s.should == 'Johnson'
+      matches[1].content.to_s.should == 'Johnson'
+      matches[2].content.to_s.should == 'Powers'
+    end
+
     after :each do
       Document.clear
       Dictionary.clear

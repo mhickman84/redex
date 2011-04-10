@@ -19,22 +19,34 @@ module Redex
     end
 
     def parse_outer_section_types(line)
-      @matches = []
+      matches = []
       outer_section_types.each do |sec_type|
         if sec_type.start_dictionary
-          @matches << find_match(sec_type.start_dictionary, line) do |match|
+          matches << find_match(sec_type.start_dictionary, line) do |match|
             match.belongs_to = sec_type.name
             match.type = :start_section
           end
         end
         if sec_type.end_dictionary
-          @matches << find_match(sec_type.end_dictionary, line) do |match|
+          matches << find_match(sec_type.end_dictionary, line) do |match|
             match.belongs_to = sec_type.name
             match.type = :end_section
           end
         end
       end
-      @matches.compact
+      matches.compact
+    end
+
+    def parse_outer_content_types(line)
+      matches = []
+      outer_content_types.each do |con_type|
+        puts "CONTENT TYPE: #{con_type.inspect}"
+        matches << find_match(con_type.dictionary, line) do |match|
+          match.belongs_to = con_type.name
+          match.type = :content
+        end
+      end
+      matches.compact
     end
 
     def parse(document)
@@ -103,17 +115,6 @@ module Redex
       DocumentType.get(document.type).section_types.select {
           |sec_type| sec_type.name == name
       }.first
-    end
-
-    def parse_content(content_type, document)
-
-    end
-
-    def parse_outer_sections(document)
-#     dictionaries = @doc_type.section_types.map { |section_type| section_type. }
-      document.lines.each do |line|
-
-      end
     end
   end
 end

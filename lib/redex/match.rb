@@ -2,9 +2,9 @@ module Redex
   class Match
 
     TYPES = [
-      :start_section,
-      :end_section,
-      :content
+        :start_section,
+        :end_section,
+        :content
     ]
 
 #   Type of match
@@ -61,15 +61,15 @@ module Redex
     def <=>(other)
       case
         when self.line.number < other.line.number
-          1
-        when self.line.number > other.line.number
           -1
+        when self.line.number > other.line.number
+          1
         when self.line.number == other.line.number
           puts "CONTENT BEGINNING: #{self.content.begin(0)}"
           if self.content.begin(0) < other.content.begin(0)
-            1
-          elsif self.content.begin(0) > other.content.begin(0)
             -1
+          elsif self.content.begin(0) > other.content.begin(0)
+            1
           else
             0
           end

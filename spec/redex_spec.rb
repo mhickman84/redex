@@ -73,6 +73,15 @@ describe Redex do
     doc_type.children[1].children[0].dictionary.should be_a Redex::Dictionary
   end
 
+  it "should allow new content types to be added to a document type" do
+    Redex.define_doc_type :letter do |d|
+      d.has_content :first_name, :dictionary => :first_names
+    end
+    doc_type = Redex.document_types[:letter]
+    doc_type.content_types.size.should == 1
+    doc_type.content_types.first.name.should == :first_name
+  end
+
   it "should have a list of defined document types" do
     Redex.document_types.all? { |doctype| doctype.should be_a DocumentType }
   end

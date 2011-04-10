@@ -3,7 +3,6 @@ module Redex
   class DocumentType
 
     include Helper::ActsAsParent
-    include Helper::Type
 
 #   Unique name of the type of document containing the content to be extracted (letter, resume, etc).
     attr_reader :name

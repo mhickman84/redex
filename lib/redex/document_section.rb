@@ -23,7 +23,5 @@ module Redex
     def lines
       @document.lines @line_numbers
     end
-
-
   end
 end

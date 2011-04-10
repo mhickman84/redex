@@ -43,7 +43,7 @@ module Redex
 
       def self.empty_msg
         msg = %q{ No items found. Please double check your css or xpath selectors
-      and ensure that the site you are trying to reach does not block scripts. }
+        and ensure that the site you are trying to reach does not block scripts. }
       end
 
       module Import

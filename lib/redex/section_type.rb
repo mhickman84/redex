@@ -2,7 +2,6 @@ module Redex
 # Represents the types of sections that can occur within
 # a document or another section
   class SectionType
-    include Helper::Type
     include Helper::ActsAsParent
     include Helper::ActsAsChild
 #   Name of the section type (i.e. header, footer)
