@@ -9,6 +9,7 @@ require 'redex/line'
 require 'redex/dictionary_item'
 require 'redex/dictionary'
 require 'redex/match'
+require 'redex/scanner'
 require 'redex/parser'
 require 'redex/runner'
 

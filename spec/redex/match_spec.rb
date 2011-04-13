@@ -30,17 +30,19 @@ module Redex
       @match.document.name.should == "episodes.txt"
     end
 
-    it "should increment the score of a dictionary item when confirmed" do
-      @match.confirm
-      @dict.first.score.should == 1
-    end
+    describe "#confirm" do
+      it "should increment the score of a dictionary item when confirmed" do
+        @match.confirm
+        @dict.first.score.should == 1
+      end
 
-    it "should ignore subsequent calls to confirm" do
-      @match.confirm
-      @match.confirm
-      @dict.first.score.should == 1
+      it "should ignore subsequent calls to confirm" do
+        @match.confirm
+        @match.confirm
+        @dict.first.score.should == 1
+      end
     end
-
+    
     describe "<=>" do
       before :each do
         @mac_item = @dict.items.select { |item| item.value == "Mac" }.first
@@ -74,7 +76,7 @@ module Redex
         fourth_match = Match.new(@charlie_item, @doc.line(5))
         fifth_match = Match.new(@dee_item, @doc.line(6))
         matches = []
-        matches << third_match << fifth_match << fourth_match << first_match << second_match
+        matches << second_match << third_match << fifth_match << fourth_match << first_match
         matches.sort!
         matches[0].content.to_s.should == "Frank"
         matches[1].content.to_s.should == "Mac"
