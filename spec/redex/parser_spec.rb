@@ -8,7 +8,7 @@ module Redex
       define_test_doc_type
       letter_path = File.expand_path "../../spec/document_files/letters/sample_letter.txt", File.dirname(__FILE__)
       @letter = Document.import(letter_path, :type => :letter)
-      @scanner = Scanner.new(:letter)
+      @matches = Scanner.new(:letter).scan(@letter)
       @parser = Parser.new(:letter)
     end
 
@@ -19,18 +19,22 @@ module Redex
     end
 
     describe "#parse_sections_of_type" do
+      before(:each) { @address_sections = @parser.parse_sections_of_type(:address, @matches) }
+
       it "should create sections of the supplied type from a list of section matches" do
-        matches = @scanner.scan(@letter)
-        matches.each { |m| puts "MATCH: #{m}" }
-        letter_sections = @parser.parse_sections_of_type(:address, matches)
-        letter_sections.all? { |section| section.type.should == :address }
+        puts "---ADDRESS SECTIONS---"
+        @address_sections.each { |sec| puts sec.inspect  }
+        @address_sections.all? { |section| section.type.should == :address }
+      end
+
+      it "should create 1 section for each pair of :start and :end section matches" do
+        @address_sections.size.should == 2
       end
     end
 
     describe "#parse_contents_of_type" do
       it "should create contents from a list of content matches" do
-        matches = @scanner.scan(@letter)
-        letter_contents = @parser.parse_contents_of_type(:address, matches)
+        letter_contents = @parser.parse_contents_of_type(:address, @matches)
         letter_contents.all? { |content| content.should be_a DocumentContent }
       end
     end
