@@ -4,7 +4,8 @@ module Redex
   describe Scanner do
     include RedexHelper
     before :each do
-      add_dictionaries
+      define_test_dictionaries
+      define_test_doc_type
 
       @doc = Document.import(File.expand_path "../../spec/document_files/episodes.txt", File.dirname(__FILE__))
       @dict = Dictionary.import(File.expand_path "../../spec/dictionary_files/cast", File.dirname(__FILE__))
@@ -18,12 +19,12 @@ module Redex
     end
 
     it "should create a match object when given a dictionary and a line containing a match" do
-      match = @scanner.find_match(@dict, @doc.line(1))
-      match.should be_a Match
+      match = @scanner.find_match(@dict, @doc.line(1), :some_content_type, ContentMatch)
+      match.should be_a_kind_of ContentMatch
       match.content.to_s.should == "Frank"
       match.dictionary.should == @dict
-      match = @scanner.find_match(@zip_codes, @letter.line(2))
-      match.should be_a Match
+      match = @scanner.find_match(@zip_codes, @letter.line(2), :some_content_type, ContentMatch)
+      match.should be_a_kind_of Helper::Matchable
       match.content.to_s.should == "65286"
     end
 
@@ -32,7 +33,7 @@ module Redex
       @dict.each { |item| puts "ITEM: #{item.inspect} SCORE: #{item.score} INDEX: #{item.index}" }
       @dict.take(4) { |item| item.increment }
       @dict.each { |item| puts "ITEM: #{item.inspect} SCORE: #{item.score} INDEX: #{item.index}" }
-      match = @scanner.find_match(@dict, @doc.line(4))
+      match = @scanner.find_match(@dict, @doc.line(4), :some_content_type, ContentMatch)
       match.should be_nil
     end
 
@@ -44,32 +45,33 @@ module Redex
       letter_sections = @scanner.outer_section_types
       letter_sections.size.should == 2
       letter_sections.all? { |section| section.should be_a SectionType }
-      letter_sections.first.name.should == :return_address
+      letter_sections.first.name.should == :address
       letter_sections.last.name.should == :salutation
     end
 
     it "should return match objects for each of the outer sections" do
-      matches = []
+      matches = MatchList.new
       @letter.lines.each do |line|
-         matches.concat(@scanner.scan_outer_sections line)
+        matches.concat(@scanner.scan_outer_sections line)
       end
-      puts "MATCHES: #{matches.inspect}"
+      matches.each { |m| puts "MATCH: #{m.inspect}" }
       matches.size.should == 5
-      return_address_matches = matches.select { |match| match.belongs_to == :return_address }
+      return_address_matches = matches.of_type :address
       return_address_matches.size.should == 4
-      salutation_matches = matches.select { |match| match.belongs_to == :salutation }
+      salutation_matches = matches.of_type :salutation
       salutation_matches.size.should == 1
-      start_matches = matches.select { |match| match.type == :start_section }
+      start_matches = matches.at_location :start
       start_matches.size.should == 3
-      end_matches = matches.select { |match| match.type == :end_section }
+      end_matches = matches.at_location :end
       end_matches.size.should == 2
 
       match_content = matches.map { |match| match.content[0] }
+      puts "MATCH CONTENT: #{match_content.inspect}"
       match_content.should include "3519 Front Street", "65286", "765 Berliner Plaza", "68534", "Dear Ms. Johnson:"
     end
 
     it "should return match objects for each of the outer contents" do
-      matches = []
+      matches = MatchList.new
       @letter.lines.each do |line|
         matches.concat(@scanner.scan_outer_contents line)
       end
@@ -84,9 +86,7 @@ module Redex
       before(:each) { @outer_matches = @scanner.scan @letter }
 
       it "should return all outer section and content matches for a document" do
-        puts "Dictionaries: #{Redex.configuration.dictionaries.inspect}"
-        @outer_matches.each { |match| puts "MATCH: " + match.content.to_s }
-        @outer_matches.should be_a Array
+        @outer_matches.should be_a MatchList
         @outer_matches.size.should == 8
       end
 
@@ -94,12 +94,6 @@ module Redex
         @outer_matches.first.content.to_s.should == '3519 Front Street'
         @outer_matches.last.content.to_s.should == 'Powers'
       end
-    end
-
-    after :each do
-      Document.clear
-      Dictionary.clear
-      remove_dictionaries
     end
   end
 end

@@ -8,5 +8,9 @@ require 'redex'
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each { |f| require f }
 
 RSpec.configure do |config|
-  
+  config.after(:each) do
+    Redex.db.flushdb
+    Redex.configuration.dictionaries = {}
+    Redex.configuration.document_types = {}
+  end
 end

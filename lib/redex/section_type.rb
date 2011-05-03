@@ -4,6 +4,7 @@ module Redex
   class SectionType
     include Helper::ActsAsParent
     include Helper::ActsAsChild
+    
 #   Name of the section type (i.e. header, footer)
     attr_reader :name
 

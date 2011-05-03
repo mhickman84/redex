@@ -1,12 +1,14 @@
 module Redex
 # Represents a single line of a document (typically stored in Redis)
   class Line
+    
 #   Content of the line
     attr_reader :value
+
 #   Line number (1-based)
     attr_reader :number
     
-    def initialize(document, value, number)
+    def initialize document, value, number
       @document_name = document.name || document
       @value = value
       @number = number
@@ -18,7 +20,7 @@ module Redex
     end
 
 #   Sort by line number
-    def <=>(other)
+    def <=> other
       self.number <=> other.number
     end
 

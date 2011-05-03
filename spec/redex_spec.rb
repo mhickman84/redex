@@ -86,8 +86,4 @@ describe Redex do
     Redex.document_types.all? { |doctype| doctype.should be_a DocumentType }
   end
 
-  after :each do
-    Redex.configuration.document_types = {}
-    Redex.db.flushdb
-  end
 end

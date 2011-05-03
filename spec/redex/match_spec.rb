@@ -1,13 +1,13 @@
 require File.expand_path('../spec_helper', File.dirname(__FILE__))
 
 module Redex
-  describe Match do
+  describe ContentMatch do
     before :each do
       dictionary_path = File.expand_path("spec/dictionary_files/cast")
       doc_path = File.expand_path("spec/document_files/episodes.txt")
       @dict = Redex::Dictionary.import(dictionary_path)
       @doc = Redex::Document.import(doc_path)
-      @match = Match.new(@dict.first, @doc.line(2))
+      @match = ContentMatch.new(@dict.first, @doc.line(2), :episode_content)
     end
 
     it "should be associated with a line and a dictionary item" do
@@ -15,7 +15,7 @@ module Redex
       @match.line.should be_a Redex::Line
     end
 
-    it "should contain a string containing the matched content" do
+    it "should contain a string with the matched content" do
       @match.content.should be_a MatchData
       @match.content.to_s.should == "Mac"
     end
@@ -42,7 +42,7 @@ module Redex
         @dict.first.score.should == 1
       end
     end
-    
+
     describe "<=>" do
       before :each do
         @mac_item = @dict.items.select { |item| item.value == "Mac" }.first
@@ -51,10 +51,10 @@ module Redex
         @frank_item = @dict.items.select { |item| item.value == "Frank" }.first
         @dee_item = @dict.items.select { |item| item.value == "Dee" }.first
       end
-      it "should compare by line number in ascending order" do
 
-        first_match = Match.new(@mac_item, @doc.line(2))
-        second_match = Match.new(@charlie_item, @doc.line(5))
+      it "should compare by line number in ascending order" do
+        first_match = ContentMatch.new(@mac_item, @doc.line(2), :episode_content)
+        second_match = ContentMatch.new(@charlie_item, @doc.line(5), :episode_content)
 
         first_match.<=>(second_match).should == -1
         second_match.<=>(first_match).should == 1
@@ -62,19 +62,19 @@ module Redex
       end
 
       it "should compare by the character index of the match if the line numbers are equal" do
-        first_match = Match.new(@mac_item, @doc.line(2))
-        second_match = Match.new(@dennis_item, @doc.line(2))
+        first_match = ContentMatch.new(@mac_item, @doc.line(2), :episode_content)
+        second_match = ContentMatch.new(@dennis_item, @doc.line(2), :episode_content)
         first_match.<=>(second_match).should == -1
         second_match.<=>(first_match).should == 1
         first_match.<=>(first_match).should == 0
       end
 
       it "should sort matches by line number then index in ascending order" do
-        first_match = Match.new(@frank_item, @doc.line(1))
-        second_match = Match.new(@mac_item, @doc.line(2))
-        third_match = Match.new(@dennis_item, @doc.line(2))
-        fourth_match = Match.new(@charlie_item, @doc.line(5))
-        fifth_match = Match.new(@dee_item, @doc.line(6))
+        first_match = ContentMatch.new(@frank_item, @doc.line(1), :episode_content)
+        second_match = ContentMatch.new(@mac_item, @doc.line(2), :episode_content)
+        third_match = ContentMatch.new(@dennis_item, @doc.line(2), :episode_content)
+        fourth_match = ContentMatch.new(@charlie_item, @doc.line(5), :episode_content)
+        fifth_match = ContentMatch.new(@dee_item, @doc.line(6), :episode_content)
         matches = []
         matches << second_match << third_match << fifth_match << fourth_match << first_match
         matches.sort!
@@ -85,7 +85,5 @@ module Redex
         matches[4].content.to_s.should == "Dee"
       end
     end
-
-    after(:each) { Redex.db.flushdb }
   end
 end

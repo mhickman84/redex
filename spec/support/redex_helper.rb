@@ -1,6 +1,6 @@
 module Redex
   module RedexHelper
-    def add_dictionaries
+    def define_test_dictionaries
       @street_addresses = Dictionary.new("street_addresses")
       @cities = Dictionary.new("cities")
       @states = Dictionary.new("states")
@@ -21,9 +21,11 @@ module Redex
       Redex.configuration.dictionaries[:zip_codes] = @zip_codes
       Redex.configuration.dictionaries[:greetings] = @greetings
       Redex.configuration.dictionaries[:last_names] = @last_names
+    end
 
+    def define_test_doc_type
       Redex.define_doc_type :letter do |d|
-        d.has_section :return_address do |s|
+        d.has_section :address do |s|
           s.starts_with_content :street_address, :dictionary => :street_addresses
           s.has_content :city, :dictionary => :cities
           s.has_content :state, :dictionary => :states
@@ -34,11 +36,6 @@ module Redex
         end
         d.has_content :last_name, :dictionary => :last_names
       end
-    end
-
-    def remove_dictionaries
-      Redex.configuration.dictionaries = {}
-      Redex.configuration.document_types = {}
     end
   end
 end

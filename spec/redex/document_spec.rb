@@ -99,7 +99,5 @@ module Redex
     it "should not be flagged as 'parsed' at initialization" do
       @doc.parsed?.should be_false
     end
-
-    after(:each) { Document.db.flushdb }
   end
 end

@@ -2,7 +2,7 @@ module Redex
   class Scanner
 
 #   Accepts a document type (as a symbol)
-    def initialize(doc_type)
+    def initialize doc_type
       @doc_type = DocumentType.get(doc_type)
     end
 
@@ -18,41 +18,36 @@ module Redex
       end
     end
 
-    def scan_outer_sections(line)
-      matches = []
+    def scan_outer_sections line
+      matches = MatchList.new
       outer_section_types.each do |sec_type|
         if sec_type.start_dictionary
-          matches << find_match(sec_type.start_dictionary, line) do |match|
-            match.belongs_to = sec_type.name
-            match.type = :start_section
+          matches << find_match(sec_type.start_dictionary, line, sec_type.name, SectionMatch) do |match|
+            match.location = :start
           end
         end
         if sec_type.end_dictionary
-          matches << find_match(sec_type.end_dictionary, line) do |match|
-            match.belongs_to = sec_type.name
-            match.type = :end_section
+          matches << find_match(sec_type.end_dictionary, line, sec_type.name, SectionMatch) do |match|
+            match.location = :end
           end
         end
       end
       matches.compact
     end
 
-    def scan_outer_contents(line)
-      matches = []
+    def scan_outer_contents line
+      matches = MatchList.new
       outer_content_types.each do |con_type|
         puts "CONTENT TYPE: #{con_type.inspect}"
-        matches << find_match(con_type.dictionary, line) do |match|
-          match.belongs_to = con_type.name
-          match.type = :content
-        end
+        matches << find_match(con_type.dictionary, line, con_type, ContentMatch)
       end
       matches.compact
     end
 
 #   Finds matches for outer sections and contents within
 #   the supplied document or section.
-    def scan(doc_or_section)
-      matches = []
+    def scan doc_or_section
+      matches = MatchList.new
       doc_or_section.lines.each do |line|
         matches.concat scan_outer_sections(line)
         matches.concat scan_outer_contents(line)
@@ -63,13 +58,14 @@ module Redex
 #   Searches a line for dictionary terms
 #   Stops searching once a match is found and returns a match object
 #   Returns nil if no match is found
-#   Increments the score of the corresponding dictionary item when a match is created
-    def find_match(dictionary, line)
+#   Increments the score of the corresponding dictionary item when a match is confirmed
+    def find_match dictionary, line, type, match_class
       first_match = dictionary.detect do |item|
-        item.match?(line)
+        item.match? line
       end
       if first_match
-        match = Match.new(first_match, line)
+        puts "MATCH CLASS: #{match_class}"
+        match = match_class.new first_match, line, type
         puts "MATCH FOUND: #{match.inspect}"
         yield match if block_given?
         match
@@ -78,7 +74,7 @@ module Redex
       end
     end
 
-    def get_section_type(name, document)
+    def get_section_type name, document
       DocumentType.get(document.type).section_types.select {
           |sec_type| sec_type.name == name
       }.first

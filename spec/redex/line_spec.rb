@@ -21,9 +21,5 @@ module Redex
       @doc_line.<=>(@doc_line_2).should == -1
       @doc_line.<=>(@doc_line).should == 0
     end
-
-    after :each do
-      Dictionary.db.flushdb
-    end
   end
 end

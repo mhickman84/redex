@@ -53,9 +53,5 @@ module Redex
     it "should return true if a match is found" do
       @item.match?(@line).should == true
     end
-
-    after :each do
-      Dictionary.db.flushdb
-    end
   end
 end

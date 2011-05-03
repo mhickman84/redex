@@ -19,8 +19,6 @@ module Redex
       end
     end
 
-
-
 #   Find matches for the specified document type
     def self.find_matches(doc_type)
       parser = Parser.new
@@ -32,7 +30,6 @@ module Redex
           match = parser.find_match(line)
           @matches << match if match
         end
-
       end
       @matches
     end

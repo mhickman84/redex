@@ -110,9 +110,5 @@ module Redex
       @dictionary_1[0].value.should == "item"
       @dictionary_1[1].value.should == "other_item"
     end
-
-    after :each do
-      Dictionary.db.flushdb
-    end
   end
 end

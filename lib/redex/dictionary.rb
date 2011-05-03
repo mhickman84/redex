@@ -5,7 +5,7 @@ module Redex
     extend Helper::Data
     extend Helper::FileUtil::Import
     include Enumerable
-    
+
     NAMESPACE = :dict
 
     attr_reader :name
@@ -57,6 +57,11 @@ module Redex
       end
     end
 
+#   find an item by value
+    def find_item(value)
+      self.find { |item| item.value == value }
+    end
+
 #   fetch dictionary items one by one from Redis
     def each
       current_index = size - 1
@@ -67,7 +72,7 @@ module Redex
         current_index -= 1
       end
     end
-    
+
 #   Name-based equality
     def ==(other)
       self.name == other.name

@@ -18,7 +18,7 @@ module Redex
 
 #   Returns the document type object associated with the supplied name
     def self.get(name)
-      Redex.document_types[name]
+      Redex.document_types[name] || raise("Document type #{name} has not been defined")
     end
 
 #   Types of content found in this doc type

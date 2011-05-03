@@ -26,9 +26,21 @@ module Redex
       lines.last.value.should == "Hundred Dollar Baby\n"
     end
 
-    after :each do
-      Document.clear
-      Dictionary.clear
+    it "should create a section when given a start and end match" do
+      dictionary_path = File.expand_path("spec/dictionary_files/cast")
+      doc_path = File.expand_path("spec/document_files/episodes.txt")
+      dictionary = Redex::Dictionary.import(dictionary_path)
+      document = Redex::Document.import(doc_path)
+      mac_item = dictionary.find_item "Mac"
+      charlie_item = dictionary.find_item "Charlie"
+      start_match = SectionMatch.new(mac_item, document.line(2), :episode_section)
+      start_match.location = :start
+      end_match = SectionMatch.new(charlie_item, @doc.line(5), :episode_section)
+      end_match.location = :end
+      section = DocumentSection.from_matches(:type_a, start_match, end_match)
+      section.should be_a DocumentSection
+      section.lines.size.should == 4
+      section.document.name.should == "episodes.txt"
     end
   end
 end

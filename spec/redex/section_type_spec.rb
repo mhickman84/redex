@@ -4,7 +4,8 @@ module Redex
   describe SectionType do
     include RedexHelper
     before :each do
-      add_dictionaries
+      define_test_dictionaries
+      define_test_doc_type
       @section_type = SectionType.new(:test_section)
     end
 
@@ -70,7 +71,5 @@ module Redex
       @section_type.children.first.should be_a ContentType
       @section_type.children.first.name.should == :zip_code
     end
-
-    after(:each) { remove_dictionaries }
   end
 end

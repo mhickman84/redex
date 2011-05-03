@@ -53,7 +53,5 @@ module Redex
       @test_doc_type.content_types.size.should == 1
       @test_doc_type.content_types.all? { |type| type.should be_a ContentType }
     end
-
-    after(:each) { Redex.configuration.document_types = {} }
   end
 end

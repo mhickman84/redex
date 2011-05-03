@@ -25,9 +25,5 @@ module Redex
       Redex.configuration.documents.values.all? { |doc| doc.type.should == :letter }
     end
 
-    after :each do
-      Redex.configuration.document_types = {}
-      Dictionary.db.flushdb
-    end
   end
 end
