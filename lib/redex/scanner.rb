@@ -64,7 +64,6 @@ module Redex
         item.match? line
       end
       if first_match
-        puts "MATCH CLASS: #{match_class}"
         match = match_class.new first_match, line, type
         puts "MATCH FOUND: #{match.inspect}"
         yield match if block_given?

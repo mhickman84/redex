@@ -18,16 +18,21 @@ module Redex
       lambda { Parser.new(:fake_doc_type) }.should raise_error
     end
 
-    it "should create sections of the supplied type from a list of section matches" do
-      section_matches = @scanner.scan(@letter).select { |match| match.type =~ /section/ }
-      letter_sections = @parser.parse_sections_for_type(:address, section_matches)
-      letter_sections.all? { |section| section.type.should == :address }
+    describe "#parse_sections_of_type" do
+      it "should create sections of the supplied type from a list of section matches" do
+        matches = @scanner.scan(@letter)
+        matches.each { |m| puts "MATCH: #{m}" }
+        letter_sections = @parser.parse_sections_of_type(:address, matches)
+        letter_sections.all? { |section| section.type.should == :address }
+      end
     end
 
-    it "should create contents from a list of content matches" do
-      content_matches = @scanner.scan(@letter).select { |match| match.type =~ /content/ }
-      letter_contents = @parser.parse_contents(content_matches)
-      letter_contents.all? { |content| content.should be_a DocumentContent }
+    describe "#parse_contents_of_type" do
+      it "should create contents from a list of content matches" do
+        matches = @scanner.scan(@letter)
+        letter_contents = @parser.parse_contents_of_type(:address, matches)
+        letter_contents.all? { |content| content.should be_a DocumentContent }
+      end
     end
   end
 end

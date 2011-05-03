@@ -17,6 +17,7 @@ module Redex
     end
 
     it "should have an optional parent section or document" do
+      @content_type.parent = DocumentType.new(:some_doc_type)
       @content_type.top_level?.should be_true
       @content_type.parent = SectionType.new(:some_random_section)
       @content_type.top_level?.should be_false

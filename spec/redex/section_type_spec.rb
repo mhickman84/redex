@@ -20,7 +20,8 @@ module Redex
       @section_type.children.first.name.should == :section_header
     end
 
-    it "should be a top level section type if it has no parent types" do
+    it "should be a top level section type the parent is a Document Type" do
+      @section_type.parent = DocumentType.new(:some_doc_type)
       @section_type.top_level?.should be_true
       @section_type.parent = SectionType.new(:some_section)
       @section_type.top_level?.should be_false

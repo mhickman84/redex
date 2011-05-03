@@ -13,7 +13,8 @@ module Redex
       @section.document.name.should == "episodes.txt"
     end
 
-    it "should be a top level section if no parent has been assigned" do
+    it "should be a top level section the parent is a document" do
+      @section.parent = @doc
       @section.top_level?.should be_true
       @section.parent = DocumentSection.new(:some_section, @doc, 1..2)
       @section.top_level?.should be_false
