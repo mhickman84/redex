@@ -4,6 +4,7 @@ module Redex
 #     Add child
       def add_child(child)
         @children ||= []
+        child.parent = self
         @children << child
       end
 

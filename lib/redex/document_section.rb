@@ -26,7 +26,7 @@ module Redex
 
     def self.from_matches type, start_match, end_match
       line_numbers = Range.new start_match.line.number, end_match.line.number
-      new type, start_match.document, line_numbers
+      DocumentSection.new type, start_match.document, line_numbers
     end
   end
 end

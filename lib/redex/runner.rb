@@ -14,7 +14,6 @@ module Redex
       end
       @documents.flatten!
       @documents.each do |doc|
-        puts "DOCUMENTS: #{@documents.inspect}"
         Redex.configuration.documents[doc.name.to_sym] = doc
       end
     end

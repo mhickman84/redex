@@ -10,7 +10,7 @@ module Redex
     end
 
     def of_class klass
-      results = target.select { |match| match.class == klass }
+      results = target.select { |match| match.is_a? klass }
       MatchList.new results
     end
 
@@ -20,7 +20,7 @@ module Redex
     end
 
     def at_location location
-      section_results = target.select { |match| match.class == SectionMatch }
+      section_results = target.select { |match| match.is_a? SectionMatch }
       location_results = section_results.select { |match| match.location == location }
       MatchList.new location_results
     end
@@ -30,9 +30,9 @@ module Redex
     end
 
     private
+    
     def method_missing(method, *args, &block)
       result = target.send(method, *args, &block)
-      puts "RESULT: #{result.class}"
       case result
         when Array
           MatchList.new result

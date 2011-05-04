@@ -15,7 +15,7 @@ module Redex
     end
 
     def self.from_match type, match
-      new type, match.document, match.line.number
+      DocumentContent.new(type, match.document, match.line.number)
     end
   end
 end

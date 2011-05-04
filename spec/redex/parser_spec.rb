@@ -22,8 +22,7 @@ module Redex
       before(:each) { @address_sections = @parser.parse_sections_of_type(:address, @matches) }
 
       it "should create sections of the supplied type from a list of section matches" do
-        puts "---ADDRESS SECTIONS---"
-        @address_sections.each { |sec| puts sec.inspect  }
+        @address_sections.all? { |content| content.should be_a DocumentSection }
         @address_sections.all? { |section| section.type.should == :address }
       end
 
@@ -33,9 +32,19 @@ module Redex
     end
 
     describe "#parse_contents_of_type" do
-      it "should create contents from a list of content matches" do
-        letter_contents = @parser.parse_contents_of_type(:address, @matches)
-        letter_contents.all? { |content| content.should be_a DocumentContent }
+      before(:each) do
+        puts "--MATCH TYPES--"
+        @matches.each { |m| puts "--> #{m.type}"}
+        @last_name_contents = @parser.parse_contents_of_type(:last_name, @matches)
+      end
+
+      it "should create contents matching the specified type from a list of content matches" do
+        @last_name_contents.all? { |content| content.should be_a DocumentContent }
+        @last_name_contents.all? { |content| content.type.should == :last_name }
+      end
+
+      it "should create 1 DocumentContent object for each match" do
+        @last_name_contents.size.should == 3
       end
     end
   end

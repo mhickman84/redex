@@ -1,6 +1,6 @@
 module Redex
   class Parser
-    def initialize(doc_type)
+    def initialize doc_type
       @doc_type = DocumentType.get(doc_type)
     end
 
@@ -9,16 +9,20 @@ module Redex
       end_matches = matches.of_type(type).at_location(:end)
       sections = []
       until start_matches.empty? || end_matches.empty?
-        DocumentSection.from_matches type, start_matches.shift, end_matches.shift
+        puts "START MATCHES: #{start_matches.size} | END MATCHES: #{end_matches.size}"
+        sections << DocumentSection.from_matches(type, start_matches.shift, end_matches.shift)
+        puts "SECTION: #{sections.last.inspect}"
       end
       sections
     end
 
     def parse_contents_of_type type, matches
-      matches = matches.of_class(ContentMatch).of_type(type)
+      type_matches = matches.of_class(ContentMatch).of_type(type)
+      puts "---TYPE MATCHES---"
+      type_matches.each { |tm| puts "MATCH: #{tm.inspect}" }
       contents = []
-      until matches.empty?
-        contents << DocumentContent.from_match(type, matches.shift)
+      until type_matches.empty?
+        contents << DocumentContent.from_match(type, type_matches.shift)
       end
       contents
     end

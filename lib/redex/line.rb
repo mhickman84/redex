@@ -5,7 +5,7 @@ module Redex
 #   Content of the line
     attr_reader :value
 
-#   Line number (1-based)
+#   Line number (*** 1-based ***)
     attr_reader :number
     
     def initialize document, value, number

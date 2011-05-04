@@ -38,8 +38,7 @@ module Redex
     def scan_outer_contents line
       matches = MatchList.new
       outer_content_types.each do |con_type|
-        puts "CONTENT TYPE: #{con_type.inspect}"
-        matches << find_match(con_type.dictionary, line, con_type, ContentMatch)
+        matches << find_match(con_type.dictionary, line, con_type.name, ContentMatch)
       end
       matches.compact
     end
@@ -49,10 +48,10 @@ module Redex
     def scan doc_or_section
       matches = MatchList.new
       doc_or_section.lines.each do |line|
-        matches.concat scan_outer_sections(line)
-        matches.concat scan_outer_contents(line)
+        matches << scan_outer_sections(line)
+        matches << scan_outer_contents(line)
       end
-      matches.sort
+      matches.flatten.sort
     end
 
 #   Searches a line for dictionary terms
