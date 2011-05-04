@@ -55,8 +55,6 @@ module Redex
       @section_type.children.last.should be_a SectionType
     end
 
-    it "should be assigned as the p"
-
     it "should assign a start dictionary and content type" do
       @section_type.starts_with_content :street_address, :dictionary => :street_addresses
       @section_type.start_dictionary.should be_a Dictionary
