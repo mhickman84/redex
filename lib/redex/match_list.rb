@@ -5,10 +5,6 @@ module Redex
       @target = target
     end
 
-    def target
-      @target ||= []
-    end
-
     def of_class klass
       results = target.select { |match| match.is_a? klass }
       MatchList.new results
@@ -30,7 +26,11 @@ module Redex
     end
 
     private
-    
+
+    def target
+      @target ||= []
+    end
+
     def method_missing(method, *args, &block)
       result = target.send(method, *args, &block)
       case result

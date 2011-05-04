@@ -7,6 +7,7 @@ module Redex
         children << child
       end
 
+#     Add array of children
       def add_children children
         children.each { |child| add_child child }
       end
