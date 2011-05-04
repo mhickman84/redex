@@ -13,28 +13,34 @@ module Redex
     attr_reader :end_dictionary
 
 
-    def initialize(name)
+    def initialize name
       @name = name
     end
 
 #   Set start dictionary
-    def starts_with(options)
-      @start_dictionary = Dictionary.get(options[:dictionary])
+    def starts_with options
+      @start_dictionary = Dictionary.get options[:dictionary]
     end
 
 #   Set end dictionary
-    def ends_with(options)
-      @end_dictionary = Dictionary.get(options[:dictionary])
+    def ends_with options
+      @end_dictionary = Dictionary.get options[:dictionary]
     end
 
-    def starts_with_content(name, options={})
-      starts_with(options)
-      has_content(name, options)
+    def starts_and_ends_with_content name, options={}
+      starts_with options
+      ends_with options
+      has_content name, options
     end
 
-    def ends_with_content(name, options={})
-      ends_with(options)
-      has_content(name, options)
+    def starts_with_content name, options={}
+      starts_with options
+      has_content name, options
+    end
+
+    def ends_with_content name, options={}
+      ends_with options
+      has_content name, options
     end
   end
 end

@@ -55,15 +55,15 @@ module Redex
         matches.concat(@scanner.scan_outer_sections line)
       end
       matches.each { |m| puts "MATCH: #{m.inspect}" }
-      matches.size.should == 5
+      matches.size.should == 6
       return_address_matches = matches.of_type :address
       return_address_matches.size.should == 4
       salutation_matches = matches.of_type :salutation
-      salutation_matches.size.should == 1
+      salutation_matches.size.should == 2
       start_matches = matches.at_location :start
       start_matches.size.should == 3
       end_matches = matches.at_location :end
-      end_matches.size.should == 2
+      end_matches.size.should == 3
 
       match_content = matches.map { |match| match.content[0] }
       puts "MATCH CONTENT: #{match_content.inspect}"
@@ -87,7 +87,7 @@ module Redex
 
       it "should return all outer section and content matches for a document" do
         @outer_matches.should be_a MatchList
-        @outer_matches.size.should == 8
+        @outer_matches.size.should == 9
       end
 
       it "should return all matches in order" do

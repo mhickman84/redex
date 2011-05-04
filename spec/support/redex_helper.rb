@@ -32,7 +32,7 @@ module Redex
           s.ends_with_content :zip_code, :dictionary => :zip_codes
         end
         d.has_section :salutation do |s|
-          s.starts_with_content :greeting, :dictionary => :greetings
+          s.starts_and_ends_with_content :greeting, :dictionary => :greetings
         end
         d.has_content :last_name, :dictionary => :last_names
       end

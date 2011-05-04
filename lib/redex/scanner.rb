@@ -6,6 +6,17 @@ module Redex
       @doc_type = DocumentType.get(doc_type)
     end
 
+#   Finds matches for outer sections and contents within
+#   the supplied document or section.
+    def scan doc_or_section
+      matches = MatchList.new
+      doc_or_section.lines.each do |line|
+        matches << scan_outer_sections(line)
+        matches << scan_outer_contents(line)
+      end
+      matches.flatten.sort
+    end    
+
     def outer_section_types
       @doc_type.section_types.select do |sec_type|
         sec_type.top_level?
@@ -41,17 +52,6 @@ module Redex
         matches << find_match(con_type.dictionary, line, con_type.name, ContentMatch)
       end
       matches.compact
-    end
-
-#   Finds matches for outer sections and contents within
-#   the supplied document or section.
-    def scan doc_or_section
-      matches = MatchList.new
-      doc_or_section.lines.each do |line|
-        matches << scan_outer_sections(line)
-        matches << scan_outer_contents(line)
-      end
-      matches.flatten.sort
     end
 
 #   Searches a line for dictionary terms

@@ -21,11 +21,8 @@ module Redex
 #   Type of document
     attr_accessor :type
 
-#   Array containing parsed sections of a document
-    attr_reader :sections
-
-#   Array containing parsed contents of a document
-    attr_reader :contents
+#   Boolean flag indicating whether or not the document has been parsed
+    attr_writer :parsed
 
 #   Number of lines
     attr_reader :number_of_lines
@@ -100,14 +97,22 @@ module Redex
       @parsed
     end
 
+#   Types of content found in this doc type
+    def contents
+      children.select { |child| child.is_a? DocumentContent }
+    end
+
+#   Types of sections found in this doc type
+    def sections
+      children.select { |child| child.is_a? DocumentSection }
+    end
+
     def add_section section
-      @sections ||= []
-      @sections << section
+      add_child section
     end
 
     def add_content content
-      @contents ||= []
-      @contents << content
+      add_child content
     end
 
     private

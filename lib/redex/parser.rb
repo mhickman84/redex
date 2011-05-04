@@ -2,10 +2,21 @@ module Redex
   class Parser
     def initialize doc_type
       @doc_type = DocumentType.get(doc_type)
+      @scanner = Scanner.new(doc_type)
     end
 
     def parse document
-
+      matches = @scanner.scan document
+      sections = @doc_type.section_types.reduce([]) do |memo, sec_type|
+        memo.concat(parse_sections_of_type sec_type.name, matches)
+      end
+      contents = @doc_type.content_types.reduce([]) do |memo, con_type|
+        memo.concat(parse_contents_of_type con_type.name, matches)
+      end
+      document.add_children sections
+      document.add_children contents
+      document.parsed = true
+      document
     end
 
     def parse_sections_of_type type, matches
@@ -20,8 +31,6 @@ module Redex
 
     def parse_contents_of_type type, matches
       type_matches = matches.of_class(ContentMatch).of_type(type)
-      puts "---TYPE MATCHES---"
-      type_matches.each { |tm| puts "MATCH: #{tm.inspect}" }
       contents = []
       until type_matches.empty?
         contents << DocumentContent.from_match(type, type_matches.shift)

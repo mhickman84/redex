@@ -32,8 +32,6 @@ module Redex
 
     describe "#parse_contents_of_type" do
       before(:each) do
-        puts "--MATCH TYPES--"
-        @matches.each { |m| puts "--> #{m.type}"}
         @last_name_contents = @parser.parse_contents_of_type(:last_name, @matches)
       end
 
@@ -48,10 +46,28 @@ module Redex
     end
 
     describe "#parse" do
-      it "should accept an unparsed document and return a parsed document" do
+      before :each do
         @letter.parsed?.should be_false
-        @parser.parse(@letter)
-        @letter.parsed?.should be_true
+        @parsed_letter = @parser.parse @letter
+      end
+      
+      it "should accept an unparsed document and return a parsed document" do
+        @parsed_letter.parsed?.should be_true
+      end
+
+      it "should populate the document with the outermost sections" do
+        sections = @parsed_letter.sections
+        sections.size.should == 3
+        sections.all? { |s| s.should be_a DocumentSection }
+        sections.first.type.should == :address
+        sections.last.type.should == :salutation
+      end
+
+      it "should populate the document with the outermost contents" do
+        contents = @parsed_letter.contents
+        contents.size.should == 3
+        contents.all? { |c| c.should be_a DocumentContent }
+        contents.all? { |c| c.type.should == :last_name }
       end
     end
   end
