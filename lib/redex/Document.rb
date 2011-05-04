@@ -8,7 +8,9 @@ module Redex
 
     extend Helper::Data
     extend Helper::FileUtil::Import
+
     include Enumerable
+    include Helper::ActsAsParent
 
 #   Prefix used in Redis
     NAMESPACE = :file
@@ -28,14 +30,14 @@ module Redex
 #   Number of lines
     attr_reader :number_of_lines
 
-    def initialize(name)
+    def initialize name
       @name = name
       @parsed = false
       @number_of_lines = Document.db.llen @name
     end
 
 #   Saves a single line or an array of lines to a document (stored in Redis)
-    def <<(line_or_lines)
+    def << line_or_lines
       case line_or_lines
         when String
           add_line line_or_lines
@@ -48,7 +50,7 @@ module Redex
     end
 
 #   Retrieves a single document line from Redis and returns a line object
-    def line(number)
+    def line number
       value = nil
       update do
         value = Document.db.lindex @name, number - 1
@@ -58,7 +60,7 @@ module Redex
 
 #   Returns all document lines from Redis and as an array of line objects
 #   Returns a range of lines when a range object is supplied
-    def lines(range=nil)
+    def lines range=nil
       values = []
       if range
         update { values = Document.db.lrange(@name, range.first - 1, range.last - 1) }
@@ -89,7 +91,7 @@ module Redex
     end
 
 #   Name-based equality (name is stored as key in Redis)
-    def ==(other)
+    def == other
       self.name == other.name
     end
 
@@ -98,24 +100,25 @@ module Redex
       @parsed
     end
 
-    def add_section(section)
+    def add_section section
       @sections ||= []
-      @sections << DocumentSection.new(self)
+      @sections << section
     end
 
-    def add_content(content)
-
+    def add_content content
+      @contents ||= []
+      @contents << content
     end
 
     private
-    def add_line(line)
+    def add_line line
       update do
         Document.db.rpush @name, line
       end
       self
     end
 
-    def add_lines(lines)
+    def add_lines lines
       update do
         lines.each do |line|
           add_line line

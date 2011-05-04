@@ -99,5 +99,6 @@ module Redex
     it "should not be flagged as 'parsed' at initialization" do
       @doc.parsed?.should be_false
     end
+
   end
 end

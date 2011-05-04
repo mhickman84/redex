@@ -4,14 +4,16 @@ module Redex
       @doc_type = DocumentType.get(doc_type)
     end
 
+    def parse document
+
+    end
+
     def parse_sections_of_type type, matches
       start_matches = matches.of_type(type).at_location(:start)
       end_matches = matches.of_type(type).at_location(:end)
       sections = []
       until start_matches.empty? || end_matches.empty?
-        puts "START MATCHES: #{start_matches.size} | END MATCHES: #{end_matches.size}"
         sections << DocumentSection.from_matches(type, start_matches.shift, end_matches.shift)
-        puts "SECTION: #{sections.last.inspect}"
       end
       sections
     end

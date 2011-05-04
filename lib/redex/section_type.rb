@@ -4,9 +4,7 @@ module Redex
   class SectionType
     include Helper::ActsAsParent
     include Helper::ActsAsChild
-    
-#   Name of the section type (i.e. header, footer)
-    attr_reader :name
+    include Helper::ActsAsType
 
 #   Dictionary terms signaling the start of the section
     attr_reader :start_dictionary

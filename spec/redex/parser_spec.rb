@@ -13,8 +13,7 @@ module Redex
     end
 
     it "should require a document type that has been defined" do
-      parser = Parser.new(:letter)
-      parser.should be_a Parser
+      @parser.should be_a Parser
       lambda { Parser.new(:fake_doc_type) }.should raise_error
     end
 
@@ -45,6 +44,14 @@ module Redex
 
       it "should create 1 DocumentContent object for each match" do
         @last_name_contents.size.should == 3
+      end
+    end
+
+    describe "#parse" do
+      it "should accept an unparsed document and return a parsed document" do
+        @letter.parsed?.should be_false
+        @parser.parse(@letter)
+        @letter.parsed?.should be_true
       end
     end
   end
