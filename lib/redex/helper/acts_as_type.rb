@@ -5,14 +5,8 @@ module Redex
       #   Name of the section type (i.e. header, footer)
       attr_reader :name
 
-#     Types of content found in this doc type
-      def content_types
-        self.children.select { |child| child.class == ContentType }
-      end
-
-#     Types of sections found in this doc type
-      def section_types
-        self.children.select { |child| child.class == SectionType }
+      def type
+        self
       end
 
 #     Adds new section to look for within this section type

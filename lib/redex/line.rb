@@ -9,7 +9,7 @@ module Redex
     attr_reader :number
     
     def initialize document, value, number
-      @document_name = document.name || document
+      @document = document
       @value = value
       @number = number
     end

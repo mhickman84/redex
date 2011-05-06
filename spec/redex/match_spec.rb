@@ -6,7 +6,7 @@ module Redex
       dictionary_path = File.expand_path("spec/dictionary_files/cast")
       doc_path = File.expand_path("spec/document_files/episodes.txt")
       @dict = Redex::Dictionary.import(dictionary_path)
-      @doc = Redex::Document.import(doc_path)
+      @doc = Redex::Document.import(doc_path, :type => :episode_doc)
       @match = ContentMatch.new(@dict.first, @doc.line(2), :episode_content)
     end
 

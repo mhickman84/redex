@@ -5,7 +5,7 @@ module Redex
 
     before :each do
       file_path = File.expand_path("spec/document_files/test.txt")
-      @doc = Document.import(file_path)
+      @doc = Document.import(file_path, :type => :test_doc)
       @doc_line = @doc.line 1
       @doc_line_2 = @doc.line 2
     end

@@ -6,7 +6,7 @@ module Redex
       dictionary_path = File.expand_path("spec/dictionary_files/cast")
       doc_path = File.expand_path("spec/document_files/episodes.txt")
       @dict = Redex::Dictionary.import(dictionary_path)
-      @doc = Redex::Document.import(doc_path)
+      @doc = Redex::Document.import(doc_path, :type => :episode_list)
       @match = ContentMatch.new(@dict.first, @doc.line(2), :episode_content)
       @content = DocumentContent.new :some_content_type, @doc, 2
     end
@@ -20,10 +20,10 @@ module Redex
 
     describe "DocumentContent#from_match" do
       it "should create a DocumentContent instance of the supplied type from a match" do
-        content = DocumentContent.from_match :foo_type, @match
+        content = DocumentContent.from_match :address, @match
         content.should be_a DocumentContent
         content.document.name.should == 'episodes.txt'
-        content.type.should == :foo_type
+        content.type.name.should == :address
       end
     end
   end

@@ -7,8 +7,10 @@ module Redex
       define_test_dictionaries
       define_test_doc_type
 
-      @doc = Document.import(File.expand_path "../../spec/document_files/episodes.txt", File.dirname(__FILE__))
-      @dict = Dictionary.import(File.expand_path "../../spec/dictionary_files/cast", File.dirname(__FILE__))
+      doc_path = File.expand_path "../../spec/document_files/episodes.txt", File.dirname(__FILE__)
+      @doc = Document.import(doc_path, :type => :test_doc)
+      dict_path = File.expand_path "../../spec/dictionary_files/cast", File.dirname(__FILE__)
+      @dict = Dictionary.import(dict_path)
 
       letter_path = File.expand_path "../../spec/document_files/letters/sample_letter.txt", File.dirname(__FILE__)
       @letter = Document.import(letter_path, :type => :letter)
@@ -40,46 +42,14 @@ module Redex
     it "should assign a document type on initialization" do
       @scanner.instance_variable_get(:@doc_type).should be_a DocumentType
     end
-
-    it "should return a collection of outer sections to search for in the document" do
-      letter_sections = @scanner.outer_section_types
-      letter_sections.size.should == 2
-      letter_sections.all? { |section| section.should be_a SectionType }
-      letter_sections.first.name.should == :address
-      letter_sections.last.name.should == :salutation
-    end
-
-    it "should return match objects for each of the outer sections" do
-      matches = MatchList.new
-      @letter.lines.each do |line|
-        matches.concat(@scanner.scan_outer_sections line)
+    
+    describe "#scan_for" do
+      it "should find all matches of the specified type within a given line" do
+        line = @letter.line 2
+        city_type = @letter.type.find_type :city
+        city_matches = @scanner.scan_for city_type, line
+        city_matches.first.content.to_s.should == 'Mount Celebres'
       end
-      matches.each { |m| puts "MATCH: #{m.inspect}" }
-      matches.size.should == 6
-      return_address_matches = matches.of_type :address
-      return_address_matches.size.should == 4
-      salutation_matches = matches.of_type :salutation
-      salutation_matches.size.should == 2
-      start_matches = matches.at_location :start
-      start_matches.size.should == 3
-      end_matches = matches.at_location :end
-      end_matches.size.should == 3
-
-      match_content = matches.map { |match| match.content[0] }
-      puts "MATCH CONTENT: #{match_content.inspect}"
-      match_content.should include "3519 Front Street", "65286", "765 Berliner Plaza", "68534", "Dear Ms. Johnson:"
-    end
-
-    it "should return match objects for each of the outer contents" do
-      matches = MatchList.new
-      @letter.lines.each do |line|
-        matches.concat(@scanner.scan_outer_contents line)
-      end
-      puts "OUTER CONTENT MATCHES: #{matches.inspect}"
-      matches.size.should == 3
-      matches[0].content.to_s.should == 'Johnson'
-      matches[1].content.to_s.should == 'Johnson'
-      matches[2].content.to_s.should == 'Powers'
     end
 
     describe "#scan" do

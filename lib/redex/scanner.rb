@@ -10,46 +10,28 @@ module Redex
 #   the supplied document or section.
     def scan doc_or_section
       matches = MatchList.new
+      child_types = doc_or_section.type.children
       doc_or_section.lines.each do |line|
-        matches << scan_outer_sections(line)
-        matches << scan_outer_contents(line)
+        child_types.each do |type|
+          puts "SCANNING LINE #{line.number} for TYPE #{type.name}"
+          matches << scan_for(type, line)
+        end
       end
       matches.flatten.sort
-    end    
-
-    def outer_section_types
-      @doc_type.section_types.select do |sec_type|
-        sec_type.top_level?
-      end
     end
 
-    def outer_content_types
-      @doc_type.content_types.select do |type|
-        type.top_level?
-      end
-    end
-
-    def scan_outer_sections line
+    def scan_for type, line
       matches = MatchList.new
-      outer_section_types.each do |sec_type|
-        if sec_type.start_dictionary
-          matches << find_match(sec_type.start_dictionary, line, sec_type.name, SectionMatch) do |match|
+      case type
+        when ContentType
+          matches << find_match(type.dictionary, line, type.name, ContentMatch)
+        when SectionType
+          matches << find_match(type.start_dictionary, line, type.name, SectionMatch) do |match|
             match.location = :start
           end
-        end
-        if sec_type.end_dictionary
-          matches << find_match(sec_type.end_dictionary, line, sec_type.name, SectionMatch) do |match|
+          matches << find_match(type.end_dictionary, line, type.name, SectionMatch) do |match|
             match.location = :end
           end
-        end
-      end
-      matches.compact
-    end
-
-    def scan_outer_contents line
-      matches = MatchList.new
-      outer_content_types.each do |con_type|
-        matches << find_match(con_type.dictionary, line, con_type.name, ContentMatch)
       end
       matches.compact
     end
@@ -70,12 +52,6 @@ module Redex
       else
         nil
       end
-    end
-
-    def get_section_type name, document
-      DocumentType.get(document.type).section_types.select {
-          |sec_type| sec_type.name == name
-      }.first
     end
   end
 end

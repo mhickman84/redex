@@ -10,7 +10,7 @@ module Redex
       @item_2 = DictionaryItem.new(@dict, "Mac")
       3.times { @item.increment }
       @dict.items.each { |item| puts item }
-      @line = Line.new(Document.new("fake"), "This line contains the name Frank.", 1)
+      @line = Line.new(Document.new("fake", :fake_doc), "This line contains the name Frank.", 1)
     end
 
     it "should access an item from a dictionary" do
@@ -42,7 +42,7 @@ module Redex
     end
 
     it "should return false if no match is found" do
-      line_2 = Line.new(Document.new("fake"), "This line doesn't contain a match.", 1)
+      line_2 = Line.new(Document.new("fake", :fake_doc), "This line doesn't contain a match.", 1)
       @item.match?(line_2).should == false
     end
 

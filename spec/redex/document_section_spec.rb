@@ -2,10 +2,13 @@ require File.expand_path('../spec_helper', File.dirname(__FILE__))
 
 module Redex
   describe DocumentSection do
+    include RedexHelper
     before :each do
+      define_test_dictionaries
+      define_test_doc_type
       file_path = File.expand_path("spec/document_files/episodes.txt")
-      @doc = Document.import(file_path)
-      @section = DocumentSection.new(:header_section, @doc, 3..4)
+      @doc = Document.import(file_path, :type => :letter)
+      @section = DocumentSection.new(:address, @doc, 3..4)
     end
 
     it "should belong to a document" do
@@ -31,7 +34,7 @@ module Redex
       dictionary_path = File.expand_path("spec/dictionary_files/cast")
       doc_path = File.expand_path("spec/document_files/episodes.txt")
       dictionary = Redex::Dictionary.import(dictionary_path)
-      document = Redex::Document.import(doc_path)
+      document = Redex::Document.import(doc_path, :type => :episode_list)
       mac_item = dictionary.find_item "Mac"
       charlie_item = dictionary.find_item "Charlie"
       start_match = SectionMatch.new(mac_item, document.line(2), :episode_section)
@@ -42,6 +45,29 @@ module Redex
       section.should be_a DocumentSection
       section.lines.size.should == 4
       section.document.name.should == "episodes.txt"
+    end
+
+    it "should have a level that is one greater than the level of its parent" do
+      @doc.add_child @section
+      @doc.level.should == 0
+      @section.level.should == 1
+
+      nested_section = DocumentSection.new :type_b, @doc, 5..6
+      @section.add_child nested_section
+      nested_section.level.should == 2
+    end
+
+    it "should point to the root document" do
+      @doc.add_child @section
+      @section.find_root.should == @doc
+    end
+
+    describe "#type" do
+      it "should return the SectionType object matching the section's type" do
+        @letter_section = DocumentSection.new(:address, @doc, 3..4)
+        @section.type.should be_a SectionType
+        @section.type.name.should == :address
+      end
     end
   end
 end

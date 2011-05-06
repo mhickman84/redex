@@ -38,9 +38,11 @@ module Redex
         @confirmed.freeze
       end
 
-#   TODO: MAKE MORE CONCISE
-#   sort by line number and then by character index
-      def <=>(other)
+      
+
+#     TODO: MAKE MORE CONCISE
+#     sort by line number and then by character index
+      def <=> other
         case
           when self.line.number < other.line.number
             -1

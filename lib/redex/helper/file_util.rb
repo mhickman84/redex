@@ -49,6 +49,8 @@ module Redex
       module Import
 #       Load document(s) from file into Redis
         def import(thing, options={})
+          puts "INSIDE import METHOD"
+          puts "OPTIONS: #{options.inspect}"
           if File.directory? thing
             add_directory thing, options
           elsif File.file? thing
@@ -60,7 +62,9 @@ module Redex
 
         private
 #       Adds files in supplied directory to Redis
-        def add_directory(directory, options={})
+        def add_directory(directory, options)
+          puts "INSIDE add_directory METHOD"
+          puts "OPTIONS: #{options.inspect}"
           docs = []
           Dir.foreach(directory) do |file|
             file_path = File.join(File.expand_path(directory), file)
@@ -70,15 +74,20 @@ module Redex
         end
 
 #       Adds file to Redis (as a list)
-        def add_file(path_to_file, options={})
+        def add_file(path_to_file, options)
+          puts "INSIDE add_file METHOD"
+          puts "OPTIONS: #{options.inspect}"
           name = options[:name] || File.basename(path_to_file)
-          redis_collection = new(name)
+          if options[:type]
+            redis_collection = new name, options[:type]
+          else
+            redis_collection = new name
+          end
           redis_collection.update do |d|
             IO.foreach path_to_file do |line|
               d << line
             end
           end
-          redis_collection.type = options[:type] if options[:type]
           redis_collection
         end
       end

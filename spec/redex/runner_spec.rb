@@ -22,7 +22,7 @@ module Redex
     it "should load all document files of each type" do
       Redex.configuration.documents.size.should == 2
       puts "DOCUMENTS: #{Redex.configuration.documents.inspect}"
-      Redex.configuration.documents.values.all? { |doc| doc.type.should == :letter }
+      Redex.configuration.documents.values.all? { |doc| doc.type.name.should == :letter }
     end
 
   end

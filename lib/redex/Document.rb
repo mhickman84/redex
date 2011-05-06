@@ -18,17 +18,16 @@ module Redex
 #   Unique name for document
     attr_reader :name
 
-#   Type of document
-    attr_accessor :type
-
+#   TODO: DRY up
 #   Boolean flag indicating whether or not the document has been parsed
     attr_writer :parsed
 
 #   Number of lines
     attr_reader :number_of_lines
 
-    def initialize name
+    def initialize name, type
       @name = name
+      @type = type
       @parsed = false
       @number_of_lines = Document.db.llen @name
     end
@@ -113,6 +112,14 @@ module Redex
 
     def add_content content
       add_child content
+    end
+
+    def level
+      0
+    end
+
+    def type
+      @type_object ||= DocumentType.get(@type)
     end
 
     private

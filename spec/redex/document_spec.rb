@@ -3,9 +3,8 @@ require File.expand_path('../spec_helper', File.dirname(__FILE__))
 module Redex
   describe Document do
     before(:each) do
-      @doc = Document.new("some_file")
-      @doc.type = :term_paper
-      @other_doc = Document.new("other_file")
+      @doc = Document.new("some_file", :term_paper)
+      @other_doc = Document.new("other_file", :essay)
 
       @doc << "Random line of text."
       @doc << "Next line of text."
@@ -40,7 +39,7 @@ module Redex
     end
 
     it "should add an array of strings" do
-      doc = Document.new("array_doc")
+      doc = Document.new("array_doc", :array_doc)
       doc << ["Line one.", "Line two.", "Line three."]
       lines = doc.lines 1..3
       lines.size.should == 3
@@ -51,8 +50,8 @@ module Redex
 
     it "should add all lines in a file when given a file path" do
       file_path = File.expand_path("spec/document_files/test.txt")
-      Document.import(file_path)
-      lines = Document.new("test.txt").lines
+      Document.import(file_path, :type => :some_doc_type)
+      lines = Document.new("test.txt", :some_doc_type).lines
       puts "LINES: #{lines.inspect}"
       lines.size.should == 3
       lines[0].value.should == "First line of file\n"
@@ -63,9 +62,9 @@ module Redex
     it "should add all files in a directory when given a directory" do
       directory = File.expand_path("spec/document_files")
       puts directory
-      Document.import(directory)
-      file_lines = Document.new("test.txt").lines
-      file_2_lines = Document.new("test2.txt").lines
+      Document.import(directory, :type => :some_doc_type)
+      file_lines = Document.new("test.txt", :test_doc).lines
+      file_2_lines = Document.new("test2.txt", :test_doc).lines
       file_lines.size.should == 3
       file_2_lines.size.should == 5
       file_lines[0].value.should == "First line of file\n"
@@ -87,9 +86,9 @@ module Redex
     end
 
     it "should be equal to another dictionary with the same name" do
-      doc_1 = Document.new("uno")
-      doc_2 = Document.new("dos")
-      doc_3 = Document.new("uno")
+      doc_1 = Document.new("uno", :some_doc_type)
+      doc_2 = Document.new("dos", :some_doc_type)
+      doc_3 = Document.new("uno", :some_doc_type)
 
       doc_1.should == doc_1
       doc_1.should == doc_3
