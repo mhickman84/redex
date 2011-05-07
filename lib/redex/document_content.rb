@@ -16,8 +16,6 @@ module Redex
     end
 
     def type
-      puts "DOCUMENT: #{document.inspect}"
-      puts "DOCUMENT TYPE: #{document.type.inspect}"
       @doc_type = document.type
       @type ||= @doc_type.find_type @type_name
     end
