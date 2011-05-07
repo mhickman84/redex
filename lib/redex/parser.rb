@@ -5,7 +5,7 @@ module Redex
       @scanner = Scanner.new(doc_type)
     end
 
-#   TODO: ADD SUPPORT FOR ARBITRARY NESTING
+#   TODO: REPLACE HARD CODED VALUES
     def parse document
       parse_entity document
       puts "DEPTH: #{document.depth}"
