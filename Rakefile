@@ -13,13 +13,21 @@ require 'rake'
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
-  gem.name        = "redex"
-  gem.homepage    = "http://github.com/mhickman84/redex"
-  gem.license     = "MIT"
-  gem.summary     = %Q{TODO: one-line summary of your gem}
+  gem.name = "redex"
+  gem.homepage = "http://github.com/mhickman84/redex"
+  gem.license = "MIT"
+  gem.summary = %Q{TODO: one-line summary of your gem}
   gem.description = %Q{TODO: longer description of your gem}
-  gem.email       = "mhickman84@gmail.com"
-  gem.authors     = ["Mike Hickman"]
+  gem.email = "mhickman84@gmail.com"
+  gem.authors = ["Mike Hickman"]
+  gem.executables = ["redex-web"]
+  gem.add_runtime_dependency 'nokogiri', '~> 1.4'
+  gem.add_runtime_dependency 'redis-namespace', '~> 0.1'
+  gem.add_runtime_dependency 'sinatra', '1.2'
+  gem.add_runtime_dependency 'vegas', '~> 0.1.2'
+  gem.add_development_dependency 'rspec', '~> 2.5.0'
+  gem.add_development_dependency 'bundler', '~> 1.0.10'
+  gem.add_development_dependency 'jeweler', '~> 1.5.2'
   # Include your dependencies below. Runtime dependencies are required when using your gem,
   # and development dependencies are only needed for development (ie running rake tasks, tests, etc)
   #  gem.add_runtime_dependency 'jabber4r', '> 0.1'
@@ -35,17 +43,17 @@ end
 
 RSpec::Core::RakeTask.new(:rcov) do |spec|
   spec.pattern = 'spec/**/*_spec.rb'
-  spec.rcov    = true
+  spec.rcov = true
 end
 
 task :default => :spec
 
 require 'rake/rdoctask'
 Rake::RDocTask.new do |rdoc|
-  version       = File.exist?('VERSION') ? File.read('VERSION') : ""
+  version = File.exist?('VERSION') ? File.read('VERSION') : ""
 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title    = "redex #{version}"
+  rdoc.title = "redex #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end

@@ -46,10 +46,6 @@ module Redex
       @item.match?(line_2).should == false
     end
 
-    it "should return the index of the item" do
-      pending
-    end
-
     it "should return true if a match is found" do
       @item.match?(@line).should == true
     end

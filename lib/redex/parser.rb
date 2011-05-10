@@ -7,14 +7,13 @@ module Redex
 
     def parse document
       parse_entity document
-      puts "DEPTH: #{document.depth}"
       level = 1
       loop do
         children = document.children_at_level level
         break if children.empty? || children.nil?
         children.each do |child|
           next unless child.respond_to? :children
-          parse_entity child if child.respond_to? :children
+          parse_entity child
         end
         level += 1
       end

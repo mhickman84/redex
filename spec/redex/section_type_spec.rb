@@ -49,7 +49,7 @@ module Redex
     it "should contain section types and content types" do
       @section_type.has_content :street_address, :dictionary => :street_addresses
       @section_type.has_content :phone_number, :dictionary => :phone_numbers
-      @section_type.has_section :phone_number, :dictionary => :phone_numbers
+      @section_type.has_section :phone_number
       @section_type.children.size.should == 3
       @section_type.children.first.should be_a ContentType
       @section_type.children.last.should be_a SectionType

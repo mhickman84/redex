@@ -9,9 +9,11 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Mike Hickman"]
-  s.date = %q{2011-03-27}
+  s.date = %q{2011-05-09}
+  s.default_executable = %q{redex-web}
   s.description = %q{TODO: longer description of your gem}
   s.email = %q{mhickman84@gmail.com}
+  s.executables = ["redex-web"]
   s.extra_rdoc_files = [
     "LICENSE.txt",
     "README.rdoc"
@@ -22,6 +24,7 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "bin/redex-web",
     "lib/redex.rb",
     "lib/redex/Document.rb",
     "lib/redex/configuration.rb",
@@ -32,19 +35,23 @@ Gem::Specification.new do |s|
     "lib/redex/document_section.rb",
     "lib/redex/document_type.rb",
     "lib/redex/helper.rb",
+    "lib/redex/helper/acts_as_child.rb",
+    "lib/redex/helper/acts_as_parent.rb",
+    "lib/redex/helper/acts_as_type.rb",
     "lib/redex/helper/data.rb",
-    "lib/redex/helper/document_util.rb",
     "lib/redex/helper/file_util.rb",
-    "lib/redex/helper/nestable.rb",
-    "lib/redex/helper/type.rb",
+    "lib/redex/helper/matchable.rb",
     "lib/redex/line.rb",
     "lib/redex/match.rb",
+    "lib/redex/match_list.rb",
     "lib/redex/parser.rb",
     "lib/redex/runner.rb",
+    "lib/redex/scanner.rb",
     "lib/redex/section_type.rb",
+    "lib/redex/server.rb",
+    "lib/redex/server/public/jquery-1.6.min.js",
+    "lib/redex/server/views/layout.erb",
     "redex.gemspec",
-    "spec/.DS_Store",
-    "spec/data/.DS_Store",
     "spec/data/mock_web_page.html",
     "spec/data/mock_xml_doc.xml",
     "spec/data/zeppelin_members.csv",
@@ -67,17 +74,20 @@ Gem::Specification.new do |s|
     "spec/redex/document_type_spec.rb",
     "spec/redex/file_helper_spec.rb",
     "spec/redex/line_spec.rb",
+    "spec/redex/match_list_spec.rb",
     "spec/redex/match_spec.rb",
     "spec/redex/parser_spec.rb",
     "spec/redex/runner_spec.rb",
+    "spec/redex/scanner_spec.rb",
     "spec/redex/section_type_spec.rb",
     "spec/redex_spec.rb",
-    "spec/spec_helper.rb"
+    "spec/spec_helper.rb",
+    "spec/support/redex_helper.rb"
   ]
   s.homepage = %q{http://github.com/mhickman84/redex}
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.3.7}
+  s.rubygems_version = %q{1.6.2}
   s.summary = %q{TODO: one-line summary of your gem}
   s.test_files = [
     "spec/redex/configuration_spec.rb",
@@ -90,40 +100,63 @@ Gem::Specification.new do |s|
     "spec/redex/document_type_spec.rb",
     "spec/redex/file_helper_spec.rb",
     "spec/redex/line_spec.rb",
+    "spec/redex/match_list_spec.rb",
     "spec/redex/match_spec.rb",
     "spec/redex/parser_spec.rb",
     "spec/redex/runner_spec.rb",
+    "spec/redex/scanner_spec.rb",
     "spec/redex/section_type_spec.rb",
     "spec/redex_spec.rb",
-    "spec/spec_helper.rb"
+    "spec/spec_helper.rb",
+    "spec/support/redex_helper.rb"
   ]
 
   if s.respond_to? :specification_version then
-    current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_runtime_dependency(%q<nokogiri>, ["~> 1.4.4"])
       s.add_runtime_dependency(%q<redis-namespace>, ["~> 0.1"])
+      s.add_runtime_dependency(%q<sinatra>, ["~> 1.2"])
       s.add_development_dependency(%q<rspec>, ["~> 2.5.0"])
       s.add_development_dependency(%q<bundler>, ["~> 1.0.10"])
       s.add_development_dependency(%q<jeweler>, ["~> 1.5.2"])
-      s.add_development_dependency(%q<rcov>, [">= 0"])
+      s.add_runtime_dependency(%q<nokogiri>, ["~> 1.4"])
+      s.add_runtime_dependency(%q<redis-namespace>, ["~> 0.1"])
+      s.add_runtime_dependency(%q<sinatra>, ["= 1.2"])
+      s.add_runtime_dependency(%q<vegas>, ["~> 0.1.2"])
+      s.add_development_dependency(%q<rspec>, ["~> 2.5.0"])
+      s.add_development_dependency(%q<bundler>, ["~> 1.0.10"])
+      s.add_development_dependency(%q<jeweler>, ["~> 1.5.2"])
     else
       s.add_dependency(%q<nokogiri>, ["~> 1.4.4"])
       s.add_dependency(%q<redis-namespace>, ["~> 0.1"])
+      s.add_dependency(%q<sinatra>, ["~> 1.2"])
       s.add_dependency(%q<rspec>, ["~> 2.5.0"])
       s.add_dependency(%q<bundler>, ["~> 1.0.10"])
       s.add_dependency(%q<jeweler>, ["~> 1.5.2"])
-      s.add_dependency(%q<rcov>, [">= 0"])
+      s.add_dependency(%q<nokogiri>, ["~> 1.4"])
+      s.add_dependency(%q<redis-namespace>, ["~> 0.1"])
+      s.add_dependency(%q<sinatra>, ["= 1.2"])
+      s.add_dependency(%q<vegas>, ["~> 0.1.2"])
+      s.add_dependency(%q<rspec>, ["~> 2.5.0"])
+      s.add_dependency(%q<bundler>, ["~> 1.0.10"])
+      s.add_dependency(%q<jeweler>, ["~> 1.5.2"])
     end
   else
     s.add_dependency(%q<nokogiri>, ["~> 1.4.4"])
     s.add_dependency(%q<redis-namespace>, ["~> 0.1"])
+    s.add_dependency(%q<sinatra>, ["~> 1.2"])
     s.add_dependency(%q<rspec>, ["~> 2.5.0"])
     s.add_dependency(%q<bundler>, ["~> 1.0.10"])
     s.add_dependency(%q<jeweler>, ["~> 1.5.2"])
-    s.add_dependency(%q<rcov>, [">= 0"])
+    s.add_dependency(%q<nokogiri>, ["~> 1.4"])
+    s.add_dependency(%q<redis-namespace>, ["~> 0.1"])
+    s.add_dependency(%q<sinatra>, ["= 1.2"])
+    s.add_dependency(%q<vegas>, ["~> 0.1.2"])
+    s.add_dependency(%q<rspec>, ["~> 2.5.0"])
+    s.add_dependency(%q<bundler>, ["~> 1.0.10"])
+    s.add_dependency(%q<jeweler>, ["~> 1.5.2"])
   end
 end
 

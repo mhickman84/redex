@@ -6,6 +6,7 @@ module Redex
       define_method(setting) { settings.has_key?(setting) ? settings[setting] : options[:default] }
     end
 
+#   TODO: Add Redis Connection as setting
 #   Path where dictionaries are located
     define_setting :load_path, :default => []
 #   Path where new dictionary files are written
