@@ -6,23 +6,14 @@ module Redex
   class Server < Sinatra::Base
     dir = File.dirname(File.expand_path __FILE__)
     set :public, "#{dir}/server/public"
+    set :views,  "#{dir}/server/views"
 
     get "/" do
-      File.read(File.join "#{dir}/server/public", 'app.html')
+      erb :home, {:layout => true}
     end
 
-    get "/navItems" do
-      content_type :json
-      [
-          {:text => "Import Data", :name => "import"},
-          {:text => "Dictionaries", :name => "dictionaries"},
-          {:text => "Parse Documents", :name => "documents"}
-      ].to_json
-    end
-
-    get "/pages/import" do
-      content_type :json
-      {:header => "Import"}.to_json
+    get "/import" do
+      erb :import, {:layout => true}
     end
   end
 end
