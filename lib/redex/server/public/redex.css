@@ -22,7 +22,7 @@ h1 span {
 
 h2 {
 		height: 10px;
-		font-size: 20px;
+		font-size: 18px;
 		padding: 3px 0 17px 20px;
     background-color: white;
 		margin: 0;
@@ -72,18 +72,22 @@ nav#primary {
     padding: 0 20px;
 }
 
+nav#primary ul {
+	float: right;
+}
+
 nav li {
     float: left;
 }
 
 nav a {
+	display: block;
 	color: black;
   text-decoration: none;
 }
 
 nav#primary a {
     padding-top: 10px;
-    display: block;
     width: 100px;
     height: 50px;
     border-right: 1px solid gray;
@@ -96,15 +100,18 @@ nav#primary li:first-child a {
 }
 
 nav#secondary {
-	float: left;
+	float: right;
+	padding-right: ;
 }
 
 nav#secondary li {
 	margin: 0 auto;
+	height: 30px;
+	width: 150px;
 }
 
 nav#secondary a {
-	padding: 10px 10px 10px 10px;
+	padding: 5px 10px 15px 10px;
   height: 10px;
-	width: 150px;
+	width: 100%;
 }

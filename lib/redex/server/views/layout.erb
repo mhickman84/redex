@@ -1,32 +1,47 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.3.0/build/cssreset/reset-min.css">
-    <link rel="stylesheet" type="text/css" href="redex.css">
-    <link href='http://fonts.googleapis.com/css?family=Terminal+Dosis+Light' rel='stylesheet' type='text/css'>
-    <script src="jquery-1.6.min.js" type="text/javascript"></script>
-    <script src="jquery.tmpl.js" type="text/javascript"></script>
-    <script src="application.js" type="text/javascript"></script>
+  <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.3.0/build/cssreset/reset-min.css">
+  <link rel="stylesheet" type="text/css" href="/redex.css">
+  <link href='http://fonts.googleapis.com/css?family=Terminal+Dosis+Light' rel='stylesheet' type='text/css'>
+  <script src="/jquery-1.6.min.js" type="text/javascript"></script>
+  <script src="/jquery.tmpl.js" type="text/javascript"></script>
+  <script src="/application.js" type="text/javascript"></script>
 </head>
 <body>
 <header>
-    <h1>
-      <span>/</span>redex<span>/</span>
-    </h1>
-    <nav id="primary">
-        <ul>
-            <li><a href="import">Import Data</a></li>
-            <li><a href="documents">Parse Documents</a></li>
-        </ul>
-    </nav>
+  <h1>
+    <span>/</span>redex<span>/</span>
+  </h1>
+  <nav id="primary">
+    <ul>
+      <% nav_items.keys.each do |item| %>
+          <%= partial :nav_item, :item => item %>
+      <% end %>
+    </ul>
+  </nav>
 </header>
 <body>
 <section id="page-content">
+  <section id="sub-header">
+    <h2><%= header_text %> >></h2>
+    <nav id="secondary">
+      <ul>
+        <% nav_items[current_section].each do |item| %>
+            <%= partial :nav_item, :item => item %>
+        <% end %>
+      </ul>
+    </nav>
+  </section>
+
+  <section id="main-content">
     <%= yield %>
+  </section>
+
 </section>
 </body>
 <footer>
-    This is the footer.
+  This is the footer.
 </footer>
 </body>
 </html>
