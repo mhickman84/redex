@@ -30,9 +30,12 @@ module Redex
 
     it "should raise an exception if the doc type's name is not unique" do
       Redex.define_doc_type :test_doc
-      Redex.configuration.document_types.size.should == 1
       lambda { Redex.define_doctype :test_doc }.should raise_error
-      Redex.configuration.document_types.size.should == 1
+    end
+
+    it "should raise an exception if the dictionary's name is not unique" do
+      Redex.define_dictionary :test
+      lambda { Redex.define_dictionary :test }.should raise_error
     end
 
     it "should allow new document types to be defined" do
@@ -61,6 +64,16 @@ module Redex
 
     it "should have a list of defined document types" do
       Redex.document_types.all? { |doctype| doctype.should be_a DocumentType }
+    end
+
+    it "should have a list of defined dictionaries" do
+      Redex.dictionaries.size.should == 6
+      Redex.dictionaries.values.all? { |dictionary| dictionary.should be_a Dictionary }
+    end
+
+    it "should allow new dictionaries to be defined" do
+      Redex.define_dictionary :businesses
+      Redex.configuration.dictionaries[:businesses].should be_a Dictionary
     end
   end
 end

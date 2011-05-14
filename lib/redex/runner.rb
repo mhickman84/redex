@@ -1,5 +1,11 @@
 module Redex
   class Runner
+    def self.run
+      self.import_dictionaries
+      self.import_documents
+
+    end
+
     def self.import_dictionaries
       @dictionaries = Dictionary.import(Redex.configuration.load_path)
       @dictionaries.each do |dict|

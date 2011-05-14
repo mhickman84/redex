@@ -10,22 +10,30 @@ module Redex
 
     attr_reader :name
 
-    def initialize(name)
+    def initialize name
       @name = name
     end
 
 #   Retrieve a dictionary by name (takes a symbol)
-    def self.get(name)
-      if Redex.configuration.dictionaries[name]
-        Redex.configuration.dictionaries[name]
+    def self.get name
+      count = db.zcard name.to_s
+      if count > 0
+        Dictionary.new name.to_s
       else
-        raise "Dictionary #{name} not found"
+        raise "Dictionary #{name} not found in database"
+      end
+    end
+
+#   Return all dictionaries
+    def self.get_all
+      db.keys('*').map do |key|
+        new key
       end
     end
 
 #   Add an item or an array of items to a dictionary
 #   Returns the dictionary object
-    def <<(item_or_items)
+    def << item_or_items
       case item_or_items
         when String
           add_item item_or_items
@@ -42,7 +50,7 @@ module Redex
       values.map { |val| DictionaryItem.new(self, val) }
     end
 
-    def [](index)
+    def [] index
       item_value = Dictionary.db.zrange(@name, index, index).first
       DictionaryItem.new(self, item_value)
     end
@@ -52,13 +60,13 @@ module Redex
     end
 
     def update
-      Document.db.multi do
+      Dictionary.db.multi do
         yield self
       end
     end
 
 #   find an item by value
-    def find_item(value)
+    def find_item value
       self.find { |item| item.value == value }
     end
 
@@ -74,18 +82,18 @@ module Redex
     end
 
 #   Name-based equality
-    def ==(other)
+    def == other
       self.name == other.name
     end
 
     private
 
-    def add_item(item)
+    def add_item item
       sanitized_value = item.strip.chomp.sub("\t", "")
       Dictionary.db.zadd @name, 0, sanitized_value unless sanitized_value.empty?
     end
 
-    def add_items(items)
+    def add_items items
       update do |dict|
         items.each do |item|
           add_item item

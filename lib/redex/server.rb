@@ -2,12 +2,15 @@ require 'rubygems'
 require 'sinatra'
 require 'redex'
 require 'json'
+require 'nokogiri'
 module Redex
   class Server < Sinatra::Base
     dir = File.dirname(File.expand_path __FILE__)
     set :public, "#{dir}/server/public"
     set :views, "#{dir}/server/views"
-
+    enable :sessions
+#   to enable sessions with shotgun plugin
+    set :session_secret, "code monkey"
 
     helpers do
       def nav_items
@@ -35,8 +38,6 @@ module Redex
           item_text = nav_item.to_s
         elsif nav_items.values.flatten.include? nav_item
           item_text = "#{nav_items.key(nav_item).to_s}_#{nav_item.to_s}"
-        else
-          raise "Error: Nav item: #{nav_item.to_s} not found."
         end
         item_text.to_s.split('_').map do |s|
           s.capitalize
@@ -66,8 +67,37 @@ module Redex
       end
     end
 
+    before do
+      unless session['initialized']
+        @street_addresses = Dictionary.new("street_addresses")
+        @cities = Dictionary.new("cities")
+        @states = Dictionary.new("states")
+        @zip_codes = Dictionary.new("zip_codes")
+        @greetings = Dictionary.new("greetings")
+        @last_names = Dictionary.new("last_names")
+
+        @street_addresses << ['^\d+\s.+\sRoad$', '^\d+\s.+\sStreet$', '^\d+\s.+\sAvenue$', '^\d+\s.+\sLane$', '^\d+\s.+\sPlaza$']
+        @cities << ['Durham', 'Chapel Hill', 'Mount Celebres', 'Las Vegas', 'Industrial Point']
+        @states << ['VA', 'CA', 'NC']
+        @zip_codes << ['27514', '27708', '22903', '68534', '65286']
+        @greetings << ['^Dear.+,', '^Dear.+:']
+        @last_names << ['Powers', 'Johnson', 'Smith', 'Davis']
+
+        Redex.configuration.dictionaries[:street_addresses] = @street_addresses
+        Redex.configuration.dictionaries[:cities] = @cities
+        Redex.configuration.dictionaries[:states] = @states
+        Redex.configuration.dictionaries[:zip_codes] = @zip_codes
+        Redex.configuration.dictionaries[:greetings] = @greetings
+        Redex.configuration.dictionaries[:last_names] = @last_names
+        session['configuration'] = Redex.configuration
+        session['initialized'] = true
+      end
+      Redex.configuration = session['configuration']
+      @dictionaries = Dictionary.get_all
+    end
+
     get "/" do
-      erb :home, :layout => true
+      redirect url_for :dictionaries
     end
 
     get "/import_data" do
@@ -82,7 +112,35 @@ module Redex
       erb :import_from_web, :layout => true
     end
 
+    get "/import_data/from_web/:dictionary_name" do
+      @selected_dictionary = Dictionary.get params[:dictionary_name]
+      erb :import_from_web, :layout => true
+    end
+
+    post "/import_data/from_web/:dictionary_name/preview" do
+      @selected_dictionary = Dictionary.get params[:dictionary_name]
+      url = params[:url]
+      selector = params[:selector]
+      doc = Nokogiri.parse(open url)
+      session['preview_data'] = doc.search(selector).map do |node|
+        node.content unless node.content.nil?
+      end
+      redirect "/import_data/from_web/#{@selected_dictionary.name}/preview"
+    end
+
+    get "/import_data/from_web/:dictionary_name/preview" do
+      @selected_dictionary = Dictionary.get params[:dictionary_name]
+      @preview_data = session['preview_data']
+      puts @preview_data.inspect
+      erb :import_from_web, :layout => true
+    end
+
     get "/dictionaries" do
+      erb :dictionaries, :layout => true
+    end
+
+    get "/dictionaries/:name" do
+      @selected_dictionary = Dictionary.get params[:dictionary_name]
       erb :dictionaries, :layout => true
     end
 

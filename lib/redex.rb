@@ -21,6 +21,10 @@ module Redex
     @configuration ||= Configuration.new
   end
 
+  def self.configuration= configuration
+    @configuration = configuration
+  end
+
   def self.configure
     yield configuration if block_given?
   end
@@ -29,7 +33,20 @@ module Redex
     configuration.document_types
   end
 
-  def self.define_doc_type(name)
+  def self.dictionaries
+    configuration.dictionaries
+  end
+
+  def self.define_dictionary name
+    dictionary = Dictionary.new name
+    yield dictionary if block_given?
+    if configuration.dictionaries.keys.include? name
+      raise "Dictionary #{name} cannot be added because it already exists"
+    end
+    configuration.dictionaries[name] = dictionary
+  end
+
+  def self.define_doc_type name
     doc_type = DocumentType.new name
     yield doc_type if block_given?
     if configuration.document_types.keys.include? name

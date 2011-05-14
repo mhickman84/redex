@@ -1,0 +1,16 @@
+<% @selected_dictionary ||= @dictionaries.first %>
+<section id="sidebar">
+  <h3>Select a Dictionary</h3>
+  <%= partial :dictionaries_list, :dictionaries => @dictionaries %>
+</section>
+<section id="content">
+  <h4>Selected: <%= @selected_dictionary.name %></h4>
+  <ul>
+    <% @selected_dictionary.items.each do |item| %>
+        <li>
+          <span class="score"><%= item.score %></span>
+          <%= item.value %>
+        </li>
+    <% end %>
+  </ul>
+</section>

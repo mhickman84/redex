@@ -1,7 +1,11 @@
-<h3>List of Dictionaries</h3>
-
 <ul>
-  <% dictionaries.each do |dictionary| %>
-
+  <% if dictionaries && !dictionaries.empty? %>
+      <% dictionaries.each do |dictionary| %>
+          <li>
+            <a href="/import_data/from_web/<%= dictionary.name %>"><%= dictionary.name %></a>
+          </li>
+      <% end %>
+  <% else %>
+      <li>You do not have any dictionaries defined.</li>
   <% end %>
 </ul>

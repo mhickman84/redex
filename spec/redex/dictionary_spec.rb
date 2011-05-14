@@ -110,5 +110,13 @@ module Redex
       @dictionary_1[0].value.should == "item"
       @dictionary_1[1].value.should == "other_item"
     end
+
+    it "should return all dictionaries defined in the database as dictionary objects" do
+      dictionaries_in_redis = Dictionary.get_all
+      dictionaries_in_redis.size.should == 2
+      dictionaries_in_redis.all? { |d| d.should be_a Dictionary }
+      dictionaries_in_redis.first.name.should == 'items'
+      dictionaries_in_redis.last.name.should == 'more_items'
+    end
   end
 end

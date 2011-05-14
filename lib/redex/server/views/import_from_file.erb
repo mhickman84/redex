@@ -1,0 +1,7 @@
+<section id="sidebar">
+  <h3>Select a Dictionary</h3>
+  <%= partial :dictionaries_list, :dictionaries => @dictionaries %>
+</section>
+<section id="content">
+      <h4>Selected: <%= @selected_dictionary.name if @selected_dictionary %></h4>
+</section>
