@@ -82,17 +82,8 @@ module Redex
         @zip_codes << ['27514', '27708', '22903', '68534', '65286']
         @greetings << ['^Dear.+,', '^Dear.+:']
         @last_names << ['Powers', 'Johnson', 'Smith', 'Davis']
-
-        Redex.configuration.dictionaries[:street_addresses] = @street_addresses
-        Redex.configuration.dictionaries[:cities] = @cities
-        Redex.configuration.dictionaries[:states] = @states
-        Redex.configuration.dictionaries[:zip_codes] = @zip_codes
-        Redex.configuration.dictionaries[:greetings] = @greetings
-        Redex.configuration.dictionaries[:last_names] = @last_names
-        session['configuration'] = Redex.configuration
         session['initialized'] = true
       end
-      Redex.configuration = session['configuration']
       @dictionaries = Dictionary.get_all
     end
 
@@ -113,7 +104,7 @@ module Redex
     end
 
     get "/import_data/from_web/:dictionary_name" do
-      @selected_dictionary = Dictionary.get params[:dictionary_name]
+      @selected_dictionary = Dictionary.get params[:dictionary_name].intern
       erb :import_from_web, :layout => true
     end
 
@@ -140,7 +131,7 @@ module Redex
     end
 
     get "/dictionaries/:name" do
-      @selected_dictionary = Dictionary.get params[:dictionary_name]
+      @selected_dictionary = Dictionary.get params[:name]
       erb :dictionaries, :layout => true
     end
 

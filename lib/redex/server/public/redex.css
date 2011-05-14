@@ -67,20 +67,33 @@ footer {
 }
 
 #main-content {
-    margin: 0 20px;
-    padding: 20px 0;
     min-height: 500px;
 }
 
 #content {
-	padding: 0 20px;
+	padding: 0;
 	float: left;
+}
+
+#content h4 {
+	margin: 0;
+	background-color: gray;
+	font-size: 15px;
+	padding: 2px 20px;
+	margin: 20px 0;
+	width: 100%;
+	color: white;
+	display: block;
 }
 
 #sidebar {
 	width: 200px;
 	float: left;
 	border-right: 1px solid gray;
+}
+
+#sidebar ul {
+	padding-left: 20px;
 }
 
 .field-container {

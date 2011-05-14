@@ -2,7 +2,7 @@
   <% if dictionaries && !dictionaries.empty? %>
       <% dictionaries.each do |dictionary| %>
           <li>
-            <a href="/import_data/from_web/<%= dictionary.name %>"><%= dictionary.name %></a>
+            <a href="<%= base_url + dictionary.name %>"><%= dictionary.name %></a>
           </li>
       <% end %>
   <% else %>

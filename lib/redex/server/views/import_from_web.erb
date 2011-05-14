@@ -1,7 +1,7 @@
 <% @selected_dictionary ||= @dictionaries.first %>
 <section id="sidebar">
   <h3>Select a Dictionary</h3>
-  <%= partial :dictionaries_list, :dictionaries => @dictionaries %>
+  <%= partial :dictionaries_list, :dictionaries => @dictionaries, :base_url => '/import_data/from_web/' %>
 </section>
 <section id="content">
   <h4>Selected: <%= @selected_dictionary.name %></h4>
