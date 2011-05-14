@@ -34,16 +34,12 @@ module Redex
   end
 
   def self.dictionaries
-    configuration.dictionaries
+    Dictionary.get_all
   end
 
   def self.define_dictionary name
     dictionary = Dictionary.new name
     yield dictionary if block_given?
-    if configuration.dictionaries.keys.include? name
-      raise "Dictionary #{name} cannot be added because it already exists"
-    end
-    configuration.dictionaries[name] = dictionary
   end
 
   def self.define_doc_type name

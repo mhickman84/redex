@@ -14,13 +14,6 @@ module Redex
       @zip_codes << ['27514', '27708', '22903', '68534', '65286']
       @greetings << ['^Dear.+,', '^Dear.+:']
       @last_names << ['Powers', 'Johnson', 'Smith', 'Davis']
-
-      Redex.configuration.dictionaries[:street_addresses] = @street_addresses
-      Redex.configuration.dictionaries[:cities] = @cities
-      Redex.configuration.dictionaries[:states] = @states
-      Redex.configuration.dictionaries[:zip_codes] = @zip_codes
-      Redex.configuration.dictionaries[:greetings] = @greetings
-      Redex.configuration.dictionaries[:last_names] = @last_names
     end
 
     def define_test_doc_type

@@ -33,11 +33,6 @@ module Redex
       lambda { Redex.define_doctype :test_doc }.should raise_error
     end
 
-    it "should raise an exception if the dictionary's name is not unique" do
-      Redex.define_dictionary :test
-      lambda { Redex.define_dictionary :test }.should raise_error
-    end
-
     it "should allow new document types to be defined" do
       define_test_doc_type
 
@@ -55,11 +50,11 @@ module Redex
 
     it "should allow new content types to be added to a document type" do
       Redex.define_doc_type :letter do |d|
-        d.has_content :first_name, :dictionary => :first_names
+        d.has_content :last_name, :dictionary => :last_names
       end
       doc_type = Redex.document_types[:letter]
       doc_type.content_types.size.should == 1
-      doc_type.content_types.first.name.should == :first_name
+      doc_type.content_types.first.name.should == :last_name
     end
 
     it "should have a list of defined document types" do
@@ -68,12 +63,16 @@ module Redex
 
     it "should have a list of defined dictionaries" do
       Redex.dictionaries.size.should == 6
-      Redex.dictionaries.values.all? { |dictionary| dictionary.should be_a Dictionary }
+      Redex.dictionaries.all? { |dictionary| dictionary.should be_a Dictionary }
     end
 
     it "should allow new dictionaries to be defined" do
-      Redex.define_dictionary :businesses
-      Redex.configuration.dictionaries[:businesses].should be_a Dictionary
+      Redex.define_dictionary :businesses do |dict|
+        dict << 'Heroku'
+      end
+      @businesses_dictionary = Dictionary.get(:businesses)
+      @businesses_dictionary.should be_a Dictionary
+      @businesses_dictionary.size.should == 1
     end
   end
 end

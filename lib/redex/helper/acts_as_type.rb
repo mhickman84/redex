@@ -22,7 +22,7 @@ module Redex
         new_content_type = ContentType.new(name)
         new_content_type.parent = self
         if options[:dictionary]
-          new_content_type.dictionary = Redex.configuration.dictionaries[options[:dictionary]]
+          new_content_type.dictionary = Dictionary.get(options[:dictionary])
         end
         yield new_content_type if block_given?
         add_child new_content_type
