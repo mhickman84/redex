@@ -5,12 +5,8 @@
 </section>
 <section id="content">
   <h4>Selected: <%= @selected_dictionary.name %></h4>
-  <ul>
-    <% @selected_dictionary.items.each do |item| %>
-        <li>
-          <span class="score"><%= item.score %></span>
-          <%= item.value %>
-        </li>
-    <% end %>
-  </ul>
+  <script id="dictionary-item-template" type="text/x-jquery-tmpl">
+    <li><span class="number">${score}</span>${value}</li>
+  </script>
+  <ul id="dictionary-item-target"></ul>
 </section>

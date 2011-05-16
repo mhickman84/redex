@@ -68,22 +68,19 @@ module Redex
     end
 
     before do
-      unless session['initialized']
-        @street_addresses = Dictionary.new("street_addresses")
-        @cities = Dictionary.new("cities")
-        @states = Dictionary.new("states")
-        @zip_codes = Dictionary.new("zip_codes")
-        @greetings = Dictionary.new("greetings")
-        @last_names = Dictionary.new("last_names")
+      @street_addresses = Dictionary.new("street_addresses")
+      @cities = Dictionary.new("cities")
+      @states = Dictionary.new("states")
+      @zip_codes = Dictionary.new("zip_codes")
+      @greetings = Dictionary.new("greetings")
+      @last_names = Dictionary.new("last_names")
 
-        @street_addresses << ['^\d+\s.+\sRoad$', '^\d+\s.+\sStreet$', '^\d+\s.+\sAvenue$', '^\d+\s.+\sLane$', '^\d+\s.+\sPlaza$']
-        @cities << ['Durham', 'Chapel Hill', 'Mount Celebres', 'Las Vegas', 'Industrial Point']
-        @states << ['VA', 'CA', 'NC']
-        @zip_codes << ['27514', '27708', '22903', '68534', '65286']
-        @greetings << ['^Dear.+,', '^Dear.+:']
-        @last_names << ['Powers', 'Johnson', 'Smith', 'Davis']
-        session['initialized'] = true
-      end
+      @street_addresses << ['^\d+\s.+\sRoad$', '^\d+\s.+\sStreet$', '^\d+\s.+\sAvenue$', '^\d+\s.+\sLane$', '^\d+\s.+\sPlaza$']
+      @cities << ['Durham', 'Chapel Hill', 'Mount Celebres', 'Las Vegas', 'Industrial Point']
+      @states << ['VA', 'CA', 'NC']
+      @zip_codes << ['27514', '27708', '22903', '68534', '65286']
+      @greetings << ['^Dear.+,', '^Dear.+:']
+      @last_names << ['Powers', 'Johnson', 'Smith', 'Davis']
       @dictionaries = Dictionary.get_all
     end
 
@@ -109,30 +106,41 @@ module Redex
     end
 
     post "/import_data/from_web/:dictionary_name/preview" do
-      @selected_dictionary = Dictionary.get params[:dictionary_name]
+      content_type :json
       url = params[:url]
       selector = params[:selector]
       doc = Nokogiri.parse(open url)
-      session['preview_data'] = doc.search(selector).map do |node|
-        node.content unless node.content.nil?
-      end
-      redirect "/import_data/from_web/#{@selected_dictionary.name}/preview"
+      data = {}
+      all_results = doc.search(selector).map { |node| {:item => node.content} unless node.content.nil? }
+      data[:items] = all_results.take 20
+      data[:stats] = [{:count => all_results.size }]
+      data.to_json
     end
 
-    get "/import_data/from_web/:dictionary_name/preview" do
-      @selected_dictionary = Dictionary.get params[:dictionary_name]
-      @preview_data = session['preview_data']
-      puts @preview_data.inspect
-      erb :import_from_web, :layout => true
-    end
+#    get "/import_data/from_web/:dictionary_name/preview" do
+#      @selected_dictionary = Dictionary.get params[:dictionary_name]
+#      @preview_data = session['preview_data']
+#      puts @preview_data.inspect
+#      erb :import_from_web, :layout => true
+#    end
 
     get "/dictionaries" do
       erb :dictionaries, :layout => true
     end
 
     get "/dictionaries/:name" do
+      content_type :json
       @selected_dictionary = Dictionary.get params[:name]
-      erb :dictionaries, :layout => true
+      @selected_dictionary.items.map do |item|
+        {
+            :score => item.score,
+            :value => item.value
+        }
+      end.to_json
+    end
+
+    get "/dictionaries/select/:name" do
+      session['selected_dictionary'] = Dictionary.get params[:name]
     end
 
     get "/documents" do

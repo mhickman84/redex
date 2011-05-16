@@ -34,7 +34,7 @@ h2 {
 h3 {
     margin: 10px 0;
     text-align: center;
-		font-weight: bold;
+    font-weight: bold;
 }
 
 #sub-header {
@@ -71,39 +71,57 @@ footer {
 }
 
 #content {
-	padding: 0;
-	float: left;
+    padding: 0;
+    float: left;
 }
 
 #content h4 {
-	margin: 0;
-	background-color: gray;
-	font-size: 15px;
-	padding: 2px 20px;
-	margin: 20px 0;
-	width: 100%;
-	color: white;
-	display: block;
+    background-color: gray;
+    font-size: 15px;
+    padding: 2px 20px;
+    margin: 20px 0;
+    width: 100%;
+    color: white;
+    display: block;
 }
 
 #sidebar {
-	width: 200px;
-	float: left;
-	border-right: 1px solid gray;
+    width: 200px;
+    float: left;
+    border-right: 1px solid gray;
 }
 
-#sidebar ul {
-	padding-left: 20px;
+#sidebar a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #5a6791;
+}
+
+ul {
+    padding-left: 20px;
 }
 
 .field-container {
-	height: 40px;
-	margin-top: 10px;
+    height: 40px;
+}
+
+#content form {
+    margin: 10px 20px;
 }
 
 .field-container input {
-	float: left;
-	height: 25px;
+    float: left;
+    height: 25px;
+    width: 99%;
+    border: 1px solid gray;
+}
+
+span.number {
+    background-color: #e6e6e6;
+    padding: 0 5px;
+    margin-right: 5px;
+    color: #961227;
+    border-right: 1px solid gray;
 }
 
 nav#primary {

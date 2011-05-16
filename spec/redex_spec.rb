@@ -15,7 +15,6 @@ module Redex
       Redex.configure do |config|
         config.load_path = ["/path/to/directory/1", "/path/to/directory/2"]
       end
-
       Redex.configuration.settings[:load_path].should == ["/path/to/directory/1", "/path/to/directory/2"]
     end
 
