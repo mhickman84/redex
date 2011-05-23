@@ -110,6 +110,10 @@ ul {
     margin: 10px 20px;
 }
 
+input.button {
+    font-size: 10px;
+}
+
 .field-container input {
     float: left;
     height: 25px;
@@ -179,9 +183,14 @@ nav#secondary a {
     width: 100%;
 }
 
+.button-container {
+
+}
+
 #preview-item-target li {
     margin-top: 10px;
-    border-bottom: 1px solid gray;
+		list-style-type: square;
+		float: left;
     width: 200px;
 }
 

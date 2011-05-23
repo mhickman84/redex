@@ -68,6 +68,23 @@ module Redex
       def partial template, local_vars={}
         erb template.to_sym, {:layout => false}, local_vars
       end
+
+      def load_js
+        output = ''
+        if @javascripts
+          @javascripts.each do |js|
+            output << <<-EOF
+            <script src="/#{js.to_s}.js" type="text/javascript"></script>
+            EOF
+          end
+        end
+        output
+      end
+
+      def js name
+        @javascripts ||= []
+        @javascripts << name
+      end
     end
 
     before do
@@ -149,5 +166,6 @@ module Redex
     get "/documents" do
       erb :documents, :layout => true
     end
+
   end
 end

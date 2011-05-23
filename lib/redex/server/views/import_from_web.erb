@@ -1,3 +1,4 @@
+<% js :import_from_web %>
 <% @selected_dictionary ||= @dictionaries.first %>
 <section id="sidebar">
   <h3>Select a Dictionary</h3>
@@ -13,14 +14,16 @@
     <div class="field-container">
       <label for="selector">CSS or XPATH selector</label><input name="selector" id="selector" type="text"/>
     </div>
-    <input type="submit" title="Preview"/>
+    <div class="button-container">
+      <input id="preview" type="submit" class="button" value="Preview"/>
+    </div>
   </form>
   <script id="preview-item-template" type="text/x-jquery-tmpl">
     {{each stats}}
-        <span>Results 1 - 20 of ${count}</span>
+    <h5>Results 1 - 20 of ${count}</h5>
     {{/each}}
     {{each items}}
-        <li>${item}</li>
+    <li>${item}</li>
     {{/each}}
   </script>
   <ul id="preview-item-target"></ul>
