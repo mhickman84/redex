@@ -3,6 +3,7 @@ require 'sinatra'
 require 'redex'
 require 'json'
 require 'nokogiri'
+
 module Redex
   class Server < Sinatra::Base
     dir = File.dirname(File.expand_path __FILE__)
@@ -14,9 +15,11 @@ module Redex
 
     helpers do
       def nav_items
-        {:dictionaries => [:index],
-         :documents => [:index],
-         :import_data => [:from_web, :from_file]}
+        {
+            :dictionaries => [:index],
+            :documents => [:index],
+            :import_data => [:from_web, :from_file]
+        }
       end
 
       def current_section
@@ -113,7 +116,7 @@ module Redex
       data = {}
       all_results = doc.search(selector).map { |node| {:item => node.content} unless node.content.nil? }
       data[:items] = all_results.take 20
-      data[:stats] = [{:count => all_results.size }]
+      data[:stats] = [{:count => all_results.size}]
       data.to_json
     end
 

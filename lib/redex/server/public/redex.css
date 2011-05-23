@@ -72,13 +72,13 @@ footer {
 
 #content {
     padding: 0;
-    float: left;
+    float: right;
 }
 
 #content h4 {
     background-color: gray;
     font-size: 15px;
-    padding: 2px 20px;
+		text-indent: 20px;
     margin: 20px 0;
     width: 100%;
     color: white;
@@ -87,6 +87,7 @@ footer {
 
 #sidebar {
     width: 200px;
+		height: 100%;
     float: left;
     border-right: 1px solid gray;
 }
@@ -98,7 +99,7 @@ footer {
 }
 
 ul {
-    padding-left: 20px;
+    padding: 0 20px;
 }
 
 .field-container {
@@ -114,6 +115,10 @@ ul {
     height: 25px;
     width: 99%;
     border: 1px solid gray;
+}
+
+.clear-fix {
+    clear: both;
 }
 
 span.number {
@@ -172,4 +177,18 @@ nav#secondary a {
     padding: 5px 10px 15px 10px;
     height: 10px;
     width: 100%;
+}
+
+#preview-item-target li {
+    margin-top: 10px;
+    border-bottom: 1px solid gray;
+    width: 200px;
+}
+
+.clearfix {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    clear: both;
+    height: 0;
 }
