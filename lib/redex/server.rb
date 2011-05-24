@@ -141,13 +141,6 @@ module Redex
       Dictionary.get(params[:dictionary_name]) << all_results
     end
 
-#    get "/import_data/from_web/:dictionary_name/preview" do
-#      @selected_dictionary = Dictionary.get params[:dictionary_name]
-#      @preview_data = session['preview_data']
-#      puts @preview_data.inspect
-#      erb :import_from_web, :layout => true
-#    end
-
     get "/dictionaries" do
       erb :dictionaries, :layout => true
     end
