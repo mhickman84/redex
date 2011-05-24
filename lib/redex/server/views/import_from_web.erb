@@ -7,7 +7,7 @@
 <section id="content">
   <h4>Selected: <%= @selected_dictionary.name %></h4>
 
-  <form method="post" id="preview-form" action="/import_data/from_web/<%= @selected_dictionary.name %>/preview">
+  <form method="get" id="preview-form" action="/import_data/from_web/<%= @selected_dictionary.name %>">
     <div class="field-container">
       <label for="url">URL</label><input id="url" name="url" type="text"/>
     </div>
@@ -19,12 +19,16 @@
     </div>
   </form>
   <script id="preview-item-template" type="text/x-jquery-tmpl">
-    {{each stats}}
-    <h5>Results 1 - 20 of ${count}</h5>
-    {{/each}}
-    {{each items}}
-    <li>${item}</li>
-    {{/each}}
+    {{if items}}
+        {{each stats}}
+        <h5>Results 1 - 20 of ${count}</h5>
+        {{/each}}
+        {{each items}}
+        <li>${item}</li>
+        {{/each}}
+    {{else}}
+        <h5>No results found.</h5>
+    {{/if}}
   </script>
   <ul id="preview-item-target"></ul>
 </section>

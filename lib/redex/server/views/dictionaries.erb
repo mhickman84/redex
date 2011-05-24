@@ -1,10 +1,11 @@
+<% js :dictionaries %>
 <% @selected_dictionary ||= @dictionaries.first %>
 <section id="sidebar">
   <h3>Select a Dictionary</h3>
   <%= partial :dictionaries_list, :dictionaries => @dictionaries, :base_url => '/dictionaries/' %>
 </section>
 <section id="content">
-  <h4>Selected: <%= @selected_dictionary.name %></h4>
+  <h4><%= @selected_dictionary.name %></h4>
   <script id="dictionary-item-template" type="text/x-jquery-tmpl">
     <li><span class="number">${score}</span>${value}</li>
   </script>

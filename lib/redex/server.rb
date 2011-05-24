@@ -121,11 +121,6 @@ module Redex
     end
 
     get "/import_data/from_web/:dictionary_name" do
-      @selected_dictionary = Dictionary.get params[:dictionary_name].intern
-      erb :import_from_web, :layout => true
-    end
-
-    post "/import_data/from_web/:dictionary_name/preview" do
       content_type :json
       url = params[:url]
       selector = params[:selector]
@@ -135,6 +130,15 @@ module Redex
       data[:items] = all_results.take 20
       data[:stats] = [{:count => all_results.size}]
       data.to_json
+    end
+
+    post "/import_data/from_web/:dictionary_name" do
+      content_type :json
+      url = params[:url]
+      selector = params[:selector]
+      doc = Nokogiri.parse(open url)
+      all_results = doc.search(selector).map { |node| node.content unless node.content.nil? }
+      Dictionary.get(params[:dictionary_name]) << all_results
     end
 
 #    get "/import_data/from_web/:dictionary_name/preview" do
@@ -159,8 +163,10 @@ module Redex
       end.to_json
     end
 
-    get "/dictionaries/select/:name" do
+    post "/dictionaries/select/:name" do
+      content_type :json
       session['selected_dictionary'] = Dictionary.get params[:name]
+      session['selected_dictionary'].to_json
     end
 
     get "/documents" do
