@@ -158,7 +158,7 @@ module Redex
 
     post "/dictionaries/select/:name" do
       content_type :json
-      session['selected_dictionary'] = Dictionary.get params[:name]
+      session['selected_dictionary'] = params[:name]
       session['selected_dictionary'].to_json
     end
 
