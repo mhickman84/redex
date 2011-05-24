@@ -1,7 +1,7 @@
 require 'redis-namespace'
 require 'redex/configuration'
 require 'redex/helper'
-require 'redex/doc'
+require 'redex/document'
 require 'redex/content_type'
 require 'redex/section_type'
 require 'redex/document_type'
