@@ -138,7 +138,7 @@ module Redex
       selector = params[:selector]
       doc = Nokogiri.parse(open url)
       all_results = doc.search(selector).map { |node| node.content unless node.content.nil? }
-      Dictionary.get(params[:dictionary_name]) << all_results
+      Dictionary.get(session['selected_dictionary']) << all_results
     end
 
     get "/dictionaries" do
@@ -147,8 +147,8 @@ module Redex
 
     get "/dictionaries/:name" do
       content_type :json
-      @selected_dictionary = Dictionary.get params[:name]
-      @selected_dictionary.items.map do |item|
+      dictionary = Dictionary.get params[:name]
+      dictionary.items.map do |item|
         {
             :score => item.score,
             :value => item.value
