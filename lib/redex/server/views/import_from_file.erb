@@ -1,7 +1,34 @@
+<% js :import_from_web %>
+<% @selected_dictionary ||= @dictionaries.first %>
 <section id="sidebar">
   <h3>Select a Dictionary</h3>
-  <%= partial :dictionaries_list, :dictionaries => @dictionaries %>
+  <%= partial :dictionaries_list, :dictionaries => @dictionaries, :base_url => '/dictionaries/select/', :id => 'preview' %>
 </section>
 <section id="content">
-      <h4>Selected: <%= @selected_dictionary.name if @selected_dictionary %></h4>
+  <h4>Selected: <%= @selected_dictionary.name %></h4>
+
+  <form method="get" id="preview-form" action="/dictionaries/import_from_file/">
+    <div class="field-container">
+      <label for="url">URL</label><input id="url" name="url" type="text"/>
+    </div>
+    <div class="field-container">
+      <label for="selector">CSS or XPATH selector</label><input name="selector" id="selector" type="text"/>
+    </div>
+    <div class="button-container">
+      <input id="preview" type="submit" class="button" value="Preview"/>
+    </div>
+  </form>
+  <script id="preview-item-template" type="text/x-jquery-tmpl">
+    {{if items}}
+        {{each stats}}
+        <h5>Results 1 - 20 of ${count}</h5>
+        {{/each}}
+        {{each items}}
+        <li>${item}</li>
+        {{/each}}
+    {{else}}
+        <h5>No results found.</h5>
+    {{/if}}
+  </script>
+  <ul id="preview-item-target"></ul>
 </section>

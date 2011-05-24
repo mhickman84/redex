@@ -16,9 +16,9 @@ module Redex
     helpers do
       def nav_items
         {
-            :dictionaries => [:index],
+            :dictionaries => [:import_from_web, :import_from_file],
             :documents => [:index],
-            :import_data => [:from_web, :from_file]
+            :settings => [:document_types]
         }
       end
 
@@ -108,19 +108,15 @@ module Redex
       redirect url_for :dictionaries
     end
 
-    get "/import_data" do
-      erb :import_data, :layout => true
-    end
-
-    get "/import_data/from_file" do
+    get "/dictionaries/import_from_file" do
       erb :import_from_file, :layout => true
     end
 
-    get "/import_data/from_web" do
+    get "/dictionaries/import_from_web" do
       erb :import_from_web, :layout => true
     end
 
-    get "/import_data/from_web/:dictionary_name" do
+    get "/dictionaries/import_from_web/" do
       content_type :json
       url = params[:url]
       selector = params[:selector]
@@ -132,7 +128,7 @@ module Redex
       data.to_json
     end
 
-    post "/import_data/from_web/:dictionary_name" do
+    post "/dictionaries/import_from_web/" do
       content_type :json
       url = params[:url]
       selector = params[:selector]
@@ -165,6 +161,5 @@ module Redex
     get "/documents" do
       erb :documents, :layout => true
     end
-
   end
 end

@@ -7,7 +7,7 @@
 <section id="content">
   <h4>Selected: <%= @selected_dictionary.name %></h4>
 
-  <form method="get" id="preview-form" action="/import_data/from_web/<%= @selected_dictionary.name %>">
+  <form id="preview-form" method="get" action="/dictionaries/import_from_web/">
     <div class="field-container">
       <label for="url">URL</label><input id="url" name="url" type="text"/>
     </div>
@@ -16,6 +16,7 @@
     </div>
     <div class="button-container">
       <input id="preview" type="submit" class="button" value="Preview"/>
+      <input id="reset" type="reset" class="button" value="Reset"/>
     </div>
   </form>
   <script id="preview-item-template" type="text/x-jquery-tmpl">
