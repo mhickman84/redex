@@ -20,16 +20,18 @@
     </div>
   </form>
   <script id="preview-item-template" type="text/x-jquery-tmpl">
+    {{each stats}}
+    <h5>Results 1 - 20 of ${count}</h5>
+    {{/each}}
     {{if items}}
-        {{each stats}}
-        <h5>Results 1 - 20 of ${count}</h5>
-        {{/each}}
-        {{each items}}
-        <li>${item}</li>
-        {{/each}}
+    <ul>
+    {{each items}}
+    <li>${item}</li>
+    {{/each}}
+    </ul>
     {{else}}
-        <h5>No results found.</h5>
+    <h5>No results found.</h5>
     {{/if}}
   </script>
-  <ul id="preview-item-target"></ul>
+  <div id="preview-item-target"></div>
 </section>

@@ -183,8 +183,12 @@ nav#secondary a {
     width: 100%;
 }
 
-.button-container {
+.button-container input {
+    font-weight: bold;
+}
 
+#preview-item-target {
+    margin: 20px;
 }
 
 #preview-item-target li {

@@ -16,7 +16,7 @@ module Redex
     helpers do
       def nav_items
         {
-            :dictionaries => [:import_from_web, :import_from_file],
+            :dictionaries => [:new, :import_from_web, :import_from_file],
             :documents => [:index],
             :settings => [:document_types]
         }
@@ -141,6 +141,16 @@ module Redex
       erb :dictionaries, :layout => true
     end
 
+    get "dictionaries/create" do
+      erb :create_dictionary, :layout => true
+    end
+
+    post "dictionaries/create" do
+      
+      redirect "/dictionaries/#{}"
+    end
+
+
     get "/dictionaries/:name" do
       content_type :json
       dictionary = Dictionary.get params[:name]
@@ -160,6 +170,10 @@ module Redex
 
     get "/documents" do
       erb :documents, :layout => true
+    end
+
+    get '/settings' do
+      erb :settings, :layout => true
     end
   end
 end
