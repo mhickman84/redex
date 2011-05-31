@@ -28,6 +28,7 @@ module Redex
     it "should add an item for each line in a dictionary file" do
       file_path = File.expand_path("spec/dictionary_files/cast")
       @dictionary_from_file = Dictionary.import(file_path)
+      @dictionary_from_file.should be_a Dictionary
       items = @dictionary_from_file.items
       items.size.should == 5
       item_values = items.map { |item| item.value }
@@ -76,7 +77,7 @@ module Redex
     end
 
     it "should iterate through dictionary items" do
-      @dictionary_1.each { |item| puts "VALUE: #{item.value}"}
+      @dictionary_1.each { |item| puts "VALUE: #{item.value}" }
     end
 
     it "should be enumerable" do
@@ -111,6 +112,24 @@ module Redex
       dictionaries_in_redis.all? { |d| d.should be_a Dictionary }
       dictionaries_in_redis.first.name.should == 'items'
       dictionaries_in_redis.last.name.should == 'more_items'
+    end
+
+    describe "#<<" do
+      before :each do
+        @empty_dictionary = Dictionary.new("empty")
+      end
+      it "should add a placeholder item if empty on initialization" do
+        @empty_dictionary.items.size.should == 1
+        @empty_dictionary.items.first.value.should == Dictionary::PLACEHOLDER
+      end
+
+      it "should remove the placeholder item before the first item has been added" do
+        @empty_dictionary.items.size.should == 1
+        @empty_dictionary.items.first.value.should == Dictionary::PLACEHOLDER
+        @empty_dictionary << "first item"
+        @empty_dictionary.items.size.should == 1
+        @empty_dictionary.items.first.value.should == "first item"
+      end
     end
   end
 end

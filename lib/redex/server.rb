@@ -94,13 +94,7 @@ module Redex
       @zip_codes = Dictionary.new("zip_codes")
       @greetings = Dictionary.new("greetings")
       @last_names = Dictionary.new("last_names")
-
-      @street_addresses << ['^\d+\s.+\sRoad$', '^\d+\s.+\sStreet$', '^\d+\s.+\sAvenue$', '^\d+\s.+\sLane$', '^\d+\s.+\sPlaza$']
-      @cities << ['Durham', 'Chapel Hill', 'Mount Celebres', 'Las Vegas', 'Industrial Point']
-      @states << ['VA', 'CA', 'NC']
-      @zip_codes << ['27514', '27708', '22903', '68534', '65286']
-      @greetings << ['^Dear.+,', '^Dear.+:']
-      @last_names << ['Powers', 'Johnson', 'Smith', 'Davis']
+      
       @dictionaries = Dictionary.get_all
     end
 

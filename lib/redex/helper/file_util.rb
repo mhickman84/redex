@@ -83,10 +83,9 @@ module Redex
           else
             redis_collection = new name
           end
-          redis_collection.update do |d|
-            IO.foreach path_to_file do |line|
-              d << line
-            end
+          
+          IO.foreach path_to_file do |line|
+            redis_collection << line
           end
           redis_collection
         end

@@ -7,11 +7,13 @@ module Redex
     include Enumerable
 
     NAMESPACE = :dict
+    PLACEHOLDER = 'No Items Found.'
 
     attr_reader :name
 
     def initialize name
       @name = name
+      self << PLACEHOLDER if empty?
     end
 
 #   Retrieve a dictionary by name (takes a symbol)
@@ -34,6 +36,7 @@ module Redex
 #   Add an item or an array of items to a dictionary
 #   Returns the dictionary object
     def << item_or_items
+      remove_placeholder_item
       case item_or_items
         when String
           add_item item_or_items
@@ -44,6 +47,7 @@ module Redex
       end
       self
     end
+
 
     def items
       values = Dictionary.db.zrangebyscore(@name, "-inf", "+inf")
@@ -98,6 +102,17 @@ module Redex
         items.each do |item|
           add_item item
         end
+      end
+    end
+
+    def empty?
+      true if Dictionary.db.zcard(@name) == 0
+    end
+
+    def remove_placeholder_item
+      puts "*^*^*^*^ FIRST ITEM: #{Dictionary.db.zrange(@name, 0, 0)}"
+      if Dictionary.db.zcard(@name) == 1 && Dictionary.db.zrange(@name, 0, 0).first == PLACEHOLDER
+        Dictionary.db.zrem @name, PLACEHOLDER
       end
     end
   end
